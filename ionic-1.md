@@ -69,9 +69,6 @@ Pour pouvoir surcharger les styles et utiliser les thèmes tels que Material des
 ```sudo npm install -g bower```
 
 
-
-
-
 ##Best practices
 
 (https://github.com/johnpapa/angular-styleguide)
@@ -84,6 +81,8 @@ Suffixer les composants avec **Component**, par exemple ```UsersComponent```
 Suffixer les services avec **Service**, par exemple ```UsersService```
 
 ##Ressources
+
+(http://mcgivery.com/15-ionic-framework-2-resources/)
 
 (http://www.sitepoint.com/building-simple-app-using-ionic-advanced-html5-mobile-app-framework/)
 
