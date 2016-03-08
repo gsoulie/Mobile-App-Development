@@ -18,3 +18,5 @@ Découvrir le tutorial ionic 2
 
 ```$ ionic start myTutorial tutorial --v2```
 
+##TypeScript
+
