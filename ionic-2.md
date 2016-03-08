@@ -18,5 +18,9 @@ Découvrir le tutorial ionic 2
 
 ```$ ionic start myTutorial tutorial --v2```
 
+##Géolocalisation
+
+(http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
+
 ##TypeScript
 
