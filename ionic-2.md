@@ -14,5 +14,5 @@ création d'un projet compatible ionic 2
 
 Découvrir le tutorial ionic 2
 
-```$ ionic start myTutorial tutorial --v2````
+```$ ionic start myTutorial tutorial --v2```
 
