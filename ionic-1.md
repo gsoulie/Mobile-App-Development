@@ -380,3 +380,53 @@ ionic 2 n'étant pas encore déployé en version GA, il est toutefois possible d
 création d'un projet compatible ionic 2
 
 ```$ ionic start myionic2project --v2```
+
+##Base de données
+
+source : (https://www.thepolyglotdeveloper.com/2014/11/use-sqlite-instead-local-storage-ionic-framework/)
+
+Il est recommandé d'utiliser une connexion SQLite plutôt que d'utiliser le stockage local
+
+######installation du plugin sqlite cordova
+
+```	
+cordova plugin add https://github.com/brodysoft/Cordova-SQLitePlugin.git
+```
+
+Ensuite il faut renseigner la lib ng-cordova.min.js dans le index.html (**avant** la déclaration du cordova.js)
+
+````
+<script src="lib/nbCordova/dist/ng-cordova.min.js"></script>
+<script src="cordova.js"></script>
+````
+
+Ajouter la dépendance dans le app.js
+
+```
+angular.module('starter', ['ionic', 'ngCordova'])
+```
+
+**Important :**
+
+**
+l'activité de la base de données ne peut être active que lorsque la méthode ```onDeviceReady()``` a été appelée.
+On ouvre donc la bdd dans la méthode ```.run()```
+**
+
+```
+var db = null;
+ 
+var example = angular.module('starter', ['ionic', 'ngCordova'])
+    .run(function($ionicPlatform, $cordovaSQLite) {
+        $ionicPlatform.ready(function() {
+            if(window.cordova && window.cordova.plugins.Keyboard) {
+                cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+            }
+            if(window.StatusBar) {
+                StatusBar.styleDefault();
+            }
+            db = $cordovaSQLite.openDB("my.db");
+            $cordovaSQLite.execute(db, "CREATE TABLE IF NOT EXISTS people (id integer primary key, firstname text, lastname text)");
+        });
+    });
+```
