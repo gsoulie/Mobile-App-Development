@@ -120,7 +120,10 @@ Attention, à jouer les commandes suivantes dans le répertoire du projet :
 ```$ ionic run android```
 
 ###Architecture d’une application ionic
-<<image>>
+
+**View** < Template < **Controller** < {data} < **Service**
+
+```<div>[{data}]</div>``` < Template < ```$scope = {data}``` < {data} < ```Return {data}```
 
 ###Structure générale d’un projet ionic
 ```
