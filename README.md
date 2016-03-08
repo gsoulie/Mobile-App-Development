@@ -75,6 +75,7 @@ Pour pouvoir surcharger les styles et utiliser les thèmes tels que Material des
 ##Best practices
 
 (https://github.com/johnpapa/angular-styleguide)
+
 (https://github.com/toddmotto/angular-styleguide)
 
 
@@ -82,7 +83,9 @@ Pour pouvoir surcharger les styles et utiliser les thèmes tels que Material des
 ##Ressources
 
 (http://www.sitepoint.com/building-simple-app-using-ionic-advanced-html5-mobile-app-framework/)
+
 (http://www.sitepoint.com/5-ionic-app-development-tips-tricks/)
+
 (http://ngcordova.com/)
 
 ###ionic creator
@@ -282,6 +285,7 @@ Ensuite pour pouvoir utiliser un controller, il suffit d’utiliser la directive
 ###Cibler une plateforme
 
 (http://ionicframework.com/docs/platform-customization/platform-classes.html)
+
 (http://ionicframework.com/docs/platform-customization/styling-angularjs.html)
 
 ```
