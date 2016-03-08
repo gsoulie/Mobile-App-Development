@@ -1,4 +1,4 @@
-# ionic start guide
+# ionic start guide [based on ionic 1]
 
 ##Introduction
 
