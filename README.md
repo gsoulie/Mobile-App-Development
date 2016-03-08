@@ -78,7 +78,10 @@ Pour pouvoir surcharger les styles et utiliser les thèmes tels que Material des
 
 (https://github.com/toddmotto/angular-styleguide)
 
+######Règles de nommage
+Suffixer les composants avec **Component**, par exemple ```UsersComponent```
 
+Suffixer les services avec **Service**, par exemple ```UsersService```
 
 ##Ressources
 
