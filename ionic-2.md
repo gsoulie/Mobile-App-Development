@@ -11,3 +11,8 @@ ionic 2 n'étant pas encore déployé en version GA, il est toutefois possible d
 création d'un projet compatible ionic 2
 
 ```$ ionic start myionic2project --v2```
+
+Découvrir le tutorial ionic 2
+
+```$ ionic start myTutorial tutorial --v2````
+
