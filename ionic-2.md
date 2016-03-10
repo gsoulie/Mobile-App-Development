@@ -313,7 +313,6 @@ let options = {
 };
 
 navigator.camera.getPicture(
-
   (imagePath) => {
     console.log(imagePath);
   },
@@ -321,6 +320,5 @@ navigator.camera.getPicture(
   (error) => {
     console.log(error);
   }, options
-
 );
 ```
