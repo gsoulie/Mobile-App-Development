@@ -68,7 +68,7 @@ export class AppCmp {
 **Modification du controller map.js**
 
 ```
-import {Page} from 'ionic/ionic';
+import {Page, Geolocation} from 'ionic/ionic';
  
 @Page({
   templateUrl: 'build/pages/map/map.html',
