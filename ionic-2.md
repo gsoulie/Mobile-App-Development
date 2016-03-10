@@ -292,3 +292,35 @@ export class HomePage {
     </ion-list>
 </ion-content>
 ```
+
+##Camera
+
+**Installation du plugin**
+
+```
+$ ionic plugin add cordova-plugin-camera
+```
+
+**Fonction pour prendre une photo**
+
+```
+let options = {
+  quality: 100,
+  destinationType: Camera.DestinationType.FILE_URI,
+  sourceType: Camera.PictureSourceType.CAMERA,
+  encodingType: Camera.EncodingType.JPEG,
+  saveToPhotoAlbum: true
+};
+
+navigator.camera.getPicture(
+
+  (imagePath) => {
+    console.log(imagePath);
+  },
+
+  (error) => {
+    console.log(error);
+  }, options
+
+);
+```
