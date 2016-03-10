@@ -20,7 +20,154 @@ Découvrir le tutorial ionic 2
 
 ##Géolocalisation
 
-(http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
+source : (http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
+
+**Ajouter les dépendances Google Map API dans le index.html**
+
+```
+<script src="http://maps.google.com/maps/api/js"></script>
+<script src="cordova.js"></script>
+<script src="build/js/app.bundle.js"></script>
+```
+
+**Important** Lors de la mise en production de l'application il faudra créer une clé API Google Map et renseigner cette clé en paramètre
+
+**Charger une Map (map.html)**
+
+
+```
+<ion-navbar *navbar>
+  <ion-title>
+    Map
+  </ion-title>
+  <ion-buttons end>
+    <button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
+  </ion-buttons>  
+</ion-navbar>
+ 
+<ion-content>
+  <div id="map"></div>  
+</ion-content>
+```
+
+Ensuite spécifier la configuration de la ion-navbar dans le app.js
+```
+@App({
+  template: '<ion-nav [root]="root"></ion-nav>',
+})
+
+this.root = MapPage;
+```
+
+**Modification du controller map.js**
+
+```
+import {Page} from 'ionic/ionic';
+ 
+@Page({
+  templateUrl: 'build/pages/map/map.html',
+})
+export class MapPage {
+  constructor() {
+    this.map = null;
+    this.loadMap();
+  }
+ 
+  loadMap(){
+ 
+    let latLng = new google.maps.LatLng(-34.9290, 138.6010);
+ 
+    let mapOptions = {
+      center: latLng,
+      zoom: 15,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+ 
+    this.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+  }
+}
+```
+
+**Style de la page (map.scss)**
+
+```
+.scroll {
+    height: 100%;
+}
+ 
+#map {
+    width: 100%;
+    height: 100%;
+}
+```
+
+**Ajout du pluging geolocation**
+
+```
+$ ionic plugin add cordova-plugin-geolocation
+```
+
+**Modification de la fonction loadMap**
+
+```
+loadMap(){
+ 
+  let options = {timeout: 10000, enableHighAccuracy: true};
+ 
+  navigator.geolocation.getCurrentPosition(
+ 
+      (position) => {
+          let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+ 
+          let mapOptions = {
+              center: latLng,
+              zoom: 15,
+              mapTypeId: google.maps.MapTypeId.ROADMAP
+          }
+ 
+          this.map = new google.maps.Map(document.getElementById("map"), mapOptions);
+      },
+ 
+      (error) => {
+          console.log(error);
+      }, options
+  );
+}
+```
+
+**Ajout de marker**
+
+```
+addMarker(){
+ 
+  let marker = new google.maps.Marker({
+    map: this.map,
+    animation: google.maps.Animation.DROP,
+    position: this.map.getCenter()
+  });
+ 
+  let content = "<h4>Information!</h4>";          
+ 
+  this.addInfoWindow(marker, content);
+ 
+}
+```
+
+**Ajout fonction addInfoWindow (map.js)**
+
+```
+addInfoWindow(marker, content){
+ 
+  let infoWindow = new google.maps.InfoWindow({
+    content: content
+  });
+ 
+  google.maps.event.addListener(marker, 'click', function(){
+    infoWindow.open(this.map, marker);
+  });
+ 
+}
+```
 
 ##TypeScript
 
