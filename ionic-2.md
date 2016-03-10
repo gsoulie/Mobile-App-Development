@@ -32,6 +32,12 @@ source : (http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-v
 
 **Important** Lors de la mise en production de l'application il faudra créer une clé API Google Map et renseigner cette clé en paramètre
 
+**Importer la nouvelle page dans app.core.scss**
+
+```
+@import "pages/map/map";
+```
+
 **Charger une Map (map.html)**
 
 
