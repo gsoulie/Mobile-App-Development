@@ -56,7 +56,13 @@ Ensuite spécifier la configuration de la ion-navbar dans le app.js
   template: '<ion-nav [root]="root"></ion-nav>',
 })
 
-this.root = MapPage;
+export class AppCmp {
+  constructor(platform: Platform){
+    ...
+    this.root = MapPage;  
+  }
+}
+
 ```
 
 **Modification du controller map.js**
