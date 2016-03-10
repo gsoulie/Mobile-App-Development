@@ -141,7 +141,7 @@ loadMap(){
 }
 ```
 
-**Ajout de marker**
+**Ajout de marker (map.js)**
 
 ```
 addMarker(){
