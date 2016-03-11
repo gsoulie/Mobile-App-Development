@@ -450,3 +450,41 @@ export class HomePage {
     }
 }
 ```
+
+##Gestion des thèmes
+
+###Statusbar
+
+**installation plugin cordova**
+
+```
+$ ionic plugin add cordova-plugin-statusbar
+```
+
+**customisation**
+
+```
+var app = angular.module('ionicApp', ['ionic'])
+
+.run(function() {
+    if(window.StatusBar) {
+      StatusBar.overlaysWebView(true);
+      StatusBar.style(1) //Light
+      StatusBar.style(2) //Black, transulcent
+      StatusBar.style(3) //Black, opaque
+    }
+});
+
+// styles: Default : 0, LightContent: 1, BlackTranslucent: 2, BlackOpaque: 3
+$cordovaStatusbar.style(1);
+
+// supported names: black, darkGray, lightGray, white, gray, red, green,
+// blue, cyan, yellow, magenta, orange, purple, brown
+$cordovaStatusbar.styleColor('black');
+
+$cordovaStatusbar.styleHex('#000');
+
+$cordovaStatusbar.hide();
+
+$cordovaStatusbar.show();
+```
