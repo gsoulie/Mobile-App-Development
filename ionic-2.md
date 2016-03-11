@@ -10,6 +10,11 @@ ionic 2 n'étant pas encore déployé en version GA, il est toutefois possible d
 
 ```$ sudo npm install -g ionic@beta```
 
+Update du CLI en cas de MAJ du framework
+```
+npm install -g ionic@beta
+```
+
 création d'un projet compatible ionic 2
 
 ```$ ionic start myionic2project --v2```
