@@ -493,3 +493,22 @@ $cordovaStatusbar.hide();
 
 $cordovaStatusbar.show();
 ```
+
+##Composants
+
+###Combobox
+
+```
+<div class="list">
+  <label class="item item-input item-select">
+    <div class="input-label">
+      Lightsaber
+    </div>
+    <select>
+      <option>Blue</option>
+      <option selected>Green</option>
+      <option>Red</option>
+    </select>
+  </label>
+</div>
+```
