@@ -377,3 +377,76 @@ export class Page {
 
 la lib **map** est importée uniquement parceque nous avons besoin de sa fonction http.get
 
+##Navigation
+
+**Page1.html**
+
+```
+<ion-navbar *navbar>
+    <ion-title>
+        Other
+    </ion-title>
+</ion-navbar>
+ 
+<ion-content class="other">
+    <div>some content here...</div>
+</ion-content>
+```
+
+**Page1.js**
+
+```
+import {Page, Platform, NavParams} from 'ionic/ionic';
+ 
+@Page({
+    templateUrl: 'app/page1/page1.html',
+})
+ 
+export class Page1Page {
+    constructor(platform: Platform, navParams: NavParams) {
+        this.platform = platform;
+        this.navParams = navParams;
+        this.firstname = navParams.get("firstname");
+        this.lastname = navParams.get("lastname");
+    }
+}
+```
+
+**Page source (home.html)**
+
+```
+<ion-navbar *navbar>
+    <ion-title>
+        Home
+    </ion-title>
+</ion-navbar>
+ 
+<ion-content class="home">
+    <button (click)="navigate()">Navigate</button>
+</ion-content>
+```
+
+**Page source (home.js)**
+
+```
+import {Page, Platform, NavController} from 'ionic/ionic';
+import {OtherPage} from '../page1/page1';
+ 
+@Page({
+    templateUrl: 'app/home/home.html',
+})
+ 
+export class HomePage {
+    constructor(platform: Platform, nav: NavController) {
+        this.platform = platform;
+        this.nav = nav;
+    }
+ 
+    navigate() {
+        this.nav.push(Page1Page, {
+            firstname: "Nic",
+            lastname: "Raboy"
+        });
+    }
+}
+```
