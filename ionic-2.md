@@ -328,3 +328,52 @@ navigator.camera.getPicture(
   }, options
 );
 ```
+
+##Requête HTTP
+
+source : (http://www.joshmorony.com/using-http-to-fetch-remote-data-from-a-server-in-ionic-2/)
+
+url du service reddit API pour le jeu de données de test : (https://www.reddit.com/r/gifs/top/.json?limit=10&sort=hot)
+
+**Création de la Vue (page.html)**
+
+```
+<ion-navbar *navbar>
+  <ion-title>Tab 1</ion-title>
+</ion-navbar>
+ 
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="#post of posts">
+      <img [src]="post.data.url" />
+    </ion-item>
+  </ion-list>
+</ion-content>
+```
+
+**Création du controller (page.js)**
+
+```
+import {Page} from 'ionic/ionic';
+import {Http} from 'angular2/http';
+import 'rxjs/add/operator/map';
+ 
+@Page({
+  templateUrl: 'build/pages/page/page.html'
+})
+export class Page {
+  constructor(http: Http) {
+ 
+    this.http = http;
+    this.posts = null;
+ 
+    this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').map(res => res.json()).subscribe(data => {
+        this.posts = data.data.children;
+    });
+ 
+  }
+}
+```
+
+la lib **map** est importée uniquement parceque nous avons besoin de sa fonction http.get
+
