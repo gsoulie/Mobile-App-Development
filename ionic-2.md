@@ -512,3 +512,8 @@ $cordovaStatusbar.show();
   </label>
 </div>
 ```
+
+## Accès fichier
+
+source : (https://forum.ionicframework.com/t/how-to-save-an-image-locally-with-ionic-2/46257/4)
+
