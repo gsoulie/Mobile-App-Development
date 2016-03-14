@@ -517,3 +517,24 @@ $cordovaStatusbar.show();
 
 source : (https://forum.ionicframework.com/t/how-to-save-an-image-locally-with-ionic-2/46257/4)
 
+## Backend Firebase
+
+### Exemple social network app
+
+source : (http://www.gajotres.net/ionic-2-succesfull-oauth-social-login-with-firebase/)
+source 2 : (https://www.toptal.com/front-end/building-multi-platform-real-time-mobile-applications-using-ionic-framework-and-firebase)
+
+**Installation plugin Cordova**
+
+```
+cordova plugin add cordova-plugin-whitelist
+cordova plugin add cordova-plugin-inappbrowser@1.1.0
+```
+
+**Configuration du app.html**
+
+```
+<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+```
+
+####Création du compte Firebase
