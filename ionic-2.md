@@ -23,6 +23,10 @@ Découvrir le tutorial ionic 2
 
 ```$ ionic start myTutorial tutorial --v2```
 
+**Générer une nouvelle page dans un projet ionic 2**
+
+```$ ionic g page myNewPage```
+
 ##Géolocalisation
 
 source : (http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
