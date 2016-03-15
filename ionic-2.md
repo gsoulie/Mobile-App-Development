@@ -27,6 +27,18 @@ Découvrir le tutorial ionic 2
 
 ```$ ionic g page myNewPage```
 
+##Fonctions utiles
+
+**identifier une plateforme**
+
+```
+var isWebView = ionic.Platform.isWebView();
+var isIPad = ionic.Platform.isIPad();
+var isIOS = ionic.Platform.isIOS();
+var isAndroid = ionic.Platform.isAndroid();
+var isWindowsPhone = ionic.Platform.isWindowsPhone();
+```
+
 ##Géolocalisation
 
 source : (http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
