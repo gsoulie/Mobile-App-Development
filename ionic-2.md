@@ -37,6 +37,11 @@ var isIPad = ionic.Platform.isIPad();
 var isIOS = ionic.Platform.isIOS();
 var isAndroid = ionic.Platform.isAndroid();
 var isWindowsPhone = ionic.Platform.isWindowsPhone();
+
+var currentPlatform = ionic.Platform.platform();
+var currentPlatformVersion = ionic.Platform.version();
+
+ionic.Platform.exitApp(); // stops the app
 ```
 
 ##Géolocalisation
