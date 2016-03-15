@@ -460,6 +460,10 @@ export class HomePage {
 }
 ```
 
+**Retirer une page de la navigation**
+
+Utiliser ```this.nav.pop(...)```
+
 ##Gestion des thèmes
 
 ###Statusbar
