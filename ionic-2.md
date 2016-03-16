@@ -30,10 +30,15 @@ ionic 2 is not yet available in final version, but is it possible to create ioni
 
 ```nano ~/.bash_profile```
 
-Puis ajouter dans le fichier bash : 
+**Configure Android environment variable** : 
 
 ```export ANDROID_HOME=/Users/gsoulie/Library/android-sdk-macosx
 export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoulie/Library/android-sdk-macosx/platform-tools```
+
+**refresh bash_profile**
+```
+$ source .bash_profile
+```
 
 ##Useful Fonctions
 
