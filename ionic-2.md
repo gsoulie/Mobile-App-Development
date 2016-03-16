@@ -26,6 +26,15 @@ ionic 2 is not yet available in final version, but is it possible to create ioni
 
 ```$ ionic g page myNewPage```
 
+###Configuration des variables d’environement
+
+```nano ~/.bash_profile```
+
+Puis ajouter dans le fichier bash : 
+
+```export ANDROID_HOME=/Users/gsoulie/Library/android-sdk-macosx
+export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoulie/Library/android-sdk-macosx/platform-tools```
+
 ##Useful Fonctions
 
 **get specific platform**
