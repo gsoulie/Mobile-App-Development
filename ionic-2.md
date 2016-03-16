@@ -28,7 +28,7 @@ ionic 2 is not yet available in final version, but is it possible to create ioni
 
 ##Useful Fonctions
 
-**target platform**
+**get specific platform**
 
 ```
 var isWebView = ionic.Platform.isWebView();
