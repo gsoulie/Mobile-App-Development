@@ -10,15 +10,15 @@ ionic 2 is not yet available in final version, but is it possible to create ioni
 
 ```$ sudo npm install -g ionic@beta```
 
-Updating ionic 2 framework
+**Updating ionic 2 framework**
 
 ```$ npm install -g ionic@beta```
 
-ionic 2 project creation
+**ionic 2 project creation**
 
 ```$ ionic start myionic2project --v2```
 
-ionic 2 tutorial app
+**ionic 2 tutorial app**
 
 ```$ ionic start myTutorial tutorial --v2```
 
