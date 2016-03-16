@@ -223,7 +223,7 @@ This solution using the local device database. You can make some complex SQL que
 
 **Intallation**
 
-Since project is created, intall cordova sqlite storage plugin
+After the project is created, intall cordova sqlite storage plugin
 
 ```$ ionic plugin add cordova-sqlite-storage```
 
