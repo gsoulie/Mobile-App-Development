@@ -611,6 +611,8 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 
 ##Internationalization
 
+[Back to top](#ionic 2)
+
 **cordova plugin installation**
 
 ```
@@ -631,7 +633,7 @@ $ npm install ng2-translate --save
 
 **Create each langage i18n file**
 
-First, create **assets** folder under **wwww**, next jum into **assets** and create **i18n** folder.
+First, create **assets** folder under **www**, next jum into **assets** and create **i18n** folder.
 
 Create as many json files whose names are equal to a specific locale/language name. For example, we will work with en, de and fr locals, so our file structure should look like this:
 
@@ -715,15 +717,17 @@ For this code to work we need to find current navigator language. If current lan
 ```
 import {Page} from 'ionic/ionic';
 import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
-
+ 
 @Page({
   templateUrl: 'build/pages/home/home.html',
   pipes: [TranslatePipe]
 })
-
 export class HomePage {
   constructor(translate: TranslateService) {
     this.translate = translate;
+    this.pet = 'puppies';
+  }
+}
 ```
 
 **HomePage view**
