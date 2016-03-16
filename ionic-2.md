@@ -607,3 +607,164 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 ```
 
 ####Create Firebase account
+
+
+##Internationalization
+
+**cordova plugin installation**
+
+```
+$ cordova plugin add cordova-plugin-whitelist
+```
+
+**configure index.html**
+
+```
+<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
+```
+
+**Intallation of NG2-Translate**
+
+```
+$ npm install ng2-translate --save
+```
+
+**Create each langage i18n file**
+
+First, create **assets** folder under **wwww**, next jum into **assets** and create **i18n** folder.
+
+Create as many json files whose names are equal to a specific locale/language name. For example, we will work with en, de and fr locals, so our file structure should look like this:
+
+```
+www/assets/i18n:en.json
+www/assets/i18n:de.json
+www/assets/i18n:fr.json
+```
+
+Each i18n file looks like :
+
+```
+{
+    "title" : "Internationalization Example",   
+    "segment": {    
+        "puppies": "Puppies",
+        "kittens": "Kittens"
+    }
+}
+```
+
+**Import ng2-translate into app.js**
+
+```
+import {App, Platform} from 'ionic/ionic';
+import {HomePage} from './pages/home/home';
+import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
+ 
+ 
+@App({
+  template: '<ion-nav [root]="rootPage"></ion-nav>',
+  config: {},
+  providers: [TranslateService],
+  pipes: [TranslatePipe]
+})
+ 
+export class MyApp {
+  constructor(platform: Platform, translate: TranslateService,) {
+    this.rootPage = HomePage;
+    this.translate = translate;    
+ 
+    this.initializeTranslateServiceConfig();
+  }
+ 
+  initializeTranslateServiceConfig() {
+    var prefix = 'assets/i18n/';
+    var suffix = '.json';
+    this.translate.useStaticFilesLoader(prefix, suffix);
+ 
+    var userLang = navigator.language.split('-')[0];
+    userLang = /(de|en|hr)/gi.test(userLang) ? userLang : 'en';
+ 
+    this.translate.setDefaultLang('en');
+ 
+    this.translate.use(userLang);
+  }
+}
+```
+
+**configure ng2-translate service**
+
+```
+initializeTranslateServiceConfig() {
+  var prefix = 'assets/i18n/';
+  var suffix = '.json';
+  this.translate.useStaticFilesLoader(prefix, suffix);
+ 
+  var userLang = navigator.language.split('-')[0];
+  userLang = /(de|en|hr)/gi.test(userLang) ? userLang : 'en';
+ 
+  this.translate.setDefaultLang('en');
+ 
+  this.translate.use(userLang);
+}
+```
+
+For this code to work we need to find current navigator language. If current language is one of three predefined (en, de, or hr) we will use it as an initial application language. If not, we’ll use English as a default one:
+
+**HomePage configuration**
+
+```
+import {Page} from 'ionic/ionic';
+import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
+
+@Page({
+  templateUrl: 'build/pages/home/home.html',
+  pipes: [TranslatePipe]
+})
+
+export class HomePage {
+  constructor(translate: TranslateService) {
+    this.translate = translate;
+```
+
+**HomePage view**
+
+```
+<ion-navbar *navbar>
+  <ion-title>
+    {{ "title" | translate }}
+  </ion-title>
+</ion-navbar>
+ 
+<ion-content class="home">
+  <div padding>
+    <ion-segment [(ngModel)]="pet">
+      <ion-segment-button value="puppies">
+        {{ "segment.puppies" | translate }}
+      </ion-segment-button>
+      <ion-segment-button value="kittens">
+        {{ "segment.kittens" | translate }} 
+      </ion-segment-button>      
+    </ion-segment>
+  </div>
+ 
+  <div [ngSwitch]="pet">
+    <ion-list *ngSwitchWhen="'puppies'">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="http://ionicframework.com/dist/preview-app/www/img/thumbnail-puppy-1.jpg">
+        </ion-thumbnail>
+        <h2>Ruby</h2>
+      </ion-item>
+    </ion-list>
+ 
+    <ion-list *ngSwitchWhen="'kittens'">
+      <ion-item>
+        <ion-thumbnail item-left>
+          <img src="http://ionicframework.com/dist/preview-app/www/img/thumbnail-kitten-3.jpg">
+        </ion-thumbnail>
+        <h2>Luna</h2>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+```
