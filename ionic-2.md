@@ -530,29 +530,18 @@ $ ionic plugin add cordova-plugin-statusbar
 **customization**
 
 ```
-var app = angular.module('ionicApp', ['ionic'])
-
-.run(function() {
-    if(window.StatusBar) {
-      StatusBar.overlaysWebView(true);
-      StatusBar.style(1) //Light
-      StatusBar.style(2) //Black, transulcent
-      StatusBar.style(3) //Black, opaque
-    }
-});
-
-// styles: Default : 0, LightContent: 1, BlackTranslucent: 2, BlackOpaque: 3
-$cordovaStatusbar.style(1);
-
-// supported names: black, darkGray, lightGray, white, gray, red, green,
-// blue, cyan, yellow, magenta, orange, purple, brown
-$cordovaStatusbar.styleColor('black');
-
-$cordovaStatusbar.styleHex('#000');
-
-$cordovaStatusbar.hide();
-
-$cordovaStatusbar.show();
+initializeApp() {
+    this.platform.ready().then(() => {
+       
+      if (window.StatusBar) {
+        //window.StatusBar.styleDefault();
+        window.Statusbar.styleHex('#A81910');
+        //window.Statusbar.styleColor('black');
+        //window.Statusbar.hide();
+        //window.Statusbar.show();
+      }
+    });
+  }
 ```
 
 ##Components
