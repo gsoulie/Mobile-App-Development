@@ -611,7 +611,7 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 
 ##Internationalization
 
-[Back to top](#ionic 2)
+[Back to top](#ionic)
 
 **cordova plugin installation**
 
