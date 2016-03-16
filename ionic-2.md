@@ -1,35 +1,34 @@
 #ionic 2
 
-documentation officielle : (http://ionicframework.com/docs/v2/getting-started/migration/)
+Official ionic 2 documentation : (http://ionicframework.com/docs/v2/getting-started/migration/)
 
-structure d'un projet ionic 2 (http://ionicframework.com/docs/v2/getting-started/tutorial/project-structure/)
+ionic 2 project structure (http://ionicframework.com/docs/v2/getting-started/tutorial/project-structure/)
 
-ressources josh morony : (http://www.joshmorony.com/category/ionic-tutorials/)
+Josh MORONY resources : (http://www.joshmorony.com/category/ionic-tutorials/)
 
-ionic 2 n'étant pas encore déployé en version GA, il est toutefois possible de créer des projets basés sur ionic 2 en installant la beta
+ionic 2 is not yet available in final version, but is it possible to create ionic projects with the ionic 2 beta which can be installed as followed CLI
 
 ```$ sudo npm install -g ionic@beta```
 
-Update du CLI en cas de MAJ du framework
-```
-npm install -g ionic@beta
-```
+Updating ionic 2 framework
 
-création d'un projet compatible ionic 2
+```$ npm install -g ionic@beta```
+
+ionic 2 project creation
 
 ```$ ionic start myionic2project --v2```
 
-Découvrir le tutorial ionic 2
+ionic 2 tutorial app
 
 ```$ ionic start myTutorial tutorial --v2```
 
-**Générer une nouvelle page dans un projet ionic 2**
+**Generate new page in ionic 2 project**
 
 ```$ ionic g page myNewPage```
 
-##Fonctions utiles
+##Useful Fonctions
 
-**identifier une plateforme**
+**target platform**
 
 ```
 var isWebView = ionic.Platform.isWebView();
@@ -44,11 +43,11 @@ var currentPlatformVersion = ionic.Platform.version();
 ionic.Platform.exitApp(); // stops the app
 ```
 
-##Géolocalisation
+##Geolocation
 
 source : (http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
 
-**Ajouter les dépendances Google Map API dans le index.html**
+**Adding Google Map API depency in index.html**
 
 ```
 <script src="http://maps.google.com/maps/api/js"></script>
@@ -56,15 +55,15 @@ source : (http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-v
 <script src="build/js/app.bundle.js"></script>
 ```
 
-**Important** Lors de la mise en production de l'application il faudra créer une clé API Google Map et renseigner cette clé en paramètre
+**Important** During production deployment, you will have to create Google MAP API key and put it in parameter
 
-**Importer la nouvelle page dans app.core.scss**
+**Import the new page in app.core.scss**
 
 ```
 @import "pages/map/map";
 ```
 
-**Charger une Map (map.html)**
+**Loading Map (map.html)**
 
 
 ```
@@ -82,7 +81,7 @@ source : (http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-v
 </ion-content>
 ```
 
-Ensuite spécifier la configuration de la ion-navbar dans le app.js
+Next, specify ion-navbar configuration in app.js
 ```
 @App({
   template: '<ion-nav [root]="root"></ion-nav>',
@@ -97,7 +96,7 @@ export class AppCmp {
 
 ```
 
-**Modification du controller map.js**
+**Updating map.js**
 
 ```
 import {Page, Geolocation} from 'ionic/ionic';
@@ -126,7 +125,7 @@ export class MapPage {
 }
 ```
 
-**Style de la page (map.scss)**
+**Styling page (very important) (map.scss)**
 
 ```
 .scroll {
@@ -139,13 +138,13 @@ export class MapPage {
 }
 ```
 
-**Ajout du pluging geolocation**
+**cordova plugin installation**
 
 ```
 $ ionic plugin add cordova-plugin-geolocation
 ```
 
-**Modification de la fonction loadMap**
+**Updating loadMap function**
 
 ```
 loadMap(){
@@ -173,7 +172,7 @@ loadMap(){
 }
 ```
 
-**Ajout de marker (map.js)**
+**Adding marker function (map.js)**
 
 ```
 addMarker(){
@@ -191,7 +190,7 @@ addMarker(){
 }
 ```
 
-**Ajout fonction addInfoWindow (map.js)**
+**Adding addInfoWindow function (map.js)**
 
 ```
 addInfoWindow(marker, content){
@@ -211,24 +210,24 @@ addInfoWindow(marker, content){
 
 ##Database
 
-###Première solution
-Deux grandes solutions sont disponibles pour le stockage de données, le stockage local HTML5 et l'utilisation de la base de données SQLite.
+###First solution
+There is two main solutions for data storage. The first one is the local HTML5 storage and the second is using SQLite database storage.
 
 source : (https://www.thepolyglotdeveloper.com/2015/12/use-sqlite-in-ionic-2-instead-of-local-storage/)
 
-####Stockage HTML5
-Le stockage HTML5 permet l'enregistrement de clé-valeurs. Cette solution peut suffire pour de petites applications mais n'est pour le requêtage SQL. D'autre part, cette solution est limitée à 10MB de données
+####HTML5 local storage
+HTML5 storage provide a key-value storage. This solution can be useful for small applications, but is not adapted for SQL querying. On the other hand, this solution is limitated to 10MB of data storage.
 
-####Base de données SQLite
-Cette solution plus classique, utilise la base de données locale du device. Elle permet le requêtage SQL.
+####SQLite database
+This solution using the local device database. You can make some complex SQL query for retrieve data.
 
 **Intallation**
 
-Après avoir créé le projet ionic 2, installer le plugin cordova correspondant
+Since project is created, intall cordova sqlite storage plugin
 
 ```$ ionic plugin add cordova-sqlite-storage```
 
-**Initialisation de la BDD (app.js)**
+**Database initialization (app.js)**
 
 ```
 import {App, IonicApp, Platform, Storage, SqlStorage} from 'ionic-angular';
@@ -270,7 +269,7 @@ class MyApp {
 }
 ```
 
-**Interaction avec la BDD (home.js)**
+**Database manipulation (home.js)**
 
 ```
 import {Page, App, IonicApp, Platform, Storage, SqlStorage} from 'ionic-angular';
@@ -324,7 +323,7 @@ export class HomePage {
     }
 }
 ```
-**Affichage des données (home.html)**
+**Displaying data from database (home.html)**
 
 ```
 <ion-navbar *navbar>
@@ -343,11 +342,13 @@ export class HomePage {
     </ion-list>
 </ion-content>
 ```
-###Seconde solution
+###Second solution
 
-Utilisation de **SqlStorage**. Cette méthode est recommandée car les données seront automatiquement enregistrées dans le système de stockage approprié selon l'OS ciblé
+Is recommanded using **SqlStorage**. 
 
-**Exemple d'utilisation**
+This is the preferred storage engine, as data will be stored in appropriate app storage, unlike Local Storage which is treated differently by the OS.
+
+**Usage**
 
 ```
 let storage = new Storage(SqlStorage, options);
@@ -362,13 +363,13 @@ storage.query('select * from projects').then((resp) => {})
 
 ##Camera
 
-**Installation du plugin**
+**cordova plugin installation**
 
 ```
 $ ionic plugin add cordova-plugin-camera
 ```
 
-**Fonction pour prendre une photo**
+**Taking photo**
 
 ```
 let options = {
@@ -390,13 +391,13 @@ navigator.camera.getPicture(
 );
 ```
 
-##Requête HTTP
+##HTTP query
 
 source : (http://www.joshmorony.com/using-http-to-fetch-remote-data-from-a-server-in-ionic-2/)
 
-url du service reddit API pour le jeu de données de test : (https://www.reddit.com/r/gifs/top/.json?limit=10&sort=hot)
+reddit API url for testing app : (https://www.reddit.com/r/gifs/top/.json?limit=10&sort=hot)
 
-**Création de la Vue (page.html)**
+**Create the view (page.html)**
 
 ```
 <ion-navbar *navbar>
@@ -412,7 +413,7 @@ url du service reddit API pour le jeu de données de test : (https://www.reddit.
 </ion-content>
 ```
 
-**Création du controller (page.js)**
+**Create controller (page.js)**
 
 ```
 import {Page} from 'ionic/ionic';
@@ -436,7 +437,7 @@ export class Page {
 }
 ```
 
-la lib **map** est importée uniquement parceque nous avons besoin de sa fonction http.get
+The **map** lib is only imported because we need is http.get function
 
 ##Navigation
 
@@ -512,21 +513,21 @@ export class HomePage {
 }
 ```
 
-**Retirer une page de la navigation**
+**Remove page from navigation**
 
-Utiliser ```this.nav.pop(...)```
+Using ```this.nav.pop(...)```
 
-##Gestion des thèmes
+##Themes
 
 ###Statusbar
 
-**installation plugin cordova**
+**cordova plugin installation**
 
 ```
 $ ionic plugin add cordova-plugin-statusbar
 ```
 
-**customisation**
+**customization**
 
 ```
 var app = angular.module('ionicApp', ['ionic'])
@@ -554,7 +555,7 @@ $cordovaStatusbar.hide();
 $cordovaStatusbar.show();
 ```
 
-##Composants
+##Components
 
 ###Combobox
 
@@ -573,28 +574,28 @@ $cordovaStatusbar.show();
 </div>
 ```
 
-## Accès fichier
+## File access
 
 source : (https://forum.ionicframework.com/t/how-to-save-an-image-locally-with-ionic-2/46257/4)
 
 ## Backend Firebase
 
-### Exemple social network app
+### Network app sample
 
 source : (http://www.gajotres.net/ionic-2-succesfull-oauth-social-login-with-firebase/)
 source 2 : (https://www.toptal.com/front-end/building-multi-platform-real-time-mobile-applications-using-ionic-framework-and-firebase)
 
-**Installation plugin Cordova**
+**cordova plugin installation**
 
 ```
 cordova plugin add cordova-plugin-whitelist
 cordova plugin add cordova-plugin-inappbrowser@1.1.0
 ```
 
-**Configuration du app.html**
+**app.html configuration**
 
 ```
 <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
 ```
 
-####Création du compte Firebase
+####Create Firebase account
