@@ -231,72 +231,90 @@ Après avoir créé le projet ionic 2, installer le plugin cordova correspondant
 **Initialisation de la BDD (app.js)**
 
 ```
-import {App, Platform, Storage, SqlStorage} from 'ionic/ionic';
+import {App, IonicApp, Platform, Storage, SqlStorage} from 'ionic-angular';
 import {HomePage} from './pages/home/home';
- 
+
 @App({
-    template: `
-        <ion-nav [root]="root"></ion-nav>
-        <ion-overlay></ion-overlay>
-    `,
+  templateUrl: 'build/app.html',
+  config: {}
 })
- 
-export class MyApp {
-    constructor(platform: Platform) {
-        this.platform = platform;
-        this.initializeApp();
-        this.root = HomePage;
-    }
- 
-    initializeApp() {
-        this.platform.ready().then(() => {
-            this.storage = new Storage(SqlStorage);
-            this.storage.query('CREATE TABLE IF NOT EXISTS people (id INTEGER PRIMARY KEY AUTOINCREMENT, firstname TEXT, lastname TEXT)').then((data) => {
-                console.log("TABLE CREATED -> " + JSON.stringify(data.res));
-            }, (error) => {
-                console.log("ERROR -> " + JSON.stringify(error.err));
-            });
+class MyApp {
+  static get parameters() {
+    return [[IonicApp], [Platform]];
+  }
+
+  constructor(app, platform) {
+    // set up our app
+    this.app = app;
+    this.platform = platform;
+    this.initializeApp();
+
+    // make HelloIonicPage the root (or first) page
+    this.rootPage = HomePage;
+  }
+
+  initializeApp() {
+    this.platform.ready().then(() => {
+        this.storage = new Storage(SqlStorage);
+        this.storage.query('CREATE TABLE IF NOT EXISTS T_TASKS (id INTEGER PRIMARY KEY AUTOINCREMENT, title TEXT)').then((data) => {
+            console.log("TABLE CREATED -> " + JSON.stringify(data.res));//alert("Table créée");
+        }, (error) => {
+            console.log("ERROR -> " + JSON.stringify(error.err));
         });
-    }
+   
+      if (window.StatusBar) {
+        window.Statusbar.styleHex('#A81910');
+      }
+    });
+  }
 }
 ```
 
 **Interaction avec la BDD (home.js)**
 
 ```
-import {Platform, Page, Storage, SqlStorage} from 'ionic/ionic';
- 
+import {Page, App, IonicApp, Platform, Storage, SqlStorage} from 'ionic-angular';
+
 @Page({
-    templateUrl: 'build/pages/home/home.html',
+  templateUrl: 'build/pages/test/test.html'
 })
- 
-export class HomePage {
-    constructor(platform: Platform) {
-        this.platform = platform;
-        this.people = [];
-        this.platform.ready().then(() => {
-            this.storage = new Storage(SqlStorage);
-            this.refresh();
-        });
+
+export class TestPage {
+    static get parameters() {
+      return [[Platform]];
     }
- 
+
+    constructor(platform) {
+            this.platform = platform;
+            this.cards = [];
+            this.platform.ready().then(() => {
+                this.storage = new Storage(SqlStorage);
+                this.refresh();
+            })
+        }
+   
     add() {
-        this.platform.ready().then(() => {
-            this.storage.query("INSERT INTO people (firstname, lastname) VALUES ('Nic', 'Raboy')").then((data) => {
-                console.log(JSON.stringify(data.res));
-            }, (error) => {
-                console.log("ERROR -> " + JSON.stringify(error.err));
+
+        if(this.title !== ""){
+            this.platform.ready().then(() => {
+                this.storage.query("INSERT INTO T_TASKS (title) VALUES (?)",this.title).then((data) => {
+                    console.log(JSON.stringify(data.res));
+                }, (error) => {
+                    console.log("ERROR -> " + JSON.stringify(error.err));
+                });
             });
-        });
+
+            refresh();
+        }
     }
- 
+
     refresh() {
         this.platform.ready().then(() => {
-            this.storage.query("SELECT * FROM people").then((data) => {
-                this.people = [];
+            this.storage.query("SELECT * FROM T_TASKS").then((data) => {
+                this.cards = [];
                 if(data.res.rows.length > 0) {
                     for(var i = 0; i < data.res.rows.length; i++) {
-                        this.people.push({firstname: data.res.rows.item(i).firstname, lastname: data.res.rows.item(i).lastname});
+                        this.cards.push({title: data.res.rows.item(i).title});
                     }
                 }
             }, (error) => {
