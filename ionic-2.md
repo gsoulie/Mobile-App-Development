@@ -276,10 +276,10 @@ class MyApp {
 import {Page, App, IonicApp, Platform, Storage, SqlStorage} from 'ionic-angular';
 
 @Page({
-  templateUrl: 'build/pages/test/test.html'
+  templateUrl: 'build/pages/home/home.html'
 })
 
-export class TestPage {
+export class HomePage {
     static get parameters() {
       return [[Platform]];
     }
