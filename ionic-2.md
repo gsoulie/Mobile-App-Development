@@ -63,7 +63,7 @@ ionic.Platform.exitApp(); // stops the app
 ```
 
 ##Geolocation
-[Back to top]()
+[Back to top](https://github.com/gsoulie/ionic/edit/master/ionic-2.md)
 
 source : (http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
 
