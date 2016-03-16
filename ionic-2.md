@@ -211,6 +211,7 @@ addInfoWindow(marker, content){
 
 ##Database
 
+###Première solution
 Deux grandes solutions sont disponibles pour le stockage de données, le stockage local HTML5 et l'utilisation de la base de données SQLite.
 
 source : (https://www.thepolyglotdeveloper.com/2015/12/use-sqlite-in-ionic-2-instead-of-local-storage/)
@@ -323,6 +324,22 @@ export class HomePage {
         </ion-item>
     </ion-list>
 </ion-content>
+```
+###Seconde solution
+
+Utilisation de **SqlStorage**. Cette méthode est recommandée car les données seront automatiquement enregistrées dans le système de stockage approprié selon l'OS ciblé
+
+**Exemple d'utilisation**
+
+```
+let storage = new Storage(SqlStorage, options);
+storage.set('name', 'Max');
+storage.get('name').then((name) => {
+});
+
+// Sql storage also exposes the full engine underneath
+storage.query('insert into projects(name, data) values("Cool Project", "blah")');
+storage.query('select * from projects').then((resp) => {})
 ```
 
 ##Camera
