@@ -216,10 +216,10 @@ Deux grandes solutions sont disponibles pour le stockage de données, le stockag
 
 source : (https://www.thepolyglotdeveloper.com/2015/12/use-sqlite-in-ionic-2-instead-of-local-storage/)
 
-#####Stockage HTML5
+####Stockage HTML5
 Le stockage HTML5 permet l'enregistrement de clé-valeurs. Cette solution peut suffire pour de petites applications mais n'est pour le requêtage SQL. D'autre part, cette solution est limitée à 10MB de données
 
-#####Base de données SQLite
+####Base de données SQLite
 Cette solution plus classique, utilise la base de données locale du device. Elle permet le requêtage SQL.
 
 **Intallation**
