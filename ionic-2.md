@@ -22,6 +22,10 @@ ionic 2 is not yet available in final version, but is it possible to create ioni
 
 ```$ ionic start myTutorial tutorial --v2```
 
+**add platform support to project**
+
+```$ ionic platform add android```
+
 **Generate new page in ionic 2 project**
 
 ```$ ionic g page myNewPage```
@@ -32,13 +36,14 @@ ionic 2 is not yet available in final version, but is it possible to create ioni
 
 **Configure Android environment variable** : 
 
-```export ANDROID_HOME=/Users/gsoulie/Library/android-sdk-macosx
-export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoulie/Library/android-sdk-macosx/platform-tools```
+```
+export ANDROID_HOME=/Users/gsoulie/Library/android-sdk-macosx
+export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoulie/Library/android-sdk-macosx/platform-tools
+```
 
 **refresh bash_profile**
-```
-$ source .bash_profile
-```
+
+```$ source .bash_profile```
 
 ##Useful Fonctions
 
