@@ -21,11 +21,11 @@
 
 ##Start
 
-Official ionic 2 documentation : (http://ionicframework.com/docs/v2/getting-started/migration/)
+[Official ionic 2 documentation](http://ionicframework.com/docs/v2/getting-started/migration/)
 
-ionic 2 project structure (http://ionicframework.com/docs/v2/getting-started/tutorial/project-structure/)
+[ionic 2 project structure](http://ionicframework.com/docs/v2/getting-started/tutorial/project-structure/)
 
-Josh MORONY resources : (http://www.joshmorony.com/category/ionic-tutorials/)
+[Josh MORONY resources](http://www.joshmorony.com/category/ionic-tutorials/)
 
 ionic 2 is not yet available in final version, but is it possible to create ionic projects with the ionic 2 beta which can be installed as followed CLI
 
@@ -180,8 +180,7 @@ ionic.Platform.exitApp(); // stops the app
 ##Geolocation
 [Back to top](#ionic-2)  
 
-
-source : (http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
+[source](http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
 
 **Adding Google Map API depency in index.html**
 
@@ -351,7 +350,7 @@ addInfoWindow(marker, content){
 ###First solution
 There is two main solutions for data storage. The first one is the local HTML5 storage and the second is using SQLite database storage.
 
-source : (https://www.thepolyglotdeveloper.com/2015/12/use-sqlite-in-ionic-2-instead-of-local-storage/)
+[source](https://www.thepolyglotdeveloper.com/2015/12/use-sqlite-in-ionic-2-instead-of-local-storage/)
 
 ####HTML5 local storage
 HTML5 storage provide a key-value storage. This solution can be useful for small applications, but is not adapted for SQL querying. On the other hand, this solution is limitated to 10MB of data storage.
@@ -547,9 +546,9 @@ navigator.camera.getPicture(
 ##HTTP query
 [Back to top](#ionic-2)  
 
-source : (http://www.joshmorony.com/using-http-to-fetch-remote-data-from-a-server-in-ionic-2/)
+[source](http://www.joshmorony.com/using-http-to-fetch-remote-data-from-a-server-in-ionic-2/)
 
-reddit API url for testing app : (https://www.reddit.com/r/gifs/top/.json?limit=10&sort=hot)
+[reddit API url for testing app](https://www.reddit.com/r/gifs/top/.json?limit=10&sort=hot)
 
 **Create the view (page.html)**
 
@@ -742,15 +741,15 @@ For clickable list you have to use
 ##File access
 [Back to top](#ionic-2)  
 
-source : (https://forum.ionicframework.com/t/how-to-save-an-image-locally-with-ionic-2/46257/4)
+[source](https://forum.ionicframework.com/t/how-to-save-an-image-locally-with-ionic-2/46257/4)
 
 ##Backend Firebase
 [Back to top](#ionic-2)  
 
 ###Network app sample
 
-source : (http://www.gajotres.net/ionic-2-succesfull-oauth-social-login-with-firebase/)
-source 2 : (https://www.toptal.com/front-end/building-multi-platform-real-time-mobile-applications-using-ionic-framework-and-firebase)
+[source](http://www.gajotres.net/ionic-2-succesfull-oauth-social-login-with-firebase/)
+[source 2](https://www.toptal.com/front-end/building-multi-platform-real-time-mobile-applications-using-ionic-framework-and-firebase)
 
 **cordova plugin installation**
 
