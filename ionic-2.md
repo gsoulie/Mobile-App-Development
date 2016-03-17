@@ -1,8 +1,8 @@
 #ionic 2
 
 ##### Table of Contents  
-[Fct](#useful\/functions)  
-[Emphasis](#geolocation)  
+[Useful functions](#useful-functions)  
+[Geolocation](#geolocation)  
 
 
 
