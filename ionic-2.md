@@ -944,6 +944,15 @@ $ cordova plugin rm cordova-plugin-console
 
 ###Android publishing
 
+First, check your config.xml file located in :
+
+```
+app/platforms/ios/AppName/config.xml
+app/platforms/android/res/xml
+```
+
+more information about it's configuration [here](http://cordova.apache.org/docs/en/latest/config_ref/index.html)
+
 To generate a release build for Android :
 
 ```
