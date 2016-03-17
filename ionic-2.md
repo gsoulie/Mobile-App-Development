@@ -659,6 +659,7 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 
 ##Internationalization
 [Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
+[Back to top](#ionic-2)  
 
 **cordova plugin installation**
 
