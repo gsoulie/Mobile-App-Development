@@ -3,6 +3,8 @@
 ##### Table of Contents  
 [Start](#start)  
 [Atom configuration](#work-with-atom)  
+[Cordova](#cordova)  
+[Gulp](#gulp)  
 [Useful functions](#useful-functions)  
 [Geolocation](#geolocation)  
 [TypeScript](#typescript)  
@@ -82,6 +84,42 @@ export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoul
 ```$ ionic serve --lab```
 
 ##Work with Atom
+
+###1 - Install Atom
+
+###2 - Install shell commands
+
+Open your Atom editor and doing
+
+*Main menu -> Install shell command*
+
+It allows you to use ```$ apm``` command to install Atom packages
+
+###3 - Configure Atom auto-updating
+
+```$ apm install auto-update-packages```
+
+Next restart Atom
+
+###4 - Useful packages
+
+```$ apm install atom-typescript```
+
+```$ apm install ionic-atom```
+
+```$ apm install atom-beautify```
+
+##Cordova
+
+**Install Cordova**
+
+```$ sudo npm install -g cordova```
+
+##Gulp
+
+Gulp package allows you tu override style and theme like material design for Android
+
+```$ sudo npm install -g gulp```
 
 ##Useful Functions
 [Back to top](#ionic-2)  
