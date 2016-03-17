@@ -3,6 +3,16 @@
 ##### Table of Contents  
 [Useful functions](#useful-functions)  
 [Geolocation](#geolocation)  
+[TypeScript](#typescript)
+[Database](#database)
+[Camera](#camera)
+[HTTP query](#http-query)
+[Navigation](#navigation)
+[Themes](#themes)
+[Components](#components)
+[File access](#file-access)
+[Backend Firebase](#backend-firebase)
+[Internationalization](#internationalization)
 
 
 
@@ -618,15 +628,15 @@ For clickable list you have to use
 ```
 
 
-## File access
+##File access
 [Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
 
 source : (https://forum.ionicframework.com/t/how-to-save-an-image-locally-with-ionic-2/46257/4)
 
-## Backend Firebase
+##Backend Firebase
 [Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
 
-### Network app sample
+###Network app sample
 
 source : (http://www.gajotres.net/ionic-2-succesfull-oauth-social-login-with-firebase/)
 source 2 : (https://www.toptal.com/front-end/building-multi-platform-real-time-mobile-applications-using-ionic-framework-and-firebase)
