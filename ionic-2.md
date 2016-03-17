@@ -1,4 +1,7 @@
+#ionic 2
+
 ##### Table of Contents  
+[Start](#start)
 [Useful functions](#useful-functions)  
 [Geolocation](#geolocation)  
 [TypeScript](#typescript)  
@@ -12,7 +15,7 @@
 [Backend Firebase](#backend-firebase)  
 [Internationalization](#internationalization)  
 
-#ionic 2
+##Start
 
 Official ionic 2 documentation : (http://ionicframework.com/docs/v2/getting-started/migration/)
 
