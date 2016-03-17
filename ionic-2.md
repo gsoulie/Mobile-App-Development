@@ -43,7 +43,9 @@ ionic 2 is not yet available in final version, but is it possible to create ioni
 ```$ ionic start myTutorial tutorial --v2```
 
 **add platform support to project**
+
 (run it inside you're project folder)
+
 ```$ ionic platform add android```
 
 **Generate new page in ionic 2 project**
