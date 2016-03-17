@@ -62,7 +62,7 @@ export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoul
 ```$ source .bash_profile```
 
 ##Useful Functions
-[Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
+[Back to top](#ionic-2)  
 
 **get specific platform**
 
@@ -80,7 +80,7 @@ ionic.Platform.exitApp(); // stops the app
 ```
 
 ##Geolocation
-[Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
+[Back to top](#ionic-2)  
 
 
 source : (http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
@@ -245,10 +245,10 @@ addInfoWindow(marker, content){
 ```
 
 ##TypeScript
-[Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
+[Back to top](#ionic-2)  
 
 ##Database
-[Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
+[Back to top](#ionic-2)  
 
 ###First solution
 There is two main solutions for data storage. The first one is the local HTML5 storage and the second is using SQLite database storage.
@@ -383,7 +383,7 @@ export class HomePage {
 </ion-content>
 ```
 ###Second solution
-[Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
+[Back to top](#ionic-2)  
 
 Is recommanded using **SqlStorage**. 
 
@@ -403,7 +403,7 @@ storage.query('select * from projects').then((resp) => {})
 ```
 
 ##Camera
-[Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
+[Back to top](#ionic-2)  
 
 **cordova plugin installation**
 
@@ -434,7 +434,7 @@ navigator.camera.getPicture(
 ```
 
 ##HTTP query
-[Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
+[Back to top](#ionic-2)  
 
 source : (http://www.joshmorony.com/using-http-to-fetch-remote-data-from-a-server-in-ionic-2/)
 
@@ -483,7 +483,7 @@ export class Page {
 The **map** lib is only imported because we need is http.get function
 
 ##Navigation
-[Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
+[Back to top](#ionic-2)  
 
 **Page1.html**
 
@@ -562,7 +562,7 @@ export class HomePage {
 Using ```this.nav.pop(...)```
 
 ##Themes
-[Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
+[Back to top](#ionic-2)  
 
 ###Statusbar
 
@@ -590,7 +590,7 @@ initializeApp() {
 ```
 
 ##Components
-[Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
+[Back to top](#ionic-2)  
 
 ###Combobox
 
@@ -629,12 +629,12 @@ For clickable list you have to use
 
 
 ##File access
-[Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
+[Back to top](#ionic-2)  
 
 source : (https://forum.ionicframework.com/t/how-to-save-an-image-locally-with-ionic-2/46257/4)
 
 ##Backend Firebase
-[Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
+[Back to top](#ionic-2)  
 
 ###Network app sample
 
@@ -658,7 +658,6 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 
 
 ##Internationalization
-[Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
 [Back to top](#ionic-2)  
 
 **cordova plugin installation**
