@@ -1,5 +1,11 @@
 #ionic 2
 
+##### Table of Contents  
+[Fct](#useful fonctions)  
+[Emphasis](#geolocation)  
+
+
+
 Official ionic 2 documentation : (http://ionicframework.com/docs/v2/getting-started/migration/)
 
 ionic 2 project structure (http://ionicframework.com/docs/v2/getting-started/tutorial/project-structure/)
