@@ -1,7 +1,7 @@
 #ionic 2
 
 ##### Table of Contents  
-[Fct](#usefulfonctions)  
+[Fct](#useful_functions)  
 [Emphasis](#geolocation)  
 
 
@@ -51,7 +51,7 @@ export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoul
 
 ```$ source .bash_profile```
 
-##Useful Fonctions
+##Useful Functions
 
 **get specific platform**
 
