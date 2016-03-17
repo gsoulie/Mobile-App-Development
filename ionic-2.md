@@ -1,7 +1,7 @@
 #ionic 2
 
 ##### Table of Contents  
-[Fct](#useful)  
+[Fct](#useful\/functions)  
 [Emphasis](#geolocation)  
 
 
