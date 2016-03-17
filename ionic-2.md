@@ -3,16 +3,16 @@
 ##### Table of Contents  
 [Useful functions](#useful-functions)  
 [Geolocation](#geolocation)  
-[TypeScript](#typescript) 
-[Database](#database) 
-[Camera](#camera) 
-[HTTP query](#http-query) 
-[Navigation](#navigation) 
-[Themes](#themes) 
-[Components](#components) 
-[File access](#file-access) 
-[Backend Firebase](#backend-firebase) 
-[Internationalization](#internationalization) 
+[TypeScript](#typescript)  
+[Database](#database)  
+[Camera](#camera)  
+[HTTP query](#http-query)  
+[Navigation](#navigation)  
+[Themes](#themes)  
+[Components](#components)  
+[File access](#file-access)  
+[Backend Firebase](#backend-firebase)  
+[Internationalization](#internationalization)  
 
 
 
