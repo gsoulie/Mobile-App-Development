@@ -1,7 +1,8 @@
 #ionic 2
 
 ##### Table of Contents  
-[Start](#start)
+[Start](#start)  
+[Atom configuration](#work-with-atom)  
 [Useful functions](#useful-functions)  
 [Geolocation](#geolocation)  
 [TypeScript](#typescript)  
@@ -79,6 +80,8 @@ export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoul
 **Testing app on multiple screen sizes and platform**
 
 ```$ ionic serve --lab```
+
+##Work with Atom
 
 ##Useful Functions
 [Back to top](#ionic-2)  
