@@ -17,6 +17,7 @@
 [File access](#file-access)  
 [Backend Firebase](#backend-firebase)  
 [Internationalization](#internationalization)  
+[Publishing App](#publishing-app)  
 
 ##Start
 
@@ -28,33 +29,47 @@ Josh MORONY resources : (http://www.joshmorony.com/category/ionic-tutorials/)
 
 ionic 2 is not yet available in final version, but is it possible to create ionic projects with the ionic 2 beta which can be installed as followed CLI
 
-```$ sudo npm install -g ionic@beta```
+```
+$ sudo npm install -g ionic@beta
+```
 
 **Updating ionic 2 framework**
 
-```$ npm install -g ionic@beta```
+```
+$ npm install -g ionic@beta
+```
 
 **ionic 2 project creation**
 
-```$ ionic start myionic2project --v2```
+```
+$ ionic start myionic2project --v2
+```
 
 **ionic 2 tutorial app**
 
-```$ ionic start myTutorial tutorial --v2```
+```
+$ ionic start myTutorial tutorial --v2
+```
 
 **add platform support to project**
 
 (run it inside you're project folder)
 
-```$ ionic platform add android```
+```
+$ ionic platform add android
+```
 
 **Generate new page in ionic 2 project**
 
-```$ ionic g page myNewPage```
+```
+$ ionic g page myNewPage
+```
 
 ###Configuration des variables d’environement
 
-```nano ~/.bash_profile```
+```
+nano ~/.bash_profile
+```
 
 **Configure Android environment variable** : 
 
@@ -65,11 +80,15 @@ export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoul
 
 **refresh bash_profile**
 
-```$ source .bash_profile```
+```
+$ source .bash_profile
+```
 
 **Display log with ionic serve**
 
-```$ ionic serve -l -s -c```
+```
+$ ionic serve -l -s -c
+```
 
 ```
 [--consolelogs|-c] ......  Print app console logs to Ionic CLI
@@ -83,7 +102,9 @@ export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoul
 
 **Testing app on multiple screen sizes and platform**
 
-```$ ionic serve --lab```
+```
+$ ionic serve --lab
+```
 
 ##Work with Atom
 [Back to top](#ionic-2) 
@@ -100,31 +121,43 @@ It allows you to use ```$ apm``` command to install Atom packages
 
 ###3 - Configure Atom auto-updating
 
-```$ apm install auto-update-packages```
+```
+$ apm install auto-update-packages
+```
 
 Next restart Atom
 
 ###4 - Useful packages
 
-```$ apm install atom-typescript```
+```
+$ apm install atom-typescript
+```
 
-```$ apm install ionic-atom```
+```
+$ apm install ionic-atom
+```
 
-```$ apm install atom-beautify```
+```
+$ apm install atom-beautify
+```
 
 ##Cordova
 [Back to top](#ionic-2) 
 
 **Install Cordova**
 
-```$ sudo npm install -g cordova```
+```
+$ sudo npm install -g cordova
+```
 
 ##Gulp
 [Back to top](#ionic-2) 
 
 Gulp package allows you to override style and theme like material design for Android
 
-```$ sudo npm install -g gulp```
+```
+$ sudo npm install -g gulp
+```
 
 ##Useful Functions
 [Back to top](#ionic-2)  
@@ -330,7 +363,9 @@ This solution using the local device database. You can make some complex SQL que
 
 After the project is created, intall cordova sqlite storage plugin
 
-```$ ionic plugin add cordova-sqlite-storage```
+```
+$ ionic plugin add cordova-sqlite-storage
+```
 
 **Database initialization (app.js)**
 
@@ -895,3 +930,52 @@ export class HomePage {
   </div>
 </ion-content>
 ```
+
+##Publishing app
+[Back to top](#ionic-2)
+
+Now that we have a working app, we are ready to push it live to the world! Since the Ionic team already submitted the Todo app from this guide to the app store, chances are you’ll want to follow this chapter with a new app that you make on your own.
+
+So first, we need to generate a release build of our app, targeted at each platform we wish to deploy on. Before we deploy, we should take care to adjust plugins needed during development that should not be in production mode. For example, we probably don’t want the debug console plugin enabled, so we should remove it before generating the release builds:
+
+```
+$ cordova plugin rm cordova-plugin-console
+```
+
+###Android publishing
+
+To generate a release build for Android :
+
+```
+$ cordova build --release android
+```
+
+This will generate a release build based on the settings in your config.xml. Your Ionic app will have preset default values in this file, but if you need to customize how your app is built, you can edit this file to fit your preferences
+
+Next, we can find our unsigned **APK** file in ```platforms/android/build/outputs/apk```
+
+Now, we need to sign the unsigned APK and run an alignment utility on it to optimize it and prepare it for the app store. If you already have a signing key, skip these steps and use that one instead.
+
+Let’s generate our private key using the **keytool** command that comes with the JDK.
+
+```
+$ keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
+```
+
+You’ll first be prompted to create a password for the keystore. Then, answer the rest of the nice tools’s questions and when it’s all done, you should have a file called **my-release-key.keystore** created in the current directory.
+
+**Note:** Make sure to save this file somewhere safe, if you lose it you won’t be able to submit updates to your app!
+
+To sign the unsigned APK, run the **jarsigner** tool which is also included in the JDK:
+
+```
+$ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore HelloWorld-release-unsigned.apk alias_name
+```
+
+This signs the apk in place. Finally, we need to run the zip align tool to optimize the APK. The **zipalign** tool can be found in **/path/to/Android/sdk/build-tools/VERSION/zipalign**. For example, on OS X with Android Studio installed, **zipalign is in ~/Library/Android/sdk/build-tools/VERSION/zipalign:**
+
+```
+$ zipalign -v 4 HelloWorld-release-unsigned.apk HelloWorld.apk
+```
+
+Now we have our final release binary called HelloWorld.apk and we can release this on the Google Play Store
