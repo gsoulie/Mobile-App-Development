@@ -2,7 +2,6 @@
 
 > **Warning** this guide is based on the beta of ionic 2. Consequently, some information may be outdated
 
-
 ##### Table of Contents  
 [Start](#start-with-ionic)  
 [Atom configuration](#work-with-atom)  
@@ -23,6 +22,8 @@
 [Publishing App](#publishing-app)  
 
 ##Start with ionic
+
+**Some resources**
 
 [Official ionic 2 documentation](http://ionicframework.com/docs/v2/getting-started/migration/)
 
