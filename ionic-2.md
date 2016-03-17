@@ -392,14 +392,25 @@ This is the preferred storage engine, as data will be stored in appropriate app 
 **Usage**
 
 ```
-let storage = new Storage(SqlStorage, options);
-storage.set('name', 'Max');
+import {Injectable} from 'angular2/core';
+import {Http} from 'angular2/http';
+import {Storage, SqlStorage} from 'ionic/ionic';
+
+@Injectable()
+export class Record {
+    constructor() {
+        this.storage = new Storage(SqlStorage);
+        this.storage.set('name','max');
+        this.storage.set('lastname','dupont');
+    }
+}
+
 storage.get('name').then((name) => {
 });
 
 // Sql storage also exposes the full engine underneath
-storage.query('insert into projects(name, data) values("Cool Project", "blah")');
-storage.query('select * from projects').then((resp) => {})
+this.storage.query('insert into projects(name, data) values("Cool Project", "blah")');
+this.storage.query('select * from projects').then((resp) => {})
 ```
 
 ##Camera
