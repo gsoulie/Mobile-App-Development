@@ -52,6 +52,7 @@ export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoul
 ```$ source .bash_profile```
 
 ##Useful Functions
+[Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
 
 **get specific platform**
 
