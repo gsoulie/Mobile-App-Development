@@ -3,7 +3,7 @@
 > **Warning** this guide is based on the beta of ionic 2. Consequently, some information may be outdated
 
 ##### Table of Contents  
-[Start](#start-with-ionic)  
+[Start with ionic](#start-with-ionic)  
 [Atom configuration](#work-with-atom)  
 [Cordova](#cordova)  
 [Gulp](#gulp)  
