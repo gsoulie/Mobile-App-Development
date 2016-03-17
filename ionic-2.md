@@ -120,7 +120,7 @@ Next restart Atom
 ##Gulp
 [Back to top](#ionic-2) 
 
-Gulp package allows you tu override style and theme like material design for Android
+Gulp package allows you to override style and theme like material design for Android
 
 ```$ sudo npm install -g gulp```
 
