@@ -59,6 +59,24 @@ export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoul
 
 ```$ source .bash_profile```
 
+**Display log with ionic serve**
+
+```$ ionic serve -l -s -c```
+
+```
+[--consolelogs|-c] ......  Print app console logs to Ionic CLI
+[--serverlogs|-s] .......  Print dev server logs to Ionic CLI
+[--port|-p] .............  Dev server HTTP port (8100 default)
+[--livereload-port|-i] ..  Live Reload port (35729 default)
+[--nobrowser|-b] ........  Disable launching a browser
+[--nolivereload|-r] .....  Do not start live reload
+[--noproxy|-x] ..........  Do not add proxies
+```
+
+**Testing app on multiple screen sizes and platform**
+
+```$ ionic serve --lab```
+
 ##Useful Functions
 [Back to top](#ionic-2)  
 
