@@ -1,5 +1,7 @@
 #ionic 2
 
+> **Warning** this guide is based on the beta of ionic 2. Consequently, some information may be outdated
+
 ##### Table of Contents  
 [Start](#start)  
 [Atom configuration](#work-with-atom)  
