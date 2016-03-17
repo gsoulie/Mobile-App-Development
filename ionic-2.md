@@ -592,6 +592,25 @@ initializeApp() {
 </div>
 ```
 
+###ion-list
+
+Solution for filling dynamic ion-list item
+
+```
+<ion-list> 
+    <ion-item *ngFor="#item of items">{{item.fullname}}</ion-item> 
+</ion-list>
+```
+
+For clickable list you have to use 
+
+```
+<ion-list> 
+    <button ion-item *ngFor="#item of items">{{item.fullname}}</button> 
+</ion-list>
+```
+
+
 ## File access
 [Back to top](https://github.com/gsoulie/ionic/blob/master/ionic-2.md)
 
