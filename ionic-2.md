@@ -2,8 +2,9 @@
 
 > **Warning** this guide is based on the beta of ionic 2. Consequently, some information may be outdated
 
+
 ##### Table of Contents  
-[Start](#start)  
+[Start](#start-with-ionic)  
 [Atom configuration](#work-with-atom)  
 [Cordova](#cordova)  
 [Gulp](#gulp)  
@@ -21,7 +22,7 @@
 [Internationalization](#internationalization)  
 [Publishing App](#publishing-app)  
 
-##Start
+##Start with ionic
 
 [Official ionic 2 documentation](http://ionicframework.com/docs/v2/getting-started/migration/)
 
