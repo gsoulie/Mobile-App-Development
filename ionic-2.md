@@ -61,6 +61,8 @@ $ ionic platform add android
 
 **Generate new page in ionic 2 project**
 
+It creates new folder in the project treeview with js, html and scss files
+
 ```
 $ ionic g page myNewPage
 ```
