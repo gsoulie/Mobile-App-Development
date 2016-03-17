@@ -27,9 +27,12 @@
 
 [Official ionic 2 documentation](http://ionicframework.com/docs/v2/getting-started/migration/)
 
+[Official ionic 2 native component documentation](http://ionicframework.com/docs/v2/native/Calendar/)
+
 [ionic 2 project structure](http://ionicframework.com/docs/v2/getting-started/tutorial/project-structure/)
 
 [Josh MORONY resources](http://www.joshmorony.com/category/ionic-tutorials/)
+
 
 ionic 2 is not yet available in final version, but is it possible to create ionic projects with the ionic 2 beta which can be installed as followed CLI
 
