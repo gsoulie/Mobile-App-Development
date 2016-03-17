@@ -84,6 +84,7 @@ export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoul
 ```$ ionic serve --lab```
 
 ##Work with Atom
+[Back to top](#ionic-2) 
 
 ###1 - Install Atom
 
@@ -110,12 +111,14 @@ Next restart Atom
 ```$ apm install atom-beautify```
 
 ##Cordova
+[Back to top](#ionic-2) 
 
 **Install Cordova**
 
 ```$ sudo npm install -g cordova```
 
 ##Gulp
+[Back to top](#ionic-2) 
 
 Gulp package allows you tu override style and theme like material design for Android
 
