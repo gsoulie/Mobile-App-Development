@@ -8,6 +8,7 @@
 [Cordova](#cordova)  
 [Gulp](#gulp)  
 [Useful functions](#useful-functions)  
+[Angular](#angular)  
 [Geolocation](#geolocation)  
 [TypeScript](#typescript)  
 [Database](#database)  
@@ -184,6 +185,106 @@ var currentPlatform = ionic.Platform.platform();
 var currentPlatformVersion = ionic.Platform.version();
 
 ionic.Platform.exitApp(); // stops the app
+```
+
+##Angular
+[Back to top](#ionic-2)  
+
+[new Angular 2 concepts and syntax](http://www.joshmorony.com/ionic-2-first-look-series-new-angular-2-concepts-syntax/)
+
+###Some Angular 2 concepts
+
+**Binding a Property to a value**
+```
+<input [value]="firstName">
+```
+
+This will set the elements property to fisrtName. More used to see ```{{firstName}}```
+
+**Calling a Function on an Event**
+
+```
+<button (click)="someFunction($event)">
+```
+
+This will call the someFunction function and pass in the event whenever the button is clicked on. You can replace click with any native or custom event you like. You can also use the following syntax:
+
+```
+<button (^click)="someFunction($event)">
+```
+to make the event bubble up to other elements.
+
+**Rendering Expressions**
+
+```
+<p>Hi, {{name}}</p>
+```
+
+Just like in Angular 1, this will evaluate the expression and render the result. There’s still some things that are the same!
+
+**Two Way Data Binding**
+
+In Angular 1 we could set up two way data binding by using ng-model, so if we changed a value in an input field with an ng-model it would immediately be updated elsewhere in the application if we were using that value.
+
+We can achieve the same two way data binding in Angular 2 like this:
+
+```
+<input [value]="name" (input)="name = $event.target.value">
+```
+
+This sets the value to the expression name and when we detect the input event we updated name to be the new value that was entered. To make this easier, we can still use ng-model in Angular 2 like this to achieve the same thing:
+
+```
+<input [(ng-model)]="name">
+```
+
+**Creating a Variable to Access an Element**
+
+```
+<p #myParagraph></p>
+```
+This creates a local variable that we can use to access the element, so if I wanted to add some content into this paragraph I could do the following:
+
+```
+<button (click)="myParagraph.innerHTML = 'Once upon a time...'">
+```
+
+Directives
+
+```
+<section *ngIf="showSection">
+ 
+<li *ngFor="#item of items">
+```
+We can also create embedded templates using directives like ngIf and ngFor.
+
+**Import & Export**
+
+ES6 allows us to Import and Export components. Take the following component for example:
+
+```
+import {IonicView, NavController} from 'ionic/ionic';
+ 
+@IonicView({
+  templateUrl: 'app/hello-ionic/hello-ionic.html'
+})
+export class HelloIonicPage {
+  constructor(nav: NavController) {
+    this.nav = nav;
+  }
+}
+```
+This component is making use of the IonicView and NavController components so it imports them. The HelloIonicPage component that is being created here is then exported.
+
+Now you would be able to access HelloIonicPage by importing it elsewhere:
+
+```
+import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
+```
+It’s a similar concept to Dependency Injection in Angular 1, where we would inject services we were using into the controller like this:
+
+```
+.controller('ExampleCtrl', function($scope, $state, $myService) {
 ```
 
 ##Geolocation
