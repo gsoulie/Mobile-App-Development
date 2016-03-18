@@ -8,7 +8,7 @@
 [Cordova](#cordova)  
 [Gulp](#gulp)  
 [Useful functions](#useful-functions)  
-[Angular](#angular)  
+[Angular 2](#angular-2)  
 [Geolocation](#geolocation)  
 [TypeScript](#typescript)  
 [Database](#database)  
@@ -187,10 +187,12 @@ var currentPlatformVersion = ionic.Platform.version();
 ionic.Platform.exitApp(); // stops the app
 ```
 
-##Angular
+##Angular 2
 [Back to top](#ionic-2)  
 
 [new Angular 2 concepts and syntax](http://www.joshmorony.com/ionic-2-first-look-series-new-angular-2-concepts-syntax/)
+
+AngularJS 2 is the backbone of Ionic 2, is being written for ECMAScript 6
 
 ###Some Angular 2 concepts
 
@@ -249,7 +251,7 @@ This creates a local variable that we can use to access the element, so if I wan
 <button (click)="myParagraph.innerHTML = 'Once upon a time...'">
 ```
 
-Directives
+**Directives**
 
 ```
 <section *ngIf="showSection">
@@ -285,6 +287,49 @@ It’s a similar concept to Dependency Injection in Angular 1, where we would in
 
 ```
 .controller('ExampleCtrl', function($scope, $state, $myService) {
+```
+
+**Promises**
+
+ES6 adds native support for promises, which look like this:
+
+```
+function msgAfterTimeout (msg, who, timeout) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve(`${msg} Hello ${who}!`), timeout)
+    })
+}
+msgAfterTimeout("", "Foo", 100).then((msg) =>
+    msgAfterTimeout(msg, "Bar", 200)
+).then((msg) => {
+    console.log(`done after 300ms:${msg}`)
+})
+```
+
+rather than callbacks which can end up looking like this:
+
+```
+function msgAfterTimeout (msg, who, timeout, onDone) {
+    setTimeout(function () {
+        onDone(msg + " Hello " + who + "!");
+    }, timeout);
+}
+msgAfterTimeout("", "Foo", 100, function (msg) {
+    msgAfterTimeout(msg, "Bar", 200, function (msg) {
+        console.log("done after 300ms:" + msg);
+    });
+});
+```
+
+**Block Scoping**
+
+Currently, if I define a variable in JavaScript it is available anywhere within the function that I defined it in. The new block scoping features in ES6 allow you to use the new let keyword to define a variable only within a single block of code like this:
+
+```
+for (let i = 0; i < a.length; i++) {
+    let x = a[i]
+    //etc.
+}
 ```
 
 ##Geolocation
