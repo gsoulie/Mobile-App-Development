@@ -747,6 +747,23 @@ For clickable list you have to use
 ```
 
 
+###Customize tab icon
+
+It's pretty easy to do actually. When you set a tabIcon property, Ionic sets a class name on the tab, based on the name you provided. So for example, if you set ```tabIcon="customicon"```, then the resulting class names will be ```.ion-ios-hygglo-customicon``` and ```.ion-ios-hygglo-customicon-outline``` (for selected tabs) for iOS. On Android, the prefix will be ```.ion-md-``` instead of ```.ion-ios-```.
+
+Then just create a custom css, something like this:
+
+```
+.ion-ios-customicon,
+.ion-md-customicon {
+  content: url(../../assets/img/ui/customicon.svg);
+  width: 24px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+```
+
 ##File access
 [Back to top](#ionic-2)  
 
