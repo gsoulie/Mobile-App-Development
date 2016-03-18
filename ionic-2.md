@@ -521,6 +521,16 @@ this.storage.query('insert into projects(name, data) values("Cool Project", "bla
 this.storage.query('select * from projects').then((resp) => {})
 ```
 
+####PouchDB
+
+First, install cordova sqlite-storage plugin
+
+```
+$ ionic plugin add cordova-sqlite-storage
+```
+
+**TODO - implementing ionic 2 sample app**
+
 ##Camera
 [Back to top](#ionic-2)  
 
