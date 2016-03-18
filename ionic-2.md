@@ -26,6 +26,8 @@
 
 **Some resources**
 
+[ionic.io](http://docs.ionic.io/docs/io-introduction)
+
 [Official ionic 2 documentation](http://ionicframework.com/docs/v2/getting-started/migration/)
 
 [Official ionic 2 native component documentation](http://ionicframework.com/docs/v2/native/Calendar/)
