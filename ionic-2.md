@@ -1199,9 +1199,16 @@ Or simply
 $ ionic resources
 ```
 
-**Note : ** If splash screen doesn't showing, update your cordova plugin
+**Note :** If splash screen doesn't showing, update your cordova plugin
 
 ```
 ionic plugin rm cordova-plugin-splashscreen
 ionic plugin add https://github.com/apache/cordova-plugin-splashscreen.git
+```
+
+**Remove fade-in / fade-out effect**
+
+Add the following property to config.xml
+```
+<preference name="FadeSplashScreen" value="false"/>
 ```
