@@ -21,6 +21,7 @@
 [Backend Firebase](#backend-firebase)  
 [Internationalization](#internationalization)  
 [Publishing App](#publishing-app)  
+[Splash screen and appicon](#splash-screen-and-appicon)  
 
 ##Start with ionic
 
@@ -1171,3 +1172,27 @@ $ zipalign -v 4 HelloWorld-release-unsigned.apk HelloWorld.apk
 ```
 
 Now we have our final release binary called HelloWorld.apk and we can release this on the Google Play Store
+
+
+##Splash screen and appicon
+[Back to top](#ionic-2)
+
+[Appicon and Splash screen documentation](http://blog.ionic.io/automating-icons-and-splash-screens/)
+
+Save a splash.png, splash.psd or splash.ai file within the resources directory at the root of the Cordova project. Splash screen dimensions vary for each platform, device and orientation, so a square source image is required the generate each of various sizes. The source image’s minimum dimensions should be 2208x2208 px, and its artwork should be centered within the square, knowing that each generated image will be center cropped into landscape and portrait images. The splash screen’s artwork should roughly fit within a center square (1200x1200 px). This Photoshop splash screen template provides the recommended size and guidelines of the artwork’s safe zone. Additionally, when the Orientation preference config is set to either landscape or portrait mode, then only the necessary images will be generated.
+
+```
+$ ionic resources --splash
+```
+
+You can also run 
+
+```
+$ ionic resources --icon
+```
+
+Or simply
+
+```
+$ ionic resources
+```
