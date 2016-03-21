@@ -12,7 +12,8 @@
 [Geolocation](#geolocation)  
 [TypeScript](#typescript)  
 [Database](#database)  
-[Camera](#camera)  
+[Camera](#camera) 
+[Barcode Scanner](#barcode-scanner)  
 [HTTP query](#http-query)  
 [Navigation](#navigation)  
 [Themes](#themes)  
@@ -775,6 +776,11 @@ export class AdminPage{
 ```
 
 [List of camera options](https://github.com/apache/cordova-plugin-camera#module_camera.CameraOptions)
+
+
+##Barcode scanner
+
+[Barcode scanner documentation](http://ionicframework.com/docs/v2/native/BarcodeScanner/)
 
 ##HTTP query
 [Back to top](#ionic-2)  
