@@ -896,6 +896,8 @@ Solution for filling dynamic ion-list item
 <ion-list> 
     <ion-item *ngFor="#item of items">{{item.fullname}}</ion-item> 
 </ion-list>
+
+or
 ```
 
 For clickable list you have to use 
@@ -906,6 +908,51 @@ For clickable list you have to use
 </ion-list>
 ```
 
+
+**Add filter on ion-list**
+
+Consider a ion-list in which we want to hide every items which property "deleted" is set to true
+
+```
+<ion-list>
+  <ion-item-sliding *ngFor="#item of getActiveItems()" #slidingItem>
+    <ion-item>{{item.fach}} ({{item.kuerzel}})</ion-item>
+    <ion-item-options>
+      <button (click)="showEditModal(item, slidingItem)"><ion-icon name="create"></ion-icon>Bearbeiten</button>
+      <button danger (click)="doConfirm(item, slidingItem)"><ion-icon name="trash"></ion-icon>Löschen</button>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-list>
+
+
+@Page(
+    // ...
+)
+export class TestPage {
+    // ...
+    getActiveItems() {
+        // NOTE: Returning a new array might mess up the change detection of Ng2.
+        // TODO: Use an existing array instead of returning a new one each time.
+        return this.items.filter(item => !item.deleted);
+    }
+}
+```
+
+Second solution, in case that you prefer to do the filtering in the template then you can do it this way:
+
+```
+<ion-list>
+  <template ngFor #item="$implicit" [ngForOf]="items">
+    <ion-item-sliding *ngIf="!item.deleted" #slidingItem>
+      <ion-item>{{item.fach}} ({{item.kuerzel}})</ion-item>
+      <ion-item-options>
+        <button (click)="showEditModal(item, slidingItem)"><ion-icon name="create"></ion-icon>Bearbeiten</button>
+        <button danger (click)="doConfirm(item, slidingItem)"><ion-icon name="trash"></ion-icon>Löschen</button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </template>
+</ion-list>
+```
 
 ###Customize tab icon
 
