@@ -779,6 +779,7 @@ export class AdminPage{
 
 
 ##Barcode scanner
+[Back to top](#ionic-2)
 
 [Barcode scanner documentation](http://ionicframework.com/docs/v2/native/BarcodeScanner/)
 
