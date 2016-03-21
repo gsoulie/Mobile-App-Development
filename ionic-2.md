@@ -685,15 +685,25 @@ $ ionic plugin add cordova-sqlite-storage
 ##Camera
 [Back to top](#ionic-2)  
 
+**include ionic-native package**
+
+```
+$ npm install ionic-native --save
+```
+
 **cordova plugin installation**
 
 ```
 $ ionic plugin add cordova-plugin-camera
 ```
 
-**Taking photo**
+**Usage**
 
 ```
+import {Camera} from 'ionic-native';
+...
+...
+
 let options = {
   quality: 100,
   destinationType: Camera.DestinationType.FILE_URI,
