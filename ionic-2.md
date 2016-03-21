@@ -12,7 +12,7 @@
 [Geolocation](#geolocation)  
 [TypeScript](#typescript)  
 [Database](#database)  
-[Camera](#camera) 
+[Camera](#camera)   
 [Barcode Scanner](#barcode-scanner)  
 [HTTP query](#http-query)  
 [Navigation](#navigation)  
