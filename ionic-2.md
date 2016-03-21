@@ -868,6 +868,32 @@ initializeApp() {
   }
 ```
 
+**Other solution with beta3**
+
+```
+import {App, Platform} from 'ionic-angular';
+import {TabsPage} from './pages/tabs/tabs';
+
+
+@App({
+  template: '<ion-nav [root]="rootPage"></ion-nav>',
+  config: {} // http://ionicframework.com/docs/v2/api/config/Config/
+})
+export class MyApp {
+  static get parameters() {
+    return [[Platform]];
+  }
+
+  constructor(platform) {
+    this.rootPage = TabsPage;
+
+    platform.ready().then(() => {
+            StatusBar.backgroundColorByHexString("#25312C")
+    });
+  }
+}
+```
+
 ##Components
 [Back to top](#ionic-2)  
 
