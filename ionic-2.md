@@ -445,7 +445,55 @@ You can also use the config object to define platform specific behaviour:
 ##Third party lib
 [Back to top](#ionic-2)
 
-###TODO
+###Warning not tested yet !
+
+First, create a JS file containing your code, like :
+
+```
+export class myLib{
+    constructor(){
+    	// some stuff
+    }
+    
+    function1(_params){
+    	// some stuff
+    }
+    
+    function2(){
+    	// some stuff
+    }
+}
+```
+
+**Usage**
+
+Add import and providers in your root page (app.js) if you want to use your lib across your project.
+
+```
+import {MyLib} from './pages/lib/myLib';
+
+@App({
+    providers: [MyLib]
+    })
+
+export class myPage{
+	constructor(myLib: MyLib){	// or just constructor(myLib)
+		myLib.function1("test");
+	}
+}
+```
+
+In child page, **providers** in **@App** is *not necessary* in your **@Page decorator**. You can use it, but it will create another myLib instance.
+
+```
+import {MyLib} from './pages/lib/myLib';
+
+export class myPage{
+	constructor(myLib: MyLib){	// or just constructor(myLib)
+		this.result = myLib.function2();
+	}
+}
+```
 
 ##Geolocation
 [Back to top](#ionic-2)  
