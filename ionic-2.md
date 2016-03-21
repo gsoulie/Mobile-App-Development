@@ -712,6 +712,70 @@ navigator.camera.getPicture(
 );
 ```
 
+**Other way**
+
+Install typing package
+
+```
+$ npm install typings -g
+```
+
+Then execute the following command line in project's folder
+
+```
+typings install cordova --save --ambient
+```
+
+```
+import {Page, NavController, Alert} from 'ionic-angular';
+import {Camera} from 'ionic-native';
+
+@Page({
+  templateUrl: './build/pages/admin_page/admin_page.html'
+})
+
+export class AdminPage{
+  pages: String = "pages";
+  tags: String = "tags";
+
+
+
+  page_slect_alert: {title: string};
+
+  constructor(){
+    //this.zone = ngzone;
+  //  this.image = null;
+    this.page_slect_alert={
+      title: 'Select Fb Page For Image'
+
+    };
+  }
+
+  stpSelect(){
+    console.log('select');
+  }
+
+  getImage(){
+    var options = {
+      quality: 50,
+			   destinationType: navigator.camera.DestinationType.FILE_URI,
+			   sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
+    };
+
+    Camera.getPicture(options).then((imageData) => {
+      // imageData is either a base64 encoded string or a file URI
+      // If it's base64:
+      let base64Image = "data:image/jpeg;base64," + imageData;
+      }, (err) => {
+    });
+
+  };
+
+}
+```
+
+[List of camera options](https://github.com/apache/cordova-plugin-camera#module_camera.CameraOptions)
+
 ##HTTP query
 [Back to top](#ionic-2)  
 
