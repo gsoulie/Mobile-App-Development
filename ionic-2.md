@@ -9,6 +9,9 @@
 [Gulp](#gulp)  
 [Useful functions](#useful-functions)  
 [Angular 2](#angular-2)  
+[Decorators](#decorators)  
+[Config](#config)    
+[Third party lib](#third-party-lib)    
 [Geolocation](#geolocation)  
 [TypeScript](#typescript)  
 [Database](#database)  
@@ -336,6 +339,113 @@ for (let i = 0; i < a.length; i++) {
     //etc.
 }
 ```
+##Decorators
+[Back to top](#ionic-2)  
+
+[Decorators by Josh MORONY](https://www.joshmorony.com/building-mobile-apps-with-ionic-2/decorators-in-ionic2.html)
+
+####@App
+**@App** is the most important decorator of all, but you'll only ever use it once in each application you build. **The @App decorator declares the class that it is attached to as the root component of the application**. We've already talked about this briefly, and will continue to do so later, but the root component is essentially the starting point for your app.
+
+It's important to understand the component based structure of an Ionic 2 application, it's basically made up of a bunch of different components tied together, and at the root of all of **this is the root component**. The root components main responsibility is setting up your root page, which will be the first page that the user sees in your application. You can then get your page to push additional pages onto the navigation stack (we will cover navigation concepts in depth in a later lesson), and those pages can in turn push more pages and so on.
+
+####@Page
+**@Page** is likely the most common decorator you will use in your applications. It is used to define any page, or "view", in your application. So if you have an application with the following pages:
+
+Location
+All Products
+Product Detail
+Contact
+
+Then **each of these will be their own components which will have a decorator of @Page in the class definition**. Every page will also have a template that can either be defined directly using template in the decorator, or by using a templateUrl
+
+####@Component
+
+####@Directive
+
+The @Directive decorator allows you to create your own custom directives. Typically, the decorator would look something like this:
+
+```
+@Directive({
+    selector: '[my-selector]'
+})
+```
+
+Then in your template you could use that selector to trigger the behaviour of the directive you have created by adding it to an element:
+```
+<some-element my-selector></some-element>
+```
+It might be a little confusing as to when to use @Component and @Directive, as they are both quite similar. The easiest thing to remember is that if you want to modify the behaviour of an existing component use a directive, if you want to create a completely new component use a component.
+
+####@Pipe
+
+**@Pipe** allows you to create your own custom pipes to filter data that is displayed to the user, which can be very handy. The decorator might look something like this:
+```
+@Pipe({
+  name: 'myPipe'
+})
+```
+which would then allow you to implement it in your templates like this:
+```
+<p>{{someString | myPipe}}</p>
+`````
+Now someString would be run through your custom myPipe before the value is output to the user.
+
+##Config
+[Back to top](#ionic-2)  
+
+The Config lets you configure your entire app or specific platforms. You can set the tab placement, icon mode, animations, and more here.
+
+[Config official documentation](http://ionicframework.com/docs/v2/api/config/Config/)
+
+**sample code of Config**
+
+```
+@App({
+  template: `<ion-nav [root]="root"></ion-nav>`
+  config: {
+    backButtonText: 'Go Back',
+    iconMode: 'ios',
+    modalEnter: 'modal-slide-in',
+    modalLeave: 'modal-slide-out',
+    tabbarPlacement: 'bottom',
+    pageTransition: 'ios',
+  }
+})
+```
+
+To change the mode to always use Material Design (md).
+
+```
+@App({
+  template: `<ion-nav [root]="root"></ion-nav>`
+  config: {
+    mode: 'md'
+  }
+})
+```
+
+You can also use the config object to define platform specific behaviour:
+
+```
+@App({
+  template: `<ion-nav [root]="root"></ion-nav>`
+  config: {
+    tabbarPlacement: 'bottom',
+    platforms: {
+     ios: {
+       tabbarPlacement: 'top',
+     }
+    }
+  }
+})
+```
+
+
+##Third party lib
+[Back to top](#ionic-2)
+
+###TODO
 
 ##Geolocation
 [Back to top](#ionic-2)  
