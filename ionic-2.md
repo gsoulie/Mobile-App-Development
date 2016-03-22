@@ -1236,6 +1236,38 @@ Then just create a custom css, something like this:
 }
 ```
 
+**Remove item from list**
+
+View file
+```
+<ion-list>
+    <ion-item-sliding *ngFor="#post of posts">
+    	<ion-item>
+    	...
+    	</ion-item>
+    	
+    	<ion-item-options>
+    	    <button danger (click)="removePost(post)">
+    	    	<ion-icon name="remove"></ion-icon>
+    	    </button>
+    	</ion-item-options>
+    </ion-item-sliding>
+</ion-list>
+```
+
+Controller file
+
+```
+removePost(post){
+    let index = this.posts.indexOf(post);
+
+    if(index > -1){
+      this.posts.splice(index, 1);
+    }
+}
+```
+
+
 ##File access
 [Back to top](#ionic-2)  
 
