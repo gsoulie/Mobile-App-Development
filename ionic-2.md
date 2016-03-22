@@ -1219,22 +1219,6 @@ Second solution, in case that you prefer to do the filtering in the template the
 </ion-list>
 ```
 
-###Customize tab icon
-
-It's pretty easy to do actually. When you set a tabIcon property, Ionic sets a class name on the tab, based on the name you provided. So for example, if you set ```tabIcon="customicon"```, then the resulting class names will be ```.ion-ios-hygglo-customicon``` and ```.ion-ios-hygglo-customicon-outline``` (for selected tabs) for iOS. On Android, the prefix will be ```.ion-md-``` instead of ```.ion-ios-```.
-
-Then just create a custom css, something like this:
-
-```
-.ion-ios-customicon,
-.ion-md-customicon {
-  content: url(../../assets/img/ui/customicon.svg);
-  width: 24px;
-  height: 32px;
-  padding: 6px 4px 2px;
-  opacity: 0.9;
-}
-```
 
 **Remove item from list**
 
@@ -1266,6 +1250,75 @@ removePost(post){
     }
 }
 ```
+
+**Inifinite scroll in ion-list**
+
+[Infinite scroll](http://ionicframework.com/docs/v2/api/components/infinite-scroll/InfiniteScroll/)
+
+View file
+```
+<ion-content>
+
+ <ion-list>
+   <ion-item *ngFor="#i of items"></ion-item>
+ </ion-list>
+
+ <ion-infinite-scroll (infinite)="doInfinite($event)">
+   <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+ </ion-infinite-scroll>
+
+</ion-content>
+```
+
+Controller file
+```
+@Page({...})
+export class NewsFeedPage {
+
+  constructor() {
+    this.items = [];
+    for (var i = 0; i < 30; i++) {
+      this.items.push( this.items.length );
+    }
+  }
+
+  doInfinite(infiniteScroll) {
+    console.log('Begin async operation');
+
+    setTimeout(() => {
+      for (var i = 0; i < 30; i++) {
+        this.items.push( this.items.length );
+      }
+
+      console.log('Async operation has ended');
+      infiniteScroll.complete();
+    }, 500);
+  }
+
+}
+```
+
+
+###Customize tab icon
+
+It's pretty easy to do actually. When you set a tabIcon property, Ionic sets a class name on the tab, based on the name you provided. So for example, if you set ```tabIcon="customicon"```, then the resulting class names will be ```.ion-ios-hygglo-customicon``` and ```.ion-ios-hygglo-customicon-outline``` (for selected tabs) for iOS. On Android, the prefix will be ```.ion-md-``` instead of ```.ion-ios-```.
+
+Then just create a custom css, something like this:
+
+```
+.ion-ios-customicon,
+.ion-md-customicon {
+  content: url(../../assets/img/ui/customicon.svg);
+  width: 24px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+```
+
 
 
 ##File access
