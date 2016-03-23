@@ -857,90 +857,60 @@ $ ionic plugin add cordova-plugin-camera
 
 **Usage**
 
-```
-import {Camera} from 'ionic-native';
-...
-...
-
-let options = {
-  quality: 100,
-  destinationType: Camera.DestinationType.FILE_URI,
-  sourceType: Camera.PictureSourceType.CAMERA,
-  encodingType: Camera.EncodingType.JPEG,
-  saveToPhotoAlbum: true
-};
-
-navigator.camera.getPicture(
-  (imagePath) => {
-    console.log(imagePath);
-  },
-
-  (error) => {
-    console.log(error);
-  }, options
-);
-```
-
-**Other way**
-
-Install typing package
+View file
 
 ```
-$ npm install typings -g
+<ion-navbar *navbar maintheme>
+  <button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+  </button>
+  <ion-title>Photo</ion-title>
+</ion-navbar>
+
+<ion-content padding class="getting-started">
+    <img src="{{sourceImage}}"/>
+	<button fab primary fab-bottom fab-center (click)="takePhoto()">
+         <ion-icon name="camera"></ion-icon>
+    </button>
+</ion-content>
+
 ```
 
-Then execute the following command line in project's folder
-
+Controller file
 ```
-typings install cordova --save --ambient
-```
-
-```
-import {Page, NavController, Alert} from 'ionic-angular';
+import {Page} from 'ionic-angular';
 import {Camera} from 'ionic-native';
 
 @Page({
-  templateUrl: './build/pages/admin_page/admin_page.html'
+  templateUrl: 'build/pages/photo/photo.html'
 })
+export class PhotoPage {
+    constructor(){
+        this.sourceImage = "";
+    }
 
-export class AdminPage{
-  pages: String = "pages";
-  tags: String = "tags";
+    takePhoto(){
+        let options = {
+          quality: 100,
+          destinationType: navigator.camera.DestinationType.FILE_URI,
+          sourceType: navigator.camera.PictureSourceType.CAMERA,
+          encodingType: navigator.camera.EncodingType.JPEG,
+          saveToPhotoAlbum: true
+        };
 
+        navigator.camera.getPicture(
+          (imagePath) => {
+            console.log(imagePath);
+            this.sourceImage = imagePath;
+          },
 
-
-  page_slect_alert: {title: string};
-
-  constructor(){
-    //this.zone = ngzone;
-  //  this.image = null;
-    this.page_slect_alert={
-      title: 'Select Fb Page For Image'
-
-    };
-  }
-
-  stpSelect(){
-    console.log('select');
-  }
-
-  getImage(){
-    var options = {
-      quality: 50,
-			   destinationType: navigator.camera.DestinationType.FILE_URI,
-			   sourceType: navigator.camera.PictureSourceType.PHOTOLIBRARY
-    };
-
-    Camera.getPicture(options).then((imageData) => {
-      // imageData is either a base64 encoded string or a file URI
-      // If it's base64:
-      let base64Image = "data:image/jpeg;base64," + imageData;
-      }, (err) => {
-    });
-
-  };
-
+          (error) => {
+            console.log(error);
+          }, options
+        );
+    }
 }
+
 ```
 
 [List of camera options](https://github.com/apache/cordova-plugin-camera#module_camera.CameraOptions)
