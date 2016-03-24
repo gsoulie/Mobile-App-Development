@@ -968,6 +968,7 @@ export class Page {
 }
 ```
 
+#####Note : 
 The **map** lib is only imported because we need is http.get function
 
 ##Navigation
