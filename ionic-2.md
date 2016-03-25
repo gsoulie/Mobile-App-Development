@@ -1290,6 +1290,18 @@ Then just create a custom css, something like this:
 }
 ```
 
+###Searchbar
+
+```
+<ion-searchbar [(ngModel)]="searchQuery" (change)="searchThing($event)" autocorrect="off"></ion-searchbar>
+```
+
+```
+searchThing() {
+this.giphy.search(this.searchQuery).then(data => {
+    this.gifs = data;
+});
+```
 
 
 ##File access
