@@ -352,12 +352,21 @@ It's important to understand the component based structure of an Ionic 2 applica
 ####@Page
 **@Page** is likely the most common decorator you will use in your applications. It is used to define any page, or "view", in your application. So if you have an application with the following pages:
 
-Location
-All Products
-Product Detail
-Contact
+- Location
+- All Products
+- Product Detail
+- Contact
 
 Then **each of these will be their own components which will have a decorator of @Page in the class definition**. Every page will also have a template that can either be defined directly using template in the decorator, or by using a templateUrl
+
+```
+@Page({
+    templateUrl: 'build/pages/location/location.html'   
+})
+export class LocationPage {
+
+}
+```
 
 ####@Component
 
