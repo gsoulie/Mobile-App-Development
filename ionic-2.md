@@ -947,7 +947,7 @@ export class PhotoPage {
 <ion-content>
   <ion-list>
     <ion-item *ngFor="#post of posts">
-      <img [src]="post.data.url" />
+      <img [src]="post.data.thumbnail" />
     </ion-item>
   </ion-list>
 </ion-content>
@@ -964,7 +964,11 @@ import 'rxjs/add/operator/map';
   templateUrl: 'build/pages/page/page.html'
 })
 export class Page {
-  constructor(http: Http) {
+  static get parameters() {
+     return [[Http]];
+  }
+
+  constructor(http) {
  
     this.http = http;
     this.posts = null;
