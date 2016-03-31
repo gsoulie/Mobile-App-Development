@@ -5,6 +5,7 @@
 ##### Table of Contents  
 [Start with ionic](#start-with-ionic)  
 [Atom configuration](#work-with-atom)  
+[Bracket](#bracket)     
 [Cordova](#cordova)  
 [Gulp](#gulp)  
 [Useful functions](#useful-functions)  
@@ -157,6 +158,15 @@ $ apm install ionic-atom
 ```
 $ apm install atom-beautify
 ```
+
+##Bracket
+[Back to top](#ionic-2) 
+
+[Bracket official website](http://brackets.io/)
+[Package ionic](http://www.ionicbrackets.com/)
+
+After installation, download the ionicBracket plugin, then just open the extension manager inside of Brackets and copy the extension link (http://ionicbrackets.com/Ionic-Brackets-Extension.zip) into the extension url field and hit install.
+
 
 ##Cordova
 [Back to top](#ionic-2) 
