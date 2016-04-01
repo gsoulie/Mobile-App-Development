@@ -4,6 +4,10 @@
 
 [Devices metrics](http://www.materialup.com/posts/device-metrics-google-design/responsive)
 
+##JS Guideline
+
+[bevacqua](https://github.com/bevacqua/js/blob/master/README.md)    
+
 ##JS Libraries
 
 [IS.JS](http://arasatasaygin.github.io/is.js/)    
