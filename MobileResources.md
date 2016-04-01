@@ -20,9 +20,8 @@
 
 ##Graphical resources
 [FlatUI colors](http://flatuicolors.com/)     
-[Material Design palette](http://www.materialpalette.com/)     
-[Material UI](http://www.andreagalanti.it/materialuicolors/#color)    
-[trends by OS](http://tintui.com/index.html)     
+[Material Design palette](http://www.materialpalette.com/)         
+[Color trends by OS](http://tintui.com/index.html)     
 [Material design](http://www.google.com/design/spec/style/color.html#color-color-palette)    
 [Android official icons](https://developer.android.com/design/downloads/index.html)     
 
