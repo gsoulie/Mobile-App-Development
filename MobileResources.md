@@ -1,6 +1,6 @@
 #Mobile App Resources and tools
 
-##Device size
+##Device screen size
 
 [Devices metrics](http://www.materialup.com/posts/device-metrics-google-design/responsive)
 
