@@ -15,7 +15,7 @@
 
 [JSONLint](http://jsonlint.com/)    
 [JSHint](http://jshint.com/)    
-[JSON viewer](http://www.jsoneditoronline.org/)    
+[JSON editor](http://www.jsoneditoronline.org/)    
 [JSON viewer](http://jsonviewer.stack.hu/)     
 
 ##Graphical resources
