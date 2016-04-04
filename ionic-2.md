@@ -188,7 +188,7 @@ module.exports = function(grunt) {
 }
 ```
 
-**You can also give a folder instead of listing all the file one by one 
+**You can also give a folder instead of listing all the file one by one** 
 ```
 module.exports = function(grunt) {
 
