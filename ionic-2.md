@@ -11,7 +11,8 @@
 [Gulp](#gulp)  
 [Useful functions](#useful-functions)  
 [Angular 2](#angular-2)  
-[Decorators](#decorators)  
+[Decorators](#decorators) 
+[Pipe](#pipe)    
 [Config](#config)    
 [Third party lib](#third-party-lib)    
 [Geolocation](#geolocation)  
@@ -769,6 +770,101 @@ which would then allow you to implement it in your templates like this:
 <p>{{someString | myPipe}}</p>
 `````
 Now someString would be run through your custom myPipe before the value is output to the user.
+
+##Pipe
+[Back to top](#ionic-2)  
+
+[Understanding Pipe](http://mcgivery.com/understanding-ionic-2-pipe/)
+
+####First step : create the pipe class
+
+First, create a "pipe" directory in your project will containing all pipe lib. A basic pipe class looks like below :
+
+```
+import {Pipe} from 'angular2/core'
+
+@Pipe({
+	name: 'helloWorld'	// pipe name
+})
+export class HelloWorld {
+	// Pipe function
+	transform(value) {
+		return "Hello " + value + "!";
+	}
+}
+```
+
+####Using pipe in other page
+
+```
+import {HelloWorld} from 'pipes/HelloWorld'	// pipe import
+
+@Page({
+	templateUrl: 'myPage/myPage.html',
+	pipes: [HelloWorld]	// pipe declaration
+})
+export class MyPage {
+	constructor(){
+		this.name = "Andrew";
+	}
+}
+```
+
+**View file**
+
+Pipe inline syntax : ```value | myPipe:args[0]:args[1]```
+
+```
+<ion-label>{{name:helloWorld}}</ion-label>
+```
+
+**Note : ** The first letter of the pipe's name in the view file is in lower case
+
+####Other example
+
+**Pipe file**
+
+```
+import {Pipe} from 'angular2/core'
+
+@Pipe({
+	name: 'addInt'
+})
+export class AddInt {
+	transform(value, args) {
+		return value + args[0];
+	}
+}
+```
+
+**Page file**
+
+```
+import {AddInt} from 'pipes/AddInt'
+
+@Page({
+	templateUrl: 'myPage/myPage.html',
+	pipes: [AddInt]
+})
+export class MyPage {
+	constructor(){
+		this.myIntArray = [1,3,7,15,31];
+		this.mySingleInt = 40;
+	}
+}
+```
+
+**View file**
+
+```
+The meaning of life: {{mySingleInt | addInt:2}}
+
+<ul>
+<li *ngFor="#myInt of myIntArray">
+{{myInt | addInt:1}}
+</li>
+</ul>
+```
 
 ##Config
 [Back to top](#ionic-2)  
