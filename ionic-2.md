@@ -775,6 +775,7 @@ Now someString would be run through your custom myPipe before the value is outpu
 [Back to top](#ionic-2)  
 
 [Understanding Pipe](http://mcgivery.com/understanding-ionic-2-pipe/)
+[Josh Morony Pipe documentation](http://www.joshmorony.com/how-to-use-pipes-to-manipulate-data-in-ionic-2/)
 
 ####First step : create the pipe class
 
