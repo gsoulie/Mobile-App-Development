@@ -14,6 +14,7 @@
 [Decorators](#decorators)    
 [Pipe](#pipe)    
 [Config](#config)    
+[Global variables](#global-variables)     
 [Third party lib](#third-party-lib)    
 [Geolocation](#geolocation)  
 [TypeScript](#typescript)  
@@ -921,6 +922,24 @@ You can also use the config object to define platform specific behaviour:
 })
 ```
 
+##Global variables
+[Back to top](#ionic-2)
+
+Here's a solution to centralize application's globals. The solution consist in using **config.js** file in provider's folder.
+
+You can export all your variable like below :
+
+```
+export let VALUE_ONE = "09:00";
+export let VALUE_TWO = "192.168.0.1";
+...
+```
+
+And then in the component or service that requires them, just do this :
+
+```
+import {VALUE_ONE} from './config';
+```
 
 ##Third party lib
 [Back to top](#ionic-2)
