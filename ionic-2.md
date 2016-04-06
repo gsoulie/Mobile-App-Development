@@ -844,7 +844,7 @@ export class myLib{
 
 **Usage**
 
-Add import and providers in your root page (app.js) if you want to use your lib across your project.
+Add import and providers **in your root page (app.js) if you want to use your lib across your project**.
 
 ```
 import {MyLib} from './pages/lib/myLib';
