@@ -815,10 +815,10 @@ export class MyPage {
 Pipe inline syntax : ```value | myPipe:args[0]:args[1]```
 
 ```
-<ion-label>{{name:helloWorld}}</ion-label>
+<ion-label>{{name | helloWorld}}</ion-label>
 ```
 
-**Note : ** The first letter of the pipe's name in the view file is in lower case
+**Note:** The first letter of the pipe's name in the view file is in lower case
 
 ####Other example
 
