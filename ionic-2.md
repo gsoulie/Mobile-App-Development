@@ -84,13 +84,11 @@ It creates new folder in the project treeview with js, html and scss files
 $ ionic g page myNewPage
 ```
 
-###Configuration des variables d’environement
+###Configure Android environment variable
 
 ```
 nano ~/.bash_profile
 ```
-
-**Configure Android environment variable** : 
 
 ```
 export ANDROID_HOME=/Users/gsoulie/Library/android-sdk-macosx
