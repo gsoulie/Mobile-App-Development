@@ -887,6 +887,12 @@ export class myPage{
 
 **Important** During production deployment, you will have to create Google MAP API key and put it in parameter
 
+**cordova plugin installation**
+
+```
+$ ionic plugin add cordova-plugin-geolocation
+```
+
 **Import the new page in app.core.scss**
 
 ```
@@ -966,12 +972,6 @@ export class MapPage {
     width: 100%;
     height: 100%;
 }
-```
-
-**cordova plugin installation**
-
-```
-$ ionic plugin add cordova-plugin-geolocation
 ```
 
 **Updating loadMap function**
