@@ -11,7 +11,7 @@
 [Gulp](#gulp)  
 [Useful functions](#useful-functions)  
 [Angular 2](#angular-2)  
-[Decorators](#decorators) 
+[Decorators](#decorators)    
 [Pipe](#pipe)    
 [Config](#config)    
 [Third party lib](#third-party-lib)    
