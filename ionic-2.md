@@ -1357,81 +1357,140 @@ The **map** lib is only imported because we need is http.get function
 ##Navigation
 [Back to top](#ionic-2)  
 
-**Page1.html**
+###Using NavController
+
+[Understanding ionic 2 NavController](http://mcgivery.com/understanding-ionic-2-navigation-navcontroller/)
+
+Before we can use the NavController, we will need to import it.
 
 ```
-<ion-navbar *navbar>
-    <ion-title>
-        Other
-    </ion-title>
-</ion-navbar>
- 
-<ion-content class="other">
-    <div>some content here...</div>
-</ion-content>
+import {Page, NavController} from 'ionic-angular';
 ```
 
-**Page1.js**
+Next we will inject it into our ```@Page``` and assign it to a property.
 
 ```
-import {Page, Platform, NavParams} from 'ionic/ionic';
- 
+import {Page, NavController} from 'ionic-angular';
+
 @Page({
-    templateUrl: 'app/page1/page1.html',
+	templateUrl: "build/pages/Main/Main.html"
 })
- 
-export class Page1Page {
-    constructor(platform: Platform, navParams: NavParams) {
-        this.platform = platform;
-        this.navParams = navParams;
-        this.firstname = navParams.get("firstname");
-        this.lastname = navParams.get("lastname");
-    }
+export class MainPage(){
+	constructor(nav: NavController){
+		this.nav = nav;
+	}
 }
 ```
 
-**Page source (home.html)**
+Now, we can call properties on nav, our instance of **NavController**. For example, say we want to navigate from our Main view to our About view, we would need to start by importing that ```@Page``` class.
 
 ```
-<ion-navbar *navbar>
-    <ion-title>
-        Home
-    </ion-title>
-</ion-navbar>
- 
-<ion-content class="home">
-    <button (click)="navigate()">Navigate</button>
-</ion-content>
-```
+import {Page, NavController} from 'ionic-angular';
+import {AboutPage} from 'About/About'
 
-**Page source (home.js)**
-
-```
-import {Page, Platform, NavController} from 'ionic/ionic';
-import {OtherPage} from '../page1/page1';
- 
 @Page({
-    templateUrl: 'app/home/home.html',
+	templateUrl: "build/pages/Main/Main.html"
 })
- 
-export class HomePage {
-    constructor(platform: Platform, nav: NavController) {
-        this.platform = platform;
-        this.nav = nav;
-    }
- 
-    navigate() {
-        this.nav.push(Page1Page, {
-            firstname: "Nic",
-            lastname: "Raboy"
-        });
-    }
+export class MainPage(){
+	constructor(nav: NavController){
+		this.nav = nav;
+	}
 }
 ```
 
-**Remove page from navigation**
+Next, let’s create a method on our page called **goToAbout** that we can call from our template. This method will push the AboutPage onto the stack.
 
-Using ```this.nav.pop(...)```
+```
+import {Page, NavController} from 'ionic-angular';
+import {AboutPage} from 'About/About'
+
+@Page({
+	templateUrl: "build/pages/Main/Main.html"
+})
+export class MainPage(){
+	constructor(nav: NavController){
+		this.nav = nav;
+	}
+	
+	goToAbout(){
+		this.nav.push(AboutPage);
+	}
+}
+```
+
+In our template, **Main.html**, we will have a button that will call this method when pressed.
+
+```
+<button (click)="goToAbout()">About</button>
+```
+
+To summarize, when this button is pressed, it will call the goToAbout method which pushes an instance of the AboutPage class onto the navigation stack which is then compiled and animated into view.
+
+####Passing Data
+In many scenarios we have data in one view that we need to pass to another. Luckily, the push method accepts a second parameter which is an object of data to pass to the ```@Page``` passed into the first parameter.
+
+```
+this.nav.push(AboutPage,{
+	username: "andrewmcgivery",
+	blogger: true
+});
+```
+
+This data is then accessible in the pushed ```@Page``` via navParams which is similar to $stateParams in 1.0.
+
+```
+import {Page, NavParams} from 'ionic-angular';
+
+@Page({
+	templateUrl: 'build/pages/About/About.html',
+})
+export class AboutPage {
+	constructor(navParams: NavParams){
+		this.username = navParams.get("username"); // "andrewmcgivery"
+		this.blogger = navParams.get("blogger"); // true
+	}
+}
+```
+####Pop
+
+Pop is super simple to use as well. As an example, if we wanted to create a function called **goBack** that goes back when pressed in our AboutPage, we could just call **nav.pop()** :
+
+```
+import {Page, NavController} from 'ionic-angular';
+
+@Page({
+	templateUrl: 'build/pages/About/About.html',
+})
+export class AboutPage {
+	constructor(nav: NavController){
+		this.nav = nav;
+	}
+	
+	goBack(){
+		this.nav.pop();
+	}
+}
+```
+
+####Other Methods
+There is a few more methods available on the NavController such as insert, remove, etc. I would suggest reading the Official Docs.
+
+####Lifecycle Events
+In version 1.0, we had the concept of events being fired when we were entering and leaving the view, among others. In version 2.0, we have a very similar set of events. To handle one of these events, we just need to give our ```@Page``` class a method that matches the event. For example, if we want to run an event when the ```@Page``` is loaded, we will need to give our page the **onPageLoaded** method:
+```
+import {Page} from 'ionic-angular';
+
+@Page({
+	templateUrl: 'build/pages/About/About.html',
+})
+export class AboutPage {
+	onPageLoaded(){
+		console.log("Page Loaded!");
+	}
+}
+```
+
+We can have a set of handlers for a variety of events including then the page is about to be entered, when the page is leaving, etc. Again, I would suggest reading the Official Docs.
 
 ##Themes
 [Back to top](#ionic-2)  
