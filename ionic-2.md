@@ -867,6 +867,10 @@ The meaning of life: {{mySingleInt | addInt:2}}
 </ul>
 ```
 
+####Conclusion
+
+Pipes are very useful for string formatting like date, hour, regexp...
+
 ##Config
 [Back to top](#ionic-2)  
 
