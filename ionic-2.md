@@ -10,6 +10,7 @@
 [Cordova](#cordova)  
 [Gulp](#gulp)  
 [Useful functions](#useful-functions)  
+[TypeScript](#typescript)  
 [Angular 2](#angular-2)  
 [Decorators](#decorators)    
 [Pipe](#pipe)    
@@ -17,7 +18,6 @@
 [Global variables](#global-variables)     
 [Third party lib](#third-party-lib)    
 [Geolocation](#geolocation)  
-[TypeScript](#typescript)  
 [Database](#database)  
 [Camera](#camera)   
 [Barcode Scanner](#barcode-scanner)  
@@ -566,6 +566,12 @@ var currentPlatformVersion = ionic.Platform.version();
 
 ionic.Platform.exitApp(); // stops the app
 ```
+
+
+##TypeScript
+[Back to top](#ionic-2)  
+
+[TypeScript Guildeline](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)    
 
 ##Angular 2
 [Back to top](#ionic-2)  
@@ -1173,11 +1179,6 @@ addInfoWindow(marker, content){
  
 }
 ```
-
-##TypeScript
-[Back to top](#ionic-2)  
-
-[TypeScript Guildelines(https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)    
 
 ##Database
 [Back to top](#ionic-2)  
