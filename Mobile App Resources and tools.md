@@ -4,9 +4,10 @@
 
 [Devices metrics](http://www.materialup.com/posts/device-metrics-google-design/responsive)
 
-##JS Guideline
+##JS / TypeScript Guideline
 
 [bevacqua](https://github.com/bevacqua/js/blob/master/README.md)    
+[TypeScript Guildelines(https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)    
 
 ##JS Libraries
 
