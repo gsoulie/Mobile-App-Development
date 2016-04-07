@@ -29,7 +29,7 @@
 [Backend Firebase](#backend-firebase)  
 [Internationalization](#internationalization)  
 [Splash screen and appicon](#splash-screen-and-appicon)  
-[Testing with Jasmine](#testing-with-Jasmine)    
+[Testing with Jasmine](#testing-with-jasmine)    
 [Beta testing](#beta-testing)    
 [Publishing App](#publishing-app)  
 
