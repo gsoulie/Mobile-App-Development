@@ -1177,6 +1177,8 @@ addInfoWindow(marker, content){
 ##TypeScript
 [Back to top](#ionic-2)  
 
+[TypeScript Guildelines(https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)    
+
 ##Database
 [Back to top](#ionic-2)  
 
