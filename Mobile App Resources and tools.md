@@ -18,6 +18,7 @@
 
 ##JS tools
 
+[ECMAScript6 Lint](http://www.es6fiddle.net/imqlo1x9/)    
 [JSONLint](http://jsonlint.com/)    
 [JSHint](http://jshint.com/)    
 [JSON editor](http://www.jsoneditoronline.org/)    
