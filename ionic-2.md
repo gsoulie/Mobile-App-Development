@@ -792,7 +792,7 @@ Now someString would be run through your custom myPipe before the value is outpu
 First, create a "pipe" directory in your project will containing all pipe lib. A basic pipe class looks like below :
 
 ```
-import {Pipe} from 'angular2/core'
+import {Pipe} from 'angular2/core';
 
 @Pipe({
 	name: 'helloWorld'	// pipe name
@@ -821,7 +821,7 @@ export class HelloWorldPipe implements PipeTransform {
 ####Using pipe in other page
 
 ```
-import {HelloWorld} from 'pipes/HelloWorld'	// pipe import
+import {HelloWorld} from 'pipes/HelloWorld';	// pipe import
 
 @Page({
 	templateUrl: 'myPage/myPage.html',
@@ -849,7 +849,7 @@ Pipe inline syntax : ```value | myPipe:args[0]:args[1]```
 **Pipe file**
 
 ```
-import {Pipe} from 'angular2/core'
+import {Pipe} from 'angular2/core';
 
 @Pipe({
 	name: 'addInt'
@@ -864,7 +864,7 @@ export class AddInt {
 **Page file**
 
 ```
-import {AddInt} from 'pipes/AddInt'
+import {AddInt} from 'pipes/AddInt';
 
 @Page({
 	templateUrl: 'myPage/myPage.html',
