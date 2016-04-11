@@ -546,7 +546,7 @@ $ apm install linter-csslint
 
 ####Activate auto-compilation
 
-Add ```"compileOnSave": false``` on your **tsconfig.json** file
+Add ```"compileOnSave": false``` to your **tsconfig.json** file
 
 ####Shortcuts
 
