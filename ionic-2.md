@@ -492,6 +492,8 @@ module.exports = function(grunt) {
 
 ###1 - Install Atom
 
+[Atom website](https://atom.io/)
+
 ###2 - Install shell commands
 
 Open your Atom editor and doing
