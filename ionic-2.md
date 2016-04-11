@@ -544,6 +544,16 @@ $ apm install linter-jshint
 $ apm install linter-csslint
 ```
 
+[JSDoc](https://atom.io/packages/jsdoc)
+```
+$ apm install jsdoc
+```
+
+[Docblockr](https://atom.io/packages/docblockr)
+```
+$ apm install docblockr
+```
+
 ####Activate auto-compilation
 
 Add ```"compileOnSave": false``` to your **tsconfig.json** file
