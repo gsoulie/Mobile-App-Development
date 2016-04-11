@@ -522,6 +522,35 @@ $ apm install ionic-atom
 $ apm install atom-beautify
 ```
 
+[TODO-show configuration](https://atom.io/packages/todo-show)
+```
+$ apm install todo-show
+```
+
+[Minimap configuration](https://atom.io/packages/minimap)
+```
+$ apm install minimap
+```
+
+[Linter JSHint](https://atom.io/packages/linter-jshint)
+```
+$ apm install linter-jshint
+```
+
+[Linter CSS](https://atom.io/packages/linter-csslint)
+```
+$ apm install linter-csslint
+```
+
+####Activate auto-compilation
+
+Add ```"compileOnSave": false``` on your **tsconfig.json** file
+
+####Shortcuts
+
+```F6``` For compilation
+
+
 ##Bracket
 [Back to top](#ionic-2) 
 
@@ -578,6 +607,7 @@ ionic.Platform.exitApp(); // stops the app
 
 [new Angular 2 concepts and syntax](http://www.joshmorony.com/ionic-2-first-look-series-new-angular-2-concepts-syntax/)
 [Angular 2 syntax demistified](http://blog.thoughtram.io/angular/2015/08/11/angular-2-template-syntax-demystified-part-1.html)
+[AngularUI](https://angular-ui.github.io/)
 
 AngularJS 2 is the backbone of Ionic 2, is being written for ECMAScript 6
 
