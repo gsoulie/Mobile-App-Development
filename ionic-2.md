@@ -756,6 +756,18 @@ msgAfterTimeout("", "Foo", 100).then((msg) =>
 ).then((msg) => {
     console.log(`done after 300ms:${msg}`)
 })
+
+this.http.get(url).subscribe(
+ (data) => {
+ console.log(data);
+ },
+ (err) => {
+ console.log(err);
+ },
+ () => {
+ console.log("completed");
+ }
+);
 ```
 
 rather than callbacks which can end up looking like this:
