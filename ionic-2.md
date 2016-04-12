@@ -62,6 +62,28 @@ $ sudo npm install -g ionic@beta
 $ npm install -g ionic@beta
 ```
 
+again, and then updating the package.json file of your project. You should see something like 
+
+this in that file:
+```
+ "dependencies": {
+ "angular2": "2.0.0-beta.6",
+ "es6-promise": "3.0.2",
+ "es6-shim": "0.33.13",
+ "ionic-angular": "2.0.0-beta.3",
+ "ionic-native": "^1.0.12",
+ "ionicons": "3.0.0-alpha.3",
+ "reflect-metadata": "0.1.2",
+ "rxjs": "5.0.0-beta.0",
+ "zone.js": "0.5.14"
+ }
+```
+Simply change the ionic-angular version number to the latest version, and then run:
+
+```
+npm install
+```
+
 **ionic 2 project creation**
 
 ```
