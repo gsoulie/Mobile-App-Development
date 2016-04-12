@@ -24,6 +24,18 @@
 }
 ```
 
+**Variable**
+
+```
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+```
+
 **Encoding**
 
 It's recommanded to force encoding in the main sass file with ```@charset```directive
@@ -102,6 +114,34 @@ $font-stack: 'Helvetica', 'Arial', sans-serif;
 // Nope
 $font-stack: ('Helvetica', 'Arial', sans-serif,);
 ```
+
+**Extend/Inheritance**
+
+This is one of the most useful features of Sass. Using ```@extend``` lets you share a set of CSS properties from one selector to another
+
+```
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+
+.error {
+  @extend .message;
+  border-color: red;
+}
+
+.warning {
+  @extend .message;
+  border-color: yellow;
+}
+```
+
 ##Javascript
 [Back to top](#best-practice-guide) 
 
