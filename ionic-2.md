@@ -116,7 +116,7 @@ $ ionic serve -l -s -c
 [--consolelogs|-c] ......  Print app console logs to Ionic CLI
 [--serverlogs|-s] .......  Print dev server logs to Ionic CLI
 [--port|-p] .............  Dev server HTTP port (8100 default)
-[--livereload-port|-i] ..  Live Reload port (35729 default)
+[--livereload-port|-i] ..  Live Reload port (35729 default) ========> automatic reload on device
 [--nobrowser|-b] ........  Disable launching a browser
 [--nolivereload|-r] .....  Do not start live reload
 [--noproxy|-x] ..........  Do not add proxies
