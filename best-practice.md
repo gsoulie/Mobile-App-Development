@@ -6,6 +6,7 @@
 [Javascript](#javascript)    
 [Ionic 2](#ionic-2)    
 [AngularJS 2](#angularjs-2)    
+[TypeScript](#typescript)    
 
 
 ##Sass
@@ -109,3 +110,8 @@ $font-stack: ('Helvetica', 'Arial', sans-serif,);
 
 ##AngularJS 2
 [Back to top](#best-practice-guide) 
+
+##Typescript
+[Back to top](#best-practice-guide)    
+
+[Typescript guideline](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)
