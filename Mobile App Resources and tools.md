@@ -16,6 +16,10 @@
 [Backbone.js](http://backbonejs.org/)    
 [Moment.js](http://momentjs.com/)    
 
+##Ionic
+
+[Ionic framework resources](http://mcgivery.com/100-ionic-framework-resources/)
+
 ##JS tools
 
 [ECMAScript6 Lint](http://www.es6fiddle.net/imqlo1x9/)    
