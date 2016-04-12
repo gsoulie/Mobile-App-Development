@@ -26,7 +26,8 @@
 [Themes](#themes)  
 [Components](#components)  
 [File access](#file-access)  
-[Backend Firebase](#backend-firebase)  
+[Backend Firebase](#backend-firebase)      
+[Backend Strongloop](#backend-strongloop)     
 [Internationalization](#internationalization)  
 [Splash screen and appicon](#splash-screen-and-appicon)  
 [Testing with Jasmine](#testing-with-jasmine)    
@@ -1934,6 +1935,11 @@ this.giphy.search(this.searchQuery).then(data => {
 
 ##Backend Firebase
 [Back to top](#ionic-2)  
+
+##Backend Strongloop
+[Back to top](#ionic-2) 
+
+[Strongloop and bluemix](http://www.raymondcamden.com/2015/10/29/strongloop-ionic-and-ibm-bluemix/)    
 
 ###Network app sample
 
