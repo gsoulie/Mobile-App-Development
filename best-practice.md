@@ -14,7 +14,7 @@
 ##Sass
 [Back to top](#best-practice-guide) 
 
-[Sass best practice documentation](https://sass-guidelin.es/fr/#syntaxe--formatage)
+[source : Sass best practice documentation](https://sass-guidelin.es/fr/#syntaxe--formatage)
 
 **Display block**
 
@@ -212,7 +212,7 @@ Use upper case on the first letter
 ##Typescript
 [Back to top](#best-practice-guide)  
 
-[Typescript guideline](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)     
+[source : Typescript guideline](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)     
 
 ####Names
 1. Use PascalCase for type names.
@@ -234,18 +234,18 @@ Use double quote for strings
 
 ####Basic types
 
-[Basic types guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Basic%20Types.md)    
+[source : Basic types guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Basic%20Types.md)    
 
 ####Classes
 
-[Classes guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Classes.md)    
+[source : Classes guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Classes.md)    
 
 ####Namespace
 
-[Namespace guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces%20and%20Modules.md)    
+[source : Namespace guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces%20and%20Modules.md)    
 ####Function
 
-[Function guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Functions.md)    
+[source : Function guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Functions.md)    
 
 
 
