@@ -39,15 +39,15 @@
 
 **Some resources**
 
-[ionic.io](http://docs.ionic.io/docs/io-introduction)
+[link : ionic.io](http://docs.ionic.io/docs/io-introduction)
 
-[Official ionic 2 documentation](http://ionicframework.com/docs/v2/getting-started/migration/)
+[link : Official ionic 2 documentation](http://ionicframework.com/docs/v2/getting-started/migration/)
 
-[Official ionic 2 native component documentation](http://ionicframework.com/docs/v2/native/Calendar/)
+[link : Official ionic 2 native component documentation](http://ionicframework.com/docs/v2/native/Calendar/)
 
-[ionic 2 project structure](http://ionicframework.com/docs/v2/getting-started/tutorial/project-structure/)
+[link : ionic 2 project structure](http://ionicframework.com/docs/v2/getting-started/tutorial/project-structure/)
 
-[Josh MORONY resources](http://www.joshmorony.com/category/ionic-tutorials/)
+[link : Josh MORONY resources](http://www.joshmorony.com/category/ionic-tutorials/)
 
 
 ionic 2 is not yet available in final version, but is it possible to create ionic projects with the ionic 2 beta which can be installed as followed CLI
@@ -515,7 +515,7 @@ module.exports = function(grunt) {
 
 ###1 - Install Atom
 
-[Atom website](https://atom.io/)
+[link : Atom website](https://atom.io/)
 
 ###2 - Install shell commands
 
@@ -547,32 +547,32 @@ $ apm install ionic-atom
 $ apm install atom-beautify
 ```
 
-[TODO-show configuration](https://atom.io/packages/todo-show)
+[link : TODO-show configuration](https://atom.io/packages/todo-show)
 ```
 $ apm install todo-show
 ```
 
-[Minimap configuration](https://atom.io/packages/minimap)
+[link : Minimap configuration](https://atom.io/packages/minimap)
 ```
 $ apm install minimap
 ```
 
-[Linter JSHint](https://atom.io/packages/linter-jshint)
+[link : Linter JSHint](https://atom.io/packages/linter-jshint)
 ```
 $ apm install linter-jshint
 ```
 
-[Linter CSS](https://atom.io/packages/linter-csslint)
+[link : Linter CSS](https://atom.io/packages/linter-csslint)
 ```
 $ apm install linter-csslint
 ```
 
-[JSDoc](https://atom.io/packages/jsdoc)
+[link : JSDoc](https://atom.io/packages/jsdoc)
 ```
 $ apm install jsdoc
 ```
 
-[Docblockr](https://atom.io/packages/docblockr)
+[link : Docblockr](https://atom.io/packages/docblockr)
 ```
 $ apm install docblockr
 ```
@@ -589,8 +589,8 @@ Add ```"compileOnSave": false``` to your **tsconfig.json** file
 ##Bracket
 [Back to top](#ionic-2) 
 
-[Bracket official website](http://brackets.io/)
-[Package ionic](http://www.ionicbrackets.com/)
+[link : Bracket official website](http://brackets.io/)
+[link : Package ionic](http://www.ionicbrackets.com/)
 
 After installation, download the ionicBracket plugin, then just open the extension manager inside of Brackets and copy the extension link (http://ionicbrackets.com/Ionic-Brackets-Extension.zip) into the extension url field and hit install.
 
@@ -635,14 +635,14 @@ ionic.Platform.exitApp(); // stops the app
 ##TypeScript
 [Back to top](#ionic-2)  
 
-[TypeScript Guildeline](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)    
+[link : TypeScript Guildeline](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)    
 
 ##Angular 2
 [Back to top](#ionic-2)  
 
-[new Angular 2 concepts and syntax](http://www.joshmorony.com/ionic-2-first-look-series-new-angular-2-concepts-syntax/)
-[Angular 2 syntax demistified](http://blog.thoughtram.io/angular/2015/08/11/angular-2-template-syntax-demystified-part-1.html)
-[AngularUI](https://angular-ui.github.io/)
+[link : new Angular 2 concepts and syntax](http://www.joshmorony.com/ionic-2-first-look-series-new-angular-2-concepts-syntax/)
+[link : Angular 2 syntax demistified](http://blog.thoughtram.io/angular/2015/08/11/angular-2-template-syntax-demystified-part-1.html)
+[link : AngularUI](https://angular-ui.github.io/)
 
 AngularJS 2 is the backbone of Ionic 2, is being written for ECMAScript 6
 
@@ -798,7 +798,7 @@ for (let i = 0; i < a.length; i++) {
 ##Decorators
 [Back to top](#ionic-2)  
 
-[Decorators by Josh MORONY](https://www.joshmorony.com/building-mobile-apps-with-ionic-2/decorators-in-ionic2.html)
+[link : Decorators by Josh MORONY](https://www.joshmorony.com/building-mobile-apps-with-ionic-2/decorators-in-ionic2.html)
 
 ####@App
 **@App** is the most important decorator of all, but you'll only ever use it once in each application you build. **The @App decorator declares the class that it is attached to as the root component of the application**. We've already talked about this briefly, and will continue to do so later, but the root component is essentially the starting point for your app.
@@ -844,7 +844,7 @@ It might be a little confusing as to when to use @Component and @Directive, as t
 
 ####@Pipe
 
-[Understanding Pipe](http://mcgivery.com/understanding-ionic-2-pipe/)
+[link : Understanding Pipe](http://mcgivery.com/understanding-ionic-2-pipe/)
 
 **@Pipe** allows you to create your own custom pipes to filter data that is displayed to the user, which can be very handy. The decorator might look something like this:
 ```
@@ -861,8 +861,8 @@ Now someString would be run through your custom myPipe before the value is outpu
 ##Pipe
 [Back to top](#ionic-2)  
 
-[Understanding Pipe](http://mcgivery.com/understanding-ionic-2-pipe/)      
-[Josh Morony Pipe documentation](http://www.joshmorony.com/how-to-use-pipes-to-manipulate-data-in-ionic-2/)
+[link : Understanding Pipe](http://mcgivery.com/understanding-ionic-2-pipe/)      
+[link : Josh Morony Pipe documentation](http://www.joshmorony.com/how-to-use-pipes-to-manipulate-data-in-ionic-2/)
 
 ####First step : create the pipe class
 
@@ -976,7 +976,7 @@ Pipes are very useful for string formatting like date, hour, regexp...
 
 The Config lets you configure your entire app or specific platforms. You can set the tab placement, icon mode, animations, and more here.
 
-[Config official documentation](http://ionicframework.com/docs/v2/api/config/Config/)
+[link : Config official documentation](http://ionicframework.com/docs/v2/api/config/Config/)
 
 **sample code of Config**
 
@@ -1096,7 +1096,7 @@ export class myPage{
 ##Geolocation
 [Back to top](#ionic-2)  
 
-[source](http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
+[link : google map geolocation](http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
 
 **Adding Google Map API depency in index.html**
 
@@ -1263,7 +1263,7 @@ addInfoWindow(marker, content){
 ###First solution
 There is two main solutions for data storage. The first one is the local HTML5 storage and the second is using SQLite database storage.
 
-[source](https://www.thepolyglotdeveloper.com/2015/12/use-sqlite-in-ionic-2-instead-of-local-storage/)
+[link : using sqlite](https://www.thepolyglotdeveloper.com/2015/12/use-sqlite-in-ionic-2-instead-of-local-storage/)
 
 ####HTML5 local storage
 HTML5 storage provide a key-value storage. This solution can be useful for small applications, but is not adapted for SQL querying. On the other hand, this solution is limitated to 10MB of data storage.
@@ -1508,20 +1508,20 @@ export class PhotoPage {
 
 ```
 
-[List of camera options](https://github.com/apache/cordova-plugin-camera#module_camera.CameraOptions)
+[link : List of camera options](https://github.com/apache/cordova-plugin-camera#module_camera.CameraOptions)
 
 
 ##Barcode scanner
 [Back to top](#ionic-2)
 
-[Barcode scanner documentation](http://ionicframework.com/docs/v2/native/BarcodeScanner/)
+[link : Barcode scanner documentation](http://ionicframework.com/docs/v2/native/BarcodeScanner/)
 
 ##HTTP query
 [Back to top](#ionic-2)  
 
-[source](http://www.joshmorony.com/using-http-to-fetch-remote-data-from-a-server-in-ionic-2/)
+[link : using http](http://www.joshmorony.com/using-http-to-fetch-remote-data-from-a-server-in-ionic-2/)
 
-[reddit API url for testing app](https://www.reddit.com/r/gifs/top/.json?limit=10&sort=hot)
+[link : reddit API url for testing app](https://www.reddit.com/r/gifs/top/.json?limit=10&sort=hot)
 
 **Create the view (page.html)**
 
@@ -1575,7 +1575,7 @@ The **map** lib is only imported because we need is http.get function
 
 ###Using NavController
 
-[Understanding ionic 2 NavController](http://mcgivery.com/understanding-ionic-2-navigation-navcontroller/)
+[link : Understanding ionic 2 NavController](http://mcgivery.com/understanding-ionic-2-navigation-navcontroller/)
 
 Before we can use the NavController, we will need to import it.
 
@@ -1882,7 +1882,7 @@ removePost(post){
 
 **Inifinite scroll in ion-list**
 
-[Infinite scroll](http://ionicframework.com/docs/v2/api/components/infinite-scroll/InfiniteScroll/)
+[link : Infinite scroll](http://ionicframework.com/docs/v2/api/components/infinite-scroll/InfiniteScroll/)
 
 View file
 ```
@@ -1965,7 +1965,7 @@ this.giphy.search(this.searchQuery).then(data => {
 ##File access
 [Back to top](#ionic-2)  
 
-[source](https://forum.ionicframework.com/t/how-to-save-an-image-locally-with-ionic-2/46257/4)
+[link : save image locally](https://forum.ionicframework.com/t/how-to-save-an-image-locally-with-ionic-2/46257/4)
 
 ##Backend Firebase
 [Back to top](#ionic-2)  
@@ -1973,12 +1973,12 @@ this.giphy.search(this.searchQuery).then(data => {
 ##Backend Strongloop
 [Back to top](#ionic-2) 
 
-[Strongloop and bluemix](http://www.raymondcamden.com/2015/10/29/strongloop-ionic-and-ibm-bluemix/)    
+[link : Strongloop and bluemix](http://www.raymondcamden.com/2015/10/29/strongloop-ionic-and-ibm-bluemix/)    
 
 ###Network app sample
 
-[source](http://www.gajotres.net/ionic-2-succesfull-oauth-social-login-with-firebase/)
-[source 2](https://www.toptal.com/front-end/building-multi-platform-real-time-mobile-applications-using-ionic-framework-and-firebase)
+[link : ionic 2 oauth social with firebase](http://www.gajotres.net/ionic-2-succesfull-oauth-social-login-with-firebase/)
+[link : ionic framework and firebase](https://www.toptal.com/front-end/building-multi-platform-real-time-mobile-applications-using-ionic-framework-and-firebase)
 
 **cordova plugin installation**
 
@@ -2162,9 +2162,9 @@ export class HomePage {
 ##Splash screen and appicon
 [Back to top](#ionic-2)
 
-[Appicon and Splash screen documentation](http://blog.ionic.io/automating-icons-and-splash-screens/)
+[link : Appicon and Splash screen documentation](http://blog.ionic.io/automating-icons-and-splash-screens/)
 
-[Splash screen PSD](http://code.ionicframework.com/resources/splash.psd)
+[link : Splash screen PSD](http://code.ionicframework.com/resources/splash.psd)
 
 Save a splash.png, splash.psd or splash.ai file within the resources directory at the root of the Cordova project. Splash screen dimensions vary for each platform, device and orientation, so a square source image is required the generate each of various sizes. The source image’s minimum dimensions should be 2208x2208 px, and its artwork should be centered within the square, knowing that each generated image will be center cropped into landscape and portrait images. The splash screen’s artwork should roughly fit within a center square (1200x1200 px). This Photoshop splash screen template provides the recommended size and guidelines of the artwork’s safe zone. Additionally, when the Orientation preference config is set to either landscape or portrait mode, then only the necessary images will be generated.
 
@@ -2214,7 +2214,7 @@ Add the following property to config.xml
 
 Available for iOS and Android, Ionic View makes it easy to **test** and **share** your app directly **on the device**. **A developer, client, customer, or friend** can download Ionic View, enter the App Id for your app, and immediately load and test the app. With hundreds of thousands of installs, Ionic View is becoming a core part of the Ionic development experience.
 
-[Ionic View](http://blog.ionic.io/rapid-development-with-ionic-view/)
+[link : Ionic View](http://blog.ionic.io/rapid-development-with-ionic-view/)
 
 ##Publishing app
 [Back to top](#ionic-2)
