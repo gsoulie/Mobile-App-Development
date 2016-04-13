@@ -245,4 +245,4 @@ XPROJECT_DEV
 COM.ISIA.XPROJECT_PROD
 ```
 
-**Accent, punctuation, non conventional characters are strictely forbidden !**
+**WARNING** : Accent, punctuation, non conventional characters are strictely forbidden !
