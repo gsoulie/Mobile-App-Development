@@ -10,6 +10,7 @@
 [Commit](#commit)    
 [iOS provisioning profile](#ios-provisioning-profile)   
 [Comments](#comments)    
+[Publishing](#publishing)    
 
 ##Sass
 [Back to top](#best-practice-guide) 
@@ -312,3 +313,11 @@ function Book(title, author) {
   ...
  }
  ```
+
+##Publishing
+
+After publishing app on store, don't forget to save following element on SQT project directory and / or GitLab project repository :
+
+[*] Android keystore
+[*] Create text file containing _alias_ and _password_ of the keystore
+[*] iOS certificate and provisioning profile
