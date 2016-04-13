@@ -7,6 +7,7 @@
 [Ionic 2](#ionic-2)    
 [AngularJS 2](#angularjs-2)    
 [TypeScript](#typescript)    
+[Commit](#commit)    
 
 
 ##Sass
@@ -145,8 +146,64 @@ This is one of the most useful features of Sass. Using ```@extend``` lets you sh
 ##Javascript
 [Back to top](#best-practice-guide) 
 
+**Using single CamelCase**
+
+It's recommanded to use single CamelCase syntax for the function, like :
+
+```
+far firstLaunch = true;
+
+function loadData(){
+  ...
+};
+```
+
+An exception for CommonJS module, put the first letter upper :
+
+```
+var Network = require('Network');
+
+Network.httpRequest({
+  ...
+});
+```
+
+**Avoid plural**
+
+**Avoid accent**
+
+**Avoid get / set prefixes**
+
+**Using upper case for constants**
+
+**Avoid "_" prefix**
+
+**Functionnal domain separators**
+
+```
+/**
+ * LIBS -------------------------------------------------------------
+ */
+var Cloud = require('ti.cloud'),
+    Moment = require('alloy/moment');
+ 
+/**
+ * INIT -------------------------------------------------------------
+ */
+var args = arguments[0] || {};
+
+/**
+ * FUNCTION ---------------------------------------------------------
+ */
+```
+Use uppercase and "-" (until column 70)
+
 ##Ionic 2
 [Back to top](#best-practice-guide) 
+
+**Page name**
+
+Use upper case on the first letter
 
 ##AngularJS 2
 [Back to top](#best-practice-guide) 
@@ -155,3 +212,10 @@ This is one of the most useful features of Sass. Using ```@extend``` lets you sh
 [Back to top](#best-practice-guide)    
 
 [Typescript guideline](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)
+
+##Commit
+[Back to top](#best-practice-guide)    
+
+*<page>* *<element>* *:* *<description/ticket number>*
+
+
