@@ -2200,6 +2200,12 @@ Add the following property to config.xml
 <preference name="FadeSplashScreen" value="false"/>
 ```
 
+**Remove spinner**
+Add the following property to config.xml
+```
+<preference name="ShowSplashScreenSpinner" value="false"/>
+```
+
 ##Testing with Jasmine
 [Back to top](#ionic-2)
 
