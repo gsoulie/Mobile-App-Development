@@ -15,7 +15,7 @@
 ##Sass
 [Back to top](#best-practice-guide) 
 
-[source : Sass best practice documentation](https://sass-guidelin.es/fr/#syntaxe--formatage)
+[link : Sass best practice documentation](https://sass-guidelin.es/fr/#syntaxe--formatage)
 
 **Display block**
 
@@ -148,6 +148,8 @@ This is one of the most useful features of Sass. Using ```@extend``` lets you sh
 ##Javascript
 [Back to top](#best-practice-guide) 
 
+[link : Javascript guideline](https://github.com/bevacqua/js/blob/master/README.md)    
+
 **Using single CamelCase**
 
 It's recommanded to use single CamelCase syntax for the function, like :
@@ -213,7 +215,7 @@ Use upper case on the first letter
 ##Typescript
 [Back to top](#best-practice-guide)  
 
-[source : Typescript guideline](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)     
+[link :Typescript guideline](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)     
 
 ####Names
 1. Use PascalCase for type names.
@@ -235,18 +237,18 @@ Use double quote for strings
 
 ####Basic types
 
-[source : Basic types guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Basic%20Types.md)    
+[link : Basic types guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Basic%20Types.md)    
 
 ####Classes
 
-[source : Classes guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Classes.md)    
+[link : Classes guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Classes.md)    
 
 ####Namespace
 
-[source : Namespace guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces%20and%20Modules.md)    
+[link : Namespace guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces%20and%20Modules.md)    
 ####Function
 
-[source : Function guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Functions.md)    
+[link : Function guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Functions.md)    
 
 
 
