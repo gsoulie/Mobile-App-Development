@@ -216,6 +216,6 @@ Use upper case on the first letter
 ##Commit
 [Back to top](#best-practice-guide)    
 
-*<page>* *<element>* *:* *<description/ticket number>*
+**<page>** **<element>** **:** **<description/ticket number>**
 
 
