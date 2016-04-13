@@ -8,7 +8,7 @@
 [AngularJS 2](#angularjs-2)    
 [TypeScript](#typescript)    
 [Commit](#commit)    
-
+[iOS provisioning profile](#ios-provisioning-profile)     
 
 ##Sass
 [Back to top](#best-practice-guide) 
@@ -216,6 +216,33 @@ Use upper case on the first letter
 ##Commit
 [Back to top](#best-practice-guide)    
 
-**<page>** **<element>** **:** **<description/ticket number>**
+_[page] - [element] : [(#ticket number) / description]_
 
+_UserLogin - loginFunction : #123451 success case message updating_
 
+##iOS provisioning profile
+[Back to top](#best-practice-guide)    
+
+To get more clarity in the provisioning profile list on Apple developer account, it's recommanded to format profile's name like :
+
+`[CUSTOMER NAME]_[PROJECT NAME]_[PROFILE ENV]_[USER INITIALS (optionnal)]`
+
+or
+
+`[PROCJECT NAME]_[PROFILE ENV]_[USER INITIALS (optionnal)]`
+
+or
+
+`[APPID]_[PROFILE ENV]_[USER INITIALS (optionnal)]`
+
+```
+ISIA_XPROJECT_DEV_GSO
+ISIA_XPROJECT_PROD_GSO
+ISIA_XPROJECT_ADHOC_GSO
+
+XPROJECT_DEV
+
+COM.ISIA.XPROJECT_PROD
+```
+
+**Accent, punctuation, non conventional characters are strictely forbidden !**
