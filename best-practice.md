@@ -8,7 +8,8 @@
 [AngularJS 2](#angularjs-2)    
 [TypeScript](#typescript)    
 [Commit](#commit)    
-[iOS provisioning profile](#ios-provisioning-profile)     
+[iOS provisioning profile](#ios-provisioning-profile)   
+[Comments](#comments)    
 
 ##Sass
 [Back to top](#best-practice-guide) 
@@ -209,9 +210,44 @@ Use upper case on the first letter
 [Back to top](#best-practice-guide) 
 
 ##Typescript
-[Back to top](#best-practice-guide)    
+[Back to top](#best-practice-guide)  
 
-[Typescript guideline](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)
+[Typescript guideline](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)     
+
+####Names
+1. Use PascalCase for type names.
+2. Do not use "I" as a prefix for interface names.
+3. Use PascalCase for enum values.
+4. Use camelCase for function names.
+5. Use camelCase for property names and local variables.
+6. Don't use "_" as a prefix for private properties.
+7. Use whole words in names when possible.
+
+
+####null and undefined
+
+Use **undefined**, do not use null.
+
+####Quotes
+
+Use double quote for strings
+
+####Basic types
+
+[Basic types guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Basic%20Types.md)    
+
+####Classes
+
+[Classes guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Classes.md)    
+
+####Namespace
+
+[Namespace guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces%20and%20Modules.md)    
+####Function
+
+[Function guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Functions.md)    
+
+
 
 ##Commit
 [Back to top](#best-practice-guide)    
@@ -246,3 +282,32 @@ COM.ISIA.XPROJECT_PROD
 ```
 
 **WARNING** : Accent, punctuation, non conventional characters are strictely forbidden !
+
+##Comments
+[Back to top](#best-practice-guide)    
+
+Use JSDoc style
+
+####Function documentation
+
+```
+/**
+ * Represents a book.
+ * @constructor
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
+ */
+function Book(title, author) {
+ 
+}
+
+/**
+ * Add book.
+ * @constructor
+ * @param {string} args.title - The title of the book.
+ * @param {string} args.author - The author of the book.
+ */
+ function addBook(args){
+  ...
+ }
+ ```
