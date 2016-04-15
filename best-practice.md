@@ -319,7 +319,7 @@ function Book(title, author) {
 ##Publishing
 [Back to top](#best-practice-guide) 
 
-After publishing app on store, don't forget to save following element on **SQT project directory** and / or **GitLab project repository** :
+After publishing app on store, don't forget to save following elements on **SQT project directory** and / or **GitLab project repository** :
 
 - Android keystore
 - Create text file containing _alias_ and _password_ of the keystore
