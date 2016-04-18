@@ -150,6 +150,15 @@ $ ionic serve -l -s -c
 ```
 $ ionic serve --lab
 ```
+
+**Installing Gulp
+
+Gulp is a packet manager for JS libraries. You can use it to add libraries to your Ionic app or to update the Ionic JavaScript library itself.
+
+```
+$ sudo npm install -g bower
+```
+
 ##Grunt
 [Back to top](#ionic-2) 
 
