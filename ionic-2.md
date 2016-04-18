@@ -2316,3 +2316,63 @@ initPush() {
 Using push notification when app is closed needed to use background service because ionic is a web application, so the javascipt file will only be triggered/fired when the application is opened.
 
 **TODO** using ionic.io
+
+- plugins installation
+```
+$ ionic add ionic-platform-web-client
+$ ionic plugin add phonegap-plugin-push
+$ ionic io init
+$ ionic config set dev_push true
+```
+
+- in ```webpack.config.js``` Add the following line :
+
+```
+module.exports = {
+  entry: [
+    path.resolve('bower_components/ionic-platform-web-client/dist/ionic.io.bundle'),
+    ......
+```
+
+- in ```bower_components/ionic-platform-web-client/dist/ionic.io.bundle.js``` replace:
+
+```"IONIC_SETTINGS_STRING_START";"IONIC_SETTINGS_STRING_END";``` with :
+
+```
+  "IONIC_SETTINGS_STRING_START";
+    var settings = {
+            "app_id": "YOUR APP_ID",
+            "api_key": "YOUR APP_KEY",
+            "gcm_key": "YOUR GCM_KEY",
+            "dev_push": true
+        };
+        
+    return {
+        get: function(setting) {
+            if (settings[setting]) {
+                return settings[setting];
+            }
+            return null;
+        }
+    };
+  "IONIC_SETTINGS_STRING_END";
+``` 
+
+- Lastly, in your index.html you can remove ```<script src="lib/ionic-platform-web-client/dist/ionic.io.bundle.min.js"></script>``` but leave ```<script src="cordova.js"></script>``` commented out.
+
+- Everything should work now. To initiate the push service, use:
+
+```
+    Ionic.io();
+    ionicPush = new Ionic.Push().init({
+        debug: true,
+        onNotification: (data) => {
+            console.log('New push notification received');
+            console.log(data);
+        }
+    });
+
+    ionicPush.register(data => {
+        console.log("Device token:", data.token);
+    });
+```
