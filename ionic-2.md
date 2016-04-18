@@ -2317,6 +2317,8 @@ Using push notification when app is closed needed to use background service beca
 
 **TODO** using ionic.io
 
+[push notification ionic 2](http://ionicframework.com/docs/v2/native/Push/)    
+
 - plugins installation
 ```
 $ ionic add ionic-platform-web-client
