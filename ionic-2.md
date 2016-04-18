@@ -33,7 +33,7 @@
 [Testing with Jasmine](#testing-with-jasmine)    
 [Beta testing](#beta-testing)    
 [Publishing App](#publishing-app)  
-
+[Push notification](#push-notification)    
 
 ##Start with ionic
 
@@ -2273,3 +2273,46 @@ $ zipalign -v 4 HelloWorld-release-unsigned.apk HelloWorld.apk
 ```
 
 Now we have our final release binary called HelloWorld.apk and we can release this on the Google Play Store
+
+
+##Push notification
+[Back to top](#ionic-2) 
+
+First way, using push notification module, only works when app is opened
+
+```
+this.platform.ready().then(() => {
+  console.log('Platform ready');
+  this.initPush();
+}
+
+initPush() {
+  let push = Push.init({
+      android: {
+          senderID: "XXXXXX"
+      },
+      ios: {
+          alert: "true",
+          badge: true,
+          sound: 'false'
+      },
+      windows: {}
+  });
+
+  push.on('registration', (data) => {
+      console.log("REGISTRATION");
+          localStorage.setItem('token', data.registrationId);
+  });
+
+  push.on('notification', (data) => {
+      console.log('ONLY WORK'S WHEN APP IS OPEN')
+  });
+
+  push.on('error', (e) => {
+      console.log(e.message);
+  });
+```
+
+Using push notification when app is closed needed to use background service because ionic is a web application, so the javascipt file will only be triggered/fired when the application is opened.
+
+**TODO** using ionic.io
