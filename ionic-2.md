@@ -49,6 +49,8 @@
 
 [link : Josh MORONY resources](http://www.joshmorony.com/category/ionic-tutorials/)
 
+[link : Most common ionic mistakes](https://www.toptal.com/ionic/most-common-ionic-development-mistakes)
+
 
 ionic 2 is not yet available in final version, but is it possible to create ionic projects with the ionic 2 beta which can be installed as followed CLI
 
