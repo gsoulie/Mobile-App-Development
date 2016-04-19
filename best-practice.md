@@ -11,6 +11,7 @@
 [iOS provisioning profile](#ios-provisioning-profile)   
 [Comments](#comments)    
 [Publishing](#publishing)    
+[Performance](#performance)     
 
 ##Sass
 [Back to top](#best-practice-guide) 
@@ -324,3 +325,13 @@ After publishing app on store, don't forget to save following elements on **SQT 
 - Android keystore
 - Create text file containing _alias_ and _password_ of the keystore
 - iOS certificate and provisioning profile
+
+
+##Performance
+[Back to top](#best-practice-guide) 
+
+Every Android version runs a different WebView (a browser that runs your application). The performance is different across devices, and it can be really bad on the old Android devices. To get the same experience with fluidity and responsiveness on every Android device, you can install [Crosswalk](https://crosswalk-project.org/). It basically embeds the latest Chromium browser into your application, and is adding around 20Mb per APK, both ARM and X86.
+
+Crosswalk can be installed simply using Ionic CLI or Cordova CLI:
+
+```ionic plugin add cordova-plugin-crosswalk-webview```
