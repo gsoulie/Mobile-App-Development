@@ -131,7 +131,7 @@ export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoul
 $ source .bash_profile
 ```
 
-Then, restart your computer and test ANDROID_HOME ```$ANDROID_HOME``` dont't forget **$** on the command
+Then, restart your computer and test ANDROID_HOME ```$ANDROID_HOME``` don't forget **$** on the command
 
 **Display log with ionic serve**
 
