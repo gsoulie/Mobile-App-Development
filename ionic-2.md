@@ -54,7 +54,8 @@
 ###Typical installation
 
 **Install / update Node**
-First, be sure you have latest version of node
+
+First, ensure you have latest version of node
 
 ```
 $ sudo npm install npm -g
