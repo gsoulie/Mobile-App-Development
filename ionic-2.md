@@ -51,6 +51,8 @@
 
 [link : Most common ionic mistakes](https://www.toptal.com/ionic/most-common-ionic-development-mistakes)
 
+###Typical installation
+
 **Install / update Node**
 First, be sure you have latest version of node
 
@@ -99,6 +101,29 @@ Simply change the ionic-angular version number to the latest version, and then r
 npm install
 ```
 
+
+###Configure Android environment variable
+
+```
+nano ~/.bash_profile
+```
+
+```
+export ANDROID_HOME=/Users/gsoulie/Library/android-sdk-macosx
+export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoulie/Library/android-sdk-macosx/platform-tools
+```
+
+**refresh bash_profile**
+
+```
+$ source .bash_profile
+```
+
+Then, restart your computer and test ANDROID_HOME ```$ANDROID_HOME``` don't forget **$** on the command
+
+
+###Start with ionic
+
 **ionic 2 project creation**
 
 ```
@@ -126,25 +151,6 @@ It creates new folder in the project treeview with js, html and scss files
 ```
 $ ionic g page myNewPage
 ```
-
-###Configure Android environment variable
-
-```
-nano ~/.bash_profile
-```
-
-```
-export ANDROID_HOME=/Users/gsoulie/Library/android-sdk-macosx
-export PATH=${PATH}:/Users/gsoulie/Library/android-sdk-macosx/tools:/Users/gsoulie/Library/android-sdk-macosx/platform-tools
-```
-
-**refresh bash_profile**
-
-```
-$ source .bash_profile
-```
-
-Then, restart your computer and test ANDROID_HOME ```$ANDROID_HOME``` don't forget **$** on the command
 
 **Display log with ionic serve**
 
