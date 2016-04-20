@@ -592,7 +592,15 @@ $ apm install docblockr
 
 ####Activate auto-compilation
 
-Add ```"compileOnSave": false``` to your **tsconfig.json** file
+[tsconfig.json configuration](https://github.com/TypeStrong/atom-typescript/blob/master/docs/tsconfig.md)
+
+Create a **tsconfig.json** file in your project root with :
+
+```
+{
+	"compileOnSave": false
+}
+```
 
 ####Shortcuts
 
