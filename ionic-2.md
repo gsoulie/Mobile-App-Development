@@ -592,7 +592,8 @@ $ apm install docblockr
 
 ####Activate auto-compilation
 
-[tsconfig.json configuration](https://github.com/TypeStrong/atom-typescript/blob/master/docs/tsconfig.md)
+[tsconfig.json configuration](https://github.com/TypeStrong/atom-typescript/blob/master/docs/tsconfig.md)    
+[Atom typescript plugin documentation](https://github.com/TypeStrong/atom-typescript)    
 
 Create a **tsconfig.json** file in your project root with :
 
