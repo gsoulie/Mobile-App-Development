@@ -51,6 +51,19 @@
 
 [link : Most common ionic mistakes](https://www.toptal.com/ionic/most-common-ionic-development-mistakes)
 
+**Install / update Node**
+First, be sure you have latest version of node
+
+```
+$ sudo npm install npm -g
+```
+**Install cordova**
+
+```
+$ sudo npm install -g cordova
+```
+
+**Install ionic**
 
 ionic 2 is not yet available in final version, but is it possible to create ionic projects with the ionic 2 beta which can be installed as followed CLI
 
