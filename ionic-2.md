@@ -182,7 +182,7 @@ $ ionic build ios
 $ ionic emulate ios
 ```
 
-**Installing Gulp
+**Installing Gulp**
 
 Gulp is a packet manager for JS libraries. You can use it to add libraries to your Ionic app or to update the Ionic JavaScript library itself.
 
