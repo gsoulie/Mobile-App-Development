@@ -1497,7 +1497,7 @@ $ ionic plugin add cordova-sqlite-storage
 
 [Google chrome PouchDB inspector extension](https://chrome.google.com/webstore/detail/pouchdb-inspector/hbhhpaojmpfimakffndmpmpndcmonkfa?hl=en)    
 
-
+[Ionic 2 - PouchDB tutorial](http://gonehybrid.com/how-to-use-pouchdb-sqlite-for-local-storage-in-ionic-2/)    
 
 ##Camera
 [Back to top](#ionic-2)  
