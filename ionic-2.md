@@ -128,8 +128,10 @@ Then, restart your computer and test ANDROID_HOME ```$ANDROID_HOME``` don't forg
 **ionic 2 project creation**
 
 ```
-$ ionic start myionic2project --v2
+$ ionic start myionic2project --v2 --ts
 ```
+
+**--ts** to work with TypeScript
 
 **ionic 2 tutorial app**
 
