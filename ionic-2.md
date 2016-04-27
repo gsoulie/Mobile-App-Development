@@ -2027,6 +2027,53 @@ this.giphy.search(this.searchQuery).then(data => {
 });
 ```
 
+###Alert dialog box
+
+Here's a sample code to show a confirmation dialog box. The key is to add Alert import and then, don't miss to add alert object to current navigation stack
+
+```
+import {Page, NavController, Alert} from 'ionic-angular';
+import {Data} from '../../providers/data/data';
+
+@Page({
+  templateUrl: 'build/pages/home/home.html'
+})
+export class HomePage {
+
+  static get parameters(){
+    return [[Data], [NavController]];
+  }
+  //Chargement de la base de données
+  constructor(dataService, nav) {
+    this.dataService = dataService;
+    this.items = [];
+    this.nav = nav;
+  }
+  
+  doAlert(item){
+  	let confirm = Alert.create({
+          title: "Suppression",
+          message: 'Êtes-vous certain de vouloir supprimer l\'item ' + item.message + ' ?',
+          buttons: [
+            {
+              text: 'Non',
+              handler: () => {
+                console.log('Disagree clicked');
+              }
+            },
+            {
+              text: 'Oui',
+              handler: () => {
+                this.dataService.deleteDocument(item);            
+              }
+            }
+          ]
+        });
+      
+      this.nav.present(confirm);
+  }
+}
+```
 
 ##File access
 [Back to top](#ionic-2)  
