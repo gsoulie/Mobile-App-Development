@@ -700,6 +700,7 @@ ionic.Platform.exitApp(); // stops the app
 ##Angular 2
 [Back to top](#ionic-2)  
 
+[link : become a ninja with Angular 2](https://books.ninja-squad.com/public/samples/Become_a_ninja_with_Angular2_sample.html)
 [link : new Angular 2 concepts and syntax](http://www.joshmorony.com/ionic-2-first-look-series-new-angular-2-concepts-syntax/)
 [link : Angular 2 syntax demistified](http://blog.thoughtram.io/angular/2015/08/11/angular-2-template-syntax-demystified-part-1.html)
 [link : AngularUI](https://angular-ui.github.io/)
