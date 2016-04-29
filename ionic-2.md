@@ -24,7 +24,7 @@
 [HTTP query](#http-query)  
 [Navigation](#navigation)  
 [Themes](#themes)  
-[Components](#components)  
+[Components (combobox, ion-list...)](#components)  
 [File access](#file-access)  
 [Backend Firebase](#backend-firebase)      
 [Backend Strongloop](#backend-strongloop)     
