@@ -1950,7 +1950,120 @@ removePost(post){
 }
 ```
 
-**Inifinite scroll in ion-list**
+####Inifinite scroll in ion-list
+
+#####Solution 1
+
+[link : Scroll performance](http://www.joshmorony.com/boosting-scroll-performance-in-ionic-2/)
+
+**Create new project**
+
+```
+ionic start virtual-scroll tabs --v2
+```
+
+**Create Data**
+
+Modify Page1 and Page2 controller with :
+
+```
+import {Page} from 'ionic-angular';
+
+
+@Page({
+  templateUrl: 'build/pages/page1/page1.html'
+})
+export class Page1 {
+  constructor() {
+ 
+    this.items = [];
+
+    for(let i = 0; i < 2000; i++){
+
+        let item = {
+            title: 'Title',
+            body: 'body',
+            avatarUrl: 'https://avatars.io/facebook/random'+i
+        };
+
+        this.items.push(item);
+    }
+
+  }
+}
+```
+
+**Create List**
+
+First we’re going to set up a standard list to display the data we created in the constructor.
+
+Modify **page1.html** to reflect the following:
+```
+<ion-navbar *navbar>
+  <ion-title>
+    Standard Scroll
+  </ion-title>
+</ion-navbar>
+ 
+<ion-content class="page1">
+ 
+  <ion-list>
+ 
+    <ion-item *ngFor="#item of items">
+      <ion-avatar item-left>
+        <ion-img [src]="item.avatarUrl"></ion-img>
+      </ion-avatar>
+ 
+      <h2>{{item.title}}</h2>
+ 
+      <p>{{item.body}}</p>
+ 
+    </ion-item>
+ 
+  </ion-list>
+ 
+</ion-content>
+```
+
+In this case we are just using the standard ```*ngFor``` directive to loop over all of the items in our array and create list items for them. Since we are not using virtual scroll, **this means that DOM elements are going to be created for every single item !**. If you try to run the application now, you will likely even notice there is a considerable amount of lag just in loading the app.
+
+**Create a Virtual Scrolling List**
+
+Now we’re going to create a list that uses virtual scroll.
+
+Modify **page2.html** to reflect the following:
+
+```
+<ion-navbar *navbar>
+  <ion-title>
+    Virtual Scroll
+  </ion-title>
+</ion-navbar>
+ 
+<ion-content class="page2">
+ 
+    <ion-list [virtualScroll]="items">
+ 
+      <ion-item *virtualItem="#item">
+        <ion-avatar item-left>
+          <ion-img [src]="item.avatarUrl"></ion-img>
+        </ion-avatar>
+ 
+        <h2>{{item.title}}</h2>
+ 
+        <p>{{item.body}}</p>
+ 
+      </ion-item>
+ 
+    </ion-list>
+ 
+</ion-content>
+```
+The syntax is a little different, this time we are using [virtualScroll] and *virtualItem, but the concept is the same. We are setting up some data that will be looped over for the list. The only difference now is that this list will now use virtual scrolling instead of the standard scrolling.
+
+It’s important for the virtual scroll to know approximately how big your items will be, since it needs to know how many items would be required to fill up the screen. You can help this process by specifying an approxItemWidth and approxItemHeight
+
+####Solution 2
 
 [link : Infinite scroll](http://ionicframework.com/docs/v2/api/components/infinite-scroll/InfiniteScroll/)
 
