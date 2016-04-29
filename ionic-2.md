@@ -1103,56 +1103,59 @@ import {VALUE_ONE} from './config';
 ##Third party lib
 [Back to top](#ionic-2)
 
-###Warning not tested yet !
+To use a custom lib file in your project, follow the next steps 
 
-First, create a JS file containing your code, like :
+**1 Create "lib" folder under app**
 
 ```
-export class myLib{
-    constructor(){
-    	// some stuff
-    }
-    
-    function1(_params){
-    	// some stuff
-    }
-    
-    function2(){
-    	// some stuff
-    }
+/app/lib/utils.js
+```
+
+**2 implement lib file**
+
+ex : utils.js
+```
+var UI = {};
+
+UI.info = function(_titre, _message){
+  _titre = _titre != "" ? _titre : "";
+  _message = _message != "" ? _message : "";
+  
+  console.log(`[--- ${_titre} ---] ${_message}`);
+};
+
+export UI;
+
+```
+or export some functions
+
+```
+export function getSquare(_value){	// Only this function will be available from external
+   return square(_value);
+}
+
+function square(_value){	// Not exported
+   return _value * _value;
 }
 ```
 
-**Usage**
+**3 Using the custom lib in the whole project**
 
-Add import and providers **in your root page (app.js) if you want to use your lib across your project**.
-
+ex : From Home.js page
 ```
-import {MyLib} from './pages/lib/myLib';
+import * as UI from '../../lib/utils';
 
-@App({
-    providers: [MyLib]
-    })
+@Page({
+  templateUrl: 'build/pages/home/home.html'
+})
+export class HomePage {
 
-export class myPage{
-	constructor(myLib: MyLib){	// or just constructor(myLib)
-		myLib.function1("test");
-	}
+  //Chargement de la base de données
+  constructor() {
+    UI.info("test","toto"); 
+  }
 }
 ```
-
-In child page, **providers** in **@App** is *not necessary* in your **@Page decorator**. You can use it, but it will create another myLib instance.
-
-```
-import {MyLib} from './pages/lib/myLib';
-
-export class myPage{
-	constructor(myLib: MyLib){	// or just constructor(myLib)
-		this.result = myLib.function2();
-	}
-}
-```
-
 ##Geolocation
 [Back to top](#ionic-2)  
 
