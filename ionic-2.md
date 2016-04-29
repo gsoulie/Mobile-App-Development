@@ -1127,7 +1127,7 @@ UI.info = function(_titre, _message){
 export UI;
 
 ```
-or export some functions
+or export only some functions
 
 ```
 export function getSquare(_value){	// Only this function will be available from external
