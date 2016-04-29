@@ -1955,6 +1955,7 @@ removePost(post){
 #####Solution 1
 
 [link : Scroll performance](http://www.joshmorony.com/boosting-scroll-performance-in-ionic-2/)
+[link : virtual-scroll official doc](http://ionicframework.com/docs/v2/api/components/virtual-scroll/VirtualScroll/)
 
 **Create new project**
 
