@@ -39,6 +39,8 @@
 
 **Some resources**
 
+[Link : ng-conf-workshop](https://github.com/chrisgriffith/ng-conf-workshop)    
+
 [link : ionic.io](http://docs.ionic.io/docs/io-introduction)
 
 [link : Official ionic 2 documentation](http://ionicframework.com/docs/v2/getting-started/migration/)
