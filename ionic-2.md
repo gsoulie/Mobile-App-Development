@@ -771,7 +771,7 @@ This creates a local variable that we can use to access the element, so if I wan
 ```
 <section *ngIf="showSection">
  
-<li *ngFor="#item of items">
+<li *ngFor="let item of items">
 ```
 We can also create embedded templates using directives like ngIf and ngFor.
 
@@ -1024,7 +1024,7 @@ export class MyPage {
 The meaning of life: {{mySingleInt | addInt:2}}
 
 <ul>
-<li *ngFor="#myInt of myIntArray">
+<li *ngFor="let myInt of myIntArray">
 {{myInt | addInt:1}}
 </li>
 </ul>
@@ -1454,7 +1454,7 @@ export class HomePage {
  
 <ion-content class="home">
     <ion-list>
-        <ion-item *ngFor="#person of people">
+        <ion-item *ngFor="let person of people">
             {{person.firstname}} {{person.lastname}}
         </ion-item>
     </ion-list>
@@ -1604,7 +1604,7 @@ export class PhotoPage {
  
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="#post of posts">
+    <ion-item *ngFor="let post of posts">
       <img [src]="post.data.thumbnail" />
     </ion-item>
   </ion-list>
@@ -1860,7 +1860,7 @@ Solution for filling dynamic ion-list item
 
 ```
 <ion-list> 
-    <ion-item *ngFor="#item of items">{{item.fullname}}</ion-item> 
+    <ion-item *ngFor="let item of items">{{item.fullname}}</ion-item> 
 </ion-list>
 
 or
@@ -1870,7 +1870,7 @@ For clickable list you have to use
 
 ```
 <ion-list> 
-    <button ion-item *ngFor="#item of items">{{item.fullname}}</button> 
+    <button ion-item *ngFor="let item of items">{{item.fullname}}</button> 
 </ion-list>
 ```
 
@@ -1881,7 +1881,7 @@ Consider a ion-list in which we want to hide every items which property "deleted
 
 ```
 <ion-list>
-  <ion-item-sliding *ngFor="#item of getActiveItems()" #slidingItem>
+  <ion-item-sliding *ngFor="let item of getActiveItems()" #slidingItem>
     <ion-item>{{item.fach}} ({{item.kuerzel}})</ion-item>
     <ion-item-options>
       <button (click)="showEditModal(item, slidingItem)"><ion-icon name="create"></ion-icon>Bearbeiten</button>
@@ -1926,7 +1926,7 @@ Second solution, in case that you prefer to do the filtering in the template the
 View file
 ```
 <ion-list>
-    <ion-item-sliding *ngFor="#post of posts">
+    <ion-item-sliding *ngFor="let post of posts">
     	<ion-item>
     	...
     	</ion-item>
@@ -2012,7 +2012,7 @@ Modify **page1.html** to reflect the following:
  
   <ion-list>
  
-    <ion-item *ngFor="#item of items">
+    <ion-item *ngFor="let item of items">
       <ion-avatar item-left>
         <ion-img [src]="item.avatarUrl"></ion-img>
       </ion-avatar>
@@ -2075,7 +2075,7 @@ View file
 <ion-content>
 
  <ion-list>
-   <ion-item *ngFor="#i of items"></ion-item>
+   <ion-item *ngFor="let i of items"></ion-item>
  </ion-list>
 
  <ion-infinite-scroll (infinite)="doInfinite($event)">
