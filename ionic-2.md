@@ -806,6 +806,8 @@ It’s a similar concept to Dependency Injection in Angular 1, where we would in
 
 **Promises**
 
+If you’ve used ngCordova then you will probably already be familiar with promises (a lot of JavaScript libraries implement promises) and why they are easier to use than callbacks. Promises provide a much nicer format for grabbing asynchronous data (e.g. data you need to wait for when you fetch something from a server or device), the current format of callbacks leads to ugly nested code that can become a nightmare to maintain.
+
 ES6 adds native support for promises, which look like this:
 
 ```
