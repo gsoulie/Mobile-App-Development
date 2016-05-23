@@ -2047,7 +2047,7 @@ Modify **page2.html** to reflect the following:
  
     <ion-list [virtualScroll]="items">
  
-      <ion-item *virtualItem="#item">
+      <ion-item *virtualItem="let item">
         <ion-avatar item-left>
           <ion-img [src]="item.avatarUrl"></ion-img>
         </ion-avatar>
