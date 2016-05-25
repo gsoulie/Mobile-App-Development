@@ -934,7 +934,7 @@ Now someString would be run through your custom myPipe before the value is outpu
 First, create a "pipe" directory in your project will containing all pipe lib. A basic pipe class looks like below :
 
 ```
-import {Pipe} from 'angular2/core';
+import {Pipe} from '@angular/core';
 
 @Pipe({
 	name: 'helloWorld'	// pipe name
@@ -991,7 +991,7 @@ Pipe inline syntax : ```value | myPipe:args[0]:args[1]```
 **Pipe file**
 
 ```
-import {Pipe} from 'angular2/core';
+import {Pipe} from '@angular/core';
 
 @Pipe({
 	name: 'addInt'
@@ -1493,8 +1493,8 @@ This is the preferred storage engine, as data will be stored in appropriate app 
 **Usage**
 
 ```
-import {Injectable} from 'angular2/core';
-import {Http} from 'angular2/http';
+import {Injectable} from '@angular/core';
+import {Http} from '@angular/http';
 import {Storage, SqlStorage} from 'ionic/ionic';
 
 @Injectable()
@@ -1638,7 +1638,7 @@ export class PhotoPage {
 
 ```
 import {Page} from 'ionic/ionic';
-import {Http} from 'angular2/http';
+import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
  
 @Page({
