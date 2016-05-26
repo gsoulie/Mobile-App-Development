@@ -1863,18 +1863,12 @@ export class MyApp {
 ###Combobox
 
 ```
-<div class="list">
-  <label class="item item-input item-select">
-    <div class="input-label">
-      Lightsaber
-    </div>
-    <select>
-      <option>Blue</option>
-      <option selected>Green</option>
-      <option>Red</option>
-    </select>
-  </label>
-</div>
+<ion-item>
+	<ion-label>Profession</ion-label>
+	<ion-select [(ng-model)]="prof">
+		<ion-option *ngFor="let item of professions" value="{{item.objectId}}">{{item.titre}}</ion-option>
+	</ion-select>
+</ion-item>
 ```
 
 ###ion-list
