@@ -1349,6 +1349,8 @@ addInfoWindow(marker, content){
 ##Database
 [Back to top](#ionic-2)  
 
+[link : Using Sqlite storage tutorial](https://devdactic.com/ionic-2-sqlstorage/)
+
 ###First solution
 There is two main solutions for data storage. The first one is the local HTML5 storage and the second is using SQLite database storage.
 
