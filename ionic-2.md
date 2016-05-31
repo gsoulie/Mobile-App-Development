@@ -668,7 +668,7 @@ $ sudo npm install -g gulp
 ##Useful Functions
 [Back to top](#ionic-2)  
 
-**get specific platform**
+###get specific platform
 
 ```
 var isWebView = ionic.Platform.isWebView();
@@ -681,6 +681,23 @@ var currentPlatform = ionic.Platform.platform();
 var currentPlatformVersion = ionic.Platform.version();
 
 ionic.Platform.exitApp(); // stops the app
+```
+
+###Show / hide DOM element
+
+```
+<button (click)="removeNote()" [hidden]="creationMode">
+	<ion-icon name="trash"></ion-icon>
+</button>
+```
+
+In controller.ts
+
+```
+export class HomePage {
+  creationMode: boolean = false;
+  ... 
+}
 ```
 
 ##Angular 2
