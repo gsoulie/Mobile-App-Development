@@ -821,7 +821,10 @@ console.log("2π = " + math.sum(math.pi, math.pi));
 var sum = LibMath.sum, pi = LibMath.pi;
 console.log("2π = " + sum(pi, pi));
 ```
+##File access
+[Back to top](#ionic-2)  
 
+[link : save image locally](https://forum.ionicframework.com/t/how-to-save-an-image-locally-with-ionic-2/46257/4)
 
 ##Geolocation
 [Back to top](#ionic-2)  
