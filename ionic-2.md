@@ -1971,6 +1971,28 @@ removePost(post){
 }
 ```
 
+####ion-item-sliding
+
+```
+<ion-content class="home">
+  <ion-list>
+    <ion-item-sliding  *ngFor="#item of notes" >
+      <button ion-item (click)="noteSelected(item)">
+        <ion-item-content>
+          <h2>{{item.title}}</h2>
+          <p>{{item.text | truncate: 20}}</p>
+        </ion-item-content>
+      </button>
+
+      <ion-item-options>
+        <button darkgrey (click)="removeNote(item)" class="btn"><ion-icon name="trash"></ion-icon>Delete</button>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+</ion-content>
+```
+
 ####Inifinite scroll in ion-list
 
 #####Solution 1
