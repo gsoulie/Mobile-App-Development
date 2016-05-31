@@ -1,5 +1,4 @@
 ##Grunt
-[Back to top](#ionic-2) 
 
 ###1 Grunt (global) Install
 ```
