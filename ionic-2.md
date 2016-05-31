@@ -4,9 +4,9 @@
 
 ##### Table of Contents  
 [Start with ionic](#start-with-ionic)  
-[Grunt](#grunt)    
 [Atom configuration](#work-with-atom)  
 [Cordova](#cordova)   
+[Gulp](#gulp)    
 [Useful functions](#useful-functions)  
 [Angular 2](#angular-2)  
 [Decorators](#decorators)    
@@ -14,6 +14,7 @@
 [Config](#config)    
 [Global variables](#global-variables)     
 [Third party lib](#third-party-lib)    
+[File access](#file-access)  
 [Geolocation](#geolocation)  
 [Database](#database)  
 [Camera](#camera)   
@@ -26,7 +27,6 @@
 [Component - tab icon](#component-tab-icon)    
 [Component - searchbar](#component-searchbar)    
 [Component - alert dialog box](#component-alert-dialog-box)    
-[File access](#file-access)  
 [Backend Strongloop](#backend-strongloop)     
 [Internationalization](#internationalization)  
 [Splash screen and appicon](#splash-screen-and-appicon)  
@@ -821,6 +821,7 @@ console.log("2π = " + math.sum(math.pi, math.pi));
 var sum = LibMath.sum, pi = LibMath.pi;
 console.log("2π = " + sum(pi, pi));
 ```
+
 
 ##Geolocation
 [Back to top](#ionic-2)  
@@ -1876,11 +1877,6 @@ export class HomePage {
   }
 }
 ```
-
-##File access
-[Back to top](#ionic-2)  
-
-[link : save image locally](https://forum.ionicframework.com/t/how-to-save-an-image-locally-with-ionic-2/46257/4)
 
 ##Backend Strongloop
 [Back to top](#ionic-2) 
