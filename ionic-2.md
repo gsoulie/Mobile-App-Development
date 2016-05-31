@@ -6,11 +6,9 @@
 [Start with ionic](#start-with-ionic)  
 [Grunt](#grunt)    
 [Atom configuration](#work-with-atom)  
-[Bracket](#bracket)     
 [Cordova](#cordova)  
 [Gulp](#gulp)  
 [Useful functions](#useful-functions)  
-[TypeScript](#typescript)  
 [Angular 2](#angular-2)  
 [Decorators](#decorators)    
 [Pipe](#pipe)    
@@ -24,13 +22,15 @@
 [HTTP query](#http-query)  
 [Navigation](#navigation)  
 [Themes](#themes)  
-[Components (combobox, ion-list...)](#components)  
+[Component - comboBox](#component-combobox)    
+[Component - ion-list](#component-ion-list)  
+[Component - tab icon](#component-tab-icon)    
+[Component - searchbar](#component-searchbar)    
+[Component - alert dialog box](#component-alert-dialog-box)    
 [File access](#file-access)  
-[Backend Firebase](#backend-firebase)      
 [Backend Strongloop](#backend-strongloop)     
 [Internationalization](#internationalization)  
 [Splash screen and appicon](#splash-screen-and-appicon)  
-[Testing with Jasmine](#testing-with-jasmine)    
 [Beta testing](#beta-testing)    
 [Publishing App](#publishing-app)  
 [Push notification](#push-notification)    
@@ -647,16 +647,6 @@ Create a **tsconfig.json** file in your project root with :
 
 ```F6``` For compilation
 
-
-##Bracket
-[Back to top](#ionic-2) 
-
-[link : Bracket official website](http://brackets.io/)
-[link : Package ionic](http://www.ionicbrackets.com/)
-
-After installation, download the ionicBracket plugin, then just open the extension manager inside of Brackets and copy the extension link (http://ionicbrackets.com/Ionic-Brackets-Extension.zip) into the extension url field and hit install.
-
-
 ##Cordova
 [Back to top](#ionic-2) 
 
@@ -692,12 +682,6 @@ var currentPlatformVersion = ionic.Platform.version();
 
 ionic.Platform.exitApp(); // stops the app
 ```
-
-
-##TypeScript
-[Back to top](#ionic-2)  
-
-[link : TypeScript Guildeline](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)    
 
 ##Angular 2
 [Back to top](#ionic-2)  
@@ -1859,10 +1843,8 @@ export class MyApp {
 }
 ```
 
-##Components
+##Component ComboBox
 [Back to top](#ionic-2)  
-
-###Combobox
 
 ```
 <ion-item>
@@ -1873,7 +1855,8 @@ export class MyApp {
 </ion-item>
 ```
 
-###ion-list
+##Component ion-list
+[Back to top](#ionic-2)  
 
 Solution for filling dynamic ion-list item
 
@@ -2157,8 +2140,10 @@ export class NewsFeedPage {
 }
 ```
 
+##Component Tab icon
+[Back to top](#ionic-2)  
 
-###Customize tab icon
+Customize tab icon
 
 It's pretty easy to do actually. When you set a tabIcon property, Ionic sets a class name on the tab, based on the name you provided. So for example, if you set ```tabIcon="customicon"```, then the resulting class names will be ```.ion-ios-hygglo-customicon``` and ```.ion-ios-hygglo-customicon-outline``` (for selected tabs) for iOS. On Android, the prefix will be ```.ion-md-``` instead of ```.ion-ios-```.
 
@@ -2174,8 +2159,8 @@ Then just create a custom css, something like this:
   opacity: 0.9;
 }
 ```
-
-###Searchbar
+##Component Searchbar
+[Back to top](#ionic-2)  
 
 ```
 <ion-searchbar [(ngModel)]="searchQuery" (change)="searchThing($event)" autocorrect="off"></ion-searchbar>
@@ -2187,8 +2172,8 @@ this.giphy.search(this.searchQuery).then(data => {
     this.gifs = data;
 });
 ```
-
-###Alert dialog box
+##Component Alert dialog box
+[Back to top](#ionic-2)  
 
 Here's a sample code to show a confirmation dialog box. The key is to add Alert import and then, don't miss to add alert object to current navigation stack
 
@@ -2240,9 +2225,6 @@ export class HomePage {
 [Back to top](#ionic-2)  
 
 [link : save image locally](https://forum.ionicframework.com/t/how-to-save-an-image-locally-with-ionic-2/46257/4)
-
-##Backend Firebase
-[Back to top](#ionic-2)  
 
 ##Backend Strongloop
 [Back to top](#ionic-2) 
@@ -2479,9 +2461,6 @@ Add the following property to config.xml
 ```
 <preference name="ShowSplashScreenSpinner" value="false"/>
 ```
-
-##Testing with Jasmine
-[Back to top](#ionic-2)
 
 ##Beta testing
 [Back to top](#ionic-2)
