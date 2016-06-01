@@ -1503,6 +1503,32 @@ export class MyApp {
 }
 ```
 
+###Change background color of a specifi page
+
+```
+<ion-content padding class="masters">
+  <ion-list inset>
+    <button ion-item *ngFor="#master of masterPages" (click)="navMaster(master)">
+      {{master.title}}
+    </button>
+  </ion-list>
+</ion-content>
+```
+
+Then in your scss you target the class in the ion-content tag:
+
+```
+.masters {
+  background-color: green;
+}
+```
+
+Lastly you make sure this scss is being compiled with your **app.core.scss** by importing it in that same file like:
+
+```
+@import "../pages/masters/masters";
+```
+
 ##Component ComboBox
 [Back to top](#ionic-2)  
 
