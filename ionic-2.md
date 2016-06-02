@@ -8,7 +8,7 @@
 [Cordova](#cordova)   
 [Gulp](#gulp)    
 [Useful functions](#useful-functions)  
-[MomentJS](#momentjs)    
+[Moment JS](#momentjs)    
 [Angular 2](#angular-2)  
 [Decorators](#decorators)    
 [Pipe](#pipe)    
@@ -358,7 +358,7 @@ import * as moment from 'moment';
 let mydate = moment().format('ddd MMM YYYY, h:mm:ss');
 ```
 
-####Customize locale
+####Customize locale variables
 
 In the followig example, we define french locale 
 
