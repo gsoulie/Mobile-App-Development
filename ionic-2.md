@@ -8,6 +8,7 @@
 [Cordova](#cordova)   
 [Gulp](#gulp)    
 [Useful functions](#useful-functions)  
+[MomentJS](#momentjs)    
 [Angular 2](#angular-2)  
 [Decorators](#decorators)    
 [Pipe](#pipe)    
@@ -337,6 +338,24 @@ export class HomePage {
   creationMode: boolean = false;
   ... 
 }
+```
+
+##MomentJS
+[Back to top](#ionic-2)  
+
+####Package installation
+
+```
+npm install angular-moment moment --save
+```
+
+####Usage
+
+```
+import * as moment from 'moment';
+...
+...
+let mydate = moment().format('ddd MMM YYYY, h:mm:ss');
 ```
 
 ##Angular 2
@@ -1503,7 +1522,7 @@ export class MyApp {
 }
 ```
 
-###Change background color of a specifi page
+###Change background color of a specific page
 
 ```
 <ion-content padding class="masters">
