@@ -583,29 +583,6 @@ for (let i = 0; i < a.length; i++) {
 
 [link : Decorators by Josh MORONY](https://www.joshmorony.com/building-mobile-apps-with-ionic-2/decorators-in-ionic2.html)
 
-####@App
-**@App** is the most important decorator of all, but you'll only ever use it once in each application you build. **The @App decorator declares the class that it is attached to as the root component of the application**. We've already talked about this briefly, and will continue to do so later, but the root component is essentially the starting point for your app.
-
-It's important to understand the component based structure of an Ionic 2 application, it's basically made up of a bunch of different components tied together, and at the root of all of **this is the root component**. The root components main responsibility is setting up your root page, which will be the first page that the user sees in your application. You can then get your page to push additional pages onto the navigation stack (we will cover navigation concepts in depth in a later lesson), and those pages can in turn push more pages and so on.
-
-####@Page
-**@Page** is likely the most common decorator you will use in your applications. It is used to define any page, or "view", in your application. So if you have an application with the following pages:
-
-- Location
-- All Products
-- Product Detail
-- Contact
-
-Then **each of these will be their own components which will have a decorator of @Page in the class definition**. Every page will also have a template that can either be defined directly using template in the decorator, or by using a templateUrl
-
-```
-@Page({
-    templateUrl: 'build/pages/location/location.html'   
-})
-export class LocationPage {
-
-}
-```
 
 ####@Component
 
@@ -764,7 +741,7 @@ The Config lets you configure your entire app or specific platforms. You can set
 **sample code of Config**
 
 ```
-@App({
+@Component({
   template: `<ion-nav [root]="root"></ion-nav>`
   config: {
     backButtonText: 'Go Back',
@@ -780,7 +757,7 @@ The Config lets you configure your entire app or specific platforms. You can set
 To change the mode to always use Material Design (md).
 
 ```
-@App({
+@Component({
   template: `<ion-nav [root]="root"></ion-nav>`
   config: {
     mode: 'md'
@@ -791,7 +768,7 @@ To change the mode to always use Material Design (md).
 You can also use the config object to define platform specific behaviour:
 
 ```
-@App({
+@Component({
   template: `<ion-nav [root]="root"></ion-nav>`
   config: {
     tabbarPlacement: 'bottom',
@@ -951,7 +928,7 @@ $ ionic plugin add cordova-plugin-geolocation
 
 Next, specify ion-navbar configuration in app.js
 ```
-@App({
+@Component({
   template: '<ion-nav [root]="root"></ion-nav>',
 })
 
@@ -1095,16 +1072,17 @@ $ ionic plugin add cordova-sqlite-storage
 **Database initialization (app.js)**
 
 ```
-import {App, IonicApp, Platform, Storage, SqlStorage} from 'ionic-angular';
+import {App, Platform, Storage, SqlStorage} from 'ionic-angular';
 import {HomePage} from './pages/home/home';
+import {Component} from '@angular/core';
 
-@App({
+@Component({
   templateUrl: 'build/app.html',
   config: {}
 })
 class MyApp {
   static get parameters() {
-    return [[IonicApp], [Platform]];
+    return [[App], [Platform]];
   }
 
   constructor(app, platform) {
@@ -1137,9 +1115,10 @@ class MyApp {
 **Database manipulation (home.js)**
 
 ```
-import {Page, App, IonicApp, Platform, Storage, SqlStorage} from 'ionic-angular';
+import {App, Platform, Storage, SqlStorage} from 'ionic-angular';
+import {Component} from '@angular/core';
 
-@Page({
+@Component({
   templateUrl: 'build/pages/home/home.html'
 })
 
@@ -1292,10 +1271,10 @@ View file
 
 Controller file
 ```
-import {Page} from 'ionic-angular';
+import {Component} from '@angular/core';
 import {Camera} from 'ionic-native';
 
-@Page({
+@Component({
   templateUrl: 'build/pages/photo/photo.html'
 })
 export class PhotoPage {
@@ -1513,9 +1492,9 @@ There is a few more methods available on the NavController such as insert, remov
 ####Lifecycle Events
 In version 1.0, we had the concept of events being fired when we were entering and leaving the view, among others. In version 2.0, we have a very similar set of events. To handle one of these events, we just need to give our ```@Page``` class a method that matches the event. For example, if we want to run an event when the ```@Page``` is loaded, we will need to give our page the **onPageLoaded** method:
 ```
-import {Page} from 'ionic-angular';
+import {Component} from '@angular/core';
 
-@Page({
+@Component({
 	templateUrl: 'build/pages/About/About.html',
 })
 export class AboutPage {
@@ -1558,11 +1537,12 @@ initializeApp() {
 **Other solution with beta3**
 
 ```
-import {App, Platform} from 'ionic-angular';
+import {Platform} from 'ionic-angular';
+import {Component} from '@angular/core';
 import {TabsPage} from './pages/tabs/tabs';
 
 
-@App({
+@Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
@@ -1758,10 +1738,10 @@ ionic start virtual-scroll tabs --v2
 Modify Page1 and Page2 controller with :
 
 ```
-import {Page} from 'ionic-angular';
+import {Component} from '@angular/core';
 
 
-@Page({
+@Component({
   templateUrl: 'build/pages/page1/page1.html'
 })
 export class Page1 {
@@ -2059,12 +2039,13 @@ Each i18n file looks like :
 **Import ng2-translate into app.js**
 
 ```
-import {App, Platform} from 'ionic/ionic';
+import {Platform} from 'ionic/ionic';
+import {Component} from '@angular/core';
 import {HomePage} from './pages/home/home';
 import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
  
  
-@App({
+@Component({
   template: '<ion-nav [root]="rootPage"></ion-nav>',
   config: {},
   providers: [TranslateService],
