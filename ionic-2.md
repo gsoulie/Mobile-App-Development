@@ -340,6 +340,21 @@ export class HomePage {
 }
 ```
 
+###Checking network connection
+
+```
+$ cordova plugin add cordova-plugin-network-information
+```
+
+```
+if(navigator.onLine){
+   return true;
+} else {
+   return false;
+}
+```
+
+
 ##MomentJS
 [Back to top](#ionic-2)  
 
