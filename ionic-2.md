@@ -287,6 +287,18 @@ Create a **tsconfig.json** file in your project root with :
 
 ```F6``` For compilation
 
+###Customize colors
+
+To customize Atom editor colors, open Atom preference and on the Settings page, "Open Config Folder". Then, open **style.less** file and add the following code :
+
+```
+atom-text-editor::shadow {
+  .comment {
+    color: #d1cd96;
+  }
+}
+```
+
 ##Cordova
 [Back to top](#ionic-2) 
 
