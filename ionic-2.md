@@ -23,6 +23,7 @@
 [HTTP query](#http-query)  
 [Navigation](#navigation)  
 [Themes](#themes)  
+[Event propagation](#event-propagation)    
 [Component - comboBox](#component-combobox)    
 [Component - ion-list](#component-ion-list)  
 [Component - tab icon](#component-tab-icon)    
@@ -1645,6 +1646,35 @@ selectObject(_selectedItem){
 	this.newSelectedId = _selectedItem
 }
 ```
+
+##Event propagation
+[Back to top](#ionic-2)  
+
+This code show how to stop event propagation
+
+**View file**
+
+```
+<ion-content padding class="page1">
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="openDetail(item.idDevice, item.nom)">
+      <button clear item-right (click)="pickDevice($event,item.idDevice)">
+        <ion-icon green name="phone-portrait" item-right></ion-icon>
+      </button>
+      <h2>{{item.nom}}</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>
+```
+
+**Controller file**
+
+```
+pickDevice(event,_idDevice){
+    event.stopPropagation();
+  }
+```
+
 
 ##Component ion-list
 [Back to top](#ionic-2)  
