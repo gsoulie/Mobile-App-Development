@@ -28,6 +28,7 @@
 [Component - tab icon](#component-tab-icon)    
 [Component - searchbar](#component-searchbar)    
 [Component - alert dialog box](#component-alert-dialog-box)    
+[Component - floating button](#floating-button)    
 [Backend Strongloop](#backend-strongloop)     
 [Internationalization](#internationalization)  
 [Splash screen and appicon](#splash-screen-and-appicon)  
@@ -2009,6 +2010,24 @@ export class HomePage {
       this.nav.present(confirm);
   }
 }
+```
+
+##Floating button
+[Back to top](#ionic-2) 
+
+This snippet show how to fix floating button in front of a list
+
+```
+<ion-content padding class="page1">
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      ...
+    </ion-item>
+  </ion-list>
+</ion-content>
+<button fab fab-bottom fab-right fab-fixed style="z-index:100">
+  <ion-icon name="add"></ion-icon>
+</button>
 ```
 
 ##Backend Strongloop
