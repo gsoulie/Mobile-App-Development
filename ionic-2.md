@@ -1617,13 +1617,32 @@ Lastly you make sure this scss is being compiled with your **app.core.scss** by 
 ##Component ComboBox
 [Back to top](#ionic-2)  
 
+**View file**
 ```
 <ion-item>
 	<ion-label>Profession</ion-label>
 	<ion-select [(ng-model)]="prof">
-		<ion-option *ngFor="let item of professions" value="{{item.objectId}}">{{item.titre}}</ion-option>
+		<ion-option *ngFor="let item of professions" value="{{item.objectId}}" (select)="selectObject($event)">{{item.titre}}</ion-option>
 	</ion-select>
 </ion-item>
+```
+
+**Controller file**
+
+```
+public prof: string;
+private professions: any[];
+private newSelectedId: number = 0;
+
+constructor(){
+	this.prof = "prof 1";
+	this.professions = [{objectId: 1, titre: "prof 1"},{objectId: 2, titre: "prof 2"},{objectId: 3, titre: "prof 3"}];
+}
+
+// To verify
+selectObject(_selectedItem){
+	this.newSelectedId = _selectedItem
+}
 ```
 
 ##Component ion-list
