@@ -2185,7 +2185,7 @@ To use image in your app, create a **img** folder in your **www** folder and use
 ```
 let item = {name:"my item", image:"img/my_image.png"}
 ```
-**IMPORTANT** don't put "/" before *img*
+**IMPORTANT** don't put "**/**" before *img*
 
 **Style file**
 
