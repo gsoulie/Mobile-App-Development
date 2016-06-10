@@ -29,7 +29,8 @@
 [Component - tab icon](#component-tab-icon)    
 [Component - searchbar](#component-searchbar)    
 [Component - alert dialog box](#component-alert-dialog-box)    
-[Component - floating button](#floating-button)    
+[Component - floating button](#floating-button)  
+[Using image](#using-image)    
 [Backend Strongloop](#backend-strongloop)     
 [Internationalization](#internationalization)  
 [Splash screen and appicon](#splash-screen-and-appicon)  
@@ -2166,6 +2167,32 @@ This snippet show how to fix floating button in front of a list
 <button fab fab-bottom fab-right fab-fixed style="z-index:100">
   <ion-icon name="add"></ion-icon>
 </button>
+```
+
+
+##Using image
+[Back to top](#ionic-2) 
+
+To use image in your app, create a **img** folder in your **www** folder and use **img** tag like below
+
+**View file**
+```
+<img class="thb" src="{{item.image}}" item-left/>
+```
+
+**Controller file**
+
+```
+let item = {name:"my item", image:"img/my_image.png"}
+```
+**IMPORTANT** don't put "/" before *img*
+
+**Style file**
+
+```
+.thb{
+  width: 50px;
+}
 ```
 
 ##Backend Strongloop
