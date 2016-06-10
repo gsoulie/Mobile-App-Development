@@ -2040,16 +2040,67 @@ Then just create a custom css, something like this:
 ##Component Searchbar
 [Back to top](#ionic-2)  
 
+**View file**
 ```
-<ion-searchbar [(ngModel)]="searchQuery" (change)="searchThing($event)" autocorrect="off"></ion-searchbar>
+<ion-toolbar maintheme>
+  <ion-searchbar placeholder="Rechercher un device" [(ngModel)]="searchDevice" (ionInput)="getDevice($event)"></ion-searchbar>
+</ion-toolbar>
+<ion-content padding class="page1">
+  <ion-list>
+    <ion-item *ngFor="let item of items">
+      <h2>{{item.nom}}</h2>
+    </ion-item>
+  </ion-list>
+</ion-content>
 ```
 
+**Controller file**
 ```
-searchThing() {
-this.giphy.search(this.searchQuery).then(data => {
-    this.gifs = data;
-});
+constructor(public nav: NavController) {
+    this.nav = nav;
+    this.getAllDevices();
+  }
+
+  getAllDevices(){
+    this.items = [{
+      nom: "iPhone 4S",
+      version: "iOS 7.2.1"
+    },{
+      nom: "iPad2",
+      version: "iOS 8.3"
+    },{
+      nom: "Mac Mini 1",
+      version: "Mac OSX El Capitan - SSD 128Go"
+    },{
+      nom: 'Mac Book Pro 17"',
+      version: "Mac OSX Yosemite"
+    },{
+      nom: "Nexus 4",
+      version: "Android 4.4.4"
+    }];
+  }
+  
+  getDevice(searchbar){
+    this.getAllDevices();
+
+    // set searchText to the value of the searchbar
+    var searchText = searchbar.value;
+
+    // Avoid research if searchtext is empty
+    if (searchText.trim() == '') {
+      return;
+    }
+
+    // Filtering on the attribute 'nom'
+    this.items = this.items.filter((v) => {
+      if (v.nom.toLowerCase().indexOf(searchText.toLowerCase()) > -1) {
+        return true;
+      }
+      return false;
+    })
+  }
 ```
+
 ##Component Alert dialog box
 [Back to top](#ionic-2)  
 
