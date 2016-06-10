@@ -1961,6 +1961,63 @@ export class NewsFeedPage {
 }
 ```
 
+###Set colour dynamically of each ion-item
+
+**View file**
+
+```
+<ion-list>
+	<ion-item *ngFor="let item of items" (click)="openDetail(item.idDevice, item.nom)">
+		<button clear item-right (click)="pickDevice($event,item.idDevice)">
+			<ion-icon [style.color]="item.disponible ? '#00CC00' : '#CD1625'" name="phone-portrait" item-center></ion-icon>
+		</button>
+		<h2>{{item.nom}}</h2>
+	</ion-item>
+</ion-list>
+```
+
+**IMPORTANT** It's important to set colour by using hexadecimal string instead of standard colour name like 'primary', 'danger' etc... because it's actually doesn't work.
+
+**Controller file**
+
+```
+export class Page1 {
+  public items: any[];
+
+  constructor(public nav: NavController) {
+    this.nav = nav;
+
+    let dataset = [{
+      idDevice: "1",
+      nom: "iPhone 4S",
+      disponible: true
+    },{
+      idDevice: "2",
+      nom: "iPad2",
+      disponible: true
+    },{
+      idDevice: "3",
+      nom: "Mac Mini 1",
+      disponible: false
+    },{
+      idDevice: "4",
+      nom: 'Mac Book Pro 17"',
+      disponible: false
+    },{
+      idDevice: "5",
+      nom: "Nexus 4",
+      disponible: true
+    }];
+
+    this.items = dataset;
+  }
+
+  openDetail(_idDevice, _deviceName){
+    this.nav.push(FichePage,{idDevice: _idDevice, deviceName: _deviceName});
+  }
+}
+```
+
 ##Component Tab icon
 [Back to top](#ionic-2)  
 
