@@ -27,6 +27,7 @@
 [JSHint](http://jshint.com/)    
 [JSON editor](http://www.jsoneditoronline.org/)    
 [JSON viewer](http://jsonviewer.stack.hu/)     
+[JSON Schema](http://jsonschema.net/#/)    
 [TSLint for linting TypeScript code](http://palantir.github.io/tslint/)    
 
 ##Graphical resources
