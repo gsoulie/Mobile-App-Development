@@ -839,15 +839,16 @@ import {VALUE_ONE} from './config';
 ##Third party lib
 [Back to top](#ionic-2)
 
+###ES6
 To use a custom lib file in your project, follow the next steps 
 
-**1 Create "lib" folder under app**
+####1 Create "lib" folder under app
 
 ```
 /app/lib/utils.js
 ```
 
-**2 implement lib file**
+####2 implement lib file
 
 ex : utils.js
 ```
@@ -875,7 +876,7 @@ function square(_value){	// Not exported
 }
 ```
 
-**3 Using the custom lib in the whole project**
+####3 Using the custom lib in the whole project
 
 ex : From Home.js page
 ```
@@ -893,25 +894,50 @@ export class HomePage {
 }
 ```
 
-**4 TODO : to test
-```
-//  lib/math.js
-LibMath = {};
-LibMath.sum = function (x, y) { return x + y };
-LibMath.pi = 3.141593;
-```
+###TypeScript
+
+####1 Create "lib" folder under app
 
 ```
-//  someApp.js
-var math = LibMath;
-console.log("2π = " + math.sum(math.pi, math.pi));
+/app/lib/utils.ts
 ```
 
+####2 implement lib class
+
+ex : utils.ts
+
 ```
-//  otherApp.js
-var sum = LibMath.sum, pi = LibMath.pi;
-console.log("2π = " + sum(pi, pi));
+import {Component, Injectable} from '@angular/core';
+
+@Injectable()
+export class UTILS {
+    
+    constructor() {}
+    public info(_elt: string, _msg: string){
+        _elt = _elt || "";
+        _msg = _msg || "";
+        console.log('[--- ' + _elt + ' ---] ' + _msg);
+    }
+}
+````
+**Be careful** and don't forget **@Injectable** decorator
+
+####3 Inject class in other component
+
 ```
+import {UTILS} from '../../lib/utils';
+
+export class HomePage {
+	utils: UTILS;
+	constructor(){
+		this.utils = new UTILS();
+		this.utils.info("TEST","my first trace");
+	}
+}
+```
+
+
+
 ##File access
 [Back to top](#ionic-2)  
 
