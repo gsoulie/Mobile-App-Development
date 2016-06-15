@@ -2227,6 +2227,16 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 ##Backend Firebase
 [Back to top](#ionic-2) 
 
+###Install firebase
+
+```
+$ npm install angularfire2 --save-dev
+$ npm install firebase --save-dev
+
+$ typings install angularfire2 --save --global
+$ typings install firebase --save --global
+```
+
 ###Create application on Firebase
 
 The first step consist to create your application (web application type) on the Firebase dashboard. Next, you can go to **Database** section and upload your data with JSON file like : 
