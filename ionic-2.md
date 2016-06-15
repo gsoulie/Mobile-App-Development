@@ -32,6 +32,7 @@
 [Component - floating button](#floating-button)  
 [Using image](#using-image)    
 [Backend Strongloop](#backend-strongloop)     
+[Backend Firebase](#backend-firebase)    
 [Internationalization](#internationalization)  
 [Splash screen and appicon](#splash-screen-and-appicon)  
 [Beta testing](#beta-testing)    
@@ -2223,8 +2224,118 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
 ```
 
-####Create Firebase account
+##Backend Firebase
+[Back to top](#ionic-2) 
 
+###Create application on Firebase
+
+The first step consist to create your application (web application type) on the Firebase dashboard. Next, you can go to **Database** section and upload your data with JSON file like : 
+
+```
+{
+	"site": {
+		"France": {
+			"id": "1",
+			"libelle": "Paris"
+		},
+		"UK": {
+			"id": "2",
+			"libelle": "London"
+		}
+	},
+	"user": {
+		"Jean DUPONT": {
+			"id": "1",
+			"nom": "Jean DUPONT"
+		},
+		"Martin DURAND": {
+			"id": "2",
+			"nom": "Martin DURAND"
+		}
+	},
+	"type": {
+		"type1": {"id":"1", "libelle":"Smartphone Android"},
+		"type2": {"id":"2", "libelle":"Tablette Android"},
+		"type3": {"id":"3", "libelle":"iPhone"},
+	}
+}
+```
+
+###Retrieve data
+
+For retrieving data, first create a provider (``ìonic g provider FirebaseService```) to give access to your firebase with :
+
+```
+import {Injectable} from '@angular/core';
+import {Observable} from 'rxjs/Observable';
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/map';
+
+@Injectable()
+export class FirebaseService {
+  baseRef = new Firebase('https://project-<your_app_id>.firebaseio.com/');
+  constructor(public http: Http) {
+    // check for changes in auth status
+        /*this.baseRef.onAuth((authData) => {
+            if (authData) {
+                console.log("User " + authData.uid + " is logged in with " + authData.provider);
+            } else {
+                console.log("User is logged out");
+            }
+        })*/
+  }
+  getData(_tableName, _callback){
+    //console.log("PROVIDER - getData : " + _tableName);
+    let res;
+    this.baseRef.on("value", 
+      (snapshot) => {
+        let dataSet = snapshot.val();
+        //console.log("PROVIDER - resultset : " + JSON.stringify(dataSet));
+        switch(_tableName){
+          case "site": 
+            res =  dataSet.site || [];
+            break;
+          case "users": 
+            res = dataSet.user || [];
+            break;
+          case "type": 
+            res = dataSet.type || [];
+            break;
+          default : 
+            res =  dataSet || [];
+            break;
+        }
+        
+        if(_callback){_callback(res);}
+    },
+    (error) => {
+      console.log("ERREUR de récupération des données : " + JSON.stringify(error));
+    });
+  }
+}
+```
+
+Then, in your home page, add your provider like below :
+
+```
+import {FirebaseService} from '../../providers/firebase-service/firebase-service';
+
+@Component({
+  templateUrl: 'build/pages/page1/page1.html',
+  providers: [FirebaseService]
+})
+
+export class HomePage {
+  public items: any[];
+  
+  constructor(public nav: NavController, public navParams: NavParams, public fb: FirebaseService) {
+    fb.getData("type", function(e){
+	  console.log("callback return : " + JSON.stringify(e));
+	  t = e;
+	});
+  }
+}
+```
 
 ##Internationalization
 [Back to top](#ionic-2)  
