@@ -2243,35 +2243,55 @@ The first step consist to create your application (web application type) on the 
 
 ```
 {
-	"site": {
-		"France": {
-			"id": "1",
-			"libelle": "Paris"
-		},
-		"UK": {
-			"id": "2",
-			"libelle": "London"
+	"site": [{
+		"id": "1",
+		"libelle": "Paris"
+		},{
+		"id": "2",
+		"libelle": "London"
 		}
-	},
-	"user": {
-		"Jean DUPONT": {
-			"id": "1",
-			"nom": "Jean DUPONT"
-		},
-		"Martin DURAND": {
-			"id": "2",
-			"nom": "Martin DURAND"
+	],
+	"user": [{
+		"id": "1",
+		"nom": "Jean DUPONT"
+		},{
+		"id": "2",
+		"nom": "Martin DURAND"
 		}
-	},
-	"type": {
-		"type1": {"id":"1", "libelle":"Smartphone Android"},
-		"type2": {"id":"2", "libelle":"Tablette Android"},
-		"type3": {"id":"3", "libelle":"iPhone"},
-	}
+	],
+	"type": [{"id":"1", "libelle":"Smartphone Android"},
+		{"id":"2", "libelle":"Tablette Android"},
+		{"id":"3", "libelle":"iPhone"}
+	]
 }
 ```
 
-###Retrieve data
+###Retrieve data inside controller
+
+```
+constructor(){
+	this.baseRef = new Firebase('https://project-<your_fireapp_id>.firebaseio.com/');
+	this.getData();
+}
+
+getData(){
+	this.baseRef.on("value", 
+      	(snapshot) => {
+        	let dataSet = snapshot.val();
+        	this.sites =  dataSet.site || [];
+        	this.users = dataSet.user || [];
+        	this.devicesList = dataSet.type || [];
+      },
+      (error) => {
+        console.log("ERREUR de récupération des données : " + JSON.stringify(error));
+      });
+}
+```
+
+
+###Retrieve data with Provider
+
+**TODO** : To verify
 
 For retrieving data, first create a provider (``ìonic g provider FirebaseService```) to give access to your firebase with :
 
