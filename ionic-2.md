@@ -273,6 +273,11 @@ $ apm install jsdoc
 $ apm install docblockr
 ```
 
+[link : NodeDebugger](https://atom.io/packages/node-debugger)    
+```
+$
+```
+
 ####Activate auto-compilation
 
 [tsconfig.json configuration](https://github.com/TypeStrong/atom-typescript/blob/master/docs/tsconfig.md)    
