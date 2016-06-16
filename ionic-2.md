@@ -647,9 +647,9 @@ It might be a little confusing as to when to use @Component and @Directive, as t
 
 [link : Understanding Pipe](http://mcgivery.com/understanding-ionic-2-pipe/)
 
-**@Pipe** (replaced by @Component in Beta 8) allows you to create your own custom pipes to filter data that is displayed to the user, which can be very handy. The decorator might look something like this:
+**@Pipe** allows you to create your own custom pipes to filter data that is displayed to the user, which can be very handy. The decorator might look something like this:
 ```
-@Component({
+@Pipe({
   name: 'myPipe'
 })
 ```
@@ -672,7 +672,7 @@ First, create a "pipe" directory in your project will containing all pipe lib. A
 ```
 import {Pipe} from '@angular/core';
 
-@Component({
+@Pipe({
 	name: 'helloWorld'	// pipe name
 })
 export class HelloWorld {
@@ -701,7 +701,7 @@ export class HelloWorldPipe implements PipeTransform {
 ```
 import {HelloWorld} from 'pipes/HelloWorld';	// pipe import
 
-@Page({
+@Component({
 	templateUrl: 'myPage/myPage.html',
 	pipes: [HelloWorld]	// pipe declaration
 })
@@ -744,7 +744,7 @@ export class AddInt {
 ```
 import {AddInt} from 'pipes/AddInt';
 
-@Page({
+@Component({
 	templateUrl: 'myPage/myPage.html',
 	pipes: [AddInt]
 })
@@ -887,7 +887,7 @@ ex : From Home.js page
 ```
 import * as UI from '../../lib/utils';
 
-@Page({
+@Component({
   templateUrl: 'build/pages/home/home.html'
 })
 export class HomePage {
@@ -1011,9 +1011,9 @@ export class AppCmp {
 **Updating map.js**
 
 ```
-import {Page, Geolocation} from 'ionic/ionic';
+import {Component, Page, Geolocation} from 'ionic/ionic';
  
-@Page({
+@Component({
   templateUrl: 'build/pages/map/map.html',
 })
 export class MapPage {
@@ -1407,11 +1407,11 @@ export class PhotoPage {
 **Create controller (page.js)**
 
 ```
-import {Page} from 'ionic/ionic';
+import {Component, Page} from 'ionic/ionic';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
  
-@Page({
+@Component({
   templateUrl: 'build/pages/page/page.html'
 })
 export class Page {
@@ -1448,12 +1448,12 @@ Before we can use the NavController, we will need to import it.
 import {Page, NavController} from 'ionic-angular';
 ```
 
-Next we will inject it into our ```@Page``` and assign it to a property.
+Next we will inject it into our ```@Component``` and assign it to a property.
 
 ```
 import {Page, NavController} from 'ionic-angular';
 
-@Page({
+@Component({
 	templateUrl: "build/pages/Main/Main.html"
 })
 export class MainPage(){
@@ -1463,13 +1463,13 @@ export class MainPage(){
 }
 ```
 
-Now, we can call properties on nav, our instance of **NavController**. For example, say we want to navigate from our Main view to our About view, we would need to start by importing that ```@Page``` class.
+Now, we can call properties on nav, our instance of **NavController**. For example, say we want to navigate from our Main view to our About view, we would need to start by importing that ```@Component``` class.
 
 ```
-import {Page, NavController} from 'ionic-angular';
+import {Page,Component, NavController} from 'ionic-angular';
 import {AboutPage} from 'About/About'
 
-@Page({
+@Component({
 	templateUrl: "build/pages/Main/Main.html"
 })
 export class MainPage(){
@@ -1482,10 +1482,10 @@ export class MainPage(){
 Next, let’s create a method on our page called **goToAbout** that we can call from our template. This method will push the AboutPage onto the stack.
 
 ```
-import {Page, NavController} from 'ionic-angular';
+import {Component, Page, NavController} from 'ionic-angular';
 import {AboutPage} from 'About/About'
 
-@Page({
+@Component({
 	templateUrl: "build/pages/Main/Main.html"
 })
 export class MainPage(){
@@ -1508,7 +1508,7 @@ In our template, **Main.html**, we will have a button that will call this method
 To summarize, when this button is pressed, it will call the goToAbout method which pushes an instance of the AboutPage class onto the navigation stack which is then compiled and animated into view.
 
 ####Passing Data
-In many scenarios we have data in one view that we need to pass to another. Luckily, the push method accepts a second parameter which is an object of data to pass to the ```@Page``` passed into the first parameter.
+In many scenarios we have data in one view that we need to pass to another. Luckily, the push method accepts a second parameter which is an object of data to pass to the ```@Component``` passed into the first parameter.
 
 ```
 this.nav.push(AboutPage,{
@@ -1517,12 +1517,12 @@ this.nav.push(AboutPage,{
 });
 ```
 
-This data is then accessible in the pushed ```@Page``` via navParams which is similar to $stateParams in 1.0.
+This data is then accessible in the pushed ```@Component``` via navParams which is similar to $stateParams in 1.0.
 
 ```
-import {Page, NavParams} from 'ionic-angular';
+import {Component, Page, NavParams} from 'ionic-angular';
 
-@Page({
+@Component({
 	templateUrl: 'build/pages/About/About.html',
 })
 export class AboutPage {
@@ -1537,9 +1537,9 @@ export class AboutPage {
 Pop is super simple to use as well. As an example, if we wanted to create a function called **goBack** that goes back when pressed in our AboutPage, we could just call **nav.pop()** :
 
 ```
-import {Page, NavController} from 'ionic-angular';
+import {Component, Page, NavController} from 'ionic-angular';
 
-@Page({
+@Component({
 	templateUrl: 'build/pages/About/About.html',
 })
 export class AboutPage {
@@ -1557,7 +1557,7 @@ export class AboutPage {
 There is a few more methods available on the NavController such as insert, remove, etc. I would suggest reading the Official Docs.
 
 ####Lifecycle Events
-In version 1.0, we had the concept of events being fired when we were entering and leaving the view, among others. In version 2.0, we have a very similar set of events. To handle one of these events, we just need to give our ```@Page``` class a method that matches the event. For example, if we want to run an event when the ```@Page``` is loaded, we will need to give our page the **onPageLoaded** method:
+In version 1.0, we had the concept of events being fired when we were entering and leaving the view, among others. In version 2.0, we have a very similar set of events. To handle one of these events, we just need to give our ```@Component``` class a method that matches the event. For example, if we want to run an event when the ```@Component``` is loaded, we will need to give our page the **onPageLoaded** method:
 ```
 import {Component} from '@angular/core';
 
@@ -1752,7 +1752,7 @@ Consider a ion-list in which we want to hide every items which property "deleted
 </ion-list>
 
 
-@Page(
+@Component(
     // ...
 )
 export class TestPage {
@@ -1973,7 +1973,7 @@ View file
 
 Controller file
 ```
-@Page({...})
+@Component({...})
 export class NewsFeedPage {
 
   constructor() {
@@ -2145,10 +2145,10 @@ constructor(public nav: NavController) {
 Here's a sample code to show a confirmation dialog box. The key is to add Alert import and then, don't miss to add alert object to current navigation stack
 
 ```
-import {Page, NavController, Alert} from 'ionic-angular';
+import {Component, Page, NavController, Alert} from 'ionic-angular';
 import {Data} from '../../providers/data/data';
 
-@Page({
+@Component({
   templateUrl: 'build/pages/home/home.html'
 })
 export class HomePage {
@@ -2533,10 +2533,10 @@ For this code to work we need to find current navigator language. If current lan
 **HomePage configuration**
 
 ```
-import {Page} from 'ionic/ionic';
+import {Component, Page} from 'ionic/ionic';
 import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
  
-@Page({
+@Component({
   templateUrl: 'build/pages/home/home.html',
   pipes: [TranslatePipe]
 })
