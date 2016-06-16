@@ -43,7 +43,7 @@
 
 ##Start with ionic
 
-**Some resources**
+###Some resources
 
 [Link : ng-conf-workshop](https://github.com/chrisgriffith/ng-conf-workshop)    
 
