@@ -2214,9 +2214,9 @@ This snippet show how to fix floating button in front of a list
 
 ##Component grid
 [Back to top](#ionic-2) 
-#flexbox
 
-[link : complex layout using grid](http://www.joshmorony.com/an-in-depth-look-at-the-grid-system-in-ionic-2/)    
+
+[link : complex layout using grid and flexbox](http://www.joshmorony.com/an-in-depth-look-at-the-grid-system-in-ionic-2/)    
 
 
 ##Issues
