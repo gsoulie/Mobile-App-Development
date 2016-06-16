@@ -31,6 +31,7 @@
 [Component - alert dialog box](#component-alert-dialog-box)    
 [Component - floating button](#floating-button)  
 [Component - chart](#component-chart)    
+[Component - grid](#component-grid)    
 [Issues](#issues)    
 [Using image](#using-image)    
 [Backend Strongloop](#backend-strongloop)     
@@ -2210,6 +2211,12 @@ This snippet show how to fix floating button in front of a list
 
 [link : ng2-chart](http://valor-software.com/ng2-charts/)    
 [forum : related post](https://forum.ionicframework.com/t/solved-ionic-2-ng2-charts/42926)    
+
+##Component grid
+[Back to top](#ionic-2) 
+#flexbox
+
+[link : complex layout using grid](http://www.joshmorony.com/an-in-depth-look-at-the-grid-system-in-ionic-2/)    
 
 
 ##Issues
