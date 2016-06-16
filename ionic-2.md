@@ -2744,6 +2744,8 @@ module.exports = {
 ##Publishing app
 [Back to top](#ionic-2)
 
+[link : publishing app](http://ionicframework.com/docs/guide/publishing.html)    
+
 ####Enable prodMode
 
 To enable prod mode, I configured the following in app.ts:
