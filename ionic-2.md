@@ -4,7 +4,7 @@
 
 ##### Table of Contents  
 [Start with ionic](#start-with-ionic)  
-[Atom configuration](#work-with-atom)  
+[Work with Atom editor](#work-with-atom)  
 [Cordova](#cordova)   
 [Gulp](#gulp)    
 [Useful functions](#useful-functions)  
