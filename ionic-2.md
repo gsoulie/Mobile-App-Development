@@ -647,9 +647,9 @@ It might be a little confusing as to when to use @Component and @Directive, as t
 
 [link : Understanding Pipe](http://mcgivery.com/understanding-ionic-2-pipe/)
 
-**@Pipe** allows you to create your own custom pipes to filter data that is displayed to the user, which can be very handy. The decorator might look something like this:
+**@Pipe** (replaced by @Component in Beta 8) allows you to create your own custom pipes to filter data that is displayed to the user, which can be very handy. The decorator might look something like this:
 ```
-@Pipe({
+@Component({
   name: 'myPipe'
 })
 ```
@@ -672,7 +672,7 @@ First, create a "pipe" directory in your project will containing all pipe lib. A
 ```
 import {Pipe} from '@angular/core';
 
-@Pipe({
+@Component({
 	name: 'helloWorld'	// pipe name
 })
 export class HelloWorld {
@@ -729,7 +729,7 @@ Pipe inline syntax : ```value | myPipe:args[0]:args[1]```
 ```
 import {Pipe} from '@angular/core';
 
-@Pipe({
+@Component({
 	name: 'addInt'
 })
 export class AddInt {
