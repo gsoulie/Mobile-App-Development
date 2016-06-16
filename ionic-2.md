@@ -1011,7 +1011,7 @@ export class AppCmp {
 **Updating map.js**
 
 ```
-import {Component, Page, Geolocation} from 'ionic/ionic';
+import {Component, Geolocation} from 'ionic/ionic';
  
 @Component({
   templateUrl: 'build/pages/map/map.html',
@@ -1407,7 +1407,7 @@ export class PhotoPage {
 **Create controller (page.js)**
 
 ```
-import {Component, Page} from 'ionic/ionic';
+import {Component} from 'ionic/ionic';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
  
@@ -1445,13 +1445,13 @@ The **map** lib is only imported because we need is http.get function
 Before we can use the NavController, we will need to import it.
 
 ```
-import {Page, NavController} from 'ionic-angular';
+import {NavController} from 'ionic-angular';
 ```
 
 Next we will inject it into our ```@Component``` and assign it to a property.
 
 ```
-import {Page, NavController} from 'ionic-angular';
+import {Component, NavController} from 'ionic-angular';
 
 @Component({
 	templateUrl: "build/pages/Main/Main.html"
@@ -1466,7 +1466,7 @@ export class MainPage(){
 Now, we can call properties on nav, our instance of **NavController**. For example, say we want to navigate from our Main view to our About view, we would need to start by importing that ```@Component``` class.
 
 ```
-import {Page,Component, NavController} from 'ionic-angular';
+import {Component, NavController} from 'ionic-angular';
 import {AboutPage} from 'About/About'
 
 @Component({
@@ -1482,7 +1482,7 @@ export class MainPage(){
 Next, let’s create a method on our page called **goToAbout** that we can call from our template. This method will push the AboutPage onto the stack.
 
 ```
-import {Component, Page, NavController} from 'ionic-angular';
+import {Component, NavController} from 'ionic-angular';
 import {AboutPage} from 'About/About'
 
 @Component({
@@ -1520,7 +1520,7 @@ this.nav.push(AboutPage,{
 This data is then accessible in the pushed ```@Component``` via navParams which is similar to $stateParams in 1.0.
 
 ```
-import {Component, Page, NavParams} from 'ionic-angular';
+import {Component, NavParams} from 'ionic-angular';
 
 @Component({
 	templateUrl: 'build/pages/About/About.html',
@@ -1537,7 +1537,7 @@ export class AboutPage {
 Pop is super simple to use as well. As an example, if we wanted to create a function called **goBack** that goes back when pressed in our AboutPage, we could just call **nav.pop()** :
 
 ```
-import {Component, Page, NavController} from 'ionic-angular';
+import {Component, NavController} from 'ionic-angular';
 
 @Component({
 	templateUrl: 'build/pages/About/About.html',
@@ -2145,7 +2145,7 @@ constructor(public nav: NavController) {
 Here's a sample code to show a confirmation dialog box. The key is to add Alert import and then, don't miss to add alert object to current navigation stack
 
 ```
-import {Component, Page, NavController, Alert} from 'ionic-angular';
+import {Component, NavController, Alert} from 'ionic-angular';
 import {Data} from '../../providers/data/data';
 
 @Component({
@@ -2533,7 +2533,7 @@ For this code to work we need to find current navigator language. If current lan
 **HomePage configuration**
 
 ```
-import {Component, Page} from 'ionic/ionic';
+import {Component} from 'ionic/ionic';
 import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
  
 @Component({
