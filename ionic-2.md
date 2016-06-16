@@ -30,6 +30,7 @@
 [Component - searchbar](#component-searchbar)    
 [Component - alert dialog box](#component-alert-dialog-box)    
 [Component - floating button](#floating-button)  
+[Issues](#issues)    
 [Using image](#using-image)    
 [Backend Strongloop](#backend-strongloop)     
 [Backend Firebase](#backend-firebase)    
@@ -2199,6 +2200,23 @@ This snippet show how to fix floating button in front of a list
 <button fab fab-bottom fab-right fab-fixed style="z-index:100">
   <ion-icon name="add"></ion-icon>
 </button>
+```
+
+
+##Issues
+[Back to top](#ionic-2) 
+
+####Click in list item in simulator sometimes(!) doesn’t work on device
+
+Sometimes,  on the emulator or on device, 2 out of 3 clicks it doesn't fire the click function. To solve the issue, change ```<ion-item>``` to ```<button>``` with the styling of ```ion-item```.
+
+```
+<ion-list>
+	<button ion-item *ngFor="let audience of audience" (click)="pushProfilesList(audience)">
+		<h2 class="list-title">{{audience.segment}}</h2>
+		<span class="list-info">{{audience.amount}}</span>
+	</button>
+</ion-list>
 ```
 
 
