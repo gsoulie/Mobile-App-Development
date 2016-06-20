@@ -215,6 +215,8 @@ $ sudo npm install -g bower
 ##Work with Atom
 [Back to top](#ionic-2) 
 
+[link](https://scotch.io/bar-talk/best-of-atom-features-plugins-acting-like-sublime-text?utm_content=buffer8e88d&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)     
+
 ###1 - Install Atom
 
 [link : Atom website](https://atom.io/)
