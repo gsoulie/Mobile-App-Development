@@ -286,6 +286,14 @@ $ apm install docblockr
 $
 ```
 
+[link : merge-conflicts](https://atom.io/packages/merge-conflicts)    
+
+[link : color-picker](https://atom.io/packages/color-picker)    
+
+[link : emmet](https://atom.io/packages/emmet)    
+
+
+
 ####Activate auto-compilation
 
 [tsconfig.json configuration](https://github.com/TypeStrong/atom-typescript/blob/master/docs/tsconfig.md)    
