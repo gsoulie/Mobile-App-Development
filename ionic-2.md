@@ -356,6 +356,15 @@ var isWindowsPhone = ionic.Platform.isWindowsPhone();
 var currentPlatform = ionic.Platform.platform();
 var currentPlatformVersion = ionic.Platform.version();
 
+platform.isPortrait() 
+platform.isLandscape()
+
+-->
+/*
+window.addEventListener("orientationchange", function() {
+    alert(window.orientation);
+}, false);*/
+
 ionic.Platform.exitApp(); // stops the app
 ```
 
