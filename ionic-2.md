@@ -1611,10 +1611,7 @@ initializeApp() {
        
       if (window.StatusBar) {
         //window.StatusBar.styleDefault();
-        window.Statusbar.styleHex('#A81910');
-        //window.Statusbar.styleColor('black');
-        //window.Statusbar.hide();
-        //window.Statusbar.show();
+        window.StatusBarbackgroundColorByHexString("#ffcc00");
       }
     });
   }
