@@ -1603,21 +1603,7 @@ We can have a set of handlers for a variety of events including then the page is
 $ ionic plugin add cordova-plugin-statusbar
 ```
 
-**customization**
-
-```
-initializeApp() {
-    this.platform.ready().then(() => {
-       
-      if (window.StatusBar) {
-        //window.StatusBar.styleDefault();
-        window.StatusBar.backgroundColorByHexString("#ffcc00");
-      }
-    });
-  }
-```
-
-**Other solution with beta3**
+**Customize**
 
 ```
 import {Platform} from 'ionic-angular';
