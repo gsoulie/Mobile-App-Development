@@ -2089,7 +2089,7 @@ Then just create a custom css, something like this:
     </ion-title>
   </ion-navbar>
   <ion-toolbar maintheme>
-  <ion-searchbar placeholder="Rechercher un device" [(ngModel)]="searchDevice" (ionInput)="getDevice($event)"></ion-searchbar>
+  <ion-searchbar placeholder="Rechercher un device" (ionInput)="getDevice($event)"></ion-searchbar>
    </ion-toolbar>
 </ion-header>
 
@@ -2129,14 +2129,14 @@ constructor(public nav: NavController) {
     }];
   }
   
-  getDevice(searchbar){
+  getDevice(ev: any){
     this.getAllDevices();
 
     // set searchText to the value of the searchbar
-    var searchText = searchbar.value;
+    var searchText = ev.target.value;
 
     // Avoid research if searchtext is empty
-    if (searchText.trim() == '') {
+    if (!searchText || searchText.trim() === '') {
       return;
     }
 
