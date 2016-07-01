@@ -1611,7 +1611,7 @@ initializeApp() {
        
       if (window.StatusBar) {
         //window.StatusBar.styleDefault();
-        window.StatusBarbackgroundColorByHexString("#ffcc00");
+        window.StatusBar.backgroundColorByHexString("#ffcc00");
       }
     });
   }
