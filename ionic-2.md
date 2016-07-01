@@ -2082,9 +2082,17 @@ Then just create a custom css, something like this:
 
 **View file**
 ```
-<ion-toolbar maintheme>
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>
+      Annuaire
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar maintheme>
   <ion-searchbar placeholder="Rechercher un device" [(ngModel)]="searchDevice" (ionInput)="getDevice($event)"></ion-searchbar>
-</ion-toolbar>
+   </ion-toolbar>
+</ion-header>
+
 <ion-content padding class="page1">
   <ion-list>
     <ion-item *ngFor="let item of items">
@@ -2092,6 +2100,7 @@ Then just create a custom css, something like this:
     </ion-item>
   </ion-list>
 </ion-content>
+
 ```
 
 **Controller file**
