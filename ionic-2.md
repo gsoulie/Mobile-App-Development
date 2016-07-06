@@ -48,6 +48,8 @@
 
 ###Some resources
 
+[Link : Good tutorial !!](https://scotch.io/tutorials/build-a-mobile-app-with-angular-2-and-ionic-2)
+
 [Link : ng-conf-workshop](https://github.com/chrisgriffith/ng-conf-workshop)    
 
 [link : ionic.io](http://docs.ionic.io/docs/io-introduction)
