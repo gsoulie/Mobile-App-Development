@@ -48,9 +48,9 @@
 
 ###Some resources
 
-[Link : Good tutorial !!](https://scotch.io/tutorials/build-a-mobile-app-with-angular-2-and-ionic-2)
+[link : Good tutorial !!](https://scotch.io/tutorials/build-a-mobile-app-with-angular-2-and-ionic-2)
 
-[Link : ng-conf-workshop](https://github.com/chrisgriffith/ng-conf-workshop)    
+[link : ng-conf-workshop](https://github.com/chrisgriffith/ng-conf-workshop)    
 
 [link : ionic.io](http://docs.ionic.io/docs/io-introduction)
 
@@ -217,7 +217,7 @@ $ sudo npm install -g bower
 ##Work with Atom
 [Back to top](#ionic-2) 
 
-[link](https://scotch.io/bar-talk/best-of-atom-features-plugins-acting-like-sublime-text?utm_content=buffer8e88d&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)     
+[link : best Atom features plugins](https://scotch.io/bar-talk/best-of-atom-features-plugins-acting-like-sublime-text?utm_content=buffer8e88d&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)     
 
 ###1 - Install Atom
 
