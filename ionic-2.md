@@ -2066,6 +2066,37 @@ export class Page1 {
 <button [style.backgroundColor]="enable ? '#00CC00' : '#FF0000'">Test</button>
 ```
 
+
+###Pull to refresh
+
+**In your html file**
+
+```
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <button ion-item *ngFor="let user of users" (click)="goToDetails($event, user.login)">
+      <ion-avatar item-left>
+        <img [src]="user.avatar_url">
+      </ion-avatar>
+      <h2>{{ user.login }}</h2>
+      <ion-icon md="md-arrow-forward" item-right></ion-icon>
+    </button>
+  </ion-list>
+</ion-content>
+```
+
+**In your controller file**
+
+```
+doRefresh(refresher){
+    this.users = getUsers();
+    setTimeout(() => { refresher.complete(); console.log('Async operation has ended'); }, 2000); 
+  }
+```
+
 ##Component Tab icon
 [Back to top](#ionic-2)  
 
