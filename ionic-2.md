@@ -2060,6 +2060,12 @@ export class Page1 {
 }
 ```
 
+**Change button backgroundColor synamically**
+
+```
+<button [style.backgroundColor]="enable ? '#00CC00' : '#FF0000'">Test</button>
+```
+
 ##Component Tab icon
 [Back to top](#ionic-2)  
 
