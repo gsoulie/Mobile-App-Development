@@ -1000,15 +1000,16 @@ $ ionic plugin add cordova-plugin-geolocation
 
 
 ```
-<ion-navbar *navbar>
-  <ion-title>
-    Map
-  </ion-title>
-  <ion-buttons end>
-    <button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
-  </ion-buttons>  
-</ion-navbar>
- 
+<ion-header>
+	<ion-navbar>
+	  <ion-title>
+	    Map
+	  </ion-title>
+	  <ion-buttons end>
+	    <button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
+	  </ion-buttons>  
+	</ion-navbar>
+</ion-header> 
 <ion-content>
   <div id="map"></div>  
 </ion-content>
@@ -1258,14 +1259,15 @@ export class HomePage {
 **Displaying data from database (home.html)**
 
 ```
-<ion-navbar *navbar>
-    <ion-title>
-        Home
-    </ion-title>
-    <button clear (click)="refresh()">Refresh</button>
-    <button clear (click)="add()">Add</button>
-</ion-navbar>
- 
+<ion-header>
+	<ion-navbar>
+	    <ion-title>
+	        Home
+	    </ion-title>
+	    <button clear (click)="refresh()">Refresh</button>
+	    <button clear (click)="add()">Add</button>
+	</ion-navbar>
+</ion-header> 
 <ion-content class="home">
     <ion-list>
         <ion-item *ngFor="let person of people">
@@ -1341,13 +1343,14 @@ $ ionic plugin add cordova-plugin-camera
 View file
 
 ```
-<ion-navbar *navbar maintheme>
-  <button menuToggle>
-    <ion-icon name="menu"></ion-icon>
-  </button>
-  <ion-title>Photo</ion-title>
-</ion-navbar>
-
+<ion-header>
+	<ion-navbar maintheme>
+	  <button menuToggle>
+	    <ion-icon name="menu"></ion-icon>
+	  </button>
+	  <ion-title>Photo</ion-title>
+	</ion-navbar>
+</ion-header>
 <ion-content padding class="getting-started">
     <img src="{{sourceImage}}"/>
 	<button fab primary fab-bottom fab-center (click)="takePhoto()">
@@ -1412,10 +1415,11 @@ export class PhotoPage {
 **Create the view (page.html)**
 
 ```
-<ion-navbar *navbar>
-  <ion-title>Tab 1</ion-title>
-</ion-navbar>
- 
+<ion-header>
+	<ion-navbar>
+	  <ion-title>Tab 1</ion-title>
+	</ion-navbar>
+</ion-header>
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let post of posts">
@@ -1889,12 +1893,13 @@ First we’re going to set up a standard list to display the data we created in 
 
 Modify **page1.html** to reflect the following:
 ```
-<ion-navbar *navbar>
-  <ion-title>
-    Standard Scroll
-  </ion-title>
-</ion-navbar>
- 
+<ion-header>
+	<ion-navbar>
+	  <ion-title>
+	    Standard Scroll
+	  </ion-title>
+	</ion-navbar>
+</ion-header> 
 <ion-content class="page1">
  
   <ion-list>
@@ -1924,12 +1929,13 @@ Now we’re going to create a list that uses virtual scroll.
 Modify **page2.html** to reflect the following:
 
 ```
-<ion-navbar *navbar>
-  <ion-title>
-    Virtual Scroll
-  </ion-title>
-</ion-navbar>
- 
+<ion-header>
+	<ion-navbar>
+	  <ion-title>
+	    Virtual Scroll
+	  </ion-title>
+	</ion-navbar>
+</ion-header> 
 <ion-content class="page2">
  
     <ion-list [virtualScroll]="items">
