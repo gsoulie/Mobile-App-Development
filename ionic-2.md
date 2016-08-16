@@ -1753,8 +1753,8 @@ Lastly you make sure this scss is being compiled with your **app.core.scss** by 
 ```
 <ion-item>
 	<ion-label>Profession</ion-label>
-	<ion-select [(ng-model)]="prof">
-		<ion-option *ngFor="let item of professions" value="{{item.objectId}}" (select)="selectObject($event)">{{item.titre}}</ion-option>
+	<ion-select [(ng-model)]="prof" (ionChange)="selectObject($event)">
+		<ion-option *ngFor="let item of professions" value="{{item.objectId}}">{{item.titre}}</ion-option>
 	</ion-select>
 </ion-item>
 ```
