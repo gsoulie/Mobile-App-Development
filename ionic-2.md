@@ -11,7 +11,7 @@
 [Moment JS](#momentjs)    
 [Concept - Angular 2](#angular-2)  
 [Concept - Decorators](#decorators)    
-[Contept - Pipe](#pipe)    
+[Concept - Pipe](#pipe)    
 [Config](#config)    
 [Global variables](#global-variables)     
 [Third party lib](#third-party-lib)    
