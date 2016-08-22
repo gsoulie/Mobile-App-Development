@@ -847,6 +847,8 @@ You can also use the config object to define platform specific behaviour:
 
 ###Config.xml
 
+[link : ionic doc](http://ionicframework.com/docs/v2/api/config/Config/)
+
 The **config.xml** file allows you to configure a lot of things in your application, like splashscreen duration, screen orientation...
 
 Here are some example :
