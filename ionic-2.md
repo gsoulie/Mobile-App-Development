@@ -27,6 +27,7 @@
 [Event propagation](#event-propagation)    
 [Component - comboBox](#component-combobox)    
 [Component - ion-list](#component-ion-list)  
+[Component - tab](#component-tab)       
 [Component - tab icon](#component-tab-icon)    
 [Component - searchbar](#component-searchbar)    
 [Component - alert dialog box](#component-alert-dialog-box)    
@@ -2185,6 +2186,20 @@ doRefresh(refresher){
     this.users = getUsers();
     setTimeout(() => { refresher.complete(); console.log('Async operation has ended'); }, 2000); 
   }
+```
+##Component Tab
+[Back to top](#ionic-2)  
+
+According to the latest Android material guideline, you have to follow these rules :
+
+- 3 to 5 destinations => use the bottom navigation
+- Less than 3 => use tab on the top
+- More than 5 => use another solution like slide menu
+
+So, by default, ionic 2 tabs project sample is using bottom navigation. To set top navigation, just change your bootstrap (in your **app.ts**) code by :
+
+```
+ionicBootstrap(MyApp,[],{tabsPlacement: "top"});
 ```
 
 ##Component Tab icon
