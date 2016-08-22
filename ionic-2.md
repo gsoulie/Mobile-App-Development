@@ -845,6 +845,22 @@ You can also use the config object to define platform specific behaviour:
 })
 ```
 
+###Config.xml
+
+The **config.xml** file allows you to configure a lot of things in your application, like splashscreen duration, screen orientation...
+
+Here are some example :
+
+**Restrict app screen orientation**
+```
+<preference name="orientation" value="portrait"/>
+```
+
+**Adjust splashscreen delay**
+```
+<preference name="SplashScreenDelay" value="2000"/>
+```
+
 ##Global variables
 [Back to top](#ionic-2)
 
