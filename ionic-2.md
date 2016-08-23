@@ -92,7 +92,7 @@ $ sudo npm install -g ionic@beta
 **Updating ionic 2 framework**
 
 ```
-$ npm install -g ionic@beta
+$ npm update -g cordova ionic@beta
 ```
 
 again, and then updating the package.json file of your project. You should see something like 
