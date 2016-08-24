@@ -34,6 +34,7 @@
 [Component - floating button](#floating-button)  
 [Component - chart](#component-chart)    
 [Component - grid](#component-grid)    
+[Component - toggle](#component-toggle)    
 [Issues](#issues)    
 [Using image](#using-image)    
 [Backend Strongloop](#backend-strongloop)     
@@ -2389,8 +2390,30 @@ This snippet show how to fix floating button in front of a list
 [Back to top](#ionic-2) 
 
 
-[link : complex layout using grid and flexbox](http://www.joshmorony.com/an-in-depth-look-at-the-grid-system-in-ionic-2/)    
+[link : complex layout using grid and flexbox](http://www.joshmorony.com/an-in-depth-look-at-the-grid-system-in-ionic-2/) 
 
+##Component toggle
+[Back to top](#ionic-2) 
+
+####View.html
+
+```
+...
+<ion-content padding>
+  <ion-item>
+    <ion-label>Tracking</ion-label>
+    <ion-toggle id="trackingButton" black checked="false" (ionChange)="refreshTracking($event)"></ion-toggle>
+  </ion-item>
+</ion-content>
+```
+
+####View.ts
+
+```
+refreshTracking(e){
+   console.log("refreshTracking " + e.checked);
+}
+```
 
 ##Issues
 [Back to top](#ionic-2) 
