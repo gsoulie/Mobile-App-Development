@@ -1801,7 +1801,7 @@ selectObject(_selectedItem){
 [Back to top](#ionic-2)
 
 | Page event    | Description   |
-| ------------- |:-------------:|
+| ------------- |---------------|
 | ionViewLoaded      | Runs when the page has loaded. This event only happens once per page being created and added to the DOM. If a page leaves but is cached, then this event will not fire again on a subsequent viewing. The ionViewLoaded event is good place to put your setup code for the page. |
 | ionViewWillEnter      | Runs when the page is about to enter and become the active page.      |
 | ionViewDidEnter | Runs when the page has fully entered and is now the active page. This event will fire, whether it was the first load or a cached page.      |
