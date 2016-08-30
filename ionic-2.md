@@ -405,6 +405,36 @@ if(navigator.onLine){
 }
 ```
 
+### Close modal
+
+**View file**
+```
+<button (click)="close()"></button>
+```
+
+**Controller file**
+
+Don't forget to import ViewController
+
+```
+import { Component } from '@angular/core';
+import { NavController,ViewController} from 'ionic-angular';
+
+@Component({
+  templateUrl: 'build/pages/route-list/route-list.html',
+})
+export class RouteListPage {
+
+  constructor(private navCtrl: NavController, private viewCtrl: ViewController) {
+
+  }
+
+  close(){
+    this.viewCtrl.dismiss();
+  }
+}
+
+```
 
 ##MomentJS
 [Back to top](#ionic-2)  
