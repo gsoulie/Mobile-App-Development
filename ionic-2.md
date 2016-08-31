@@ -1,5 +1,7 @@
 #ionic 2
 
+<img src="http://ionic.io/img/2.png" width="200"/>
+
 > **Warning** this guide is based on the beta of ionic 2. Consequently, some information may be outdated
 
 ##### Table of Contents  
