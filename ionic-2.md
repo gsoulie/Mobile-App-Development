@@ -916,6 +916,19 @@ And then in the component or service that requires them, just do this :
 import {VALUE_ONE} from './config';
 ```
 
+###Constant
+
+Constant can be declared after lib import like :
+
+```
+import {Component} from '@angular/core';
+import {NavController, AlertController, ToastController} from 'ionic-angular';
+import {Utils} from '../../providers/utils/utils';
+import {File} from 'ionic-native';
+
+const fs:string = cordova.file.dataDirectory;
+```
+
 ##Third party lib
 [Back to top](#ionic-2)
 
