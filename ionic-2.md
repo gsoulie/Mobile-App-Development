@@ -1799,8 +1799,7 @@ Lastly you make sure this scss is being compiled with your **app.core.scss** by 
 @import "../pages/masters/masters";
 ```
 
-##UI Components
-[Back to top](#ionic-2)  
+#UI Components
 
 ##ComboBox
 [Back to top](#ionic-2)  
