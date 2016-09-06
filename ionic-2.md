@@ -431,7 +431,7 @@ We can also create embedded templates using directives like ngIf and ngFor.
 
 ES6 allows us to Import and Export components. Take the following component for example:
 
-```
+```javascript
 import {IonicView, NavController} from 'ionic/ionic';
  
 @IonicView({
