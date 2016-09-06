@@ -6,9 +6,9 @@
 
 ##### Table of Contents  
 [Start with ionic](#start-with-ionic)  
+[Cordova](#cordova)   
 [Work with Atom editor](#work-with-atom)  
 [Visual Studio Code](#visual-studio-code)    
-[Cordova](#cordova)   
 [Gulp](#gulp)    
 [Useful functions](#useful-functions)  
 [Moment JS](#momentjs)    
@@ -221,6 +221,15 @@ Gulp is a packet manager for JS libraries. You can use it to add libraries to yo
 $ sudo npm install -g bower
 ```
 
+##Cordova
+[Back to top](#ionic-2) 
+
+**Install Cordova**
+
+```
+$ sudo npm install -g cordova
+```
+
 ##Work with Atom
 [Back to top](#ionic-2) 
 
@@ -337,15 +346,6 @@ atom-text-editor::shadow {
 [Back to top](#ionic-2) 
 
 Another very good alternative to Atom is [visual studio code] (https://code.visualstudio.com/c?utm_expid=101350005-27.GqBWbOBuSRqlazQC_nNSRg.2&utm_referrer=https%3A%2F%2Fwww.google.fr%2F)
-
-##Cordova
-[Back to top](#ionic-2) 
-
-**Install Cordova**
-
-```
-$ sudo npm install -g cordova
-```
 
 ##Gulp
 [Back to top](#ionic-2) 
