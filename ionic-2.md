@@ -1921,11 +1921,9 @@ Solution for filling dynamic ion-list item
 <ion-list> 
     <ion-item *ngFor="let item of items">{{item.fullname}}</ion-item> 
 </ion-list>
-
-or
 ```
 
-For clickable list you have to use 
+For clickable list you have to use **button ion-item**
 
 ```xml
 <ion-list> 
