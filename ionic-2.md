@@ -301,11 +301,6 @@ $ apm install jsdoc
 $ apm install docblockr
 ```
 
-[link : NodeDebugger](https://atom.io/packages/node-debugger)    
-```
-$
-```
-
 [link : merge-conflicts](https://atom.io/packages/merge-conflicts)    
 
 [link : color-picker](https://atom.io/packages/color-picker)    
@@ -321,7 +316,7 @@ $
 
 Create a **tsconfig.json** file in your project root with :
 
-```
+```javascript
 {
 	"compileOnSave": false
 }
@@ -364,7 +359,7 @@ AngularJS 2 is the backbone of Ionic 2, is being written for ECMAScript 6
 ###Some Angular 2 concepts
 
 **Binding a Property to a value**
-```
+```javascript
 <input [value]="firstName">
 ```
 
@@ -372,20 +367,20 @@ This will set the elements property to fisrtName. More used to see ```{{firstNam
 
 **Calling a Function on an Event**
 
-```
+```javascript
 <button (click)="someFunction($event)">
 ```
 
 This will call the someFunction function and pass in the event whenever the button is clicked on. You can replace click with any native or custom event you like. You can also use the following syntax:
 
-```
+```javascript
 <button (^click)="someFunction($event)">
 ```
 to make the event bubble up to other elements.
 
 **Rendering Expressions**
 
-```
+```javascript
 <p>Hi, {{name}}</p>
 ```
 
@@ -397,30 +392,30 @@ In Angular 1 we could set up two way data binding by using ng-model, so if we ch
 
 We can achieve the same two way data binding in Angular 2 like this:
 
-```
+```javascript
 <input [value]="name" (input)="name = $event.target.value">
 ```
 
 This sets the value to the expression name and when we detect the input event we updated name to be the new value that was entered. To make this easier, we can still use ng-model in Angular 2 like this to achieve the same thing:
 
-```
+```javascript
 <input [(ng-model)]="name">
 ```
 
 **Creating a Variable to Access an Element**
 
-```
+```javascript
 <p #myParagraph></p>
 ```
 This creates a local variable that we can use to access the element, so if I wanted to add some content into this paragraph I could do the following:
 
-```
+```javascript
 <button (click)="myParagraph.innerHTML = 'Once upon a time...'">
 ```
 
 **Directives**
 
-```
+```javascript
 <section *ngIf="showSection">
  
 <li *ngFor="let item of items">
@@ -447,12 +442,12 @@ This component is making use of the IonicView and NavController components so it
 
 Now you would be able to access HelloIonicPage by importing it elsewhere:
 
-```
+```javascript
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 ```
 It’s a similar concept to Dependency Injection in Angular 1, where we would inject services we were using into the controller like this:
 
-```
+```javascript
 .controller('ExampleCtrl', function($scope, $state, $myService) {
 ```
 
@@ -462,7 +457,7 @@ If you’ve used ngCordova then you will probably already be familiar with promi
 
 ES6 adds native support for promises, which look like this:
 
-```
+```javascript
 function msgAfterTimeout (msg, who, timeout) {
     return new Promise((resolve, reject) => {
         setTimeout(() => resolve(`${msg} Hello ${who}!`), timeout)
@@ -489,7 +484,7 @@ this.http.get(url).subscribe(
 
 rather than callbacks which can end up looking like this:
 
-```
+```javascript
 function msgAfterTimeout (msg, who, timeout, onDone) {
     setTimeout(function () {
         onDone(msg + " Hello " + who + "!");
@@ -506,7 +501,7 @@ msgAfterTimeout("", "Foo", 100, function (msg) {
 
 Currently, if I define a variable in JavaScript it is available anywhere within the function that I defined it in. The new block scoping features in ES6 allow you to use the new let keyword to define a variable only within a single block of code like this:
 
-```
+```javascript
 for (let i = 0; i < a.length; i++) {
     let x = a[i]
     //etc.
@@ -524,14 +519,14 @@ for (let i = 0; i < a.length; i++) {
 
 The @Directive decorator allows you to create your own custom directives. Typically, the decorator would look something like this:
 
-```
+```javascript
 @Directive({
     selector: '[my-selector]'
 })
 ```
 
 Then in your template you could use that selector to trigger the behaviour of the directive you have created by adding it to an element:
-```
+```xml
 <some-element my-selector></some-element>
 ```
 It might be a little confusing as to when to use @Component and @Directive, as they are both quite similar. The easiest thing to remember is that if you want to modify the behaviour of an existing component use a directive, if you want to create a completely new component use a component.
@@ -541,13 +536,13 @@ It might be a little confusing as to when to use @Component and @Directive, as t
 [link : Understanding Pipe](http://mcgivery.com/understanding-ionic-2-pipe/)
 
 **@Pipe** allows you to create your own custom pipes to filter data that is displayed to the user, which can be very handy. The decorator might look something like this:
-```
+```javascript
 @Pipe({
   name: 'myPipe'
 })
 ```
 which would then allow you to implement it in your templates like this:
-```
+```xml
 <p>{{someString | myPipe}}</p>
 `````
 Now someString would be run through your custom myPipe before the value is output to the user.
