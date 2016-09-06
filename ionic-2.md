@@ -2,7 +2,7 @@
 
 #ionic 2
 
-> **Warning** this guide is based on the beta of ionic 2. Consequently, some information may be outdated
+> **Warning** this personnal guide is based on the beta of ionic 2. Consequently, some information may be outdated
 
 ##### Table of Contents  
 * [Prerequisites](#prerequisites)    
