@@ -5,10 +5,11 @@
 > **Warning** this guide is based on the beta of ionic 2. Consequently, some information may be outdated
 
 ##### Table of Contents  
-* [Start with ionic](#start-with-ionic)  
-* [Work with Atom editor](#work-with-atom)  
-* [Visual Studio Code](#visual-studio-code)    
-* [Basics concepts](#basics-concepts)    
+* [Prerequisites](#prerequisites)    
+	* [Start with ionic](#start-with-ionic)  
+	* [Work with Atom editor](#work-with-atom)  
+	* [Visual Studio Code](#visual-studio-code)    
+* [Concepts](#concepts)    
 	* [Angular 2](#angular-2)  
 	* [Decorators](#decorators)    
 	* [Pipe](#pipe)    
@@ -50,6 +51,8 @@
 * [Publishing App](#publishing-app)  
 
 [TODO](#todo)    
+
+#Prerequisites
 
 ##Start with ionic
 
@@ -338,7 +341,7 @@ atom-text-editor::shadow {
 
 Another very good alternative to Atom is [visual studio code] (https://code.visualstudio.com/c?utm_expid=101350005-27.GqBWbOBuSRqlazQC_nNSRg.2&utm_referrer=https%3A%2F%2Fwww.google.fr%2F)
 
-#Basics concepts
+#Concepts
 
 ##Angular 2
 [Back to top](#ionic-2)  
