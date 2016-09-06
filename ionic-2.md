@@ -33,8 +33,9 @@
 * [HTTP query](#http-query)  
 * [Navigation](#navigation)  
 * [Themes](#themes)  
-* [Page event](#page-event)    
-* [Event propagation](#event-propagation)    
+* [Events](#events)    
+	* [Page event](#page-event)    
+	* [Event propagation](#event-propagation)    
 * [UI Components](#ui-components)    
 	* [comboBox](#combobox)    
 	* [ion-list](#ion-list)  
@@ -1875,6 +1876,9 @@ selectObject(_selectedItem){
 	this.newSelectedId = _selectedItem
 }
 ```
+
+#Events
+
 ##Page event
 [Back to top](#ionic-2)
 
