@@ -17,6 +17,10 @@
 * [Global variables](#global-variables)     
 * [Third party lib](#third-party-lib)    
 * [Useful functions](#useful-functions)  
+	* [Get specific platform](#get-specific-platform)    
+	* [Show / hide UI elements](#show-/-hide-ui-elements)    
+	* [Checking network connection](#checking-network-connection)    
+	* [Close modal](#close-modal)    
 * [Moment JS](#momentjs)    
 * [File access](#file-access)  
 * [Geolocation](#geolocation)  
@@ -860,10 +864,10 @@ export class HomePage {
 }
 ```
 
-##Useful Functions
-[Back to top](#ionic-2)  
+#Useful Functions
 
-###get specific platform
+##Get specific platform
+[Back to top](#ionic-2)  
 
 ```
 var isWebView = ionic.Platform.isWebView();
@@ -886,8 +890,9 @@ window.addEventListener("orientationchange", function() {
 
 ionic.Platform.exitApp(); // stops the app
 ```
-
-###Show / hide DOM element
+ 
+##Show / hide DOM element
+[Back to top](#ionic-2) 
 
 ```
 <button (click)="removeNote()" [hidden]="creationMode">
@@ -904,7 +909,9 @@ export class HomePage {
 }
 ```
 
-###Checking network connection
+
+##Checking network connection
+[Back to top](#ionic-2)
 
 ```
 $ cordova plugin add cordova-plugin-network-information
@@ -918,8 +925,9 @@ if(navigator.onLine){
 }
 ```
 
-### Close modal
-
+## Close modal
+[Back to top](#ionic-2)
+	
 **View file**
 ```
 <button (click)="close()"></button>
