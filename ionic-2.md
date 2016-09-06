@@ -8,9 +8,10 @@
 * [Start with ionic](#start-with-ionic)  
 * [Work with Atom editor](#work-with-atom)  
 * [Visual Studio Code](#visual-studio-code)    
-* [Concept - Angular 2](#angular-2)  
-* [Concept - Decorators](#decorators)    
-* [Concept - Pipe](#pipe)    
+* [Basics concepts](#basics-concepts)    
+	* [Angular 2](#angular-2)  
+	* [Decorators](#decorators)    
+	* [Pipe](#pipe)    
 * [Config](#config)    
 * [Global variables](#global-variables)     
 * [Third party lib](#third-party-lib)    
@@ -336,6 +337,8 @@ atom-text-editor::shadow {
 [Back to top](#ionic-2) 
 
 Another very good alternative to Atom is [visual studio code] (https://code.visualstudio.com/c?utm_expid=101350005-27.GqBWbOBuSRqlazQC_nNSRg.2&utm_referrer=https%3A%2F%2Fwww.google.fr%2F)
+
+#Basics concepts
 
 ##Angular 2
 [Back to top](#ionic-2)  
