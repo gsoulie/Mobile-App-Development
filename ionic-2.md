@@ -9,14 +9,14 @@
 [Cordova](#cordova)   
 [Work with Atom editor](#work-with-atom)  
 [Visual Studio Code](#visual-studio-code)    
-[Useful functions](#useful-functions)  
-[Moment JS](#momentjs)    
 [Concept - Angular 2](#angular-2)  
 [Concept - Decorators](#decorators)    
 [Concept - Pipe](#pipe)    
 [Config](#config)    
 [Global variables](#global-variables)     
 [Third party lib](#third-party-lib)    
+[Useful functions](#useful-functions)  
+[Moment JS](#momentjs)    
 [File access](#file-access)  
 [Geolocation](#geolocation)  
 [Database](#database)  
@@ -345,172 +345,6 @@ atom-text-editor::shadow {
 [Back to top](#ionic-2) 
 
 Another very good alternative to Atom is [visual studio code] (https://code.visualstudio.com/c?utm_expid=101350005-27.GqBWbOBuSRqlazQC_nNSRg.2&utm_referrer=https%3A%2F%2Fwww.google.fr%2F)
-
-##Useful Functions
-[Back to top](#ionic-2)  
-
-###get specific platform
-
-```
-var isWebView = ionic.Platform.isWebView();
-var isIPad = ionic.Platform.isIPad();
-var isIOS = ionic.Platform.isIOS();
-var isAndroid = ionic.Platform.isAndroid();
-var isWindowsPhone = ionic.Platform.isWindowsPhone();
-
-var currentPlatform = ionic.Platform.platform();
-var currentPlatformVersion = ionic.Platform.version();
-
-platform.isPortrait() 
-platform.isLandscape()
-
--->
-/*
-window.addEventListener("orientationchange", function() {
-    alert(window.orientation);
-}, false);*/
-
-ionic.Platform.exitApp(); // stops the app
-```
-
-###Show / hide DOM element
-
-```
-<button (click)="removeNote()" [hidden]="creationMode">
-	<ion-icon name="trash"></ion-icon>
-</button>
-```
-
-In controller.ts
-
-```
-export class HomePage {
-  creationMode: boolean = false;
-  ... 
-}
-```
-
-###Checking network connection
-
-```
-$ cordova plugin add cordova-plugin-network-information
-```
-
-```
-if(navigator.onLine){
-   return true;
-} else {
-   return false;
-}
-```
-
-### Close modal
-
-**View file**
-```
-<button (click)="close()"></button>
-```
-
-**Controller file**
-
-Don't forget to import ViewController
-
-```
-import { Component } from '@angular/core';
-import { NavController,ViewController} from 'ionic-angular';
-
-@Component({
-  templateUrl: 'build/pages/route-list/route-list.html',
-})
-export class RouteListPage {
-
-  constructor(private navCtrl: NavController, private viewCtrl: ViewController) {
-
-  }
-
-  close(){
-    this.viewCtrl.dismiss();
-  }
-}
-
-```
-
-##MomentJS
-[Back to top](#ionic-2)  
-
-####Package installation
-
-```
-npm install angular-moment moment --save
-```
-
-####Usage
-
-```
-import * as moment from 'moment';
-...
-...
-let mydate = moment().format('ddd MMM YYYY, h:mm:ss');
-```
-
-####Customize locale variables
-
-In the followig example, we define french locale 
-
-```
-FR: any = {
-    months : "Janvier_Février_Mars_Avril_Mai_Juin_Juillet_Août_Septembre_Octobre_Novembre_Décembre".split("_"),
-    monthsShort : "janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.".split("_"),
-    weekdays : "Dimanche_Lundi_Mardi_Mercredi_Jeudi_Vendredi_Samedi".split("_"),
-    weekdaysShort : "dim._lun._mar._mer._jeu._ven._sam.".split("_"),
-    weekdaysMin : "Di_Lu_Ma_Me_Je_Ve_Sa".split("_"),
-    longDateFormat : {
-        LT : "HH:mm",
-        L : "DD/MM/YYYY",
-        LL : "D MMMM YYYY",
-        LLL : "D MMMM YYYY LT",
-        LLLL : "dddd D MMMM YYYY LT"
-    },
-    calendar : {
-        sameDay: "[Aujourd'hui à] LT",
-        nextDay: '[Demain à] LT',
-        nextWeek: 'dddd [à] LT',
-        lastDay: '[Hier à] LT',
-        lastWeek: 'dddd [dernier à] LT',
-        sameElse: 'L'
-    },
-    relativeTime : {
-        future : "dans %s",
-        past : "il y a %s",
-        s : "quelques secondes",
-        m : "une minute",
-        mm : "%d minutes",
-        h : "une heure",
-        hh : "%d heures",
-        d : "un jour",
-        dd : "%d jours",
-        M : "un mois",
-        MM : "%d mois",
-        y : "une année",
-        yy : "%d années"
-    },
-    ordinal : function (number) {
-        return number + (number === 1 ? 'er' : 'ème');
-    },
-    week : {
-        dow : 1, // Monday is the first day of the week.
-        doy : 4  // The week that contains Jan 4th is the first week of the year.
-    }
-};
-```
-
-Then, we assign this new locale to moment 
-
-```
-moment.locale('fr',this.FR);
-...
-let formatted = moment().format('dddd D MMMM YYYY'); // will display "jeudi 2 juin 2016"
-```
 
 ##Angular 2
 [Back to top](#ionic-2)  
@@ -1026,6 +860,171 @@ export class HomePage {
 }
 ```
 
+##Useful Functions
+[Back to top](#ionic-2)  
+
+###get specific platform
+
+```
+var isWebView = ionic.Platform.isWebView();
+var isIPad = ionic.Platform.isIPad();
+var isIOS = ionic.Platform.isIOS();
+var isAndroid = ionic.Platform.isAndroid();
+var isWindowsPhone = ionic.Platform.isWindowsPhone();
+
+var currentPlatform = ionic.Platform.platform();
+var currentPlatformVersion = ionic.Platform.version();
+
+platform.isPortrait() 
+platform.isLandscape()
+
+-->
+/*
+window.addEventListener("orientationchange", function() {
+    alert(window.orientation);
+}, false);*/
+
+ionic.Platform.exitApp(); // stops the app
+```
+
+###Show / hide DOM element
+
+```
+<button (click)="removeNote()" [hidden]="creationMode">
+	<ion-icon name="trash"></ion-icon>
+</button>
+```
+
+In controller.ts
+
+```
+export class HomePage {
+  creationMode: boolean = false;
+  ... 
+}
+```
+
+###Checking network connection
+
+```
+$ cordova plugin add cordova-plugin-network-information
+```
+
+```
+if(navigator.onLine){
+   return true;
+} else {
+   return false;
+}
+```
+
+### Close modal
+
+**View file**
+```
+<button (click)="close()"></button>
+```
+
+**Controller file**
+
+Don't forget to import ViewController
+
+```
+import { Component } from '@angular/core';
+import { NavController,ViewController} from 'ionic-angular';
+
+@Component({
+  templateUrl: 'build/pages/route-list/route-list.html',
+})
+export class RouteListPage {
+
+  constructor(private navCtrl: NavController, private viewCtrl: ViewController) {
+
+  }
+
+  close(){
+    this.viewCtrl.dismiss();
+  }
+}
+
+```
+
+##MomentJS
+[Back to top](#ionic-2)  
+
+####Package installation
+
+```
+npm install angular-moment moment --save
+```
+
+####Usage
+
+```
+import * as moment from 'moment';
+...
+...
+let mydate = moment().format('ddd MMM YYYY, h:mm:ss');
+```
+
+####Customize locale variables
+
+In the followig example, we define french locale 
+
+```
+FR: any = {
+    months : "Janvier_Février_Mars_Avril_Mai_Juin_Juillet_Août_Septembre_Octobre_Novembre_Décembre".split("_"),
+    monthsShort : "janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.".split("_"),
+    weekdays : "Dimanche_Lundi_Mardi_Mercredi_Jeudi_Vendredi_Samedi".split("_"),
+    weekdaysShort : "dim._lun._mar._mer._jeu._ven._sam.".split("_"),
+    weekdaysMin : "Di_Lu_Ma_Me_Je_Ve_Sa".split("_"),
+    longDateFormat : {
+        LT : "HH:mm",
+        L : "DD/MM/YYYY",
+        LL : "D MMMM YYYY",
+        LLL : "D MMMM YYYY LT",
+        LLLL : "dddd D MMMM YYYY LT"
+    },
+    calendar : {
+        sameDay: "[Aujourd'hui à] LT",
+        nextDay: '[Demain à] LT',
+        nextWeek: 'dddd [à] LT',
+        lastDay: '[Hier à] LT',
+        lastWeek: 'dddd [dernier à] LT',
+        sameElse: 'L'
+    },
+    relativeTime : {
+        future : "dans %s",
+        past : "il y a %s",
+        s : "quelques secondes",
+        m : "une minute",
+        mm : "%d minutes",
+        h : "une heure",
+        hh : "%d heures",
+        d : "un jour",
+        dd : "%d jours",
+        M : "un mois",
+        MM : "%d mois",
+        y : "une année",
+        yy : "%d années"
+    },
+    ordinal : function (number) {
+        return number + (number === 1 ? 'er' : 'ème');
+    },
+    week : {
+        dow : 1, // Monday is the first day of the week.
+        doy : 4  // The week that contains Jan 4th is the first week of the year.
+    }
+};
+```
+
+Then, we assign this new locale to moment 
+
+```
+moment.locale('fr',this.FR);
+...
+let formatted = moment().format('dddd D MMMM YYYY'); // will display "jeudi 2 juin 2016"
+```
 
 
 ##File access
