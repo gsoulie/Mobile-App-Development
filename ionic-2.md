@@ -21,6 +21,8 @@
 * [File access](#file-access)  
 * [Geolocation](#geolocation)  
 * [Database](#database)  
+	* [SQLite database](#sqlite-database)    
+	* [SQLStorage](#sqlstorage)    
 * [Camera](#camera)   
 * [Gallery](#gallery)    
 * [Barcode Scanner](#barcode-scanner)  
@@ -1195,7 +1197,9 @@ addInfoWindow(marker, content){
 }
 ```
 
-##Database
+#Database
+
+##SQLite storage
 [Back to top](#ionic-2)  
 
 [link : Using Sqlite storage tutorial](https://devdactic.com/ionic-2-sqlstorage/)
@@ -1337,7 +1341,7 @@ export class HomePage {
     </ion-list>
 </ion-content>
 ```
-###Second solution
+##SQLStorage
 [Back to top](#ionic-2)  
 
 Is recommanded using **SqlStorage**. 
