@@ -1362,9 +1362,34 @@ export class Record {
         this.storage.set('name','max');
         this.storage.set('lastname','dupont');
     }
+    
+    createDB(){
+	this.storage.query('CREATE TABLE IF NOT EXISTS conso( \
+	idConso INTEGER PRIMARY KEY AUTOINCREMENT,  \
+	dateConso DATE, \
+	tripMax INTEGER, \
+	cout REAL, \
+	qte REAL, \
+	prix REAL, \
+	year INTEGER, \
+	month INTEGER, \
+	dateCreation CHAR(30) \
+	)');
+    }
+    
+   addConso(_args: any){
+	    
+	this.storage.query("INSERT INTO conso (dateConso,tripMax,cout,qte,prix,year,month,dateCreation) VALUES (?,?,?,?,?,?,?,?)",[_args.dateConso, _args.tripMax, _args.cout, _args.qte, _args.prix, _args.year, _args.month, new Date()])
+	.then((data) => {
+		console.log(JSON.stringify(data.res));
+	}, (error) => {
+	        console.log("Erreur lors de l'ajout => " + JSON.stringify(error));
+	});
+  }
 }
 
 storage.get('name').then((name) => {
+
 });
 
 // Sql storage also exposes the full engine underneath
@@ -1372,7 +1397,7 @@ this.storage.query('insert into projects(name, data) values("Cool Project", "bla
 this.storage.query('select * from projects').then((resp) => {})
 ```
 
-####PouchDB
+##PouchDB
 
 First, install cordova sqlite-storage plugin
 
