@@ -27,17 +27,17 @@
 * [Themes](#themes)  
 * [Page event](#page-event)    
 * [Event propagation](#event-propagation)    
-* [UI Components](#ui-components)
-..* [Component - comboBox](#component-combobox)    
-..* [Component - ion-list](#component-ion-list)  
-..* [Component - tab](#component-tab)       
-..* [Component - tab icon](#component-tab-icon)    
-..* [Component - searchbar](#component-searchbar)    
-..* [Component - alert dialog box](#component-alert-dialog-box)    
-..* [Component - floating button](#floating-button)  
-..* [Component - chart](#component-chart)    
-..* [Component - grid](#component-grid)    
-..* [Component - toggle](#component-toggle)    
+* [UI Components](#ui-components)    
+	* [comboBox](#component-combobox)    
+	* [ion-list](#component-ion-list)  
+	* [tab](#component-tab)       
+	* [tab icon](#component-tab-icon)    
+	* [searchbar](#component-searchbar)    
+	* [alert dialog box](#component-alert-dialog-box)    
+	* [floating button](#floating-button)  
+	* [chart](#component-chart)    
+	* [grid](#component-grid)    
+	* [toggle](#component-toggle)    
 * [Known issues](#known-issues)    
 * [Using image](#using-image)    
 * [Backend Strongloop](#backend-strongloop)     
@@ -1802,7 +1802,7 @@ Lastly you make sure this scss is being compiled with your **app.core.scss** by 
 ##UI Component
 [Back to top](#ionic-2)  
 
-##Component ComboBox
+##ComboBox
 [Back to top](#ionic-2)  
 
 **View file**
@@ -1874,7 +1874,7 @@ pickDevice(event,_idDevice){
 ```
 
 
-##Component ion-list
+##ion-list
 [Back to top](#ionic-2)  
 
 Solution for filling dynamic ion-list item
@@ -2254,7 +2254,7 @@ doRefresh(refresher){
     setTimeout(() => { refresher.complete(); console.log('Async operation has ended'); }, 2000); 
   }
 ```
-##Component Tab
+##Tab
 [Back to top](#ionic-2)  
 
 According to the latest Android material guideline, you have to follow these rules :
@@ -2269,7 +2269,7 @@ So, by default, ionic 2 tabs project sample is using bottom navigation. To set t
 ionicBootstrap(MyApp,[],{tabsPlacement: "top"});
 ```
 
-##Component Tab icon
+##Tab icon
 [Back to top](#ionic-2)  
 
 Customize tab icon
@@ -2288,7 +2288,7 @@ Then just create a custom css, something like this:
   opacity: 0.9;
 }
 ```
-##Component Searchbar
+##Searchbar
 [Back to top](#ionic-2)  
 
 **View file**
@@ -2361,7 +2361,7 @@ constructor(public nav: NavController) {
   }
 ```
 
-##Component Alert dialog box
+##Alert dialog box
 [Back to top](#ionic-2)  
 
 Here's a sample code to show a confirmation dialog box. The key is to add Alert import and then, don't miss to add alert object to current navigation stack
@@ -2428,19 +2428,19 @@ This snippet show how to fix floating button in front of a list
 </button>
 ```
 
-##Component chart
+##chart
 [Back to top](#ionic-2) 
 
 [link : ng2-chart](http://valor-software.com/ng2-charts/)    
 [forum : related post](https://forum.ionicframework.com/t/solved-ionic-2-ng2-charts/42926)    
 
-##Component grid
+##grid
 [Back to top](#ionic-2) 
 
 
 [link : complex layout using grid and flexbox](http://www.joshmorony.com/an-in-depth-look-at-the-grid-system-in-ionic-2/) 
 
-##Component toggle
+##toggle
 [Back to top](#ionic-2) 
 
 ####View.html
