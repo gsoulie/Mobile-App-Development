@@ -330,7 +330,7 @@ Create a **tsconfig.json** file in your project root with :
 
 To customize Atom editor colors, open Atom preference and on the Settings page, "Open Config Folder". Then, open **style.less** file and add the following code :
 
-```
+```javascript
 atom-text-editor::shadow {
   .comment {
     color: #d1cd96;
@@ -359,7 +359,7 @@ AngularJS 2 is the backbone of Ionic 2, is being written for ECMAScript 6
 ###Some Angular 2 concepts
 
 **Binding a Property to a value**
-```javascript
+```xml
 <input [value]="firstName">
 ```
 
@@ -367,20 +367,20 @@ This will set the elements property to fisrtName. More used to see ```{{firstNam
 
 **Calling a Function on an Event**
 
-```javascript
+```xml
 <button (click)="someFunction($event)">
 ```
 
 This will call the someFunction function and pass in the event whenever the button is clicked on. You can replace click with any native or custom event you like. You can also use the following syntax:
 
-```javascript
+```xml
 <button (^click)="someFunction($event)">
 ```
 to make the event bubble up to other elements.
 
 **Rendering Expressions**
 
-```javascript
+```xml
 <p>Hi, {{name}}</p>
 ```
 
@@ -392,24 +392,24 @@ In Angular 1 we could set up two way data binding by using ng-model, so if we ch
 
 We can achieve the same two way data binding in Angular 2 like this:
 
-```javascript
+```xml
 <input [value]="name" (input)="name = $event.target.value">
 ```
 
 This sets the value to the expression name and when we detect the input event we updated name to be the new value that was entered. To make this easier, we can still use ng-model in Angular 2 like this to achieve the same thing:
 
-```javascript
+```xml
 <input [(ng-model)]="name">
 ```
 
 **Creating a Variable to Access an Element**
 
-```javascript
+```xml
 <p #myParagraph></p>
 ```
 This creates a local variable that we can use to access the element, so if I wanted to add some content into this paragraph I could do the following:
 
-```javascript
+```xml
 <button (click)="myParagraph.innerHTML = 'Once upon a time...'">
 ```
 
@@ -557,7 +557,7 @@ Now someString would be run through your custom myPipe before the value is outpu
 
 First, create a "pipe" directory in your project will containing all pipe lib. A basic pipe class looks like below :
 
-```
+```javascript
 import {Pipe} from '@angular/core';
 
 @Pipe({
@@ -575,7 +575,7 @@ export class HelloWorld {
 
 Always implement the *PipeTransform* interface when building a Pipe
 
-```
+```javascript
 export class HelloWorldPipe implements PipeTransform {
 	// Pipe function
 	transform(value) {
@@ -586,7 +586,7 @@ export class HelloWorldPipe implements PipeTransform {
 
 ####Using pipe in other page
 
-```
+```javascript
 import {HelloWorld} from 'pipes/HelloWorld';	// pipe import
 
 @Component({
@@ -604,7 +604,7 @@ export class MyPage {
 
 Pipe inline syntax : ```value | myPipe:args[0]:args[1]```
 
-```
+```xml
 <ion-label>{{name | helloWorld}}</ion-label>
 ```
 
@@ -614,7 +614,7 @@ Pipe inline syntax : ```value | myPipe:args[0]:args[1]```
 
 **Pipe file**
 
-```
+```javascript
 import {Pipe} from '@angular/core';
 
 @Component({
@@ -629,7 +629,7 @@ export class AddInt {
 
 **Page file**
 
-```
+```javascript
 import {AddInt} from 'pipes/AddInt';
 
 @Component({
@@ -669,7 +669,7 @@ The Config lets you configure your entire app or specific platforms. You can set
 
 **sample code of Config**
 
-```
+```javascript
 @Component({
   template: `<ion-nav [root]="root"></ion-nav>`
   config: {
@@ -685,7 +685,7 @@ The Config lets you configure your entire app or specific platforms. You can set
 
 To change the mode to always use Material Design (md).
 
-```
+```javascript
 @Component({
   template: `<ion-nav [root]="root"></ion-nav>`
   config: {
@@ -696,7 +696,7 @@ To change the mode to always use Material Design (md).
 
 You can also use the config object to define platform specific behaviour:
 
-```
+```javascript
 @Component({
   template: `<ion-nav [root]="root"></ion-nav>`
   config: {
@@ -719,12 +719,12 @@ The **config.xml** file allows you to configure a lot of things in your applicat
 Here are some example :
 
 **Restrict app screen orientation**
-```
+```xml
 <preference name="orientation" value="portrait"/>
 ```
 
 **Adjust splashscreen delay**
-```
+```xml
 <preference name="SplashScreenDelay" value="2000"/>
 ```
 
@@ -735,7 +735,7 @@ Here's a solution to centralize application's globals. The solution consist in u
 
 You can export all your variable like below :
 
-```
+```javascript
 export let VALUE_ONE = "09:00";
 export let VALUE_TWO = "192.168.0.1";
 ...
@@ -743,7 +743,7 @@ export let VALUE_TWO = "192.168.0.1";
 
 And then in the component or service that requires them, just do this :
 
-```
+```javascript
 import {VALUE_ONE} from './config';
 ```
 
@@ -751,7 +751,7 @@ import {VALUE_ONE} from './config';
 
 Constant can be declared after lib import like :
 
-```
+```javascript
 import {Component} from '@angular/core';
 import {NavController, AlertController, ToastController} from 'ionic-angular';
 import {Utils} from '../../providers/utils/utils';
@@ -775,7 +775,7 @@ To use a custom lib file in your project, follow the next steps
 ###2 implement lib file
 
 ex : utils.js
-```
+```javascript
 var UI = {};
 
 UI.info = function(_titre, _message){
@@ -790,7 +790,7 @@ export UI;
 ```
 or export only some functions
 
-```
+```javascript
 export function getSquare(_value){	// Only this function will be available from external
    return square(_value);
 }
@@ -803,7 +803,7 @@ function square(_value){	// Not exported
 ###3 Using the custom lib in the whole project
 
 ex : From Home.js page
-```
+```javascript
 import * as UI from '../../lib/utils';
 
 @Component({
@@ -830,7 +830,7 @@ export class HomePage {
 
 ex : utils.ts
 
-```
+```javascript
 import {Component, Injectable} from '@angular/core';
 
 @Injectable()
@@ -848,7 +848,7 @@ export class UTILS {
 
 ###3 Inject class in other component
 
-```
+```javascript
 import {UTILS} from '../../lib/utils';
 
 export class HomePage {
@@ -865,7 +865,7 @@ export class HomePage {
 ##Get specific platform
 [Back to top](#ionic-2)  
 
-```
+```javascript
 var isWebView = ionic.Platform.isWebView();
 var isIPad = ionic.Platform.isIPad();
 var isIOS = ionic.Platform.isIOS();
@@ -890,7 +890,7 @@ ionic.Platform.exitApp(); // stops the app
 ##Show / hide DOM element
 [Back to top](#ionic-2) 
 
-```
+```xml
 <button (click)="removeNote()" [hidden]="creationMode">
 	<ion-icon name="trash"></ion-icon>
 </button>
@@ -898,7 +898,7 @@ ionic.Platform.exitApp(); // stops the app
 
 In controller.ts
 
-```
+```javascript
 export class HomePage {
   creationMode: boolean = false;
   ... 
@@ -913,7 +913,7 @@ export class HomePage {
 $ cordova plugin add cordova-plugin-network-information
 ```
 
-```
+```javascript
 if(navigator.onLine){
    return true;
 } else {
@@ -925,7 +925,7 @@ if(navigator.onLine){
 [Back to top](#ionic-2)
 	
 **View file**
-```
+```xml
 <button (click)="close()"></button>
 ```
 
@@ -933,7 +933,7 @@ if(navigator.onLine){
 
 Don't forget to import ViewController
 
-```
+```javascript
 import { Component } from '@angular/core';
 import { NavController,ViewController} from 'ionic-angular';
 
@@ -964,7 +964,7 @@ npm install angular-moment moment --save
 
 ###Usage
 
-```
+```javascript
 import * as moment from 'moment';
 ...
 ...
@@ -975,7 +975,7 @@ let mydate = moment().format('ddd MMM YYYY, h:mm:ss');
 
 In the followig example, we define french locale 
 
-```
+```javascript
 FR: any = {
     months : "Janvier_Février_Mars_Avril_Mai_Juin_Juillet_Août_Septembre_Octobre_Novembre_Décembre".split("_"),
     monthsShort : "janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.".split("_"),
@@ -1024,7 +1024,7 @@ FR: any = {
 
 Then, we assign this new locale to moment 
 
-```
+```javascript
 moment.locale('fr',this.FR);
 ...
 let formatted = moment().format('dddd D MMMM YYYY'); // will display "jeudi 2 juin 2016"
@@ -1043,7 +1043,7 @@ let formatted = moment().format('dddd D MMMM YYYY'); // will display "jeudi 2 ju
 
 **Adding Google Map API depency in index.html**
 
-```
+```html
 <script src="http://maps.google.com/maps/api/js"></script>
 <script src="cordova.js"></script>
 <script src="build/js/app.bundle.js"></script>
@@ -1059,14 +1059,14 @@ $ ionic plugin add cordova-plugin-geolocation
 
 **Import the new page in app.core.scss**
 
-```
+```javascript
 @import "pages/map/map";
 ```
 
 **Loading Map (map.html)**
 
 
-```
+```xml
 <ion-header>
 	<ion-navbar>
 	  <ion-title>
@@ -1083,7 +1083,7 @@ $ ionic plugin add cordova-plugin-geolocation
 ```
 
 Next, specify ion-navbar configuration in app.js
-```
+```javascript
 @Component({
   template: '<ion-nav [root]="root"></ion-nav>',
 })
@@ -1099,7 +1099,7 @@ export class AppCmp {
 
 **Updating map.js**
 
-```
+```javascript
 import {Component, Geolocation} from 'ionic/ionic';
  
 @Component({
@@ -1128,7 +1128,7 @@ export class MapPage {
 
 **Styling page (very important) (map.scss)**
 
-```
+```css
 .scroll {
     height: 100%;
 }
@@ -1141,7 +1141,7 @@ export class MapPage {
 
 **Updating loadMap function**
 
-```
+```javascript
 loadMap(){
  
   let options = {timeout: 10000, enableHighAccuracy: true};
@@ -1169,7 +1169,7 @@ loadMap(){
 
 **Adding marker function (map.js)**
 
-```
+```javascript
 addMarker(){
  
   let marker = new google.maps.Marker({
@@ -1187,7 +1187,7 @@ addMarker(){
 
 **Adding addInfoWindow function (map.js)**
 
-```
+```javascript
 addInfoWindow(marker, content){
  
   let infoWindow = new google.maps.InfoWindow({
@@ -1225,7 +1225,7 @@ $ ionic plugin add cordova-sqlite-storage
 
 **Database initialization (app.js)**
 
-```
+```javascript
 import {App, Platform, Storage, SqlStorage} from 'ionic-angular';
 import {HomePage} from './pages/home/home';
 import {Component} from '@angular/core';
@@ -1268,7 +1268,7 @@ class MyApp {
 
 **Database manipulation (home.js)**
 
-```
+```javascript
 import {App, Platform, Storage, SqlStorage} from 'ionic-angular';
 import {Component} from '@angular/core';
 
@@ -1323,7 +1323,7 @@ export class HomePage {
 ```
 **Displaying data from database (home.html)**
 
-```
+```xml
 <ion-header>
 	<ion-navbar>
 	    <ion-title>
@@ -1350,7 +1350,7 @@ This is the preferred storage engine, as data will be stored in appropriate app 
 
 **Usage**
 
-```
+```javascript
 import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 import {Storage, SqlStorage} from 'ionic/ionic';
@@ -1432,7 +1432,7 @@ $ ionic plugin add cordova-plugin-camera
 
 View file
 
-```
+```xml
 <ion-header>
 	<ion-navbar maintheme>
 	  <button menuToggle>
@@ -1451,7 +1451,7 @@ View file
 ```
 
 Controller file
-```
+```javascript
 import {Component} from '@angular/core';
 import {Camera} from 'ionic-native';
 
@@ -1500,13 +1500,13 @@ $ ionic plugin add cordova-plugin-camera
 ```
 
 **import plugin in ts file**
-```
+```javascript
 import { Camera } from ‘ionic-native’;
 ```
 
 **declare image source component**
 
-```
+```javascript
 private imageSrc: string;
 
 constructor(private navCtrl: NavController) { }
@@ -1514,7 +1514,7 @@ constructor(private navCtrl: NavController) { }
 
 **function to access gallery**
 
-```
+```javascript
 private openGallery (): void {
   let cameraOptions = {
     sourceType: Camera.PictureSourceType.PHOTOLIBRARY,
@@ -1534,7 +1534,7 @@ private openGallery (): void {
 
 **view file**
 
-```
+```xml
 <div class="gallery-button" text-center>
     <img [src]="imageSrc" />    
   <ion-icon name="images" on-tap="openGallery()"></ion-icon>
@@ -1544,7 +1544,7 @@ private openGallery (): void {
 
 **some scss to customize the view**
 
-```
+```css
 ion-content, .toolbar-background {
 	background-color: #4E8EF7;
 	color: #FFFFFF;
@@ -1587,7 +1587,7 @@ p {
 
 **Create the view (page.html)**
 
-```
+```xml
 <ion-header>
 	<ion-navbar>
 	  <ion-title>Tab 1</ion-title>
@@ -1604,7 +1604,7 @@ p {
 
 **Create controller (page.js)**
 
-```
+```javascript
 import {Component} from 'ionic/ionic';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
@@ -1642,13 +1642,13 @@ The **map** lib is only imported because we need is http.get function
 
 Before we can use the NavController, we will need to import it.
 
-```
+```javascript
 import {NavController} from 'ionic-angular';
 ```
 
 Next we will inject it into our ```@Component``` and assign it to a property.
 
-```
+```javascript
 import {Component, NavController} from 'ionic-angular';
 
 @Component({
@@ -1663,7 +1663,7 @@ export class MainPage(){
 
 Now, we can call properties on nav, our instance of **NavController**. For example, say we want to navigate from our Main view to our About view, we would need to start by importing that ```@Component``` class.
 
-```
+```javascript
 import {Component, NavController} from 'ionic-angular';
 import {AboutPage} from 'About/About'
 
@@ -1679,7 +1679,7 @@ export class MainPage(){
 
 Next, let’s create a method on our page called **goToAbout** that we can call from our template. This method will push the AboutPage onto the stack.
 
-```
+```javascript
 import {Component, NavController} from 'ionic-angular';
 import {AboutPage} from 'About/About'
 
@@ -1699,7 +1699,7 @@ export class MainPage(){
 
 In our template, **Main.html**, we will have a button that will call this method when pressed.
 
-```
+```xml
 <button (click)="goToAbout()">About</button>
 ```
 
@@ -1708,7 +1708,7 @@ To summarize, when this button is pressed, it will call the goToAbout method whi
 ####Passing Data
 In many scenarios we have data in one view that we need to pass to another. Luckily, the push method accepts a second parameter which is an object of data to pass to the ```@Component``` passed into the first parameter.
 
-```
+```javascript
 this.nav.push(AboutPage,{
 	username: "andrewmcgivery",
 	blogger: true
@@ -1717,7 +1717,7 @@ this.nav.push(AboutPage,{
 
 This data is then accessible in the pushed ```@Component``` via navParams which is similar to $stateParams in 1.0.
 
-```
+```javascript
 import {Component, NavParams} from 'ionic-angular';
 
 @Component({
@@ -1734,7 +1734,7 @@ export class AboutPage {
 
 Pop is super simple to use as well. As an example, if we wanted to create a function called **goBack** that goes back when pressed in our AboutPage, we could just call **nav.pop()** :
 
-```
+```javascript
 import {Component, NavController} from 'ionic-angular';
 
 @Component({
@@ -1756,7 +1756,7 @@ There is a few more methods available on the NavController such as insert, remov
 
 ####Lifecycle Events
 In version 1.0, we had the concept of events being fired when we were entering and leaving the view, among others. In version 2.0, we have a very similar set of events. To handle one of these events, we just need to give our ```@Component``` class a method that matches the event. For example, if we want to run an event when the ```@Component``` is loaded, we will need to give our page the **onPageLoaded** method:
-```
+```javascript
 import {Component} from '@angular/core';
 
 @Component({
@@ -1784,7 +1784,7 @@ $ ionic plugin add cordova-plugin-statusbar
 
 **Customize**
 
-```
+```javascript
 import {Platform} from 'ionic-angular';
 import {Component} from '@angular/core';
 import {TabsPage} from './pages/tabs/tabs';
@@ -1811,7 +1811,7 @@ export class MyApp {
 
 ###Change background color of a specific page
 
-```
+```xml
 <ion-content padding class="masters">
   <ion-list inset>
     <button ion-item *ngFor="#master of masterPages" (click)="navMaster(master)">
@@ -1823,7 +1823,7 @@ export class MyApp {
 
 Then in your scss you target the class in the ion-content tag:
 
-```
+```javascript
 .masters {
   background-color: green;
 }
@@ -1831,7 +1831,7 @@ Then in your scss you target the class in the ion-content tag:
 
 Lastly you make sure this scss is being compiled with your **app.core.scss** by importing it in that same file like:
 
-```
+```javascript
 @import "../pages/masters/masters";
 ```
 
@@ -1841,7 +1841,7 @@ Lastly you make sure this scss is being compiled with your **app.core.scss** by 
 [Back to top](#ionic-2)  
 
 **View file**
-```
+```xml
 <ion-item>
 	<ion-label>Profession</ion-label>
 	<ion-select [(ng-model)]="prof" (ionChange)="selectObject($event)">
@@ -1852,7 +1852,7 @@ Lastly you make sure this scss is being compiled with your **app.core.scss** by 
 
 **Controller file**
 
-```
+```javascript
 public prof: string;
 private professions: any[];
 private newSelectedId: number = 0;
@@ -1890,7 +1890,7 @@ This code show how to stop event propagation
 
 **View file**
 
-```
+```xml
 <ion-content padding class="page1">
   <ion-list>
     <ion-item *ngFor="let item of items" (click)="openDetail(item.idDevice, item.nom)">
@@ -1905,7 +1905,7 @@ This code show how to stop event propagation
 
 **Controller file**
 
-```
+```javascript
 pickDevice(event,_idDevice){
     event.stopPropagation();
   }
@@ -1917,7 +1917,7 @@ pickDevice(event,_idDevice){
 
 Solution for filling dynamic ion-list item
 
-```
+```xml
 <ion-list> 
     <ion-item *ngFor="let item of items">{{item.fullname}}</ion-item> 
 </ion-list>
@@ -1927,7 +1927,7 @@ or
 
 For clickable list you have to use 
 
-```
+```xml
 <ion-list> 
     <button ion-item *ngFor="let item of items">{{item.fullname}}</button> 
 </ion-list>
@@ -1938,7 +1938,7 @@ For clickable list you have to use
 
 Consider a ion-list in which we want to hide every items which property "deleted" is set to true
 
-```
+```javascript
 <ion-list>
   <ion-item-sliding *ngFor="let item of getActiveItems()" #slidingItem>
     <ion-item>{{item.fach}} ({{item.kuerzel}})</ion-item>
@@ -1965,7 +1965,7 @@ export class TestPage {
 
 Second solution, in case that you prefer to do the filtering in the template then you can do it this way:
 
-```
+```xml
 <ion-list>
   <template ngFor #item="$implicit" [ngForOf]="items">
     <ion-item-sliding *ngIf="!item.deleted" #slidingItem>
@@ -1983,7 +1983,7 @@ Second solution, in case that you prefer to do the filtering in the template the
 **Remove item from list**
 
 View file
-```
+```xml
 <ion-list>
     <ion-item-sliding *ngFor="let post of posts">
     	<ion-item>
@@ -2001,7 +2001,7 @@ View file
 
 Controller file
 
-```
+```javascript
 removePost(post){
     let index = this.posts.indexOf(post);
 
@@ -2013,7 +2013,7 @@ removePost(post){
 
 ####ion-item-sliding
 
-```
+```xml
 <ion-content class="home">
   <ion-list>
     <ion-item-sliding  *ngFor="#item of notes" >
@@ -2050,9 +2050,8 @@ ionic start virtual-scroll tabs --v2
 
 Modify Page1 and Page2 controller with :
 
-```
+```javascript
 import {Component} from '@angular/core';
-
 
 @Component({
   templateUrl: 'build/pages/page1/page1.html'
@@ -2082,7 +2081,7 @@ export class Page1 {
 First we’re going to set up a standard list to display the data we created in the constructor.
 
 Modify **page1.html** to reflect the following:
-```
+```xml
 <ion-header>
 	<ion-navbar>
 	  <ion-title>
@@ -2093,20 +2092,15 @@ Modify **page1.html** to reflect the following:
 <ion-content class="page1">
  
   <ion-list>
- 
     <ion-item *ngFor="let item of items">
       <ion-avatar item-left>
         <ion-img [src]="item.avatarUrl"></ion-img>
       </ion-avatar>
  
       <h2>{{item.title}}</h2>
- 
       <p>{{item.body}}</p>
- 
     </ion-item>
- 
   </ion-list>
- 
 </ion-content>
 ```
 
@@ -2118,7 +2112,7 @@ Now we’re going to create a list that uses virtual scroll.
 
 Modify **page2.html** to reflect the following:
 
-```
+```xml
 <ion-header>
 	<ion-navbar>
 	  <ion-title>
@@ -2127,7 +2121,6 @@ Modify **page2.html** to reflect the following:
 	</ion-navbar>
 </ion-header> 
 <ion-content class="page2">
- 
     <ion-list [virtualScroll]="items">
  
       <ion-item *virtualItem="let item">
@@ -2136,13 +2129,9 @@ Modify **page2.html** to reflect the following:
         </ion-avatar>
  
         <h2>{{item.title}}</h2>
- 
         <p>{{item.body}}</p>
- 
       </ion-item>
- 
     </ion-list>
- 
 </ion-content>
 ```
 The syntax is a little different, this time we are using [virtualScroll] and *virtualItem, but the concept is the same. We are setting up some data that will be looped over for the list. The only difference now is that this list will now use virtual scrolling instead of the standard scrolling.
@@ -2154,7 +2143,7 @@ It’s important for the virtual scroll to know approximately how big your items
 [link : Infinite scroll](http://ionicframework.com/docs/v2/api/components/infinite-scroll/InfiniteScroll/)
 
 View file
-```
+```xml
 <ion-content>
 
  <ion-list>
@@ -2172,7 +2161,7 @@ View file
 ```
 
 Controller file
-```
+```javascript
 @Component({...})
 export class NewsFeedPage {
 
@@ -2203,7 +2192,7 @@ export class NewsFeedPage {
 
 **View file**
 
-```
+```xml
 <ion-list>
 	<ion-item *ngFor="let item of items" (click)="openDetail(item.idDevice, item.nom)">
 		<button clear item-right (click)="pickDevice($event,item.idDevice)">
@@ -2218,7 +2207,7 @@ export class NewsFeedPage {
 
 **Controller file**
 
-```
+```javascript
 export class Page1 {
   public items: any[];
 
@@ -2258,7 +2247,7 @@ export class Page1 {
 
 **Change button backgroundColor synamically**
 
-```
+```xml
 <button [style.backgroundColor]="enable ? '#00CC00' : '#FF0000'">Test</button>
 ```
 
@@ -2267,7 +2256,7 @@ export class Page1 {
 
 **In your html file**
 
-```
+```xml
 <ion-content padding>
   <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
@@ -2286,7 +2275,7 @@ export class Page1 {
 
 **In your controller file**
 
-```
+```javascript
 doRefresh(refresher){
     this.users = getUsers();
     setTimeout(() => { refresher.complete(); console.log('Async operation has ended'); }, 2000); 
@@ -2316,7 +2305,7 @@ It's pretty easy to do actually. When you set a tabIcon property, Ionic sets a c
 
 Then just create a custom css, something like this:
 
-```
+```css
 .ion-ios-customicon,
 .ion-md-customicon {
   content: url(../../assets/img/ui/customicon.svg);
@@ -2330,7 +2319,7 @@ Then just create a custom css, something like this:
 [Back to top](#ionic-2)  
 
 **View file**
-```
+```xml
 <ion-header>
   <ion-navbar primary>
     <ion-title>
@@ -2353,7 +2342,7 @@ Then just create a custom css, something like this:
 ```
 
 **Controller file**
-```
+```javascript
 constructor(public nav: NavController) {
     this.nav = nav;
     this.getAllDevices();
@@ -2404,7 +2393,7 @@ constructor(public nav: NavController) {
 
 Here's a sample code to show a confirmation dialog box. The key is to add Alert import and then, don't miss to add alert object to current navigation stack
 
-```
+```javascript
 import {Component, NavController, Alert} from 'ionic-angular';
 import {Data} from '../../providers/data/data';
 
@@ -2453,7 +2442,7 @@ export class HomePage {
 
 This snippet show how to fix floating button in front of a list
 
-```
+```xml
 <ion-content padding class="page1">
   <ion-list>
     <ion-item *ngFor="let item of items">
@@ -2483,7 +2472,7 @@ This snippet show how to fix floating button in front of a list
 
 ####View.html
 
-```
+```xml
 ...
 <ion-content padding>
   <ion-item>
@@ -2495,7 +2484,7 @@ This snippet show how to fix floating button in front of a list
 
 ####View.ts
 
-```
+```javascript
 refreshTracking(e){
    console.log("refreshTracking " + e.checked);
 }
@@ -2508,7 +2497,7 @@ refreshTracking(e){
 
 Sometimes,  on the emulator or on device, 2 out of 3 clicks it doesn't fire the click function. To solve the issue, change ```<ion-item>``` to ```<button>``` with the styling of ```ion-item```.
 
-```
+```xml
 <ion-list>
 	<button ion-item *ngFor="let audience of audience" (click)="pushProfilesList(audience)">
 		<h2 class="list-title">{{audience.segment}}</h2>
@@ -2524,20 +2513,20 @@ Sometimes,  on the emulator or on device, 2 out of 3 clicks it doesn't fire the 
 To use image in your app, create a **img** folder in your **www** folder and use **img** tag like below
 
 **View file**
-```
+```xml
 <img class="thb" src="{{item.image}}" item-left/>
 ```
 
 **Controller file**
 
-```
+```javascript
 let item = {name:"my item", image:"img/my_image.png"}
 ```
 **IMPORTANT** don't put "**/**" before *img*
 
 **Style file**
 
-```
+```css
 .thb{
   width: 50px;
 }
@@ -2563,7 +2552,7 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 
 **app.html configuration**
 
-```
+```html
 <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
 ```
 
@@ -2584,7 +2573,7 @@ $ typings install firebase --save --global
 
 The first step consist to create your application (web application type) on the Firebase dashboard. Next, you can go to **Database** section and upload your data with JSON file like : 
 
-```
+```javascript
 {
 	"site": [{
 		"id": "1",
@@ -2611,7 +2600,7 @@ The first step consist to create your application (web application type) on the 
 
 ###Retrieve data inside controller
 
-```
+```javascript
 constructor(){
 	this.baseRef = new Firebase('https://project-<your_fireapp_id>.firebaseio.com/');
 	this.getData();
@@ -2638,7 +2627,7 @@ getData(){
 
 For retrieving data, first create a provider (``ìonic g provider FirebaseService```) to give access to your firebase with :
 
-```
+```javascript
 import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {Http} from '@angular/http';
@@ -2690,7 +2679,7 @@ export class FirebaseService {
 
 Then, in your home page, add your provider like below :
 
-```
+```javascript
 import {FirebaseService} from '../../providers/firebase-service/firebase-service';
 
 @Component({
@@ -2721,7 +2710,7 @@ $ cordova plugin add cordova-plugin-whitelist
 
 **configure index.html**
 
-```
+```html
 <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
 ```
 
@@ -2745,7 +2734,7 @@ www/assets/i18n:fr.json
 
 Each i18n file looks like :
 
-```
+```javascript
 {
     "title" : "Internationalization Example",   
     "segment": {    
@@ -2757,7 +2746,7 @@ Each i18n file looks like :
 
 **Import ng2-translate into app.js**
 
-```
+```javascript
 import {Platform} from 'ionic/ionic';
 import {Component} from '@angular/core';
 import {HomePage} from './pages/home/home';
@@ -2796,7 +2785,7 @@ export class MyApp {
 
 **configure ng2-translate service**
 
-```
+```javascript
 initializeTranslateServiceConfig() {
   var prefix = 'assets/i18n/';
   var suffix = '.json';
@@ -2815,7 +2804,7 @@ For this code to work we need to find current navigator language. If current lan
 
 **HomePage configuration**
 
-```
+```javascript
 import {Component} from 'ionic/ionic';
 import {TranslateService, TranslatePipe} from 'ng2-translate/ng2-translate';
  
@@ -2833,7 +2822,7 @@ export class HomePage {
 
 **HomePage view**
 
-```
+```xml
 <ion-navbar *navbar>
   <ion-title>
     {{ "title" | translate }}
@@ -2911,13 +2900,13 @@ ionic plugin add https://github.com/apache/cordova-plugin-splashscreen.git
 **Remove fade-in / fade-out effect**
 
 Add the following property to config.xml
-```
+```xml
 <preference name="FadeSplashScreen" value="false"/>
 ```
 
 **Remove spinner**
 Add the following property to config.xml
-```
+```xml
 <preference name="ShowSplashScreenSpinner" value="false"/>
 ```
 
@@ -2934,7 +2923,7 @@ Available for iOS and Android, Ionic View makes it easy to **test** and **share*
 
 First way, using push notification module, only works when app is opened
 
-```
+```javascript
 this.platform.ready().then(() => {
   console.log('Platform ready');
   this.initPush();
@@ -2994,7 +2983,7 @@ module.exports = {
 
 ```"IONIC_SETTINGS_STRING_START";"IONIC_SETTINGS_STRING_END";``` with :
 
-```
+```javascript
   "IONIC_SETTINGS_STRING_START";
     var settings = {
             "app_id": "YOUR APP_ID",
@@ -3018,7 +3007,7 @@ module.exports = {
 
 - Everything should work now. To initiate the push service, use:
 
-```
+```javascript
     Ionic.io();
     ionicPush = new Ionic.Push().init({
         debug: true,
@@ -3042,14 +3031,14 @@ module.exports = {
 
 To enable prod mode, I configured the following in app.ts:
 
-```
+```javascript
 import {enableProdMode} from '@angular/core';
 enableProdMode();
 ```
 
 or other solution
 
-```
+```javascript
 let prodMode: boolean = window.hasOwnProperty('cordova');
 ```
 
