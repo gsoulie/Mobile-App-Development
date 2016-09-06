@@ -665,7 +665,7 @@ The meaning of life: {{mySingleInt | addInt:2}}
 
 Pipes are very useful for string formatting like date, hour, regexp...
 
-##Config
+#Config
 [Back to top](#ionic-2)  
 
 The Config lets you configure your entire app or specific platforms. You can set the tab placement, icon mode, animations, and more here.
