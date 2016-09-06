@@ -42,8 +42,9 @@
 	* [toggle](#toggle)    
 * [Known issues](#known-issues)    
 * [Using image](#using-image)    
-* [Backend Strongloop](#backend-strongloop)     
-* [Backend Firebase](#backend-firebase)    
+* [Backends](#backends)    
+	* [Strongloop](#strongloop)     
+	* [Firebase](#firebase)    
 * [Internationalization](#internationalization)  
 * [Splash screen and appicon](#splash-screen-and-appicon)  
 * [Beta testing](#beta-testing)    
@@ -2510,7 +2511,8 @@ let item = {name:"my item", image:"img/my_image.png"}
 }
 ```
 
-##Backend Strongloop
+#Backends
+##Strongloop
 [Back to top](#ionic-2) 
 
 [link : Strongloop and bluemix](http://www.raymondcamden.com/2015/10/29/strongloop-ionic-and-ibm-bluemix/)    
@@ -2533,7 +2535,7 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
 ```
 
-##Backend Firebase
+##Firebase
 [Back to top](#ionic-2) 
 
 ###Install firebase
