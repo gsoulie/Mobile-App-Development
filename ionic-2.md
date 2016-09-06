@@ -70,11 +70,9 @@
 
 [link : ng-conf-workshop](https://github.com/chrisgriffith/ng-conf-workshop)    
 
-[link : ionic.io](http://docs.ionic.io/docs/io-introduction)
-
 [link : Official ionic 2 documentation](http://ionicframework.com/docs/v2/getting-started/migration/)
 
-[link : Official ionic 2 native component documentation](http://ionicframework.com/docs/v2/native/Calendar/)
+[link : Official ionic 2 native component documentation](http://ionicframework.com/docs/v2/)
 
 [link : ionic 2 project structure](http://ionicframework.com/docs/v2/getting-started/tutorial/project-structure/)
 
