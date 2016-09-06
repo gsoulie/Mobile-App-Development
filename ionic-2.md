@@ -1,6 +1,6 @@
-#ionic 2
 <img src="https://www.rawdatatech.com/media/uploads/1p9KRfcYnMQG3j1NKhvKt-A_T50cZ58.jpeg"/>
 
+#ionic 2
 
 > **Warning** this guide is based on the beta of ionic 2. Consequently, some information may be outdated
 
