@@ -733,7 +733,7 @@ Here are some example :
 <preference name="SplashScreenDelay" value="2000"/>
 ```
 
-##Global variables
+#Global variables
 [Back to top](#ionic-2)
 
 Here's a solution to centralize application's globals. The solution consist in using **config.js** file in provider's folder.
@@ -765,19 +765,19 @@ import {File} from 'ionic-native';
 const fs:string = cordova.file.dataDirectory;
 ```
 
-##Third party lib
+#Third party lib
 [Back to top](#ionic-2)
 
-###ES6
+##ES6
 To use a custom lib file in your project, follow the next steps 
 
-####1 Create "lib" folder under app
+###1 Create "lib" folder under app
 
 ```
 /app/lib/utils.js
 ```
 
-####2 implement lib file
+###2 implement lib file
 
 ex : utils.js
 ```
@@ -805,7 +805,7 @@ function square(_value){	// Not exported
 }
 ```
 
-####3 Using the custom lib in the whole project
+###3 Using the custom lib in the whole project
 
 ex : From Home.js page
 ```
@@ -823,15 +823,15 @@ export class HomePage {
 }
 ```
 
-###TypeScript
+##TypeScript
 
-####1 Create "lib" folder under app
+###1 Create "lib" folder under app
 
 ```
 /app/lib/utils.ts
 ```
 
-####2 implement lib class
+###2 implement lib class
 
 ex : utils.ts
 
@@ -851,7 +851,7 @@ export class UTILS {
 ````
 **Be careful** and don't forget **@Injectable** decorator
 
-####3 Inject class in other component
+###3 Inject class in other component
 
 ```
 import {UTILS} from '../../lib/utils';
@@ -958,16 +958,16 @@ export class RouteListPage {
 
 ```
 
-##MomentJS
+#MomentJS
 [Back to top](#ionic-2)  
 
-####Package installation
+###Package installation
 
 ```
 npm install angular-moment moment --save
 ```
 
-####Usage
+###Usage
 
 ```
 import * as moment from 'moment';
@@ -976,7 +976,7 @@ import * as moment from 'moment';
 let mydate = moment().format('ddd MMM YYYY, h:mm:ss');
 ```
 
-####Customize locale variables
+###Customize locale variables
 
 In the followig example, we define french locale 
 
@@ -1036,12 +1036,12 @@ let formatted = moment().format('dddd D MMMM YYYY'); // will display "jeudi 2 ju
 ```
 
 
-##File access
+#File access
 [Back to top](#ionic-2)  
 
 [link : save image locally](https://forum.ionicframework.com/t/how-to-save-an-image-locally-with-ionic-2/46257/4)
 
-##Geolocation
+#Geolocation
 [Back to top](#ionic-2)  
 
 [link : google map geolocation](http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
@@ -1422,7 +1422,7 @@ $ ionic plugin add cordova-sqlite-storage
 
 [Ionic 2 - PouchDB tutorial](http://gonehybrid.com/how-to-use-pouchdb-sqlite-for-local-storage-in-ionic-2/)    
 
-##Camera
+#Camera
 [Back to top](#ionic-2)  
 
 **include ionic-native package**
@@ -1499,7 +1499,7 @@ export class PhotoPage {
 [link : List of camera options](https://github.com/apache/cordova-plugin-camera#module_camera.CameraOptions)
 
 
-##Gallery
+#Gallery
 [Back to top](#ionic-2)  
 
 **cordova plugin installation**
@@ -1582,12 +1582,12 @@ p {
 }
 ```
 
-##Barcode scanner
+#Barcode scanner
 [Back to top](#ionic-2)
 
 [link : Barcode scanner documentation](http://ionicframework.com/docs/v2/native/BarcodeScanner/)
 
-##HTTP query
+#HTTP query
 [Back to top](#ionic-2)  
 
 [link : using http](http://www.joshmorony.com/using-http-to-fetch-remote-data-from-a-server-in-ionic-2/)
@@ -1639,10 +1639,10 @@ export class Page {
 }
 ```
 
-#####Note : 
+####Note : 
 The **map** lib is only imported because we need is http.get function
 
-##Navigation
+#Navigation
 [Back to top](#ionic-2)  
 
 ###Using NavController
@@ -2510,10 +2510,10 @@ refreshTracking(e){
 }
 ```
 
-##Known issues
+#Known issues
 [Back to top](#ionic-2) 
 
-####Click in list item in simulator sometimes(!) doesn’t work on device
+**Click in list item in simulator sometimes(!) doesn’t work on device**
 
 Sometimes,  on the emulator or on device, 2 out of 3 clicks it doesn't fire the click function. To solve the issue, change ```<ion-item>``` to ```<button>``` with the styling of ```ion-item```.
 
@@ -2527,7 +2527,7 @@ Sometimes,  on the emulator or on device, 2 out of 3 clicks it doesn't fire the 
 ```
 
 
-##Using image
+#Using image
 [Back to top](#ionic-2) 
 
 To use image in your app, create a **img** folder in your **www** folder and use **img** tag like below
@@ -2719,7 +2719,7 @@ export class HomePage {
 }
 ```
 
-##Internationalization
+#Internationalization
 [Back to top](#ionic-2)  
 
 **cordova plugin installation**
@@ -2883,7 +2883,7 @@ export class HomePage {
 </ion-content>
 ```
 
-##Splash screen and appicon
+#Splash screen and appicon
 [Back to top](#ionic-2)
 
 [link : Appicon and Splash screen documentation](http://blog.ionic.io/automating-icons-and-splash-screens/)
@@ -2930,7 +2930,7 @@ Add the following property to config.xml
 <preference name="ShowSplashScreenSpinner" value="false"/>
 ```
 
-##Beta testing
+#Beta testing
 [Back to top](#ionic-2)
 
 Available for iOS and Android, Ionic View makes it easy to **test** and **share** your app directly **on the device**. **A developer, client, customer, or friend** can download Ionic View, enter the App Id for your app, and immediately load and test the app. With hundreds of thousands of installs, Ionic View is becoming a core part of the Ionic development experience.
@@ -2938,7 +2938,7 @@ Available for iOS and Android, Ionic View makes it easy to **test** and **share*
 [link : Ionic View](http://blog.ionic.io/rapid-development-with-ionic-view/)
 
 
-##Push notification
+#Push notification
 [Back to top](#ionic-2) 
 
 First way, using push notification module, only works when app is opened
@@ -3042,12 +3042,12 @@ module.exports = {
     });
 ```
 
-##Publishing app
+#Publishing app
 [Back to top](#ionic-2)
 
 [link : publishing app](http://ionicframework.com/docs/guide/publishing.html)    
 
-####Enable prodMode
+###Enable prodMode
 
 To enable prod mode, I configured the following in app.ts:
 
@@ -3070,7 +3070,7 @@ So first, we need to generate a release build of our app, targeted at each platf
 $ cordova plugin rm cordova-plugin-console
 ```
 
-###Android publishing
+##Android publishing
 
 First, check your config.xml file located in :
 
@@ -3118,10 +3118,10 @@ $ zipalign -v 4 HelloWorld-release-unsigned.apk HelloWorld.apk
 Now we have our final release binary called HelloWorld.apk and we can release this on the Google Play Store
 
 
-##TODO
+#TODO
 [Back to top](#ionic-2)
 
-####Testing Backand backend
+###Testing Backand backend
 
 [link : Backand](https://devdactic.com/ionic-backend-database/)   
 [link : Backand integration](https://www.backand.com/integrations/)    
@@ -3129,7 +3129,7 @@ Now we have our final release binary called HelloWorld.apk and we can release th
 Backand is an alternative to Firebase (only NoSQL approach). The main difference is that Backand can be integrated with ohter database than NoSQL, like MySQL, PostgreSQL, MSSQL and Oracle. 
 On the other hand, Backand doesn't have offline support instead of Firebase
 
-####Testing Telerik backend
+###Testing Telerik backend
 
 Telerik is a company with a lot of cool products (like NativeScript) which I haven’t had much of a chance to play around with yet, and they also offer a BaaS product for mobile applications. As far as a feature set goes they cover just about everything with offline support, data storage, file storage, social integration, push notifications and more.
 
