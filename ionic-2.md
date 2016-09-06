@@ -2944,7 +2944,7 @@ initPush() {
   });
 
   push.on('notification', (data) => {
-      console.log('ONLY WORK'S WHEN APP IS OPEN')
+      console.log("ONLY WORK'S WHEN APP IS OPEN")
   });
 
   push.on('error', (e) => {
