@@ -7,6 +7,7 @@
 ##### Table of Contents  
 [Start with ionic](#start-with-ionic)  
 [Work with Atom editor](#work-with-atom)  
+[Visual Studio Code](#visual-studio-code)    
 [Cordova](#cordova)   
 [Gulp](#gulp)    
 [Useful functions](#useful-functions)  
@@ -330,6 +331,12 @@ atom-text-editor::shadow {
   }
 }
 ```
+
+
+##Visual Studio Code
+[Back to top](#ionic-2) 
+
+Another very good alternative to Atom is [visual studio code] (https://code.visualstudio.com/c?utm_expid=101350005-27.GqBWbOBuSRqlazQC_nNSRg.2&utm_referrer=https%3A%2F%2Fwww.google.fr%2F)
 
 ##Cordova
 [Back to top](#ionic-2) 
