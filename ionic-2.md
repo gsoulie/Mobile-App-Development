@@ -1936,7 +1936,7 @@ For clickable list you have to use **button ion-item**
 
 Consider a ion-list in which we want to hide every items which property "deleted" is set to true
 
-```javascript
+```xml
 <ion-list>
   <ion-item-sliding *ngFor="let item of getActiveItems()" #slidingItem>
     <ion-item>{{item.fach}} ({{item.kuerzel}})</ion-item>
@@ -1946,8 +1946,9 @@ Consider a ion-list in which we want to hide every items which property "deleted
     </ion-item-options>
   </ion-item-sliding>
 </ion-list>
+```
 
-
+```javascript
 @Component(
     // ...
 )
