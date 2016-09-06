@@ -37,7 +37,7 @@
 [Component - chart](#component-chart)    
 [Component - grid](#component-grid)    
 [Component - toggle](#component-toggle)    
-[Issues](#issues)    
+[Known issues](#known-issues)    
 [Using image](#using-image)    
 [Backend Strongloop](#backend-strongloop)     
 [Backend Firebase](#backend-firebase)    
@@ -2459,7 +2459,7 @@ refreshTracking(e){
 }
 ```
 
-##Issues
+##Known issues
 [Back to top](#ionic-2) 
 
 ####Click in list item in simulator sometimes(!) doesn’t work on device
