@@ -2010,7 +2010,7 @@ removePost(post){
 }
 ```
 
-####ion-item-sliding
+###ion-item-sliding
 
 ```xml
 <ion-content class="home">
@@ -2027,14 +2027,13 @@ removePost(post){
         <button darkgrey (click)="removeNote(item)" class="btn"><ion-icon name="trash"></ion-icon>Delete</button>
       </ion-item-options>
     </ion-item-sliding>
-
   </ion-list>
 </ion-content>
 ```
 
-####Inifinite scroll in ion-list
+###Inifinite scroll in ion-list
 
-#####Solution 1
+####Solution 1
 
 [link : Scroll performance](http://www.joshmorony.com/boosting-scroll-performance-in-ionic-2/)
 [link : virtual-scroll official doc](http://ionicframework.com/docs/v2/api/components/virtual-scroll/VirtualScroll/)
@@ -2137,14 +2136,13 @@ The syntax is a little different, this time we are using [virtualScroll] and *vi
 
 It’s important for the virtual scroll to know approximately how big your items will be, since it needs to know how many items would be required to fill up the screen. You can help this process by specifying an approxItemWidth and approxItemHeight
 
-####Solution 2
+###Solution 2
 
 [link : Infinite scroll](http://ionicframework.com/docs/v2/api/components/infinite-scroll/InfiniteScroll/)
 
 View file
 ```xml
 <ion-content>
-
  <ion-list>
    <ion-item *ngFor="let i of items"></ion-item>
  </ion-list>
@@ -2155,7 +2153,6 @@ View file
       loadingText="Loading more data...">
     </ion-infinite-scroll-content>
  </ion-infinite-scroll>
-
 </ion-content>
 ```
 
@@ -2183,7 +2180,6 @@ export class NewsFeedPage {
       infiniteScroll.complete();
     }, 500);
   }
-
 }
 ```
 
