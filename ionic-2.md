@@ -6,7 +6,6 @@
 
 ##### Table of Contents  
 [Start with ionic](#start-with-ionic)  
-[Cordova](#cordova)   
 [Work with Atom editor](#work-with-atom)  
 [Visual Studio Code](#visual-studio-code)    
 [Concept - Angular 2](#angular-2)  
@@ -218,15 +217,6 @@ Gulp is a packet manager for JS libraries. You can use it to add libraries to yo
 
 ```
 $ sudo npm install -g bower
-```
-
-##Cordova
-[Back to top](#ionic-2) 
-
-**Install Cordova**
-
-```
-$ sudo npm install -g cordova
 ```
 
 ##Work with Atom
