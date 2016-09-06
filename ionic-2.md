@@ -3110,4 +3110,6 @@ Telerik is a company with a lot of cool products (like NativeScript) which I hav
 
 Similar to Backand, Telerik Backend Services can also connect to any existing MSSQL, MySQL, PostgreSQL or Oracle databases. If you’re coming from Parse and want a similar set of features, Telerik Backend Services will likely be a good option for you.
 
-<center><img src="http://ionic.io/img/2.png" width="200"/></center>
+
+
+<img src="http://ionic.io/img/2.png" width="200"/>
