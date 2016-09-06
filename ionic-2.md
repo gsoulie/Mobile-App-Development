@@ -9,7 +9,6 @@
 [Cordova](#cordova)   
 [Work with Atom editor](#work-with-atom)  
 [Visual Studio Code](#visual-studio-code)    
-[Gulp](#gulp)    
 [Useful functions](#useful-functions)  
 [Moment JS](#momentjs)    
 [Concept - Angular 2](#angular-2)  
@@ -346,15 +345,6 @@ atom-text-editor::shadow {
 [Back to top](#ionic-2) 
 
 Another very good alternative to Atom is [visual studio code] (https://code.visualstudio.com/c?utm_expid=101350005-27.GqBWbOBuSRqlazQC_nNSRg.2&utm_referrer=https%3A%2F%2Fwww.google.fr%2F)
-
-##Gulp
-[Back to top](#ionic-2) 
-
-Gulp package allows you to override style and theme like material design for Android
-
-```
-$ sudo npm install -g gulp
-```
 
 ##Useful Functions
 [Back to top](#ionic-2)  
