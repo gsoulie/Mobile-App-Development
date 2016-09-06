@@ -28,16 +28,16 @@
 * [Page event](#page-event)    
 * [Event propagation](#event-propagation)    
 * [UI Components](#ui-components)    
-	* [comboBox](#component-combobox)    
-	* [ion-list](#component-ion-list)  
-	* [tab](#component-tab)       
-	* [tab icon](#component-tab-icon)    
-	* [searchbar](#component-searchbar)    
-	* [alert dialog box](#component-alert-dialog-box)    
+	* [comboBox](#combobox)    
+	* [ion-list](#ion-list)  
+	* [tab](#tab)       
+	* [tab icon](#tab-icon)    
+	* [searchbar](#searchbar)    
+	* [alert dialog box](#alert-dialog-box)    
 	* [floating button](#floating-button)  
-	* [chart](#component-chart)    
-	* [grid](#component-grid)    
-	* [toggle](#component-toggle)    
+	* [chart](#chart)    
+	* [grid](#grid)    
+	* [toggle](#toggle)    
 * [Known issues](#known-issues)    
 * [Using image](#using-image)    
 * [Backend Strongloop](#backend-strongloop)     
@@ -1799,7 +1799,7 @@ Lastly you make sure this scss is being compiled with your **app.core.scss** by 
 @import "../pages/masters/masters";
 ```
 
-##UI Component
+##UI Components
 [Back to top](#ionic-2)  
 
 ##ComboBox
