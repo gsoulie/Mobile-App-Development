@@ -658,7 +658,7 @@ The meaning of life: {{mySingleInt | addInt:2}}
 ```
 
 
-###Date format pipe
+###Other example Date format pipe
 
 **Pipe file** (app/pipe/datePipe.js)
 
