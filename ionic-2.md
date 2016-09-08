@@ -554,7 +554,7 @@ Now someString would be run through your custom myPipe before the value is outpu
 [link : Understanding Pipe](http://mcgivery.com/understanding-ionic-2-pipe/)      
 [link : Josh Morony Pipe documentation](http://www.joshmorony.com/how-to-use-pipes-to-manipulate-data-in-ionic-2/)
 
-####First step : create the pipe class
+###First step : create the pipe class
 
 First, create a "pipe" directory in your project will containing all pipe lib. A basic pipe class looks like below :
 
@@ -585,7 +585,7 @@ export class HelloWorldPipe implements PipeTransform {
 }
 ```
 
-####Using pipe in other page
+###Using pipe in other page
 
 ```javascript
 import {HelloWorld} from 'pipes/HelloWorld';	// pipe import
@@ -611,7 +611,7 @@ Pipe inline syntax : ```value | myPipe:args[0]:args[1]```
 
 **Note:** The first letter of the pipe's name in the view file is in lower case
 
-####Other example
+###Other example
 
 **Pipe file**
 
@@ -656,6 +656,58 @@ The meaning of life: {{mySingleInt | addInt:2}}
 </li>
 </ul>
 ```
+
+
+###Date format pipe
+
+**Pipe file** (app/pipe/datePipe.js)
+
+```javascript
+import {Pipe, PipeTransform} from '@angular/core';
+
+@Pipe({
+    name: 'datePipe'  // pipe name
+})
+/**
+ * Formattage de la date en JJ/MM/AAAA
+ */
+export class datePipe implements PipeTransform{
+    // Pipe function
+    transform(value) {
+        if(value.length == 10){
+            return value.substring(8,10) + "/" + value.substring(5,7) + "/" + value.substring(0,4);
+        } else {
+            return value;
+        }
+    }
+}
+```
+
+**Controller file**
+
+**View file**
+
+```javascript
+import {datePipe} from '../../pipe/datePipe';
+
+@Component({
+  templateUrl: 'build/pages/about/home.html',
+  providers: [Utils],
+  pipes: [datePipe]
+})
+export class HomePage {
+...
+
+}
+```
+
+```xml
+...
+<ion-label>{{c.dateConso | datePipe}}</ion-label>
+...
+```
+
+
 
 ####Conclusion
 
