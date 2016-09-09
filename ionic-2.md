@@ -3284,7 +3284,3 @@ On the other hand, Backand doesn't have offline support instead of Firebase
 Telerik is a company with a lot of cool products (like NativeScript) which I haven’t had much of a chance to play around with yet, and they also offer a BaaS product for mobile applications. As far as a feature set goes they cover just about everything with offline support, data storage, file storage, social integration, push notifications and more.
 
 Similar to Backand, Telerik Backend Services can also connect to any existing MSSQL, MySQL, PostgreSQL or Oracle databases. If you’re coming from Parse and want a similar set of features, Telerik Backend Services will likely be a good option for you.
-
-
-
-<img src="http://ionic.io/img/2.png" width="200"/>
