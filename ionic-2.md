@@ -1,4 +1,4 @@
-<img src="https://www.rawdatatech.com/media/uploads/1p9KRfcYnMQG3j1NKhvKt-A_T50cZ58.jpeg"/>
+![alt tag](https://github.com/gsoulie/ionic/blob/master/ionic2ban.png)
 
 #ionic 2
 
