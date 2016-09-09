@@ -2407,6 +2407,33 @@ constructor(public nav: NavController) {
 
 To increase list filtering, we can use Observable instead of basic filtering shows in searchbar section above.
 
+**View file**
+
+```xml
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content class="home-page">
+ 
+    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+ 
+    <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+    </div>
+ 
+    <ion-list>
+        <ion-item *ngFor="let item of items">
+            {{item.title}}
+        </ion-item>
+    </ion-list>
+</ion-content>
+```
+
 **Controller file**
 ```javascript
 import { Component } from '@angular/core';
@@ -2443,33 +2470,6 @@ export class HomePage {
  
     setFilteredItems() {this.items = this.dataService.filterItems(this.searchTerm); }
 }
-```
-
-**View file**
-
-```xml
-<ion-header>
-  <ion-navbar primary>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
- 
-<ion-content class="home-page">
- 
-    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
- 
-    <div *ngIf="searching" class="spinner-container">
-        <ion-spinner></ion-spinner>
-    </div>
- 
-    <ion-list>
-        <ion-item *ngFor="let item of items">
-            {{item.title}}
-        </ion-item>
-    </ion-list>
-</ion-content>
 ```
 
 **Style file**
