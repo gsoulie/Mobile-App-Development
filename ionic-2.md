@@ -59,6 +59,11 @@
 * [Push notification](#push-notification)   
 * [Publishing App](#publishing-app)  
 
+#TODO
+
+* AngularJS 2 directive
+
+
 [TODO](#todo)    
 
 #Prerequisites
