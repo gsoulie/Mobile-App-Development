@@ -39,9 +39,10 @@
 * [UI Components](#ui-components)    
 	* [comboBox](#combobox)    
 	* [ion-list](#ion-list)  
+	* [searchbar](#searchbar)    
+	* [list filtering](#high-performance-list-filtering)    
 	* [tab](#tab)       
 	* [tab icon](#tab-icon)    
-	* [searchbar](#searchbar)    
 	* [alert dialog box](#alert-dialog-box)    
 	* [floating button](#floating-button)  
 	* [chart](#chart)    
@@ -1968,7 +1969,7 @@ pickDevice(event,_idDevice){
 ##ion-list
 [Back to top](#ionic-2)  
 
-Solution for filling dynamic ion-list item
+Standard dynamic ion-list item
 
 ```xml
 <ion-list> 
@@ -1984,8 +1985,7 @@ For clickable list you have to use **button ion-item**
 </ion-list>
 ```
 
-
-**Add filter on ion-list**
+###Add filter on ion-list
 
 Consider a ion-list in which we want to hide every items which property "deleted" is set to true
 
@@ -2032,16 +2032,15 @@ Second solution, in case that you prefer to do the filtering in the template the
 ```
 
 
-**Remove item from list**
+###Remove item from list
 
-View file
+**View file**
 ```xml
 <ion-list>
     <ion-item-sliding *ngFor="let post of posts">
     	<ion-item>
     	...
     	</ion-item>
-    	
     	<ion-item-options>
     	    <button danger (click)="removePost(post)">
     	    	<ion-icon name="remove"></ion-icon>
@@ -2051,7 +2050,7 @@ View file
 </ion-list>
 ```
 
-Controller file
+**Controller file**
 
 ```javascript
 removePost(post){
@@ -2189,7 +2188,7 @@ The syntax is a little different, this time we are using [virtualScroll] and *vi
 
 It’s important for the virtual scroll to know approximately how big your items will be, since it needs to know how many items would be required to fill up the screen. You can help this process by specifying an approxItemWidth and approxItemHeight
 
-###Solution 2
+####Solution 2
 
 [link : Infinite scroll](http://ionicframework.com/docs/v2/api/components/infinite-scroll/InfiniteScroll/)
 
@@ -2329,40 +2328,7 @@ doRefresh(refresher){
     setTimeout(() => { refresher.complete(); console.log('Async operation has ended'); }, 2000); 
   }
 ```
-##Tab
-[Back to top](#ionic-2)  
 
-According to the latest Android material guideline, you have to follow these rules :
-
-- 3 to 5 destinations => use the bottom navigation
-- Less than 3 => use tab on the top
-- More than 5 => use another solution like slide menu
-
-So, by default, ionic 2 tabs project sample is using bottom navigation. To set top navigation, just change your bootstrap (in your **app.ts**) code by :
-
-```
-ionicBootstrap(MyApp,[],{tabsPlacement: "top"});
-```
-
-##Tab icon
-[Back to top](#ionic-2)  
-
-Customize tab icon
-
-It's pretty easy to do actually. When you set a tabIcon property, Ionic sets a class name on the tab, based on the name you provided. So for example, if you set ```tabIcon="customicon"```, then the resulting class names will be ```.ion-ios-hygglo-customicon``` and ```.ion-ios-hygglo-customicon-outline``` (for selected tabs) for iOS. On Android, the prefix will be ```.ion-md-``` instead of ```.ion-ios-```.
-
-Then just create a custom css, something like this:
-
-```css
-.ion-ios-customicon,
-.ion-md-customicon {
-  content: url(../../assets/img/ui/customicon.svg);
-  width: 24px;
-  height: 32px;
-  padding: 6px 4px 2px;
-  opacity: 0.9;
-}
-```
 ##Searchbar
 [Back to top](#ionic-2)  
 
@@ -2435,6 +2401,155 @@ constructor(public nav: NavController) {
     })
   }
 ```
+
+##High performance list filtering
+[Back to top](#ionic-2)  
+
+To increase list filtering, we can use Observable instead of basic filtering shows in searchbar section above.
+
+**Controller file**
+```javascript
+import { Component } from '@angular/core';
+import { Control } from '@angular/common';
+import { NavController } from 'ionic-angular';
+import { Data } from '../../providers/data/data';
+import 'rxjs/add/operator/debounceTime';
+ 
+@Component({
+  templateUrl: 'build/pages/home/home.html',
+  providers: [Data]
+})
+export class HomePage {
+ 
+    searchTerm: string = '';
+    searchControl: Control;
+    items: any;
+    searching: any = false;
+ 
+    constructor(public navCtrl: NavController, private dataService: Data) {
+        this.searchControl = new Control();
+    }
+ 
+    ionViewLoaded() {
+        this.setFilteredItems();
+ 
+        this.searchControl.valueChanges.debounceTime(700).subscribe(search => {
+            this.searching = false;
+            this.setFilteredItems();
+        });
+    }
+ 
+    onSearchInput(){this.searching = true;}
+ 
+    setFilteredItems() {this.items = this.dataService.filterItems(this.searchTerm); }
+}
+```
+
+**View file**
+
+```xml
+<ion-header>
+  <ion-navbar primary>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+ 
+<ion-content class="home-page">
+ 
+    <ion-searchbar [(ngModel)]="searchTerm" [formControl]="searchControl" (ionInput)="onSearchInput()"></ion-searchbar>
+ 
+    <div *ngIf="searching" class="spinner-container">
+        <ion-spinner></ion-spinner>
+    </div>
+ 
+    <ion-list>
+        <ion-item *ngFor="let item of items">
+            {{item.title}}
+        </ion-item>
+    </ion-list>
+</ion-content>
+```
+
+**Style file**
+
+```css
+.home-page {
+ 
+    .spinner-container {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+ 
+}
+```
+
+**Data.ts provider**
+
+```javascript
+import { Injectable } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+ 
+@Injectable()
+export class Data {
+    items: any;
+ 
+    constructor(private http: Http) {
+        this.items = [
+            {title: 'one'},
+            {title: 'two'},
+            {title: 'three'},
+            {title: 'four'},
+            {title: 'five'},
+            {title: 'six'}
+        ]
+    }
+    filterItems(searchTerm){
+        return this.items.filter((item) => {
+            return item.title.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1;
+        });     
+    }
+}
+```
+
+##Tab
+[Back to top](#ionic-2)  
+
+According to the latest Android material guideline, you have to follow these rules :
+
+- 3 to 5 destinations => use the bottom navigation
+- Less than 3 => use tab on the top
+- More than 5 => use another solution like slide menu
+
+So, by default, ionic 2 tabs project sample is using bottom navigation. To set top navigation, just change your bootstrap (in your **app.ts**) code by :
+
+```
+ionicBootstrap(MyApp,[],{tabsPlacement: "top"});
+```
+
+##Tab icon
+[Back to top](#ionic-2)  
+
+Customize tab icon
+
+It's pretty easy to do actually. When you set a tabIcon property, Ionic sets a class name on the tab, based on the name you provided. So for example, if you set ```tabIcon="customicon"```, then the resulting class names will be ```.ion-ios-hygglo-customicon``` and ```.ion-ios-hygglo-customicon-outline``` (for selected tabs) for iOS. On Android, the prefix will be ```.ion-md-``` instead of ```.ion-ios-```.
+
+Then just create a custom css, something like this:
+
+```css
+.ion-ios-customicon,
+.ion-md-customicon {
+  content: url(../../assets/img/ui/customicon.svg);
+  width: 24px;
+  height: 32px;
+  padding: 6px 4px 2px;
+  opacity: 0.9;
+}
+```
+
 
 ##Alert dialog box
 [Back to top](#ionic-2)  
