@@ -2727,11 +2727,11 @@ export class MenuPage {
 }
 .grid {
     padding-top:50px;
+    background-color: rgba(255,255,255,0.7);
 }
 .rowBtn {
     height: 70px;
 }
-
 ```
 
 
