@@ -48,6 +48,7 @@
 	* [chart](#chart)    
 	* [grid](#grid)    
 	* [toggle](#toggle)    
+	* [personnal popover menu](#popover-menu)    
 * [Known issues](#known-issues)    
 * [Using image](#using-image)    
 * [Backends](#backends)    
@@ -2664,6 +2665,75 @@ refreshTracking(e){
    console.log("refreshTracking " + e.checked);
 }
 ```
+
+
+
+##Popover menu
+[Back to top](#ionic-2) 
+
+Here is a personnal code to create popover menu like Evernote edit menu 
+
+(https://github.com/gsoulie/ionic/blob/master/popover_menu.png)
+
+**View file**
+```xml
+<ion-content class="menucl" padding>
+<ion-grid class="grid" (click)="close()">
+  <ion-row>
+    <ion-col style="height:70px">
+      <button fab fab-left class="btn"><ion-icon name="add"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col style="height:70px">
+      <button fab fab-left class="btn"><ion-icon name="create"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col style="height:70px">
+      <button fab fab-left class="btn"><ion-icon name="trash"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col style="height:70px">
+      <button fab fab-left class="btn"><ion-icon name="bookmarks"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>
+
+```
+
+**Controller file**
+```javascript
+import { Component } from '@angular/core';
+import { NavController,ViewController } from 'ionic-angular';
+
+@Component({
+  templateUrl: 'build/pages/menu/menu.html',
+})
+export class MenuPage {
+
+  constructor(private navCtrl: NavController, private viewCtrl: ViewController) {}
+  close(){this.viewCtrl.dismiss();}
+}
+
+```
+
+**Style file**
+```css
+.menucl {
+    background-color: transparent;
+}
+.grid {
+    padding-top:50px;
+}
+.rowBtn {
+    height: 70px;
+}
+
+```
+
 
 #Known issues
 [Back to top](#ionic-2) 
