@@ -2673,7 +2673,7 @@ refreshTracking(e){
 
 Here is a personnal code to create popover menu like Evernote edit menu 
 
-(https://github.com/gsoulie/ionic/blob/master/popover_menu.png)
+![alt tag](https://github.com/gsoulie/ionic/blob/master/popover_menu.png)
 
 **View file**
 ```xml
