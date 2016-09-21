@@ -18,7 +18,7 @@
 * [Third party lib](#third-party-lib)    
 * [Useful functions](#useful-functions)  
 	* [Get specific platform](#get-specific-platform)    
-	* [Show / hide UI elements](#show-/-hide-ui-elements)    
+	* [Show / hide UI elements](#show-hide-ui-elements)    
 	* [Checking network connection](#checking-network-connection)    
 	* [Close modal](#close-modal)    
 * [Moment JS](#momentjs)    
@@ -947,7 +947,7 @@ window.addEventListener("orientationchange", function() {
 ionic.Platform.exitApp(); // stops the app
 ```
  
-##Show / hide DOM element
+##Show hide DOM element
 [Back to top](#ionic-2) 
 
 ```xml
