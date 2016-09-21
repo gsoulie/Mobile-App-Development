@@ -49,6 +49,7 @@
 	* [grid](#grid)    
 	* [toggle](#toggle)    
 	* [personnal popover menu](#popover-menu)    
+	* [dynamic style](#dynamic-style)    
 * [Known issues](#known-issues)    
 * [Using image](#using-image)    
 * [Backends](#backends)    
@@ -2666,8 +2667,6 @@ refreshTracking(e){
 }
 ```
 
-
-
 ##Popover menu
 [Back to top](#ionic-2) 
 
@@ -2734,6 +2733,14 @@ export class MenuPage {
 }
 ```
 
+##Dynamic style
+[Back to top](#ionic-2) 
+
+You can dynamically change the UI component style with condition like below :
+
+```xml
+<button [style.backgroundColor]="enable ? '#00CC00' : '#FF0000'">Test</button>
+```
 
 #Known issues
 [Back to top](#ionic-2) 
