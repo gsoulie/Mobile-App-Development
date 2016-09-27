@@ -11,8 +11,9 @@
 	* [Visual Studio Code](#visual-studio-code)    
 * [Concepts](#concepts)    
 	* [Angular 2](#angular-2)  
-	* [Decorators](#decorators)    
+	* [Decorators](#decorators)    	
 	* [Pipe](#pipe)    
+	* [Promise vs Observable](#promise-vs-observable)
 * [Config](#config)    
 * [Global variables](#global-variables)     
 * [Third party lib](#third-party-lib)    
@@ -720,6 +721,14 @@ export class HomePage {
 ####Conclusion
 
 Pipes are very useful for string formatting like date, hour, regexp...
+
+##Promise vs Observable
+
+The main difference is that an Observable can emit multiple values over time, whereas a Promise will only emit a value once.
+
+[link : RxJS Observables vs Promises](https://egghead.io/lessons/rxjs-rxjs-observables-vs-promises)
+
+[Back to top](#ionic-2) 
 
 #Config
 [Back to top](#ionic-2)  
