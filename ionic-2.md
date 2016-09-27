@@ -723,12 +723,29 @@ export class HomePage {
 Pipes are very useful for string formatting like date, hour, regexp...
 
 ##Promise vs Observable
+[Back to top](#ionic-2) 
 
 The main difference is that an Observable can emit multiple values over time, whereas a Promise will only emit a value once.
 
 [link : RxJS Observables vs Promises](https://egghead.io/lessons/rxjs-rxjs-observables-vs-promises)
 
-[Back to top](#ionic-2) 
+For example, **http.get** return Observable, so you must use **subscribe** instead of **then**
+
+```javascript
+this.http.get('location/of/data').map(res => res.json()).subscribe(data => {
+    console.log(data);
+});
+```
+
+The code below will not work 
+
+```javascript
+this.http.get('location/of/data').then((data) => {
+    console.log(data);
+});
+```
+
+
 
 #Config
 [Back to top](#ionic-2)  
