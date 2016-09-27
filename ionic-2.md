@@ -13,7 +13,8 @@
 	* [Angular 2](#angular-2)  
 	* [Decorators](#decorators)    	
 	* [Pipe](#pipe)    
-	* [Promise vs Observable](#promise-vs-observable)
+	* [Promise vs Observable](#promise-vs-observable)    
+	* [Mapping](#mapping)    
 * [Config](#config)    
 * [Global variables](#global-variables)     
 * [Third party lib](#third-party-lib)    
@@ -866,7 +867,49 @@ You can also use the config object to define platform specific behaviour:
 })
 ```
 
-###Config.xml
+##Mapping
+[Back to top](#ionic-2)
+
+In Javascript, mapping is a method available on arrays which allows you to “map” or “transform” each value in that array. Keep in mind that in the example above we are not mapping an array, we are mapping an observable – this functionality is provided by the RxJS library (which is included in Ionic 2 & Angular 2), it is not in Javascript by default.
+
+To give you an example of how normal array mapping works (the concept is basically the same for observables), I could take an array of the following numbers:
+
+**1**
+```
+[1, 2, 3, 4, 5]
+```
+and map the array using a function that increments each value by one, which would transform the array into the following:
+
+**2**
+```
+[2, 3, 4, 5, 6]
+```
+
+This would look something like this:
+```
+[0, 1, 2, 3, 4, 5].map(function(item){
+    return item+1;
+});
+```
+
+We supply map with a function, and then the map will run that function for every value in the array. Whatever we return from that function is what the new value of the item will be – in this case, that is the same number incremented by one. If we instead did something like return 5;, it would turn every value in the array into a 5.
+
+We use map to transform the response into something we can work with. To do that, we create a function that will be applied to each item returned from our observable (which is just the single Response object in this case). The function looks like this:
+
+```javascript
+res => res.json()
+```
+
+which is shorthand for:
+
+```javascript
+(res) => {
+    return res.json();
+}
+```
+
+
+#Config.xml
 
 [link : ionic doc](http://ionicframework.com/docs/v2/api/config/Config/)
 
