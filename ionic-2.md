@@ -908,6 +908,75 @@ which is shorthand for:
 }
 ```
 
+**Remember** that map is a method that is available on arrays anywhere, it doesn’t need to be inside of an observables map function, and it doesn’t even need to be inside of an Ionic or Angular project
+
+As an aside, filtering and reducing are also available on both observables and arrays, and like map they also return a new observable, so you can create long complex chains like this:
+
+```javascript
+this.http.get('location/of/data')
+    .map(res => res.json())
+    .filter(/*some function*/)
+    .reduce(/*some function*/)
+    .subscribe(data => {
+    console.log(data);
+});
+```
+
+**filter** can be used to remove values from an array, and **reduce** can be used to calculate some value based on all the values in an array.
+
+```javascript
+[0, 1, 2, 3, 4, 5].filter((item) => {
+    return item % 2 === 0;
+});
+
+//return [0, 2, 4]
+
+['cats', 'kittens', 'puppies', 'dogs'].filter((item) => {
+    return item.length < 5;
+});
+
+//return ['cats', 'dogs']
+```
+
+**Reduce**
+
+Like map and filter, reduce also applies a function to each value in the array, but it doesn’t necessarily result in a new array. Reduce not only supplies you with the value of the current value being operated on, but also the previous value that was returned. This allows you to either compare values in the array, or combine them in some way.
+
+We could create the following reduce function to figure out the highest number in an array:
+
+```javascript
+[0, 1, 2, 3, 4, 5].reduce((previous, current) => {
+    return Math.max(previous, current);
+});
+```
+
+The above example compares the current and previous value to see which is higher and then passes that value into the next iteration of the function. The result will be the highest number, which is 5.
+
+We could also figure out the sum of all numbers in the array with the following function:
+
+```javascript
+[0, 1, 2, 3, 4, 5].reduce((previous, current) => {
+    return current + previous;
+});
+```
+Now with each iteration of the function, the sum of the previous and current will be passe along, resulting in a sequence like:
+
+```
+0 + 1 = 1
+1 + 2 = 3
+3 + 3 = 6
+6 + 4 = 10
+10 + 5 = 15
+```
+So, the result of the reduce function will be 15 in this case.
+
+Note that you can also supply an initial value for previous, rather than using the first value of the array, if you add an additional parameter as shown below:
+
+```javascript
+[0, 1, 2, 3, 4, 5].reduce((previous, current) => {
+    // do something...
+}, 5);
+```
 
 #Config.xml
 
