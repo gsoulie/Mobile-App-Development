@@ -725,9 +725,25 @@ Pipes are very useful for string formatting like date, hour, regexp...
 ##Promise vs Observable
 [Back to top](#ionic-2) 
 
-The main difference is that an Observable can emit multiple values over time, whereas a Promise will only emit a value once.
-
 [link : RxJS Observables vs Promises](https://egghead.io/lessons/rxjs-rxjs-observables-vs-promises)
+
+Both Promises and Observables provide us with abstractions that help us deal with the asynchronous nature of our applications. However, there are important differences between the two:
+
+- Observable can emit multiple values over time
+- Observables can define both the setup and teardown aspects of asynchronous behavior.
+- Observables are cancellable.
+Moreover, Observables can be retried using one of the retry operators provided by the API, such as retry and retryWhen. On the other hand, 
+
+- Promises will only emit a value once
+- Promises require the caller to have access to the original function that returned the promise in order to have a retry capability.
+
+A promise resolves to a single value asynchronously, an observable resolves to (or emits) multiple values asynchronously (over time).
+
+Concrete examples:
+
+- Promise: Response from an Ajax call
+- Observable: Click events
+
 
 For example, **http.get** return Observable, so you must use **subscribe** instead of **then**
 
@@ -745,7 +761,60 @@ this.http.get('location/of/data').then((data) => {
 });
 ```
 
+Example : using Promise or Observable
 
+```javascript
+var promise = new Promise((resolve) => {
+    setTimeout(() => {
+        console.log("timeout hit");
+        resolve(42);
+    }, 500);
+    console.log("promise started");
+});
+
+promise.then(x => console.log(x));
+
+
+var source = Rx.Observable.create((observer) => {
+    setTimeout(() => {
+        observer.onNext(42);
+    }, 500);
+    console.log("observable started");
+});
+
+source.forEach(x => console.log(x));
+
+Instead of Promise, Observable can be cancelled
+
+In the case below, the observable method is cancelled about 500ms.
+
+var source = Rx.Observable.create((observer) => {
+    var id = setTimeout(() => {
+        observer.onNext(42);
+    }, 1000);
+    console.log("observable started");
+
+    return () => {
+        console.log("dispose called");
+        clearTimeout(id);
+    }
+});
+
+var disposable = source.forEach(x => console.log(x));
+
+setTimeout(() => {
+    disposable.dispose();
+}, 500);
+```
+The log output :
+
+> "observable started"
+> "dispose called"
+
+If we change timeout value of 500 ms to 1500
+
+> "observable started"
+> "42"
 
 #Config
 [Back to top](#ionic-2)  
