@@ -15,6 +15,7 @@
 	* [Pipe](#pipe)    
 	* [Promise vs Observable](#promise-vs-observable)    
 	* [Mapping](#mapping)    
+	* [Arrow function](#arrow-function)    
 * [Config](#config)    
 * [Global variables](#global-variables)     
 * [Third party lib](#third-party-lib)    
@@ -816,6 +817,73 @@ If we change timeout value of 500 ms to 1500
 
 > "observable started"
 > "42"
+
+
+##Arrow function
+[Back to top](#ionic-2) 
+
+[link : official documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+
+*definition : * An arrow function expression has a shorter syntax compared to function expressions and does not bind its own this, arguments, super, or new.target. Arrow functions are always anonymous. These function expressions are best suited for non-method functions and they can not be used as constructors.
+
+*summarize : *
+
+- You don't need to keep typing function
+- It lexically captures the meaning of **this**
+- It lexically captures the meaning of arguments
+
+*notation :* 
+
+```javascript
+() => {/*statement*/}
+
+//With parameters
+(param1, param2,...) => {/*statement*/}
+```
+
+###Usage
+
+this has traditionally been a pain point in JavaScript. Fat arrows fix it by capturing the meaning of this from the surrounding context. So it is very useful in case of fire callback after a window closing event.
+
+use case : 
+
+We want to refresh a list item window after adding a new item (via a "new item" modal)
+
+**List item**
+
+```javascript
+...
+
+// Refresh item list
+refreshRouteList(){
+	this.Db.getRoutesList().then((data)=> this.routesList = data);
+}
+
+//Open new item modal
+newItem(){
+	this.navCtrl.push(TrackingPage,{callback:
+		() => {this.refreshRouteList();}
+	});
+ }
+ 
+ ...
+```
+
+
+**new item modal**
+
+```javascript
+...
+
+ionViewDidLeave(){
+	console.log("close page");
+	this.callback();
+}
+  
+...
+```
+
+
 
 #Config
 [Back to top](#ionic-2)  
