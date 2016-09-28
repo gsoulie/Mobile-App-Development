@@ -826,13 +826,13 @@ If we change timeout value of 500 ms to 1500
 
 *definition : * An arrow function expression has a shorter syntax compared to function expressions and does not bind its own this, arguments, super, or new.target. Arrow functions are always anonymous. These function expressions are best suited for non-method functions and they can not be used as constructors.
 
-*summarize : *
+*summarize* : 
 
 - You don't need to keep typing function
 - It lexically captures the meaning of **this**
 - It lexically captures the meaning of arguments
 
-*notation :* 
+*notation* :  
 
 ```javascript
 () => {/*statement*/}
