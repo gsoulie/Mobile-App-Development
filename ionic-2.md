@@ -621,7 +621,7 @@ Pipe inline syntax : ```value | myPipe:args[0]:args[1]```
 <ion-label>{{name | helloWorld}}</ion-label>
 ```
 
-**Note:** The first letter of the pipe's name in the view file is in lower case
+> Note: The first letter of the pipe's name in the view file is in lower case
 
 ###Other example
 
@@ -1969,8 +1969,7 @@ export class Page {
 }
 ```
 
-####Note : 
-The **map** lib is only imported because we need is http.get function
+> Note : The **map** lib is only imported because we need is http.get function
 
 #Navigation
 [Back to top](#ionic-2)  
@@ -3420,7 +3419,7 @@ Or simply
 $ ionic resources
 ```
 
-**Note :** If splash screen doesn't showing, update your cordova plugin
+> Note : If splash screen doesn't showing, update your cordova plugin
 
 ```
 ionic plugin rm cordova-plugin-splashscreen
