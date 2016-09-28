@@ -843,7 +843,7 @@ If we change timeout value of 500 ms to 1500
 
 ###Usage
 
-this has traditionally been a pain point in JavaScript. Fat arrows fix it by capturing the meaning of this from the surrounding context. So it is very useful in case of fire callback after a window closing event.
+this has traditionally been a pain point in JavaScript. Fat arrows fix it by capturing the meaning of this from the surrounding context. So it is very useful in case of calling asynchronous callback after a window closing event.
 
 use case : 
 
