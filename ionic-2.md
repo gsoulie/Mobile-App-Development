@@ -67,6 +67,7 @@
 #TODO
 
 * AngularJS 2 directive
+* make PDF (https://gist.github.com/scalp42/7261508)    
 
 
 [TODO](#todo)    
