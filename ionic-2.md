@@ -3039,7 +3039,7 @@ Sometimes,  on the emulator or on device, 2 out of 3 clicks it doesn't fire the 
 #Using image
 [Back to top](#ionic-2) 
 
-To use image in your app, create a **img** folder in your **www** folder and use **img** tag like below
+To use image in your app, create a **images** folder in your **www/assets** folder and use **img** tag like below
 
 **View file**
 ```xml
@@ -3049,7 +3049,7 @@ To use image in your app, create a **img** folder in your **www** folder and use
 **Controller file**
 
 ```javascript
-let item = {name:"my item", image:"img/my_image.png"}
+let item = {name:"my item", image:"./assets/images/my_image.png"}
 ```
 **IMPORTANT** don't put "**/**" before *img*
 
