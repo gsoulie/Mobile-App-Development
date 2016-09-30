@@ -17,7 +17,8 @@
 	* [Mapping](#mapping)    
 	* [Arrow function](#arrow-function)    
 * [Config](#config)    
-* [Global variables](#global-variables)     
+* [Global variables](#global-variables)    
+* [Add files to project](#add-files-to-project)    
 * [Third party lib](#third-party-lib)    
 * [Useful functions](#useful-functions)  
 	* [Get specific platform](#get-specific-platform)    
@@ -1099,6 +1100,10 @@ import {File} from 'ionic-native';
 
 const fs:string = cordova.file.dataDirectory;
 ```
+#Add files to project
+[Back to top](#ionic-2)
+
+Since RC0, all the files you need to add in your project (like json file, image etc...) must be added in **YOUR_APP/src/assests/data.**
 
 #Third party lib
 [Back to top](#ionic-2)
