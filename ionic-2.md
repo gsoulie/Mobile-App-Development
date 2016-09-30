@@ -2957,7 +2957,14 @@ Here is a personnal code to create popover menu like Evernote edit menu
 
 ![alt tag](https://github.com/gsoulie/ionic/blob/master/popover_menu.png)
 
-**View file**
+
+**Main window**
+```javascript
+//Call menu
+this.navCtrl.push(MenuPage);
+```
+
+**Menu view file**
 ```xml
 <ion-content class="menucl" padding>
 <ion-grid class="grid" (click)="close()">
@@ -2986,7 +2993,7 @@ Here is a personnal code to create popover menu like Evernote edit menu
 
 ```
 
-**Controller file**
+**Menu controller file**
 ```javascript
 import { Component } from '@angular/core';
 import { NavController,ViewController } from 'ionic-angular';
@@ -3002,7 +3009,7 @@ export class MenuPage {
 
 ```
 
-**Style file**
+**Menu style file**
 ```css
 .menucl {
     background-color: transparent;
