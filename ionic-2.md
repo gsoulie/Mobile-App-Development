@@ -1788,9 +1788,11 @@ View file
 </ion-header>
 <ion-content padding class="getting-started">
     <img src="{{sourceImage}}"/>
-	<button fab primary fab-bottom fab-center (click)="takePhoto()">
-         <ion-icon name="camera"></ion-icon>
-    </button>
+    	<ion-fab>
+	   <button ion-fab color="primary" fab-bottom fab-center (click)="takePhoto()" icon-only>
+	        <ion-icon name="camera"></ion-icon>
+	   </button>
+	</ion-fab>
 </ion-content>
 
 ```
@@ -2910,9 +2912,11 @@ This snippet show how to fix floating button in front of a list
     </ion-item>
   </ion-list>
 </ion-content>
-<button fab fab-bottom fab-right fab-fixed style="z-index:100">
-  <ion-icon name="add"></ion-icon>
-</button>
+<ion-fab>
+	<button ion-fab icon-only fab-bottom fab-right fab-fixed style="z-index:100">
+  		<ion-icon name="add"></ion-icon>
+	</button>
+</ion-fab>
 ```
 
 ##chart
@@ -2970,22 +2974,38 @@ this.navCtrl.push(MenuPage);
 <ion-grid class="grid" (click)="close()">
   <ion-row>
     <ion-col style="height:70px">
-      <button fab fab-left class="btn"><ion-icon name="add"></ion-icon></button>
+       <ion-fab>
+        <button ion-fab fab-left class="btn" (click)="add()" icon-only>
+          <ion-icon name="star"></ion-icon>
+        </button>
+      </ion-fab>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col style="height:70px">
-      <button fab fab-left class="btn"><ion-icon name="create"></ion-icon></button>
+      <ion-fab>
+        <button ion-fab fab-left class="btn" icon-only>
+          <ion-icon name="create"></ion-icon>
+        </button>
+      </ion-fab>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col style="height:70px">
-      <button fab fab-left class="btn"><ion-icon name="trash"></ion-icon></button>
+       <ion-fab>
+        <button ion-fab fab-left class="btn" icon-only>
+          <ion-icon name="trash"></ion-icon>
+        </button>
+      </ion-fab>
     </ion-col>
   </ion-row>
   <ion-row>
     <ion-col style="height:70px">
-      <button fab fab-left class="btn"><ion-icon name="bookmarks"></ion-icon></button>
+       <ion-fab>
+        <button ion-fab fab-left class="btn" icon-only>
+          <ion-icon name="bookmarks"></ion-icon>
+        </button>
+      </ion-fab>
     </ion-col>
   </ion-row>
 </ion-grid>
