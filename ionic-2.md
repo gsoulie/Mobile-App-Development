@@ -22,7 +22,7 @@
 * [Third party lib](#third-party-lib)    
 * [Useful functions](#useful-functions)  
 	* [Get specific platform](#get-specific-platform)    
-	* [Show / hide UI elements](#show-hide-dom-elements)    
+	* [Show / hide DOM element](#show-hide-dom-element)    
 	* [Checking network connection](#checking-network-connection)    
 	* [Close modal](#close-modal)    
 * [Moment JS](#momentjs)    
