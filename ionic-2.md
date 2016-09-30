@@ -383,13 +383,13 @@ This will set the elements property to fisrtName. More used to see ```{{firstNam
 **Calling a Function on an Event**
 
 ```xml
-<button (click)="someFunction($event)">
+<button ion-button (click)="someFunction($event)">
 ```
 
 This will call the someFunction function and pass in the event whenever the button is clicked on. You can replace click with any native or custom event you like. You can also use the following syntax:
 
 ```xml
-<button (^click)="someFunction($event)">
+<button ion-button (^click)="someFunction($event)">
 ```
 to make the event bubble up to other elements.
 
@@ -425,7 +425,7 @@ This sets the value to the expression name and when we detect the input event we
 This creates a local variable that we can use to access the element, so if I wanted to add some content into this paragraph I could do the following:
 
 ```xml
-<button (click)="myParagraph.innerHTML = 'Once upon a time...'">
+<button ion-button (click)="myParagraph.innerHTML = 'Once upon a time...'">
 ```
 
 **Directives**
@@ -1236,7 +1236,7 @@ ionic.Platform.exitApp(); // stops the app
 [Back to top](#ionic-2) 
 
 ```xml
-<button (click)="removeNote()" [hidden]="creationMode">
+<button ion-button (click)="removeNote()" [hidden]="creationMode" icon-only>
 	<ion-icon name="trash"></ion-icon>
 </button>
 ```
@@ -1271,7 +1271,7 @@ if(navigator.onLine){
 	
 **View file**
 ```xml
-<button (click)="close()"></button>
+<button ion-button (click)="close()"></button>
 ```
 
 **Controller file**
@@ -1418,7 +1418,7 @@ $ ionic plugin add cordova-plugin-geolocation
 	    Map
 	  </ion-title>
 	  <ion-buttons end>
-	    <button (click)="addMarker()"><ion-icon name="add"></ion-icon>Add Marker</button>
+	    <button ion-button (click)="addMarker()" icon-only><ion-icon name="add"></ion-icon>Add Marker</button>
 	  </ion-buttons>  
 	</ion-navbar>
 </ion-header> 
@@ -1674,8 +1674,8 @@ export class HomePage {
 	    <ion-title>
 	        Home
 	    </ion-title>
-	    <button clear (click)="refresh()">Refresh</button>
-	    <button clear (click)="add()">Add</button>
+	    <button ion-button clear (click)="refresh()">Refresh</button>
+	    <button ion-button clear (click)="add()">Add</button>
 	</ion-navbar>
 </ion-header> 
 <ion-content class="home">
@@ -1780,7 +1780,7 @@ View file
 ```xml
 <ion-header>
 	<ion-navbar maintheme>
-	  <button menuToggle>
+	  <button ion-button menuToggle>
 	    <ion-icon name="menu"></ion-icon>
 	  </button>
 	  <ion-title>Photo</ion-title>
@@ -2046,7 +2046,7 @@ export class MainPage(){
 In our template, **Main.html**, we will have a button that will call this method when pressed.
 
 ```xml
-<button (click)="goToAbout()">About</button>
+<button ion-button (click)="goToAbout()">About</button>
 ```
 
 To summarize, when this button is pressed, it will call the goToAbout method which pushes an instance of the AboutPage class onto the navigation stack which is then compiled and animated into view.
@@ -2240,7 +2240,7 @@ This code show how to stop event propagation
 <ion-content padding class="page1">
   <ion-list>
     <ion-item *ngFor="let item of items" (click)="openDetail(item.idDevice, item.nom)">
-      <button clear item-right (click)="pickDevice($event,item.idDevice)">
+      <button ion-button clear item-right (click)="pickDevice($event,item.idDevice)">
         <ion-icon green name="phone-portrait" item-right></ion-icon>
       </button>
       <h2>{{item.nom}}</h2>
@@ -2286,8 +2286,8 @@ Consider a ion-list in which we want to hide every items which property "deleted
   <ion-item-sliding *ngFor="let item of getActiveItems()" #slidingItem>
     <ion-item>{{item.fach}} ({{item.kuerzel}})</ion-item>
     <ion-item-options>
-      <button (click)="showEditModal(item, slidingItem)"><ion-icon name="create"></ion-icon>Bearbeiten</button>
-      <button danger (click)="doConfirm(item, slidingItem)"><ion-icon name="trash"></ion-icon>Löschen</button>
+      <button ion-button (click)="showEditModal(item, slidingItem)"><ion-icon name="create"></ion-icon>Bearbeiten</button>
+      <button ion-button danger (click)="doConfirm(item, slidingItem)"><ion-icon name="trash"></ion-icon>Löschen</button>
     </ion-item-options>
   </ion-item-sliding>
 </ion-list>
@@ -2315,8 +2315,8 @@ Second solution, in case that you prefer to do the filtering in the template the
     <ion-item-sliding *ngIf="!item.deleted" #slidingItem>
       <ion-item>{{item.fach}} ({{item.kuerzel}})</ion-item>
       <ion-item-options>
-        <button (click)="showEditModal(item, slidingItem)"><ion-icon name="create"></ion-icon>Bearbeiten</button>
-        <button danger (click)="doConfirm(item, slidingItem)"><ion-icon name="trash"></ion-icon>Löschen</button>
+        <button ion-button (click)="showEditModal(item, slidingItem)"><ion-icon name="create"></ion-icon>Bearbeiten</button>
+        <button ion-button danger (click)="doConfirm(item, slidingItem)"><ion-icon name="trash"></ion-icon>Löschen</button>
       </ion-item-options>
     </ion-item-sliding>
   </template>
@@ -2334,7 +2334,7 @@ Second solution, in case that you prefer to do the filtering in the template the
     	...
     	</ion-item>
     	<ion-item-options>
-    	    <button danger (click)="removePost(post)">
+    	    <button ion-button danger (click)="removePost(post)" icon-only>
     	    	<ion-icon name="remove"></ion-icon>
     	    </button>
     	</ion-item-options>
@@ -2368,7 +2368,7 @@ removePost(post){
       </button>
 
       <ion-item-options>
-        <button darkgrey (click)="removeNote(item)" class="btn"><ion-icon name="trash"></ion-icon>Delete</button>
+        <button ion-button color="darkgrey" (click)="removeNote(item)" class="btn"><ion-icon name="trash"></ion-icon>Delete</button>
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
@@ -2534,7 +2534,7 @@ export class NewsFeedPage {
 ```xml
 <ion-list>
 	<ion-item *ngFor="let item of items" (click)="openDetail(item.idDevice, item.nom)">
-		<button clear item-right (click)="pickDevice($event,item.idDevice)">
+		<button ion-button color="clear" item-right (click)="pickDevice($event,item.idDevice)">
 			<ion-icon [style.color]="item.disponible ? '#00CC00' : '#CD1625'" name="phone-portrait" item-center></ion-icon>
 		</button>
 		<h2>{{item.nom}}</h2>
@@ -2587,7 +2587,7 @@ export class Page1 {
 **Change button backgroundColor synamically**
 
 ```xml
-<button [style.backgroundColor]="enable ? '#00CC00' : '#FF0000'">Test</button>
+<button ion-button[style.backgroundColor]="enable ? '#00CC00' : '#FF0000'">Test</button>
 ```
 
 
@@ -3049,7 +3049,7 @@ export class MenuPage {
 You can dynamically change the UI component style with condition like below :
 
 ```xml
-<button [style.backgroundColor]="enable ? '#00CC00' : '#FF0000'">Test</button>
+<button ion-button [style.backgroundColor]="enable ? '#00CC00' : '#FF0000'">Test</button>
 ```
 
 
