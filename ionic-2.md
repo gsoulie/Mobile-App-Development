@@ -53,6 +53,7 @@
 	* [toggle](#toggle)    
 	* [personnal popover menu](#popover-menu)    
 	* [dynamic style](#dynamic-style)    
+* [Sass](#sass)    	
 * [Known issues](#known-issues)    
 * [Using image](#using-image)    
 * [Backends](#backends)    
@@ -3018,6 +3019,38 @@ You can dynamically change the UI component style with condition like below :
 ```xml
 <button [style.backgroundColor]="enable ? '#00CC00' : '#FF0000'">Test</button>
 ```
+
+
+#Sass
+[Back to top](#ionic-2) 
+
+Here are some tips to perform your scss 
+
+##Positioning
+
+###Bottom positioning
+```css
+.cform {
+    position: absolute;
+    bottom: 20%;
+    left: 50px;
+    right: 50px;
+}
+```
+
+###Center image
+
+```css
+.image {
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+```
+
 
 #Known issues
 [Back to top](#ionic-2) 
