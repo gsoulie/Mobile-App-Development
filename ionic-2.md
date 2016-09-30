@@ -1250,6 +1250,22 @@ export class HomePage {
 }
 ```
 
+> Angular JS 2 update : don't use hidden anymore
+
+Prefer use this syntax
+
+**view file**
+```html
+<button ion-fab fab-left icon-only [style.display]="menuIsOpen ? 'inherit':'none'">
+   <ion-icon name="star"></ion-icon>
+</button>
+```
+
+**controller file**
+```javascript
+menuIsOpen: boolean = false;
+```
+
 
 ##Checking network connection
 [Back to top](#ionic-2)
