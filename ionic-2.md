@@ -1326,7 +1326,8 @@ npm install angular-moment moment --save
 ###Usage
 
 ```javascript
-import * as moment from 'moment';
+import * as moment from 'moment';	//syntax for ionic beta
+Import moment from 'moment'	//RC0
 ...
 ...
 let mydate = moment().format('ddd MMM YYYY, h:mm:ss');
