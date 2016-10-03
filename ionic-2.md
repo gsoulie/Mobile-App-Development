@@ -1223,6 +1223,14 @@ var currentPlatformVersion = ionic.Platform.version();
 platform.isPortrait() 
 platform.isLandscape()
 
+//Get environment variable with process.env.IONIC_ENV
+if (process.env.IONIC_ENV == 'prod') {
+  // production mode
+  
+} else {
+  // dev mode 'dev'
+}
+
 -->
 /*
 window.addEventListener("orientationchange", function() {
