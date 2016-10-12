@@ -69,7 +69,8 @@
 #TODO
 
 * AngularJS 2 directive
-* make PDF (https://gist.github.com/scalp42/7261508)    
+* make PDF (https://gist.github.com/scalp42/7261508)  
+ tutorial = (http://gonehybrid.com/how-to-create-and-display-a-pdf-file-in-your-ionic-app/)
 
 
 [TODO](#todo)    
