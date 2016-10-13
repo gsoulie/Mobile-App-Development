@@ -115,37 +115,8 @@ $ sudo npm install -g cordova
 ionic 2 is not yet available in final version, but is it possible to create ionic projects with the ionic 2 beta which can be installed as followed CLI
 
 ```
-$ sudo npm install -g ionic@beta
+$ sudo npm install -g ionic
 ```
-
-**Updating ionic 2 framework**
-
-```
-$ npm update -g cordova ionic@beta
-```
-
-again, and then updating the package.json file of your project. You should see something like 
-
-this in that file:
-```
- "dependencies": {
- "angular2": "2.0.0-beta.6",
- "es6-promise": "3.0.2",
- "es6-shim": "0.33.13",
- "ionic-angular": "2.0.0-beta.3",
- "ionic-native": "^1.0.12",
- "ionicons": "3.0.0-alpha.3",
- "reflect-metadata": "0.1.2",
- "rxjs": "5.0.0-beta.0",
- "zone.js": "0.5.14"
- }
-```
-Simply change the ionic-angular version number to the latest version, and then run:
-
-```
-npm install
-```
-
 
 ###Configure Android environment variable
 
@@ -197,6 +168,14 @@ It creates new folder in the project treeview with js, html and scss files
 
 ```
 $ ionic g page myNewPage
+```
+
+**Generate new provider in ionic 2 project**
+
+It creates new folder in the project treeview
+
+```
+$ ionic g provider myProvider
 ```
 
 **Display log with ionic serve**
