@@ -60,6 +60,7 @@
 * [Backends](#backends)    
 	* [Strongloop](#strongloop)     
 	* [Firebase](#firebase)    
+* [Authentication](#authentication)    
 * [Internationalization](#internationalization)  
 * [Splash screen and appicon](#splash-screen-and-appicon)  
 * [Beta testing](#beta-testing)    
@@ -1220,6 +1221,16 @@ window.addEventListener("orientationchange", function() {
 ionic.Platform.exitApp(); // stops the app
 ```
  
+##Generate UUID
+[Back to top](#ionic-2) 
+
+To simply generate UUID like "547d8e40-354c-11e6-aa97-083e8ec535fb"
+
+```javascript
+import { UUID } from 'angular2-uuid';
+let uuid = UUID.UUID();
+```
+
 ##Show hide DOM element
 [Back to top](#ionic-2) 
 
@@ -3296,6 +3307,15 @@ export class HomePage {
   }
 }
 ```
+#Authentication
+[Back to top](#ionic-2)  
+
+##ng2-ui-auth
+[Link](https://github.com/ronzeidman/ng2-ui-auth)
+[Example](ng2-ui-auth-example)
+
+##JWT
+[Link](https://jwt.io/)
 
 #Internationalization
 [Back to top](#ionic-2)  
