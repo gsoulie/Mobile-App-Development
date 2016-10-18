@@ -67,13 +67,11 @@
 * [Beta testing](#beta-testing)    
 * [Push notification](#push-notification)   
 * [Publishing App](#publishing-app)  
+* [Other modules](#other-modules)    
 
 #TODO
 
 * AngularJS 2 directive
-* make PDF (https://gist.github.com/scalp42/7261508)  
- tutorial = (http://gonehybrid.com/how-to-create-and-display-a-pdf-file-in-your-ionic-app/)
-
 
 [TODO](#todo)    
 
@@ -3698,7 +3696,7 @@ Let’s generate our private key using the **keytool** command that comes with t
 $ keytool -genkey -v -keystore my-release-key.keystore -alias alias_name -keyalg RSA -keysize 2048 -validity 10000
 ```
 
-You’ll first be prompted to create a password for the keystore. Then, answer the rest of the nice tools’s questions and when it’s all done, you should have a file called **my-release-key.keystore** created in the current directory.
+You will first be prompted to create a password for the keystore. Then, answer the rest of the nice tools’s questions and when it’s all done, you should have a file called **my-release-key.keystore** created in the current directory.
 
 **Note:** Make sure to save this file somewhere safe, if you lose it you won’t be able to submit updates to your app!
 
@@ -3715,6 +3713,14 @@ $ zipalign -v 4 HelloWorld-release-unsigned.apk HelloWorld.apk
 ```
 
 Now we have our final release binary called HelloWorld.apk and we can release this on the Google Play Store
+
+
+#Other modules
+[Back to top](#ionic-2) 
+
+##Make PDF
+[make PDF](https://gist.github.com/scalp42/7261508)  
+[tutorial](http://gonehybrid.com/how-to-create-and-display-a-pdf-file-in-your-ionic-app/)
 
 
 #TODO
