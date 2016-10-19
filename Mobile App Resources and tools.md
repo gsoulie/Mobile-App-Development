@@ -4,6 +4,9 @@
 
 [Visual Studio Code](http://code.visualstudio.com/Docs/?dv=osx)    
 
+##Git
+[Simple Git guide](http://rogerdudler.github.io/git-guide/index.fr.html)    
+
 ##Device screen size
 
 [Devices metrics](http://www.materialup.com/posts/device-metrics-google-design/responsive)
