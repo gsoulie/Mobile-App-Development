@@ -63,6 +63,7 @@
 [printable sketch](http://sketchsheets.com/)     
 
 ##Android resources
+[Device Metrics](https://material.io/devices/)    
 [Google Play Developer Console](https://play.google.com/apps/publish)    
 [ActionBar generator](http://jgilfelt.github.io/android-actionbarstylegenerator/)     
 [Android icon generator for Google Play Store](http://appicontemplate.com/android)     
