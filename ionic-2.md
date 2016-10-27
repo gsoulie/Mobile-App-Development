@@ -55,7 +55,7 @@
 	* [toggle](#toggle)    
 	* [personnal popover menu](#popover-menu)    
 	* [dynamic style](#dynamic-style)    
-	* [add toggle menu](#add-toggle-menu)    
+	* [Toggle menu](#toggle-menu)    
 * [Sass](#sass)    	
 * [Known issues](#known-issues)    
 * [Using image](#using-image)    
@@ -3068,7 +3068,7 @@ You can dynamically change the UI component style with condition like below :
 <button ion-button [style.backgroundColor]="enable ? '#00CC00' : '#FF0000'">Test</button>
 ```
 
-##Add toggle menu
+##Toggle menu
 [Back to top](#ionic-2) 
 
 To add a toggle menu in your pages, follow the example below
