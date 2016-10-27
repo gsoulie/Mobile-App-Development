@@ -55,6 +55,7 @@
 	* [toggle](#toggle)    
 	* [personnal popover menu](#popover-menu)    
 	* [dynamic style](#dynamic-style)    
+	* [add toggle menu](#add-toggle-menu)    
 * [Sass](#sass)    	
 * [Known issues](#known-issues)    
 * [Using image](#using-image)    
@@ -3065,6 +3066,46 @@ You can dynamically change the UI component style with condition like below :
 
 ```xml
 <button ion-button [style.backgroundColor]="enable ? '#00CC00' : '#FF0000'">Test</button>
+```
+
+##Add toggle menu
+[Back to top](#ionic-2) 
+
+To add a toggle menu in your pages, follow the example below
+
+**myPage.html**
+```xml
+<!-- here is the menu -->
+<ion-menu [content]="content">
+  <ion-content>
+    <ion-list>
+      <ion-item>A</ion-item>
+      <ion-item>B</ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- the page header -->
+<ion-header>
+  <ion-navbar color="githubviolet">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{username}}</ion-title>  
+     <ion-buttons end>
+        <button ion-button icon-only (click)="openSearch()">
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<!-- page content -->
+<ion-content padding class="main" #content>
+	<ion-list>
+		...
+	</ion-list>
+</ion-content>
 ```
 
 
