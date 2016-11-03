@@ -3579,6 +3579,8 @@ Available for iOS and Android, Ionic View makes it easy to **test** and **share*
 #Push notification
 [Back to top](#ionic-2) 
 
+[link : working both platform tutorial](https://medium.com/@ankushaggarwal/push-notifications-in-ionic-2-658461108c59#.tqfzfx5dd)
+
 First way, using push notification module, only works when app is opened
 
 ```javascript
