@@ -49,7 +49,8 @@
 [Material Design palette](http://www.materialpalette.com/)         
 [Color trends by OS](http://tintui.com/index.html)     
 [Material design](http://www.google.com/design/spec/style/color.html#color-color-palette)    
-[Android official icons](https://developer.android.com/design/downloads/index.html)     
+[Android official icons](https://developer.android.com/design/downloads/index.html)   
+[Adobe color CC](https://color.adobe.com/fr/explore/newest/)    
 
 ##Fonts
 [Icomoon](https://icomoon.io/)     
