@@ -9,7 +9,10 @@
 [Visual Studio Code](http://code.visualstudio.com/Docs/?dv=osx)    
 
 ##Git
-[Simple Git guide](http://rogerdudler.github.io/git-guide/index.fr.html)    
+[Simple Git guide](http://rogerdudler.github.io/git-guide/index.fr.html)  
+
+##Printable A4 sketch template
+[Printable A4 sketch](https://androiduiux.com/2013/01/06/printable-a4-screen-flow-sketch-template-free-download/)    
 
 ##Device screen size
 
