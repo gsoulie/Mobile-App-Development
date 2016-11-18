@@ -45,6 +45,7 @@
 [TSLint for linting TypeScript code](http://palantir.github.io/tslint/)    
 
 ##Graphical resources
+[Paletton](http://paletton.com/#uid=23q0u0k++VBrKZTEz+V+VxYZ+pL)    
 [FlatUI colors](http://flatuicolors.com/)     
 [Material Design palette](http://www.materialpalette.com/)         
 [Color trends by OS](http://tintui.com/index.html)     
