@@ -45,6 +45,7 @@
 [TSLint for linting TypeScript code](http://palantir.github.io/tslint/)    
 
 ##Graphical resources
+[Imageoptim](https://imageoptim.com/fr.html)    
 [Paletton](http://paletton.com/#uid=23q0u0k++VBrKZTEz+V+VxYZ+pL)    
 [FlatUI colors](http://flatuicolors.com/)     
 [Material Design palette](http://www.materialpalette.com/)         
@@ -73,6 +74,9 @@
 [ActionBar generator](http://jgilfelt.github.io/android-actionbarstylegenerator/)     
 [Android icon generator for Google Play Store](http://appicontemplate.com/android)     
 [Material color generator](http://paletton.com)     
+
+##Deeplinking
+[beanch.io](https://branch.io/)    
 
 ##File transfer
 [jaguar](http://share.jaguar-network.com/)      
