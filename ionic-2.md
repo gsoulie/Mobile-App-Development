@@ -53,7 +53,7 @@
 	* [chart](#chart)    
 	* [grid](#grid)    
 	* [toggle](#toggle)    
-	* [personnal popover menu](#popover-menu)    
+	* [popover menu](#popover-menu)    
 	* [dynamic style](#dynamic-style)    
 	* [Toggle menu](#toggle-menu)    
 * [Sass](#sass)    	
