@@ -2973,90 +2973,20 @@ refreshTracking(e){
 ##Popover menu
 [Back to top](#ionic-2) 
 
-Here is a personnal code to create popover menu like Evernote edit menu 
+Create popover menu like Evernote edit menu 
 
 ![alt tag](https://github.com/gsoulie/ionic/blob/master/popover_menu.png)
 
-
-**Main window**
-```javascript
-//Call menu
-this.navCtrl.push(MenuPage);
-```
-
-**Menu view file**
 ```xml
-<ion-content class="menucl" padding>
-<ion-grid class="grid" (click)="close()">
-  <ion-row>
-    <ion-col style="height:70px">
-       <ion-fab>
-        <button ion-fab fab-left class="btn" (click)="add()" icon-only>
-          <ion-icon name="star"></ion-icon>
-        </button>
-      </ion-fab>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col style="height:70px">
-      <ion-fab>
-        <button ion-fab fab-left class="btn" icon-only>
-          <ion-icon name="create"></ion-icon>
-        </button>
-      </ion-fab>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col style="height:70px">
-       <ion-fab>
-        <button ion-fab fab-left class="btn" icon-only>
-          <ion-icon name="trash"></ion-icon>
-        </button>
-      </ion-fab>
-    </ion-col>
-  </ion-row>
-  <ion-row>
-    <ion-col style="height:70px">
-       <ion-fab>
-        <button ion-fab fab-left class="btn" icon-only>
-          <ion-icon name="bookmarks"></ion-icon>
-        </button>
-      </ion-fab>
-    </ion-col>
-  </ion-row>
-</ion-grid>
-</ion-content>
-
-```
-
-**Menu controller file**
-```javascript
-import { Component } from '@angular/core';
-import { NavController,ViewController } from 'ionic-angular';
-
-@Component({
-  templateUrl: 'build/pages/menu/menu.html',
-})
-export class MenuPage {
-
-  constructor(private navCtrl: NavController, private viewCtrl: ViewController) {}
-  close(){this.viewCtrl.dismiss();}
-}
-
-```
-
-**Menu style file**
-```css
-.menucl {
-    background-color: transparent;
-}
-.grid {
-    padding-top:50px;
-    background-color: rgba(255,255,255,0.7);
-}
-.rowBtn {
-    height: 70px;
-}
+<ion-fab top right edge>
+    <button ion-fab><ion-icon name="add"></ion-icon></button>
+    <ion-fab-list>
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+</ion-fab>
 ```
 
 ##Dynamic style
