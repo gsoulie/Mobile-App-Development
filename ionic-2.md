@@ -1948,48 +1948,46 @@ p {
 
 [link : reddit API url for testing app](https://www.reddit.com/r/gifs/top/.json?limit=10&sort=hot)
 
-**Create the view (page.html)**
-
-```xml
-<ion-header>
-	<ion-navbar>
-	  <ion-title>Tab 1</ion-title>
-	</ion-navbar>
-</ion-header>
-<ion-content>
-  <ion-list>
-    <ion-item *ngFor="let post of posts">
-      <img [src]="post.data.thumbnail" />
-    </ion-item>
-  </ion-list>
-</ion-content>
-```
-
-**Create controller (page.js)**
+**Create a provider**
 
 ```javascript
-import {Component} from 'ionic/ionic';
+import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
  
-@Component({
-  templateUrl: 'build/pages/page/page.html'
-})
-export class Page {
-  static get parameters() {
-     return [[Http]];
-  }
+@Injectable()
+export class httpProvider {
 
-  constructor(http) {
- 
-    this.http = http;
-    this.posts = null;
- 
-    this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').map(res => res.json()).subscribe(data => {
-        this.posts = data.data.children;
-    });
- 
+  constructor(public http: Http) {
+ 	console.log("hello");
   }
+  
+  getRemoteData(){
+    this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').map(res => res.json()).subscribe(data => {
+        console.log(data);
+    });
+  }
+}
+```
+**Usage**
+
+In your controller, inject your provider like below :
+```javascript
+import {Component} from '@angular/core';
+import {NavController} from 'ionic-angular';
+import {httpProvider} from '../../providers/http-provider';
+
+@Component({
+    selector: 'page-home',
+    templateUrl: 'home.html'
+})
+export class HomePage {
+    constructor(public httpProvider: HttpProvider){
+    }
+    
+    ionViewDidLoad(){
+    	this.httpProvider.getRemoteData();
+    }
 }
 ```
 
