@@ -35,7 +35,7 @@
 * [Camera](#camera)   
 * [Gallery](#gallery)    
 * [Barcode Scanner](#barcode-scanner)  
-* [HTTP query](#http-query)  
+* [HTTP Remote and Local data](#http-query)  
 * [Navigation](#navigation)  
 * [Themes](#themes)  
 * [Events](#events)    
@@ -1948,7 +1948,9 @@ p {
 
 [link : reddit API url for testing app](https://www.reddit.com/r/gifs/top/.json?limit=10&sort=hot)
 
-**Create a provider**
+**Retrieve remote data**
+
+First, create a provider with the code below :
 
 ```javascript
 import {Injectable} from '@angular/core';
@@ -1969,6 +1971,9 @@ export class httpProvider {
   }
 }
 ```
+
+> Note : The **map** lib is only imported because we need is http.get function
+
 **Usage**
 
 In your controller, inject your provider like below :
@@ -1991,7 +1996,36 @@ export class HomePage {
 }
 ```
 
-> Note : The **map** lib is only imported because we need is http.get function
+**Retrieve local data**
+
+As the same way, you can retrieve local data. First, create a "data" sub folder under *assets* folder which contain a *localData.json*. Then use the http with the local path
+
+```javascript
+import {Injectable} from '@angular/core';
+import {Http} from '@angular/http';
+import 'rxjs/add/operator/map';
+ 
+@Injectable()
+export class httpProvider {
+
+  constructor(public http: Http) {
+ 	console.log("hello");
+  }
+  
+  getRemoteData(){
+    this.http.get('https://www.reddit.com/r/gifs/new/.json?limit=10').map(res => res.json()).subscribe(data => {
+        console.log(data);
+    });
+  }
+  
+  getLocalData(){
+    this.http.get('assets/data/localData.json').map(res => res.json()).subscribe(data => {
+        console.log(data);
+    });
+  }
+}
+```
+
 
 #Navigation
 [Back to top](#ionic-2)  
