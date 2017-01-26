@@ -337,6 +337,14 @@ atom-text-editor::shadow {
 
 Another very good alternative to Atom is [visual studio code] (https://code.visualstudio.com/c?utm_expid=101350005-27.GqBWbOBuSRqlazQC_nNSRg.2&utm_referrer=https%3A%2F%2Fwww.google.fr%2F)
 
+###Some useful extensions
+
+* [Ionic2 extension](https://marketplace.visualstudio.com/items?itemName=Thavarajan.ionic2)    
+* [Auto Import extension](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport)    
+* [Angular 2 - TypeScript snippets](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2)    
+* [Git History] (https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)    
+* [custom icons theme](https://code.visualstudio.com/blogs/2016/09/08/icon-themes)
+
 #Concepts
 
 ##Angular 2
