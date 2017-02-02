@@ -3125,7 +3125,7 @@ Sometimes,  on the emulator or on device, 2 out of 3 clicks it doesn't fire the 
 	</button>
 </ion-list>
 ```
-###Conflict with **this** on callback
+###Conflict with "this" on callback
 
 refering to **this** has traditionally been a pain point in JavaScript. Fat arrows fix it by capturing the meaning of this from the surrounding context. So it is very useful in case of calling asynchronous callback after a window closing event.
 
