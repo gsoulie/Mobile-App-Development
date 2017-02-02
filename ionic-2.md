@@ -604,7 +604,7 @@ export class MyPage {
 }
 ```
 
-**View file**
+*View file*
 
 Pipe inline syntax : ```value | myPipe:args[0]:args[1]```
 
