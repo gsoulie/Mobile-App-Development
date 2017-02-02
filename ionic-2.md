@@ -3113,7 +3113,7 @@ Here are some tips to perform your scss
 #Known issues
 [Back to top](#ionic-2) 
 
-**Click in list item in simulator sometimes(!) doesn’t work on device**
+###Clicking in list item in simulator sometimes(!) doesn’t work on device
 
 Sometimes,  on the emulator or on device, 2 out of 3 clicks it doesn't fire the click function. To solve the issue, change ```<ion-item>``` to ```<button>``` with the styling of ```ion-item```.
 
@@ -3124,6 +3124,45 @@ Sometimes,  on the emulator or on device, 2 out of 3 clicks it doesn't fire the 
 		<span class="list-info">{{audience.amount}}</span>
 	</button>
 </ion-list>
+```
+###Conflict with **this** on callback
+
+refering to **this** has traditionally been a pain point in JavaScript. Fat arrows fix it by capturing the meaning of this from the surrounding context. So it is very useful in case of calling asynchronous callback after a window closing event.
+
+**use case :** We want to refresh a list of items after adding a new item on it (via a "new item" modal)
+
+*List.ts*
+```javascript
+...
+// Refresh item list
+refreshRouteList(){
+    this.Db.getRoutesList().then((data)=> this.routesList = data);
+}
+
+//Open new item modal
+newItem(){
+    // Open DetailPage with callback function wich refresh the liste after adding a new item
+    /* traditional callback syntax --> does not work because 'this' conflict
+    this.navCtrl.push(DetailPage,{callback: function(){
+            this.refreshRouteList();
+        }
+    });*/
+    
+    // New syntax with Arrow function
+    this.navCtrl.push(DetailPage,{callback:
+        () => {this.refreshRouteList();}
+    });
+ }
+...
+```
+
+*DetailPage.js*
+```javascript
+...
+save(){
+    this.callback(); // refreshRouteList() callback
+}
+...
 ```
 
 
