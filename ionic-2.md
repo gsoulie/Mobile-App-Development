@@ -663,8 +663,7 @@ The meaning of life: {{mySingleInt | addInt:2}}
 
 ###Other example Date format pipe
 
-**Pipe file** (app/pipe/datePipe.js)
-
+*Pipe file* (app/pipe/datePipe.js)
 ```javascript
 import {Pipe, PipeTransform} from '@angular/core';
 
@@ -686,10 +685,7 @@ export class datePipe implements PipeTransform{
 }
 ```
 
-**Controller file**
-
-**View file**
-
+*Controller file*
 ```javascript
 import {datePipe} from '../../pipe/datePipe';
 
@@ -704,13 +700,12 @@ export class HomePage {
 }
 ```
 
+*View file*
 ```xml
 ...
 <ion-label>{{c.dateConso | datePipe}}</ion-label>
 ...
 ```
-
-
 
 ####Conclusion
 
@@ -755,7 +750,7 @@ this.http.get('location/of/data').then((data) => {
 });
 ```
 
-Example : using Promise or Observable
+*Example :* using Promise or Observable
 
 ```javascript
 var promise = new Promise((resolve) => {
@@ -843,7 +838,7 @@ use case :
 
 We want to refresh a list item window after adding a new item (via a "new item" modal)
 
-**List item**
+*List.ts*
 
 ```javascript
 ...
@@ -855,7 +850,7 @@ refreshRouteList(){
 
 //Open new item modal
 newItem(){
-	this.navCtrl.push(TrackingPage,{callback:
+	this.navCtrl.push(DetailPage,{callback:
 		() => {this.refreshRouteList();}
 	});
  }
@@ -864,19 +859,16 @@ newItem(){
 ```
 
 
-**new item modal**
+*DetailPage.ts*
 
 ```javascript
 ...
-
 ionViewDidLeave(){
 	console.log("close page");
 	this.callback();
 }
-  
 ...
 ```
-
 
 
 #Config
@@ -886,8 +878,7 @@ The Config lets you configure your entire app or specific platforms. You can set
 
 [link : Config official documentation](http://ionicframework.com/docs/v2/api/config/Config/)
 
-**sample code of Config**
-
+*sample code of Config*
 ```javascript
 @Component({
   template: `<ion-nav [root]="root"></ion-nav>`
@@ -1108,7 +1099,7 @@ To use a custom lib file in your project, follow the next steps
 
 ###2 implement lib file
 
-ex : utils.js
+*utils.js*
 ```javascript
 var UI = {};
 
@@ -1136,7 +1127,7 @@ function square(_value){	// Not exported
 
 ###3 Using the custom lib in the whole project
 
-ex : From Home.js page
+*From Home.js*
 ```javascript
 import * as UI from '../../lib/utils';
 
@@ -1162,8 +1153,7 @@ export class HomePage {
 
 ###2 implement lib class
 
-ex : utils.ts
-
+*utils.ts*
 ```javascript
 import {Component, Injectable} from '@angular/core';
 
@@ -1177,7 +1167,7 @@ export class UTILS {
         console.log('[--- ' + _elt + ' ---] ' + _msg);
     }
 }
-````
+```
 **Be careful** and don't forget **@Injectable** decorator
 
 ###3 Inject class in other component
@@ -1248,8 +1238,7 @@ let uuid = UUID.UUID();
 </button>
 ```
 
-In controller.ts
-
+*controller.ts*
 ```javascript
 export class HomePage {
   creationMode: boolean = false;
@@ -1261,14 +1250,14 @@ export class HomePage {
 
 Prefer use this syntax
 
-**view file**
+*view file*
 ```html
 <button ion-fab fab-left icon-only [style.display]="menuIsOpen ? 'inherit':'none'">
    <ion-icon name="star"></ion-icon>
 </button>
 ```
 
-**controller file**
+*controller file*
 ```javascript
 menuIsOpen: boolean = false;
 ```
@@ -1292,14 +1281,14 @@ if(navigator.onLine){
 ## Close modal
 [Back to top](#ionic-2)
 	
-**View file**
+*View file*
 ```xml
 <button ion-button (click)="close()"></button>
 ```
 
-**Controller file**
+*Controller file*
 
-Don't forget to import ViewController
+Don't forget to import *ViewController*
 
 ```javascript
 import { Component } from '@angular/core';
@@ -1410,7 +1399,7 @@ let formatted = moment().format('dddd D MMMM YYYY'); // will display "jeudi 2 ju
 
 [link : google map geolocation](http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
 
-**Adding Google Map API depency in index.html**
+*Adding Google Map API depency in index.html*
 
 ```html
 <script src="http://maps.google.com/maps/api/js"></script>
@@ -1426,14 +1415,13 @@ let formatted = moment().format('dddd D MMMM YYYY'); // will display "jeudi 2 ju
 $ ionic plugin add cordova-plugin-geolocation
 ```
 
-**Import the new page in app.core.scss**
+*Import the new page in app.core.scss*
 
 ```javascript
 @import "pages/map/map";
 ```
 
-**Loading Map (map.html)**
-
+*Loading Map (map.html)*
 
 ```xml
 <ion-header>
@@ -1451,7 +1439,8 @@ $ ionic plugin add cordova-plugin-geolocation
 </ion-content>
 ```
 
-Next, specify ion-navbar configuration in app.js
+*Next, specify ion-navbar configuration in app.js*
+
 ```javascript
 @Component({
   template: '<ion-nav [root]="root"></ion-nav>',
@@ -1466,7 +1455,7 @@ export class AppCmp {
 
 ```
 
-**Updating map.js**
+*Updating map.js*
 
 ```javascript
 import {Component, Geolocation} from 'ionic/ionic';
@@ -1495,7 +1484,7 @@ export class MapPage {
 }
 ```
 
-**Styling page (very important) (map.scss)**
+*Styling page (very important) (map.scss)*
 
 ```css
 .scroll {
@@ -1508,7 +1497,7 @@ export class MapPage {
 }
 ```
 
-**Updating loadMap function**
+*Updating loadMap function*
 
 ```javascript
 loadMap(){
@@ -1536,7 +1525,7 @@ loadMap(){
 }
 ```
 
-**Adding marker function (map.js)**
+*Adding marker function (map.js)*
 
 ```javascript
 addMarker(){
@@ -1554,7 +1543,7 @@ addMarker(){
 }
 ```
 
-**Adding addInfoWindow function (map.js)**
+*Adding addInfoWindow function (map.js)*
 
 ```javascript
 addInfoWindow(marker, content){
@@ -1592,7 +1581,7 @@ After the project is created, intall cordova sqlite storage plugin
 $ ionic plugin add cordova-sqlite-storage
 ```
 
-**Database initialization (app.js)**
+*Database initialization (app.js)*
 
 ```javascript
 import {App, Platform, Storage, SqlStorage} from 'ionic-angular';
@@ -1635,7 +1624,7 @@ class MyApp {
 }
 ```
 
-**Database manipulation (home.js)**
+*Database manipulation (home.js)*
 
 ```javascript
 import {App, Platform, Storage, SqlStorage} from 'ionic-angular';
@@ -1690,7 +1679,7 @@ export class HomePage {
     }
 }
 ```
-**Displaying data from database (home.html)**
+*Displaying data from database (home.html)*
 
 ```xml
 <ion-header>
@@ -1799,7 +1788,7 @@ $ ionic plugin add cordova-plugin-camera
 
 **Usage**
 
-View file
+*View file*
 
 ```xml
 <ion-header>
@@ -1821,7 +1810,8 @@ View file
 
 ```
 
-Controller file
+*Controller file*
+
 ```javascript
 import {Component} from '@angular/core';
 import {Camera} from 'ionic-native';
@@ -1870,12 +1860,12 @@ export class PhotoPage {
 $ ionic plugin add cordova-plugin-camera
 ```
 
-**import plugin in ts file**
+*import plugin in ts file*
 ```javascript
 import { Camera } from ‘ionic-native’;
 ```
 
-**declare image source component**
+*declare image source component*
 
 ```javascript
 private imageSrc: string;
@@ -1883,7 +1873,7 @@ private imageSrc: string;
 constructor(private navCtrl: NavController) { }
 ```
 
-**function to access gallery**
+*function to access gallery*
 
 ```javascript
 private openGallery (): void {
@@ -1903,7 +1893,7 @@ private openGallery (): void {
 }
 ```
 
-**view file**
+*view file*
 
 ```xml
 <div class="gallery-button" text-center>
@@ -1913,7 +1903,7 @@ private openGallery (): void {
 </div>
 ```
 
-**some scss to customize the view**
+*style file*
 
 ```css
 ion-content, .toolbar-background {
@@ -2242,7 +2232,7 @@ Lastly you make sure this scss is being compiled with your **app.core.scss** by 
 ##ComboBox
 [Back to top](#ionic-2)  
 
-**View file**
+*View file*
 ```xml
 <ion-item>
 	<ion-label>Profession</ion-label>
@@ -2252,7 +2242,7 @@ Lastly you make sure this scss is being compiled with your **app.core.scss** by 
 </ion-item>
 ```
 
-**Controller file**
+*Controller file*
 
 ```javascript
 public prof: string;
@@ -2290,7 +2280,7 @@ selectObject(_selectedItem){
 
 This code show how to stop event propagation
 
-**View file**
+*View file*
 
 ```xml
 <ion-content padding class="page1">
@@ -2305,7 +2295,7 @@ This code show how to stop event propagation
 </ion-content>
 ```
 
-**Controller file**
+*Controller file*
 
 ```javascript
 pickDevice(event,_idDevice){
@@ -2382,7 +2372,8 @@ Second solution, in case that you prefer to do the filtering in the template the
 
 ###Remove item from list
 
-**View file**
+*View file*
+
 ```xml
 <ion-list>
     <ion-item-sliding *ngFor="let post of posts">
@@ -2398,7 +2389,7 @@ Second solution, in case that you prefer to do the filtering in the template the
 </ion-list>
 ```
 
-**Controller file**
+*Controller file*
 
 ```javascript
 removePost(post){
@@ -2540,7 +2531,8 @@ It’s important for the virtual scroll to know approximately how big your items
 
 [link : Infinite scroll](http://ionicframework.com/docs/v2/api/components/infinite-scroll/InfiniteScroll/)
 
-View file
+*View file*
+
 ```xml
 <ion-content>
  <ion-list>
@@ -2556,7 +2548,8 @@ View file
 </ion-content>
 ```
 
-Controller file
+*Controller file*
+
 ```javascript
 @Component({...})
 export class NewsFeedPage {
@@ -2585,7 +2578,7 @@ export class NewsFeedPage {
 
 ###Set colour dynamically of each ion-item
 
-**View file**
+*View file*
 
 ```xml
 <ion-list>
@@ -2600,7 +2593,7 @@ export class NewsFeedPage {
 
 **IMPORTANT** It's important to set colour by using hexadecimal string instead of standard colour name like 'primary', 'danger' etc... because it's actually doesn't work.
 
-**Controller file**
+*Controller file*
 
 ```javascript
 export class Page1 {
@@ -2640,7 +2633,7 @@ export class Page1 {
 }
 ```
 
-**Change button backgroundColor synamically**
+*Change button backgroundColor dynamically*
 
 ```xml
 <button ion-button[style.backgroundColor]="enable ? '#00CC00' : '#FF0000'">Test</button>
@@ -2649,7 +2642,7 @@ export class Page1 {
 
 ###Pull to refresh
 
-**In your html file**
+*View file*
 
 ```xml
 <ion-content padding>
@@ -2668,7 +2661,7 @@ export class Page1 {
 </ion-content>
 ```
 
-**In your controller file**
+*Controller file*
 
 ```javascript
 doRefresh(refresher){
@@ -2680,7 +2673,8 @@ doRefresh(refresher){
 ##Searchbar
 [Back to top](#ionic-2)  
 
-**View file**
+*View file*
+
 ```xml
 <ion-header>
   <ion-navbar primary>
@@ -2703,7 +2697,8 @@ doRefresh(refresher){
 
 ```
 
-**Controller file**
+*Controller file*
+
 ```javascript
 constructor(public nav: NavController) {
     this.nav = nav;
@@ -2755,7 +2750,7 @@ constructor(public nav: NavController) {
 
 To increase list filtering, we can use Observable instead of basic filtering shows in searchbar section above.
 
-**View file**
+*View file*
 
 ```xml
 <ion-header>
@@ -2782,7 +2777,8 @@ To increase list filtering, we can use Observable instead of basic filtering sho
 </ion-content>
 ```
 
-**Controller file**
+*Controller file*
+
 ```javascript
 import { Component } from '@angular/core';
 import { Control } from '@angular/common';
@@ -2820,7 +2816,7 @@ export class HomePage {
 }
 ```
 
-**Style file**
+*Style file*
 
 ```css
 .home-page {
@@ -2834,7 +2830,7 @@ export class HomePage {
 }
 ```
 
-**Data.ts provider**
+*Data.ts provider*
 
 ```javascript
 import { Injectable } from '@angular/core';
@@ -2862,7 +2858,6 @@ export class Data {
     }
 }
 ```
-
 
 Our list filtering is designed pretty nicely now, and it should perform very well. However, since we have added this debounceTime it causes a slight delay that will certainly be perceptible to the user. Whenever we do something “in the background” we should indicate to the user that something is happening, otherwise it will appear as if the interface is lagging or broken.
 
@@ -2990,7 +2985,7 @@ This snippet show how to fix floating button in front of a list
 ##toggle
 [Back to top](#ionic-2) 
 
-####View.html
+*View.html*
 
 ```xml
 ...
@@ -3002,7 +2997,7 @@ This snippet show how to fix floating button in front of a list
 </ion-content>
 ```
 
-####View.ts
+*View.ts*
 
 ```javascript
 refreshTracking(e){
@@ -3043,7 +3038,7 @@ You can dynamically change the UI component style with condition like below :
 
 To add a toggle menu in your pages, follow the example below
 
-**myPage.html**
+*myPage.html*
 ```xml
 <!-- here is the menu -->
 <ion-menu [content]="content">
@@ -3132,6 +3127,7 @@ refering to **this** has traditionally been a pain point in JavaScript. Fat arro
 **use case :** We want to refresh a list of items after adding a new item on it (via a "new item" modal)
 
 *List.ts*
+
 ```javascript
 ...
 // Refresh item list
@@ -3159,6 +3155,7 @@ newItem(){
 An other solution consist in declare a variable wich contain **this** :
 
 *List.js*
+
 ```javascript
 var myThis = this;
 
@@ -3174,6 +3171,7 @@ newItem(){
 
 
 *DetailPage.js*
+
 ```javascript
 ...
 save(){
@@ -3188,18 +3186,19 @@ save(){
 
 To use image in your app, you can store them into ```src/app/assets/*.png```
 
-**View file**
+*View file*
+
 ```xml
 <img class="thb" src="{{item.image}}" item-left/>
 ```
 
-**Controller file**
+*Controller file*
 
 ```javascript
 let item = {name:"my item", image:"./assets/my_image.png"}
 ```
 
-**Style file**
+*Style file*
 
 ```css
 .thb{
@@ -3225,7 +3224,7 @@ cordova plugin add cordova-plugin-whitelist
 cordova plugin add cordova-plugin-inappbrowser@1.1.0
 ```
 
-**app.html configuration**
+*app.html configuration*
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
@@ -3392,7 +3391,7 @@ export class HomePage {
 $ cordova plugin add cordova-plugin-whitelist
 ```
 
-**configure index.html**
+*configure index.html*
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
@@ -3428,7 +3427,7 @@ Each i18n file looks like :
 }
 ```
 
-**Import ng2-translate into app.js**
+*Import ng2-translate into app.js*
 
 ```javascript
 import {Platform} from 'ionic/ionic';
@@ -3486,7 +3485,7 @@ initializeTranslateServiceConfig() {
 
 For this code to work we need to find current navigator language. If current language is one of three predefined (en, de, or hr) we will use it as an initial application language. If not, we’ll use English as a default one:
 
-**HomePage configuration**
+*HomePage configuration*
 
 ```javascript
 import {Component} from 'ionic/ionic';
@@ -3504,7 +3503,7 @@ export class HomePage {
 }
 ```
 
-**HomePage view**
+*HomePage view*
 
 ```xml
 <ion-navbar *navbar>
