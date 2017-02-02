@@ -3141,8 +3141,8 @@ refreshRouteList(){
 
 //Open new item modal
 newItem(){
-    // Open DetailPage with callback function wich refresh the liste after adding a new item
-    /* traditional callback syntax --> does not work because 'this' conflict
+    // Open DetailPage with callback function wich refresh the list after adding a new item
+    /* below : traditional callback syntax --> does not work because 'this' conflict
     this.navCtrl.push(DetailPage,{callback: function(){
             this.refreshRouteList();
         }
@@ -3155,6 +3155,23 @@ newItem(){
  }
 ...
 ```
+
+An other solution consist in declare a variable wich contain **this** :
+
+*List.js*
+```javascript
+var myThis = this;
+
+newItem(){
+    // Open DetailPage with callback function wich refresh the list after adding a new item
+      
+    this.navCtrl.push(DetailPage,{callback:function(){
+        myThis.refreshRouteList();
+    });
+ }
+...
+```
+
 
 *DetailPage.js*
 ```javascript
