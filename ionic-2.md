@@ -616,7 +616,7 @@ Pipe inline syntax : ```value | myPipe:args[0]:args[1]```
 
 ###Other example
 
-**Pipe file**
+*Pipe file*
 
 ```javascript
 import {Pipe} from '@angular/core';
@@ -631,7 +631,7 @@ export class AddInt {
 }
 ```
 
-**Page file**
+*Page file*
 
 ```javascript
 import {AddInt} from 'pipes/AddInt';
@@ -648,7 +648,7 @@ export class MyPage {
 }
 ```
 
-**View file**
+*View file*
 
 ```
 The meaning of life: {{mySingleInt | addInt:2}}
