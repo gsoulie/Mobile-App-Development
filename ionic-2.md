@@ -3236,6 +3236,12 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 
 ###Install firebase
 
+*CLI*
+```
+npm install --save firebase
+```
+
+*old CLI (to check)*
 ```
 $ npm install angularfire2 --save-dev
 $ npm install firebase --save-dev
