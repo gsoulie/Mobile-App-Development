@@ -67,6 +67,7 @@
 * [Splash screen and appicon](#splash-screen-and-appicon)  
 * [Beta testing](#beta-testing)    
 * [Push notification](#push-notification)   
+* [Build for iOS](#build-for-ios)    
 * [Publishing App](#publishing-app)  
 * [Other modules](#other-modules)    
 
@@ -3705,6 +3706,28 @@ module.exports = {
     ionicPush.register(data => {
         console.log("Device token:", data.token);
     });
+```
+
+#Build for iOS
+[Back to top](#ionic-2)
+```
+xcode-select --instal
+sudo npm install -g ios-deploy --unsafe-perm=true
+```
+
+*in your app folder*
+```
+ionic platform add ios
+ionic build ios
+```
+
+For the first time, you need to open your project in XCode. To do this, navigate into your app folder and open your *.xcodeproj* file
+
+Then, in xcode, go to Xcode -> preferences and create or connect to your apple ID. You need to create a provisioning profile or select one in the Xcode project settings tab
+
+*Run on ios device or simulator*
+```
+ionic run ios
 ```
 
 #Publishing app
