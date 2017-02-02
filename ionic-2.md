@@ -3711,7 +3711,7 @@ module.exports = {
 #Build for iOS
 [Back to top](#ionic-2)
 ```
-xcode-select --instal
+xcode-select --install
 sudo npm install -g ios-deploy --unsafe-perm=true
 ```
 
