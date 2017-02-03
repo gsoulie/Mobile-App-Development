@@ -3413,23 +3413,30 @@ export class SigninPage {
 
 ####Get Firebase token
 
-*list.ts*
+*detail.ts*
 
 ```javascript
 
 import { AuthService } from '../../providers/auth';
+import { DataService } from '../../providers/dataservice';
 ...
 
 export class ListPage {
-	constructor(...){}
+	constructor(private dataService: DataService...){}
 	
-	// Get data from firebase or other backend
-	onRetrieveData(){
-		// Get user token
+	// save data to firebase
+	saveItem(){
+		// Get active user token
 		this.authService.getActiveUser().getToken()
 		.then(
 			(token: string) => {
-				
+				this.dataService.storeData(token)
+				.subscribe(
+					() => console.log("success"),
+					error => {
+						console.log(error);
+					}
+				);
 			}
 		);
 	}
@@ -3442,165 +3449,35 @@ export class ListPage {
 
 ```javascript
 import { ... }
-import { Http } from '@angular/http';
-@Injectable()
+import { Http, Response } from '@angular/http';
+import { AuthService } from './auth';
+import 'rxjs/Rx';
 
+@Injectable()
 export class DataService {
 	private itemList: Game[] = [];
 
-	constructor(private http: Http){}
+	constructor(private http: Http, private authService: AuthService){}
 	addItem(name: string){ this.itemList.push(new Game(name)); }
 	deleteItem(index: number){ this.itemList.splice(index, 1); }
 	getItems(){ return this.itemList.slice(); }
 	
 	// Save data to firebase
 	storeData(token: string) {
+		// get the user Id 		
+		const userId = this.authService.getActiveUser().uid;
+		
 		// url is available in firebase --> Database menu --> copy link
-		this.http.put('https://mygames-8c67c.firebaseio.com/');
+		// here we create a game-list.json in the db
+		return this.http.put('https://mygames-8c67c.firebaseio.com/' + userId + '/game-list.json?auth=' + token
+			, this.itemList)
+		.map((response: Response) => {
+			return response.json();
+		});
 	}
 }
 ```
 
-
-###Old 
-*old CLI (to check)*
-```
-$ npm install angularfire2 --save-dev
-$ npm install firebase --save-dev
-
-$ typings install angularfire2 --save --global
-$ typings install firebase --save --global
-```
-
-###Create application on Firebase
-
-The first step consist to create your application (web application type) on the Firebase dashboard. Next, you can go to **Database** section and upload your data with JSON file like : 
-
-```javascript
-{
-	"site": [{
-		"id": "1",
-		"libelle": "Paris"
-		},{
-		"id": "2",
-		"libelle": "London"
-		}
-	],
-	"user": [{
-		"id": "1",
-		"nom": "Jean DUPONT"
-		},{
-		"id": "2",
-		"nom": "Martin DURAND"
-		}
-	],
-	"type": [{"id":"1", "libelle":"Smartphone Android"},
-		{"id":"2", "libelle":"Tablette Android"},
-		{"id":"3", "libelle":"iPhone"}
-	]
-}
-```
-
-###Retrieve data inside controller
-
-```javascript
-constructor(){
-	this.baseRef = new Firebase('https://project-<your_fireapp_id>.firebaseio.com/');
-	this.getData();
-}
-
-getData(){
-	this.baseRef.on("value", 
-      	(snapshot) => {
-        	let dataSet = snapshot.val();
-        	this.sites =  dataSet.site || [];
-        	this.users = dataSet.user || [];
-        	this.devicesList = dataSet.type || [];
-      },
-      (error) => {
-        console.log("ERREUR de récupération des données : " + JSON.stringify(error));
-      });
-}
-```
-
-
-###Retrieve data with Provider
-
-**TODO** : To verify
-
-For retrieving data, first create a provider (``ìonic g provider FirebaseService```) to give access to your firebase with :
-
-```javascript
-import {Injectable} from '@angular/core';
-import {Observable} from 'rxjs/Observable';
-import {Http} from '@angular/http';
-import 'rxjs/add/operator/map';
-
-@Injectable()
-export class FirebaseService {
-  baseRef = new Firebase('https://project-<your_app_id>.firebaseio.com/');
-  constructor(public http: Http) {
-    // check for changes in auth status
-        /*this.baseRef.onAuth((authData) => {
-            if (authData) {
-                console.log("User " + authData.uid + " is logged in with " + authData.provider);
-            } else {
-                console.log("User is logged out");
-            }
-        })*/
-  }
-  getData(_tableName, _callback){
-    //console.log("PROVIDER - getData : " + _tableName);
-    let res;
-    this.baseRef.on("value", 
-      (snapshot) => {
-        let dataSet = snapshot.val();
-        //console.log("PROVIDER - resultset : " + JSON.stringify(dataSet));
-        switch(_tableName){
-          case "site": 
-            res =  dataSet.site || [];
-            break;
-          case "users": 
-            res = dataSet.user || [];
-            break;
-          case "type": 
-            res = dataSet.type || [];
-            break;
-          default : 
-            res =  dataSet || [];
-            break;
-        }
-        
-        if(_callback){_callback(res);}
-    },
-    (error) => {
-      console.log("ERREUR de récupération des données : " + JSON.stringify(error));
-    });
-  }
-}
-```
-
-Then, in your home page, add your provider like below :
-
-```javascript
-import {FirebaseService} from '../../providers/firebase-service/firebase-service';
-
-@Component({
-  templateUrl: 'build/pages/page1/page1.html',
-  providers: [FirebaseService]
-})
-
-export class HomePage {
-  public items: any[];
-  
-  constructor(public nav: NavController, public navParams: NavParams, public fb: FirebaseService) {
-    fb.getData("type", function(e){
-	  console.log("callback return : " + JSON.stringify(e));
-	  t = e;
-	});
-  }
-}
-```
 #Authentication
 [Back to top](#ionic-2)  
 
