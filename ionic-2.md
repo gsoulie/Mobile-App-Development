@@ -3408,6 +3408,60 @@ export class SigninPage {
 
 ```
 
+
+###Retrieve Firebase token
+
+####Get Firebase token
+
+*list.ts*
+
+```javascript
+
+import { AuthService } from '../../providers/auth';
+...
+
+export class ListPage {
+	constructor(...){}
+	
+	// Get data from firebase or other backend
+	onRetrieveData(){
+		// Get user token
+		this.authService.getActiveUser().getToken()
+		.then(
+			(token: string) => {
+				
+			}
+		);
+	}
+}
+```
+
+####Save data to firebase
+
+*dataService.ts*
+
+```javascript
+import { ... }
+import { Http } from '@angular/http';
+@Injectable()
+
+export class DataService {
+	private itemList: Game[] = [];
+
+	constructor(private http: Http){}
+	addItem(name: string){ this.itemList.push(new Game(name)); }
+	deleteItem(index: number){ this.itemList.splice(index, 1); }
+	getItems(){ return this.itemList.slice(); }
+	
+	// Save data to firebase
+	storeData(token: string) {
+		// url is available in firebase --> Database menu --> copy link
+		this.http.put('https://mygames-8c67c.firebaseio.com/');
+	}
+}
+```
+
+
 ###Old 
 *old CLI (to check)*
 ```
