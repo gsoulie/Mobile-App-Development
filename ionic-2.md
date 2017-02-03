@@ -3236,11 +3236,10 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 
 ###Install firebase
 
-*CLI*
 ```
 npm install --save firebase
 ```
-Next got to firebase and create a new app, then got to *Authentication* menu and add a new authentication method (for example Email/Password in our case). This, will generate a JSON object wich contain authentication string. Just copy the *apiKey* and *authDomain* strings and paste them in your *app.component.ts* like below :
+Next, got to firebase and create a new app, then got to *Authentication* menu and add a new authentication method (for example Email/Password in our case). This, will generate a JSON object wich contain authentication string. Just copy the *apiKey* and *authDomain* strings and paste them in your *app.component.ts* like below :
 
 *app.component.ts*
 
@@ -3302,6 +3301,87 @@ export class AuthService {
 
     getActiveUser(){
         return firebase.auth().currentUser;
+    }
+}
+
+```
+
+*form.html*
+
+```html
+...
+<ion-content>
+    <form #f="ngForm" (ngSubmit)="onSignin(f)">
+        <ion-list>
+            <ion-item>
+                <ion-label fixed>Mail</ion-label>
+                <ion-input type="email" ngModel name="email" required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label fixed>password</ion-label>
+                <ion-input type="password" ngModel name="password" required></ion-input>
+            </ion-item>
+        </ion-list>
+        <button ion-button block type="submit" [disabled]="!f.valid">Signin</button>
+    </form>
+</ion-content>
+```
+
+*form.ts*
+
+```javascript
+import { NgForm } from '@angular/forms";
+import { AuthService } from '../providers/auth
+import { LoadingController, AlertController } from 'ionic-angular';
+
+export class SigninPage {
+
+    constructor(private authService: AuthService, 
+		private loadingCtrl: LoadingController,
+		private alertCtrl: AlertController){}
+
+    onSignin(form: NgForm){
+        const loading = this.loadingCtrl.create({
+		content: ‘signin you up…’
+	});
+	loading.present();
+        
+	this.authService.signin(form.value.email, form.value.password)
+		.then(data => {
+			loading.dismiss();
+		})
+		.catch(error => {
+			loading.dismiss();
+			const alert = this.alertCtrl.create({
+			title: ‘signin failed’,
+			message: error.message
+			buttons: ['Ok']
+		});
+
+		alert.present();
+    	});
+    }
+    
+    onSignup(form: NgForm){
+        const loading = this.loadingCtrl.create({
+		content: ‘signup you up…’
+	});
+	loading.present();
+        
+	this.authService.signup(form.value.email, form.value.password)
+		.then(data => {
+			loading.dismiss();
+		})
+		.catch(error => {
+			loading.dismiss();
+			const alert = this.alertCtrl.create({
+			title: ‘signup failed’,
+			message: error.message
+			buttons: ['Ok']
+		});
+
+		alert.present();
+    	});
     }
 }
 
