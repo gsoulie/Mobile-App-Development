@@ -69,6 +69,7 @@
 * [Build for iOS](#build-for-ios)    
 * [Publishing App](#publishing-app)  
 * [Other modules](#other-modules)    
+* [Self working components](https://github.com/gsoulie/Ionic2-snippets)    
 
 #TODO
 
@@ -3438,7 +3439,7 @@ export class ListPage {
 				.subscribe(
 					() => console.log("success"),
 					error => {
-						this.handleError(error.message);
+						this.handleError(error.json().error);
 					}
 				);
 			}
@@ -3484,7 +3485,7 @@ export class ListPage {
 					},
 					error => 
 						loading.dismiss();
-						this.handleError(error.message);
+						this.handleError(error.json().error);
 					}
 				);
 			}
@@ -3546,7 +3547,13 @@ export class DataService {
 	
 		return this.http.put('https://mygames-8c67c.firebaseio.com/' + userId + '/game-list.json?auth=' + token)
 		.map((response: Response) => {
-			return  response.json();
+			const game: Game[] = response.json() ? response.json() : [];
+			for(let item of game) {
+				if(!item.hasOwnProperty('category')) {
+					item.category = [];
+				}
+			}
+			return  game;//response.json();
 		})
 		.do((data) => {
 			this.itemList = data 
