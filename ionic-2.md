@@ -665,6 +665,7 @@ The meaning of life: {{mySingleInt | addInt:2}}
 ###Other example Date format pipe
 
 *Pipe file* (app/pipe/datePipe.js)
+
 ```javascript
 import {Pipe, PipeTransform} from '@angular/core';
 
@@ -687,6 +688,7 @@ export class datePipe implements PipeTransform{
 ```
 
 *Controller file*
+
 ```javascript
 import {datePipe} from '../../pipe/datePipe';
 
@@ -702,6 +704,7 @@ export class HomePage {
 ```
 
 *View file*
+
 ```xml
 ...
 <ion-label>{{c.dateConso | datePipe}}</ion-label>
@@ -875,49 +878,30 @@ ionViewDidLeave(){
 #Config
 [Back to top](#ionic-2)  
 
-The Config lets you configure your entire app or specific platforms. You can set the tab placement, icon mode, animations, and more here.
+The Config lets you configure your entire app or specific platforms. You can set the tab placement, icon mode, animations, and more for each platform. 
 
 [link : Config official documentation](http://ionicframework.com/docs/v2/api/config/Config/)
 
-*sample code of Config*
-```javascript
-@Component({
-  template: `<ion-nav [root]="root"></ion-nav>`
-  config: {
-    backButtonText: 'Go Back',
-    iconMode: 'ios',
-    modalEnter: 'modal-slide-in',
-    modalLeave: 'modal-slide-out',
-    tabbarPlacement: 'bottom',
-    pageTransition: 'ios',
-  }
-})
-```
-
-To change the mode to always use Material Design (md).
+*app.module.ts*
 
 ```javascript
-@Component({
-  template: `<ion-nav [root]="root"></ion-nav>`
-  config: {
-    mode: 'md'
-  }
-})
-```
+import { IonicApp, IonicModule } from 'ionic-angular';
 
-You can also use the config object to define platform specific behaviour:
-
-```javascript
-@Component({
-  template: `<ion-nav [root]="root"></ion-nav>`
-  config: {
-    tabbarPlacement: 'bottom',
-    platforms: {
-     ios: {
-       tabbarPlacement: 'top',
-     }
-    }
-  }
+@NgModule({
+  declarations: [ MyApp ],
+  imports: [
+    IonicModule.forRoot(MyApp, {
+      backButtonText: 'Go Back',
+      iconMode: 'ios',
+      modalEnter: 'modal-slide-in',
+      modalLeave: 'modal-slide-out',
+      tabsPlacement: 'bottom',
+      pageTransition: 'ios'
+    }, {}
+  )],
+  bootstrap: [IonicApp],
+  entryComponents: [ MyApp ],
+  providers: []
 })
 ```
 
