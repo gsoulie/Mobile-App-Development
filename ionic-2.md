@@ -3438,14 +3438,12 @@ export class ListPage {
 				.subscribe(
 					() => console.log("success"),
 					error => {
-						console.log(error);
+						this.handleError(error.message);
 					}
 				);
 			}
 		);
 	}
-	
-	get
 }
 ```
 ###Fetch data
@@ -3455,7 +3453,7 @@ Consider that we have a *list* page which display data
 *list.ts*
 
 ```javascript
-
+import { LoadingController, AlertController } from 'ionic-angular';
 import { AuthService } from '../../providers/auth';
 import { DataService } from '../../providers/dataservice';
 import { Game } from "../../models/game";
@@ -3464,10 +3462,12 @@ import { Game } from "../../models/game";
 export class ListPage {
 	listItems: Game[];
 	
-	constructor(private dataService: DataService, private authService: AuthService...){}
+	constructor(private dataService: DataService, private authService: AuthService, private loadingCtrl: LoadingController, alertCtrl: AlertController...){}
 	
 	// save data to firebase
 	getItems(){
+		const loading = this.loadingCtrl.create({content: 'please wait...'});
+		loading.present();
 		// Get active user token
 		this.authService.getActiveUser().getToken()
 		.then(
@@ -3475,21 +3475,31 @@ export class ListPage {
 				this.dataService.fetchData(token)
 				.subscribe(
 					(list: Game[]) => {
+						loading.dismiss();
 						if(list){
 							this.listItems = list;
 						} else {
 							this.listItems = [];
 						}
 					},
-					error => {
-						console.log(error);
+					error => 
+						loading.dismiss();
+						this.handleError(error.message);
 					}
 				);
 			}
 		);
 	}
 	
-	get
+	// Handle errors
+	handleError(errorMessage: string) {
+		const alert = this.alertCtrl.create({
+			title: 'An error occured',
+			message: errorMessage,
+			buttons: ['Ok']
+		});
+		alert.present();
+	}
 }
 ```
 
