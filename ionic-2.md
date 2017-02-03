@@ -2164,7 +2164,33 @@ export class AboutPage {
 
 We can have a set of handlers for a variety of events including then the page is about to be entered, when the page is leaving, etc. Again, I would suggest reading the Official Docs.
 
-##Themes
+####Navigate using navPush directive
+
+*View file*
+
+```html
+...
+<ion-content>
+	<button ion-button [navPush]="userPage">User</button>
+</ion-content>
+```
+
+*Controller file*
+
+```javascript
+import { NavController } from "ionic-angular";
+import { UserPage } from "../user/user";
+...
+export class HomePage {
+	userPage = UserPage;
+	
+	constructor(public navCtrl: NavController) {}
+}
+```
+
+
+
+#Themes
 [Back to top](#ionic-2)  
 
 ###Statusbar
