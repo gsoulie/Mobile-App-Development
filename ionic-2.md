@@ -3240,7 +3240,75 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 ```
 npm install --save firebase
 ```
+Next got to firebase and create a new app, then got to *Authentication* menu and add a new authentication method (for example Email/Password in our case). This, will generate a JSON object wich contain authentication string. Just copy the *apiKey* and *authDomain* strings and paste them in your *app.component.ts* like below :
 
+*app.component.ts*
+
+```javascript
+...
+
+export class MyApp {
+
+	tabsPage = TabsPage;
+	signingPage = SigninPage;
+	signupPage = SignupPage;
+	@ViewChild('nav') nav: NavController; //if you are using a side menu
+	isAuthenticated = false;
+
+	constructor(...) {
+		firebase.initializeApp({apiKey: "<YOUR API KEY HERE>",authDomain: "<YOUR AUTH DOMAIN HERE>"});
+
+		firebase.auth().onAuthStateChanged(user => {
+			if(user) {
+				this.isAuthenticated = true;
+				this.rootPage = TabsPage;	// redirecting on the good page
+			} else {
+				this.isAuthenticated = false;
+				this.rootPage = SiningPage;	// redirecting on the good page
+			}
+		});
+	}
+
+	// logout function
+	onLogout(){
+		this.authService.logOut();
+		this.menuCtrl.close();
+		this.nav.setRoot(SigninPage);
+	}
+}
+
+```
+
+Next, you need to create a new provider for firebase interaction. (Do not forget to add your new service to the *app.module.ts* in the *provider* section
+
+*auth.ts*
+
+```javascript
+import firebase from 'firebase';
+...
+
+export class AuthService {
+    signup(email: string, password: string){
+        return firebase.auth().createUserWithEmailAndPassword(email, password);
+    }
+
+    signin(email: string, password: string){
+        return firebase.auth().signInWithEmailAndPassword(email, password);
+    }
+
+    logout() {
+	    firebase.auth().signOut();
+    }
+
+    getActiveUser(){
+        return firebase.auth().currentUser;
+    }
+}
+
+```
+
+
+###Old 
 *old CLI (to check)*
 ```
 $ npm install angularfire2 --save-dev
