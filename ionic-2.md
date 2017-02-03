@@ -61,8 +61,7 @@
 * [Using image](#using-image)    
 * [Backends](#backends)    
 	* [Strongloop](#strongloop)     
-	* [Firebase](#firebase)    
-* [Authentication](#authentication)    
+	* [Firebase](#firebase)      
 * [Internationalization](#internationalization)  
 * [Splash screen and appicon](#splash-screen-and-appicon)  
 * [Beta testing](#beta-testing)    
@@ -3239,6 +3238,7 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 ```
 npm install --save firebase
 ```
+
 Next, got to firebase and create a new app, then got to *Authentication* menu and add a new authentication method (for example Email/Password in our case). This, will generate a JSON object wich contain authentication string. Just copy the *apiKey* and *authDomain* strings and paste them in your *app.component.ts* like below :
 
 *app.component.ts*
@@ -3278,6 +3278,8 @@ export class MyApp {
 
 ```
 
+###Authentication with firebase
+
 Next, you need to create a new provider for firebase interaction. (Do not forget to add your new service to the *app.module.ts* in the *provider* section
 
 *auth.ts*
@@ -3305,8 +3307,9 @@ export class AuthService {
 }
 
 ```
+Create signin and signup forms
 
-*form.html*
+*signinForm.html* same as *signupForm.html*
 
 ```html
 ...
@@ -3323,11 +3326,11 @@ export class AuthService {
             </ion-item>
         </ion-list>
         <button ion-button block type="submit" [disabled]="!f.valid">Signin</button>
-    </form>
+    </form>  
 </ion-content>
 ```
 
-*form.ts*
+*signinForm.ts*
 
 ```javascript
 import { NgForm } from '@angular/forms";
@@ -3340,6 +3343,7 @@ export class SigninPage {
 		private loadingCtrl: LoadingController,
 		private alertCtrl: AlertController){}
 
+    // Signing method
     onSignin(form: NgForm){
         const loading = this.loadingCtrl.create({
 		content: ‘signin you up…’
@@ -3361,7 +3365,24 @@ export class SigninPage {
 		alert.present();
     	});
     }
+}
+
+```
+
+*signupForm.ts*
+
+```javascript
+import { NgForm } from '@angular/forms";
+import { AuthService } from '../providers/auth
+import { LoadingController, AlertController } from 'ionic-angular';
+
+export class SigninPage {
+
+    constructor(private authService: AuthService, 
+		private loadingCtrl: LoadingController,
+		private alertCtrl: AlertController){}
     
+    // Signup method
     onSignup(form: NgForm){
         const loading = this.loadingCtrl.create({
 		content: ‘signup you up…’
@@ -3386,7 +3407,6 @@ export class SigninPage {
 }
 
 ```
-
 
 ###Old 
 *old CLI (to check)*
