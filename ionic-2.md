@@ -3409,9 +3409,13 @@ export class SigninPage {
 ```
 
 
-###Retrieve Firebase token
+###Manipulate data with firebase
 
-####Get Firebase token
+####Save data
+
+Note : Firebase is using JWT
+
+Consider we have a *detail* page which permit to create new items.
 
 *detail.ts*
 
@@ -3440,10 +3444,58 @@ export class ListPage {
 			}
 		);
 	}
+	
+	get
+}
+```
+###Fetch data
+
+Consider that we have a *list* page which display data
+
+*list.ts*
+
+```javascript
+
+import { AuthService } from '../../providers/auth';
+import { DataService } from '../../providers/dataservice';
+import { Game } from "../../models/game";
+...
+
+export class ListPage {
+	listItems: Game[];
+	
+	constructor(private dataService: DataService, private authService: AuthService...){}
+	
+	// save data to firebase
+	getItems(){
+		// Get active user token
+		this.authService.getActiveUser().getToken()
+		.then(
+			(token: string) => {
+				this.dataService.fetchData(token)
+				.subscribe(
+					(list: Game[]) => {
+						if(list){
+							this.listItems = list;
+						} else {
+							this.listItems = [];
+						}
+					},
+					error => {
+						console.log(error);
+					}
+				);
+			}
+		);
+	}
+	
+	get
 }
 ```
 
-####Save data to firebase
+###Database provider
+
+Create a provider wich doing all database operation
 
 *dataService.ts*
 
@@ -3452,6 +3504,7 @@ import { ... }
 import { Http, Response } from '@angular/http';
 import { AuthService } from './auth';
 import 'rxjs/Rx';
+import { Game } from '../models/game';
 
 @Injectable()
 export class DataService {
@@ -3475,8 +3528,31 @@ export class DataService {
 			return response.json();
 		});
 	}
+	
+	// Fetching firebase data
+	fetchData(token: string){
+		// get the user Id 		
+		const userId = this.authService.getActiveUser().uid;
+	
+		return this.http.put('https://mygames-8c67c.firebaseio.com/' + userId + '/game-list.json?auth=' + token)
+		.map((response: Response) => {
+			return  response.json();
+		})
+		.do((data) => {
+			this.itemList = data 
+		});
+	}
 }
 ```
+
+*model game.ts*
+
+```javascript
+export class Game {
+	constructor(public name: string, .....) {}
+}
+```
+
 
 #Authentication
 [Back to top](#ionic-2)  
