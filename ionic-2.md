@@ -3333,8 +3333,8 @@ Create signin and signup forms
 *signinForm.ts*
 
 ```javascript
-import { NgForm } from '@angular/forms";
-import { AuthService } from '../providers/auth
+import { NgForm } from '@angular/forms';
+import { AuthService } from '../providers/auth';
 import { LoadingController, AlertController } from 'ionic-angular';
 
 export class SigninPage {
@@ -3372,8 +3372,8 @@ export class SigninPage {
 *signupForm.ts*
 
 ```javascript
-import { NgForm } from '@angular/forms";
-import { AuthService } from '../providers/auth
+import { NgForm } from '@angular/forms';
+import { AuthService } from '../providers/auth';
 import { LoadingController, AlertController } from 'ionic-angular';
 
 export class SigninPage {
