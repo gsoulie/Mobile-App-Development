@@ -2273,6 +2273,29 @@ Lastly you make sure this scss is being compiled with your **app.core.scss** by 
 @import "../pages/masters/masters";
 ```
 
+###Override variable.scss
+
+In the *variable.scss* file, you can define a lot of variables to create your custom style (see more on [ionic 2 overriding variables](#https://ionicframework.com/docs/v2/theming/overriding-ionic-variables/). Here is an example of variable.scss overriding
+
+*variable.scss*
+
+```javascript
+...
+// Shared variables
+$myOwnVariable: <value>;
+$content-padding: 5px;
+
+// Colors variables
+$color: {
+	primary: ...
+	secondary: ...
+	...
+}
+
+```
+
+*note :* New colors variables must be called with <Button color="myNewColor">
+
 #UI Components
 
 ##Modal
