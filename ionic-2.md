@@ -60,7 +60,7 @@
 * [Sass](#sass)    	
 * [Known issues](#known-issues)    
 * [Using image](#using-image)    
-* [Forms](#firebase)    
+* [Forms](#forms)    
 * [Backends](#backends)    
 	* [Strongloop](#strongloop)     
 	* [Firebase](#firebase)      
@@ -1419,6 +1419,110 @@ let formatted = moment().format('dddd D MMMM YYYY'); // will display "jeudi 2 ju
 [Back to top](#ionic-2)  
 
 [link : google map geolocation](http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
+
+###Angular2 Google maps method
+
+First install angular2-google-maps package :
+
+```
+npm install --save angular2-google-maps
+```
+
+Then insert the *sebm-google-map* module to your view file
+
+*View file (SetLocationPage.html)*
+
+```xml
+<ion-content>
+	<sebm-google-map [latitude]="location.lat" [longitude]="location.lng" [zoom]="16">
+	
+	</sebm-google-map>
+</ion-content>
+```
+Next, add the module dependency in your *app.module.ts* file
+
+Note that you first need to get a google map Api key 
+
+[see angular-maps setup](https://angular-maps.com/docs/getting-started.html)    
+[Get your GMAP API Key](https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key)    
+
+**GMAP API KEY summary**
+
+1 - [Go to](https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key)    
+2 - Click on *GET A KEY* button 
+3 - Select your firebase project in the list or create a new
+4 - Copy the generated key
+5 - Insert the key in your AgmCoreModule configuration (like below)
+
+*app.module.ts*
+
+```javascript
+...
+import { AgmCoreModule } from "angular2-google-maps/core";
+
+@NgModule({
+	declarations : [...],
+	imports: [
+		...,
+		AgmCoreModule.forRoot({
+			apiKey: 'qsodkpazd51a6dz5a65z1eq24drsd5sd'
+		})
+	],
+	...
+})
+
+```
+
+Next you must specify a height in your scss file else your view will be empty :
+
+*Style file (SetLocationPage.scss)*
+```css
+my-page {
+	sebm-google-map {
+		height: 250px;
+	}
+}
+```
+
+*Controller file (SetLocationPage.ts)*
+
+```javascript
+import { NavParams } from "ionic-angular";
+
+export class LocationPage {
+	location: any = {};
+	constructor(private navParams: NavParams) { 
+		this.location = this.navParams.get("location"); 
+	}
+	
+}
+```
+
+Finally, call your Location page :
+
+*Controller file (addPlace.ts)*
+
+```javascript
+
+import { SetLocationPage } from "../set-location/set-location";
+
+export class LocationPage {
+	location: any= {
+	    lat: 40.7624324,
+	    lng: -73.9759827
+	};
+	constructor(private modalCtrl: ModalController) {}
+	
+	onOpenMap() {
+		const modal = this.modalCtrl.create(SetLocationPage, {location: this.location});
+		modal.present();
+	}
+}
+```
+
+
+
+###Cordova plugin geolocation method
 
 *Adding Google Map API depency in index.html*
 
