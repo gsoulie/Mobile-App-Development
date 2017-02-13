@@ -42,6 +42,7 @@
 	* [Page event](#page-event)    
 	* [Event propagation](#event-propagation)    
 * [UI Components](#ui-components)    
+	* [modal](#modal)    
 	* [comboBox](#combobox)    
 	* [ion-list](#ion-list)  
 	* [searchbar](#searchbar)    
@@ -2239,6 +2240,65 @@ Lastly you make sure this scss is being compiled with your **app.core.scss** by 
 ```
 
 #UI Components
+
+##Modal
+[Back to top](#ionic-2)  
+
+Consider that we have a page (UserListPage for example) with a button wich open a modal based on UserPage controller.
+
+*UserListPage Controller file*
+
+```javascript
+import { ModalController } from 'ionic/angular';
+...
+users: User[];
+
+constructor(private modalCtrl: ModalController){}
+
+openMyModal(user: User){
+	const modal = this.modalCtrl.create(UserPage, username);
+	modal.present();
+	modal.onDidDismiss((remove: boolean) => {
+		//call the dismiss method of the UserPage controller
+		if(remove) {
+			// if remove = true then remove user from database
+			this.myService.removeUser(user);
+
+			// refresh user list : 2 methods
+			// 1 - reload all the list
+			this.users = this.myService.getAllUsers();
+			
+			// 2 - remove only deleted user from users array
+			const position = this.users.findIndex((userEl: User) => {
+				return userEl.id == user.id;
+			});
+			this.users.splice(position, 1);
+			
+		}
+	});
+}
+...
+```
+
+*UserPage controller file*
+
+```javascript
+...
+constructor(private viewCtrl: ViewController, private navParams: NavParams){}
+
+ionViewDidLoad(){
+	...
+}
+
+/**
+ * @param{Boolean} remove : if true, remove the user from database
+ */
+onClose(remove = false){
+	this.viewCtrl.dismiss(remove);	
+}
+...
+```
+
 
 ##ComboBox
 [Back to top](#ionic-2)  
