@@ -1448,11 +1448,11 @@ Note that you first need to get a google map Api key
 
 **GMAP API KEY summary**
 
-1 - [Go to](https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key)    
-2 - Click on *GET A KEY* button 
-3 - Select your firebase project in the list or create a new
-4 - Copy the generated key
-5 - Insert the key in your AgmCoreModule configuration (like below)
+1 - [Get your GMAP API Key here](https://developers.google.com/maps/documentation/javascript/get-api-key?hl=en#key)    
+2 - Click on the *GET A KEY* button     
+3 - Select your firebase project in the list or create a new    
+4 - Copy the generated key    
+5 - Insert the key in your AgmCoreModule configuration (like below)    
 
 *app.module.ts*
 
