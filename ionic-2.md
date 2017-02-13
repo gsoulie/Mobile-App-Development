@@ -60,6 +60,7 @@
 * [Sass](#sass)    	
 * [Known issues](#known-issues)    
 * [Using image](#using-image)    
+* [Forms](#firebase)    
 * [Backends](#backends)    
 	* [Strongloop](#strongloop)     
 	* [Firebase](#firebase)      
