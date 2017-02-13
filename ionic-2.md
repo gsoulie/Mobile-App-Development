@@ -2294,7 +2294,7 @@ $color: {
 
 ```
 
-*note :* New colors variables must be called with <Button color="myNewColor">
+*note* : New colors variables must be called with ```<Button color="myNewColor">```
 
 #UI Components
 
