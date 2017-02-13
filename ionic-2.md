@@ -1218,6 +1218,40 @@ let uuid = UUID.UUID();
 ##Show hide DOM element
 [Back to top](#ionic-2) 
 
+####Solution 1
+
+Consider that we have a card with a quote wich can be add/remove to favorites. We only show one of the two button : "add to favorites" when the quote is not in the favorites list, and "remove from favorites" when the quote is already in the favorites list. To do this, we will use a *ngIf* directive.
+
+*View file*
+
+```xml
+...
+<button ion-button (click)="addToFavorites" *ngIf="!isFavorite(quote)">Add to favorite</button>
+<button ion-button (click)="removeFromFavorites" *ngIf="isFavorite(quote)">Remove from favorite</button>
+...
+```
+
+*Controller file*
+```javascript
+export class HomePage {
+	...
+	isFavorite(quote: Quote){
+		return this.myService.isQuoteFavorite(quote);
+	}
+	
+	// Add the quote to the favorites list
+	addToFavorites(quote: Quote){ ... }
+
+	// remove the quote from the favorites list
+	removeFromFavorites(quote: Quote){ ... }
+
+}
+```
+
+####Solution 2
+
+The next solution is to use the *hidden* property of an element
+
 ```xml
 <button ion-button (click)="removeNote()" [hidden]="creationMode" icon-only>
 	<ion-icon name="trash"></ion-icon>
