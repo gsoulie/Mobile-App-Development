@@ -228,67 +228,6 @@ Gulp is a packet manager for JS libraries. You can use it to add libraries to yo
 $ sudo npm install -g bower
 ```
 
-##Work with Atom
-[Back to top](#ionic-2) 
-
-[link : best Atom features plugins](https://scotch.io/bar-talk/best-of-atom-features-plugins-acting-like-sublime-text?utm_content=buffer8e88d&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer)     
-
-###1 - Install Atom
-
-[link : Atom website](https://atom.io/)
-
-###2 - Install shell commands
-
-Open your Atom editor and doing
-
-*Main menu -> Install shell command*
-
-It allows you to use ```$ apm``` command to install Atom packages
-
-###3 - Configure Atom auto-updating
-
-```
-$ apm install auto-update-packages
-```
-
-Next restart Atom
-
-###4 - Useful packages
-
-```
-$ apm install atom-typescript
-```
-
-```
-$ apm install ionic-atom
-```
-
-```
-$ apm install atom-beautify
-```
-
-[link : TODO-show configuration](https://atom.io/packages/todo-show)
-```
-$ apm install todo-show
-```
-
-[link : Minimap configuration](https://atom.io/packages/minimap)
-```
-$ apm install minimap
-```
-
-[link : Linter JSHint](https://atom.io/packages/linter-jshint)
-```
-$ apm install linter-jshint
-```
-
-[link : Linter CSS](https://atom.io/packages/linter-csslint)
-```
-$ apm install linter-csslint
-```
-
-[link : JSDoc](https://atom.io/packages/jsdoc)
-
 ##Visual Studio Code
 [Back to top](#ionic-2) 
 
