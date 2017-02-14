@@ -1625,7 +1625,9 @@ page-add-place {
 ```
 
 
-###Cordova plugin geolocation method
+###Using Native Geolocation cordova plugin
+
+[See ionic2 geolocation documentation here](https://ionicframework.com/docs/v2/native/geolocation/)    
 
 *Adding Google Map API depency in index.html*
 
