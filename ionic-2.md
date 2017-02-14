@@ -3529,7 +3529,8 @@ Here is a basic form sample
 - ```type="button"``` prevent the form submition when you click on the button 
 - ```type="submit"``` trigger the form submition
 
-*Controller file (home.ts)*
+
+*Controller file (addPlace.ts)*
 
 ```javascript
 import { NgForm } from "@angular/forms";
@@ -3548,15 +3549,10 @@ export class HomePage {
 	location: {lat: 40.564654, lng: -73.654754};
 	
 	constructor() {public navCtrl: NavController, private placesService: PlacesService}
+		
+	onLocate(...) { this.location = ... }	// See geolocation section for detail
 	
-	// Load data on page opening
-	ionViewWillEnter() {
-		this.places = this.placesService.loadPlaces();
-	}
-	
-	onLocate(...) { this.location = ... }
-	
-	onTakePhoto(...) { this.imageUrl = "..."; }
+	onTakePhoto(...) { this.imageUrl = "..."; }	// See Camera section for detail
 	
 	onSubmit(form: NgForm) {
 		// submit data
@@ -3565,6 +3561,30 @@ export class HomePage {
 		
 		this.location = {lat: 40.564654, lng: -73.654754} // initial location
 		this.imageUrl = "";
+	}
+}
+```
+
+*Controller file (home.ts)*
+
+```javascript
+import { AddPlacePage } from "../add-place/add-place";
+import { Place } from "../../models/place";
+import { PlacesService } from "../../providers/places";
+
+@Component({
+	selector: "page-home",
+	templateUrl: "home.html"
+})
+export class HomePage {
+	addPlacePage = AddPlacePage;
+	places: Place [] = [];
+		
+	constructor() {public navCtrl: NavController, private placesService: PlacesService}
+	
+	// Load data on page opening
+	ionViewWillEnter() {
+		this.places = this.placesService.loadPlaces();
 	}
 }
 ```
