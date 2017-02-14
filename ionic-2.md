@@ -1423,6 +1423,19 @@ export class HomePage {
             err => {console.log(err);}
         );
     }
+    
+    removeFile(place: Place){
+	const currentName = place.imageUrl.replace(/^.*[\\\/]/, '');	// extract the image name
+	File.removeFile(cordova.file.dataDirectory, currentName)
+	.then(
+		() => console.log("removed");
+	)
+	.catch(
+		() => {
+			console.log("error");
+		}
+	);
+    }
 }
 ```
 
@@ -1718,6 +1731,98 @@ export class LocationPage {
 
 ##SQLite database
 [Back to top](#ionic-2)  
+
+###Storage method
+
+Storage is an easy way to store key/value pairs and JSON objects.
+
+[documentation here](https://ionicframework.com/docs/v2/storage/)    
+
+*Service file*
+
+```javascript
+import { Storage } from "@ionic/storage";
+import { Injectable } from "@angular/core";
+import { Place } from "../models/place";
+import { Location } from "../models/location";
+
+@Injectable()   // IMPORTANT
+export class PlacesServices {
+    private places: Place[] = [];
+
+    constructor(private storage: Storage) {}
+
+    addPlace(title: string, description: string, location: Location, imageUrl: string){
+        const place = new Place(title, description, location, imageUrl);
+        this.places.push(place);    // local storage
+
+        this.storage.set('places', this.places)    // db storage
+        .then(/* nothing specially */)
+        .catch(
+            err => {
+                this.places.splice(this.places.indexOf(place), 1);
+            }
+        );
+    }
+
+    // Fetch data from DB
+    fetchPlaces() {
+        this.storage.get('places')
+        .then(
+            (places: Place[]) => {
+                this.places = places != null ? places : []; // be careful to do not return null 
+            }
+        )
+        .catch(err => console.log(err);)
+    }
+
+    loadPlaces(){
+        return this.places.slice(); // Important : slice() return a copy of the object
+    }
+
+    deletePlaces(index: number){
+        this.places.splice(index, 1);
+	
+	this.storage.set('places', this.places) // Update de data in the storage with the new places array without deleted element
+	.then(
+		() => {
+			// doing some stuff
+		}
+	)
+	.catch(
+		err => console.log(err);
+	);
+    }
+}
+```
+
+Next, call your fetch method
+
+*Controller file (home.ts)*
+
+**note** : add implementation of *OnInit*
+
+```javascript
+import { NgForm } from "@angular/forms";
+import { AddPlacePage } from "../add-place/add-place";
+import { Place } from "../../models/place";
+import { PlacesService } from "../../providers/places";
+
+@Component({
+    selector: "page-home",
+    templateUrl: "home.html"
+})
+export class HomePage implements OnInit{
+	addPlacePage = AddPlacePage;
+	places: Place [] = [];
+   
+	constructor() {public navCtrl: NavController, private placesService: PlacesService}
+
+	ngOnInit() {
+		this.placesService.fetchPlaces()
+	}
+}
+```
 
 [link : Using Sqlite storage tutorial](https://devdactic.com/ionic-2-sqlstorage/)
 
