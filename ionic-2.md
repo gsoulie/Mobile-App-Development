@@ -7,7 +7,6 @@
 ##### Table of Contents  
 * [Prerequisites](#prerequisites)    
 	* [Start with ionic](#start-with-ionic)  
-	* [Work with Atom editor](#work-with-atom)  
 	* [Visual Studio Code](#visual-studio-code)    
 * [Concepts](#concepts)    
 	* [Angular 2](#angular-2)  
@@ -288,52 +287,6 @@ $ apm install linter-csslint
 ```
 
 [link : JSDoc](https://atom.io/packages/jsdoc)
-```
-$ apm install jsdoc
-```
-
-[link : Docblockr](https://atom.io/packages/docblockr)
-```
-$ apm install docblockr
-```
-
-[link : merge-conflicts](https://atom.io/packages/merge-conflicts)    
-
-[link : color-picker](https://atom.io/packages/color-picker)    
-
-[link : emmet](https://atom.io/packages/emmet)    
-
-
-
-####Activate auto-compilation
-
-[tsconfig.json configuration](https://github.com/TypeStrong/atom-typescript/blob/master/docs/tsconfig.md)    
-[Atom typescript plugin documentation](https://github.com/TypeStrong/atom-typescript)    
-
-Create a **tsconfig.json** file in your project root with :
-
-```javascript
-{
-	"compileOnSave": false
-}
-```
-
-####Shortcuts
-
-```F6``` For compilation
-
-###Customize colors
-
-To customize Atom editor colors, open Atom preference and on the Settings page, "Open Config Folder". Then, open **style.less** file and add the following code :
-
-```javascript
-atom-text-editor::shadow {
-  .comment {
-    color: #d1cd96;
-  }
-}
-```
-
 
 ##Visual Studio Code
 [Back to top](#ionic-2) 
