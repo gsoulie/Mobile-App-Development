@@ -1955,7 +1955,7 @@ Implement code
                     <button ion-button block outline type="button" (click)="onTakePhoto()">Take a photo</button>
                 </ion-col>
             </ion-row>
-            <ion-row>
+            <ion-row *ngIf="imageUrl != ''">
                 <ion-col>
 		        <img [src]="imageUrl"></img>
                 </ion-col>
@@ -3472,7 +3472,7 @@ let item = {name:"my item", image:"./assets/my_image.png"}
 
 Here is a basic form sample
 
-*View file*
+*View file (addPlace.html)*
 
 ```xml
 <ion-content>
@@ -3529,22 +3529,83 @@ Here is a basic form sample
 - ```type="button"``` prevent the form submition when you click on the button 
 - ```type="submit"``` trigger the form submition
 
-*Controller file*
+*Controller file (home.ts)*
 
 ```javascript
 import { NgForm } from "@angular/forms";
+import { AddPlacePage } from "../add-place/add-place";
+import { Place } from "../../models/place";
+import { PlacesService } from "../../providers/places";
 
 @Component({
-	selector...
-	templateUrl: ...
+	selector: "page-home",
+	templateUrl: "home.html"
 })
-export class AddPlacePage {
+export class HomePage {
+	addPlacePage = AddPlacePage;
+	places: Place [] = [];
+	imageUrl = "";
+	location: {lat: 40.564654, lng: -73.654754};
+	
+	constructor() {public navCtrl: NavController, private placesService: PlacesService}
+	
+	// Load data on page opening
+	ionViewWillEnter() {
+		this.places = this.placesService.loadPlaces();
+	}
+	
+	onLocate(...) { this.location = ... }
+	
+	onTakePhoto(...) { this.imageUrl = "..."; }
+	
 	onSubmit(form: NgForm) {
+		// submit data
+		this.placesService.addPlace(form.value.title, form.value.description, this.location, this.imageUrl);
+		form.reset();
 		
+		this.location = {lat: 40.564654, lng: -73.654754} // initial location
+		this.imageUrl = "";
 	}
 }
 ```
 
+Now to store data, we are going to create a new service (**don't forget to add it in the app.module.ts file in provider section**)
+
+*Service file (places.ts)*
+
+```javascript
+import { Place } from "../models/place";
+import { Location } from "../models/location";
+
+export class PlacesServices {
+	private places: Place[] = [];
+	
+	addPlace(title: string, description: string, location: Location, imageUrl: string){
+		const place = new Place(title, description, location, imageUrl);
+		this.places.push(place);
+	}
+	
+	loadPlaces(){
+		return this.places.slice();	// Important : slice() return a copy of the object
+	}
+}
+```
+
+Displaying data in the *home* page
+
+*View file (home.html)*
+
+```xml
+<ion-content>
+	<ion-card *ngFor="let place of places" (click)="openPlace(place)">
+		<img [src]="place.imageUrl"></img>
+		<ion-card-content>
+			<ion-card-title>{{place.title}}</ion-card-title>
+			<p>{{place.description}}</p>
+		</ion-card-content>
+	</ion-card>
+</ion-content>
+```
 
 #Backends
 ##Strongloop
