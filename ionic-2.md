@@ -3898,7 +3898,9 @@ export class DataService {
 	constructor(private http: Http, private authService: AuthService){}
 	addItem(name: string){ this.itemList.push(new Game(name)); }
 	deleteItem(index: number){ this.itemList.splice(index, 1); }
-	getItems(){ return this.itemList.slice(); }
+	getItems(){ 
+		return this.itemList.slice(); // Important : slice() return a copy of the object
+	}
 	
 	// Save data to firebase
 	storeData(token: string) {
