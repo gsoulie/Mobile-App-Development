@@ -1420,9 +1420,11 @@ let formatted = moment().format('dddd D MMMM YYYY'); // will display "jeudi 2 ju
 
 [link : google map geolocation](http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
 
-###Angular2 Google maps method
+###Angular2 Google maps integration
 
-First install angular2-google-maps package :
+First we are going to see how to add a map on our application and add / display markers
+
+So, first install angular2-google-maps package :
 
 ```
 npm install --save angular2-google-maps
@@ -1551,6 +1553,11 @@ export class LocationPage {
 			}
 		});
 	}
+	
+	// Locate the current position 
+	onLocate() {
+		
+	}
 }
 ```
 
@@ -1624,170 +1631,75 @@ page-add-place {
 }
 ```
 
+###Using native geolocation plugin
 
-###Using Native Geolocation cordova plugin
+Now we have integrated a map on our application, we will use the native geolocation plugin to locate our current position and display it on the previous map.
 
-[See ionic2 geolocation documentation here](https://ionicframework.com/docs/v2/native/geolocation/)    
-
-*Adding Google Map API depency in index.html*
-
-```html
-<script src="http://maps.google.com/maps/api/js"></script>
-<script src="cordova.js"></script>
-<script src="build/js/app.bundle.js"></script>
-```
-
-**Important** During production deployment, you will have to create Google MAP API key and put it in parameter
-
-**cordova plugin installation**
+So, first install cordova plugin :
 
 ```
 $ ionic plugin add cordova-plugin-geolocation
 ```
 
-*Import the new page in app.core.scss*
+Then implement the *onLocate* function and add the import of *Geolocation* plugin. Note that we also add loading and toast components for more cool stuff.
+
+*Controller file (addPlace.ts)*
 
 ```javascript
-@import "pages/map/map";
-```
 
-*Loading Map (map.html)*
+import { SetLocationPage } from "../set-location/set-location";
+import { ModalController, LoadingController, ToastController } from "ionic-angular";
+import { Geolocation } from "ionic-native";
 
-```xml
-<ion-header>
-	<ion-navbar>
-	  <ion-title>
-	    Map
-	  </ion-title>
-	  <ion-buttons end>
-	    <button ion-button (click)="addMarker()" icon-only><ion-icon name="add"></ion-icon>Add Marker</button>
-	  </ion-buttons>  
-	</ion-navbar>
-</ion-header> 
-<ion-content>
-  <div id="map"></div>  
-</ion-content>
-```
-
-*Next, specify ion-navbar configuration in app.js*
-
-```javascript
-@Component({
-  template: '<ion-nav [root]="root"></ion-nav>',
-})
-
-export class AppCmp {
-  constructor(platform: Platform){
-    ...
-    this.root = MapPage;  
-  }
-}
-
-```
-
-*Updating map.js*
-
-```javascript
-import {Component, Geolocation} from 'ionic/ionic';
- 
-@Component({
-  templateUrl: 'build/pages/map/map.html',
-})
-export class MapPage {
-  constructor() {
-    this.map = null;
-    this.loadMap();
-  }
- 
-  loadMap(){
- 
-    let latLng = new google.maps.LatLng(-34.9290, 138.6010);
- 
-    let mapOptions = {
-      center: latLng,
-      zoom: 15,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
- 
-    this.map = new google.maps.Map(document.getElementById("map"), mapOptions);
-  }
+export class LocationPage {
+	// Note : can be an object of class "Location" containing lat and lng attributes
+	location: any= {
+	    lat: 40.7624324,
+	    lng: -73.9759827
+	};
+	locationIsSet = false;
+	
+	constructor(private modalCtrl: ModalController, 
+	private loadingCtrl: LoadingController, private toastCtrl: ToastController) {}
+	
+	// open map modal which permit to choose a position and get back chosen location
+	onOpenMap() {
+		...
+	}
+	
+	// Locate the current position with native geolocation plugin
+	onLocate() {
+		// Initialize loader component
+		const loader = this.loadingCtrl.create({
+			content: 'Getting your location...'
+		});
+		loader.present();
+		
+		// Get the current position
+		Geolocation.getCurrentPosition()
+		.then(
+			location => {
+				loader.dismiss();
+				this.location.lat = location.coords.latitude;
+				this.location.lng = location.coords.longitude;
+				this.locationIsSet = true;
+			}
+		)
+		.catch(
+			error => {
+				console.log(error);
+				loader.dismiss();
+				const toast = this.toastCtrl.create({
+					message: 'Could not get location, please pick it manually',
+					duration: 2500
+				});
+				toast.present();
+			}
+		); 
+	}
 }
 ```
 
-*Styling page (very important) (map.scss)*
-
-```css
-.scroll {
-    height: 100%;
-}
- 
-#map {
-    width: 100%;
-    height: 100%;
-}
-```
-
-*Updating loadMap function*
-
-```javascript
-loadMap(){
- 
-  let options = {timeout: 10000, enableHighAccuracy: true};
- 
-  navigator.geolocation.getCurrentPosition(
- 
-      (position) => {
-          let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
- 
-          let mapOptions = {
-              center: latLng,
-              zoom: 15,
-              mapTypeId: google.maps.MapTypeId.ROADMAP
-          }
- 
-          this.map = new google.maps.Map(document.getElementById("map"), mapOptions);
-      },
- 
-      (error) => {
-          console.log(error);
-      }, options
-  );
-}
-```
-
-*Adding marker function (map.js)*
-
-```javascript
-addMarker(){
- 
-  let marker = new google.maps.Marker({
-    map: this.map,
-    animation: google.maps.Animation.DROP,
-    position: this.map.getCenter()
-  });
- 
-  let content = "<h4>Information!</h4>";          
- 
-  this.addInfoWindow(marker, content);
- 
-}
-```
-
-*Adding addInfoWindow function (map.js)*
-
-```javascript
-addInfoWindow(marker, content){
- 
-  let infoWindow = new google.maps.InfoWindow({
-    content: content
-  });
- 
-  google.maps.event.addListener(marker, 'click', function(){
-    infoWindow.open(this.map, marker);
-  });
- 
-}
-```
 
 #Database
 
