@@ -1434,9 +1434,14 @@ Then insert the *sebm-google-map* module to your view file
 
 ```xml
 <ion-content>
-	<sebm-google-map [latitude]="location.lat" [longitude]="location.lng" [zoom]="16">
-	
+	<sebm-google-map 
+	[latitude]="location.lat" 
+	[longitude]="location.lng" 
+	[zoom]="16"
+	(mapClick)="onSetMarker($event)">
+		<sebm-google-map-marker [latitude]="marker.lat" [longitude]="marker.lng" *ngIf="marker"></sebm-google-map-marker>
 	</sebm-google-map>
+	<button ion-button block (click)="onConfirm()" [disabled]="!marker">Confirm</button>
 </ion-content>
 ```
 Next, add the module dependency in your *app.module.ts* file
@@ -1477,7 +1482,7 @@ Next you must specify a height in your scss file else your view will be empty :
 
 *Style file (SetLocationPage.scss)*
 ```css
-my-page {
+page-set-location-page {
 	sebm-google-map {
 		height: 250px;
 	}
@@ -1487,12 +1492,25 @@ my-page {
 *Controller file (SetLocationPage.ts)*
 
 ```javascript
-import { NavParams } from "ionic-angular";
+import { NavParams, ViewController } from "ionic-angular";
 
 export class LocationPage {
-	location: any = {};
-	constructor(private navParams: NavParams) { 
+	location: any = {};	// Note : can be an object of class "Location" containing lat and lng attributes
+	marker: any = {};
+	
+	constructor(private navParams: NavParams, private viewCtrl: ViewController) { 
 		this.location = this.navParams.get("location"); 
+	}
+
+	// Add marker on the map
+	onSetMarker(event: any){
+		this.marker = {lat: event.coords.lat, lng: event.coords.lng};
+	}
+	
+	// Confirm the location and pass the chosen location back to the page
+	onConfirm(){
+		// Close the modal with the chosen location
+		this.viewCtrl.dismiss({location: this.marker});
 	}
 	
 }
@@ -1507,19 +1525,97 @@ Finally, call your Location page :
 import { SetLocationPage } from "../set-location/set-location";
 
 export class LocationPage {
+	// Note : can be an object of class "Location" containing lat and lng attributes
 	location: any= {
 	    lat: 40.7624324,
 	    lng: -73.9759827
 	};
+	locationIsSet = false;
+	
 	constructor(private modalCtrl: ModalController) {}
 	
 	onOpenMap() {
 		const modal = this.modalCtrl.create(SetLocationPage, {location: this.location});
 		modal.present();
+		modal.onDismiss(data => {
+			if(data){
+				this.location = data.location;
+				this.locationIsSet = true;
+			}
+		});
 	}
 }
 ```
 
+
+*View file (addPlace.html)*
+
+```xml
+<ion-content>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <ion-list>
+            <ion-item>
+                <ion-label fixed>Title</ion-label>
+                <ion-input type="text" name="title" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Description</ion-label>
+                <ion-textarea name="description" ngModel required></ion-textarea>
+            </ion-item>
+        </ion-list>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <button ion-button block outline type="button" (click)="onLocate()">Locate me</button>
+                </ion-col>
+                <ion-col>
+                    <button ion-button block outline type="button" (click)="onOpenMap()">Select on map</button>
+                </ion-col>
+            </ion-row>
+            <ion-row *ngIf="locationIsSet">
+                <ion-col>
+			<sebm-google-map [latitude]="location.lat" [longitude]="location.lng" [zoom]="16">
+				<sebm-google-map-marker 
+				[latitude]="location.lat" 
+				[longitude]="location.lng">
+				</sebm-google-map-marker>
+			</sebm-google-map>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col text-center>
+                    <h5>Take a photo</h5>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <button ion-button block outline type="button" (click)="onTakePhoto()">Take a photo</button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+        <img [src]=""></img>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <button ion-button color="secondary" block type="submit" 
+		    [disabled]="!f.valid || !locationIsSet">Add this place</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>        
+    </form>
+</ion-content>
+```
+
+*Style file (addPlace.scss)*
+```css
+page-add-place {
+	sebm-google-map {
+		height: 250px;
+	}
+}
+```
 
 
 ###Cordova plugin geolocation method
