@@ -1500,6 +1500,11 @@ export class LocationPage {
 	
 	constructor(private navParams: NavParams, private viewCtrl: ViewController) { 
 		this.location = this.navParams.get("location"); 
+		
+		// retrieve chosen marker
+		if(this.navParams.get('isSet')) {
+			this.marker = this.location;
+		}
 	}
 
 	// Add marker on the map
@@ -1534,8 +1539,10 @@ export class LocationPage {
 	
 	constructor(private modalCtrl: ModalController) {}
 	
+	// open map modal which permit to choose a position and get back chosen location
 	onOpenMap() {
-		const modal = this.modalCtrl.create(SetLocationPage, {location: this.location});
+		const modal = this.modalCtrl.create(SetLocationPage, 
+		{location: this.location, isSet: this.locationIsSet});
 		modal.present();
 		modal.onDismiss(data => {
 			if(data){
