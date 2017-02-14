@@ -26,7 +26,7 @@
 	* [Checking network connection](#checking-network-connection)    
 	* [Close modal](#close-modal)    
 * [Moment JS](#momentjs)    
-* [File access](#file-access)  
+* [File storage](#file-storage)  
 * [Geolocation](#geolocation)  
 * [Database](#database)  
 	* [SQLite database](#sqlite-database)    
@@ -1364,10 +1364,67 @@ let formatted = moment().format('dddd D MMMM YYYY'); // will display "jeudi 2 ju
 ```
 
 
-#File access
+#File storage
 [Back to top](#ionic-2)  
 
-[link : save image locally](https://forum.ionicframework.com/t/how-to-save-an-image-locally-with-ionic-2/46257/4)
+[File Documentation here](https://ionicframework.com/docs/v2/native/file/)    
+
+First install the plugin :
+
+```
+$ ionic plugin add cordova-plugin-file
+```
+
+Next let see an example of photo storage in a new file
+
+*Controller file*
+
+```javascipt
+import { ModalController } from "ionic-angular";
+import { Camera, File, Entry, FileError } from "ionic-native";
+
+/**************************** 
+ * IMPORTANT
+ ***************************/
+declare var cordova: any;	// trick wich inform typescript that this cordova variable will available at the runtime
+
+export class HomePage {
+    imageUrl = '';
+
+    constructor(private modalCtrl: ModalController) {}
+
+    onTakePhoto() {
+        // See the documentation for more camera options
+        Camera.getPicture({
+            encodingType: Camera.EncodingType.JPEG,
+            correctOrientation: true
+        })
+        .then(
+            imageData => {
+	    	// Save image to File
+		const currentName = imageData.replace(/^.*[\\\/]/, '');	// extract the image name
+		const path = imageData.replace(/[^\/]*$/, '');	// extract the image path
+		File.moveFile(path, currentName, cordova.file.dataDirectory, currentName)	// warning on cordova variable
+		.then(
+			(data: Entry) => {
+				this.imageUrl = data.nativeURL;
+				Camera.cleanup();
+			}
+		)
+		.catch(
+			(err: FileError) => {
+			this.imageUrl = '';
+			Camera.cleanup();
+		});
+                this.imageUrl = imageData;
+            }
+        )
+        .catch(
+            err => {console.log(err);}
+        );
+    }
+}
+```
 
 #Geolocation
 [Back to top](#ionic-2)  
@@ -1950,7 +2007,10 @@ export class LocationPage {
 			}
 		)
 		.catch(
-			err => {console.log(err);}
+			err => {
+				console.log(err);
+				Camera.cleanup();	// Only if the image is stored in a new File
+			}
 		);
 	}
 }
