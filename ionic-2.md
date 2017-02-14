@@ -1631,6 +1631,8 @@ page-add-place {
 }
 ```
 
+[Back to top](#ionic-2) 
+
 ###Using native geolocation plugin
 
 Now we have integrated a map on our application, we will use the native geolocation plugin to locate our current position and display it on the previous map.
@@ -1916,81 +1918,89 @@ $ ionic plugin add cordova-sqlite-storage
 #Camera
 [Back to top](#ionic-2)  
 
-**include ionic-native package**
+[See documentation here](https://ionicframework.com/docs/v2/native/camera/)    
+
+First install ionic-native package if needed
 
 ```
 $ npm install ionic-native --save
 ```
 
-**cordova plugin installation**
+Then install cordova camera plugin
 
 ```
 $ ionic plugin add cordova-plugin-camera
 ```
 
-**Usage**
+Implement code
 
-*View file*
+*View file (addPlace.html)*
 
 ```xml
-<ion-header>
-	<ion-navbar maintheme>
-	  <button ion-button menuToggle>
-	    <ion-icon name="menu"></ion-icon>
-	  </button>
-	  <ion-title>Photo</ion-title>
-	</ion-navbar>
-</ion-header>
-<ion-content padding class="getting-started">
-    <img src="{{sourceImage}}"/>
-    	<ion-fab>
-	   <button ion-fab color="primary" fab-bottom fab-center (click)="takePhoto()" icon-only>
-	        <ion-icon name="camera"></ion-icon>
-	   </button>
-	</ion-fab>
+<ion-content>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <ion-list>
+            <ion-item>
+                <ion-label fixed>Title</ion-label>
+                <ion-input type="text" name="title" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label floating>Description</ion-label>
+                <ion-textarea name="description" ngModel required></ion-textarea>
+            </ion-item>
+        </ion-list>
+        <ion-grid>
+            <ion-row>
+                <ion-col>
+                    <button ion-button block outline type="button" (click)="onTakePhoto()">Take a photo</button>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+		        <img [src]="imageUrl"></img>
+                </ion-col>
+            </ion-row>
+            <ion-row>
+                <ion-col>
+                    <button ion-button color="secondary" block type="submit" 
+		    [disabled]="!f.valid || !locationIsSet">Add this place</button>
+                </ion-col>
+            </ion-row>
+        </ion-grid>        
+    </form>
 </ion-content>
-
 ```
 
-*Controller file*
+*Controller file (addPlace.ts)*
 
 ```javascript
-import {Component} from '@angular/core';
-import {Camera} from 'ionic-native';
 
-@Component({
-  templateUrl: 'build/pages/photo/photo.html'
-})
-export class PhotoPage {
-    constructor(){
-        this.sourceImage = "";
-    }
+import { SetLocationPage } from "../set-location/set-location";
+import { ModalController } from "ionic-angular";
+import { Camera } from "ionic-native";
 
-    takePhoto(){
-        let options = {
-          quality: 100,
-          destinationType: navigator.camera.DestinationType.FILE_URI,
-          sourceType: navigator.camera.PictureSourceType.CAMERA,
-          encodingType: navigator.camera.EncodingType.JPEG,
-          saveToPhotoAlbum: true
-        };
+export class LocationPage {
+	imageUrl = '';
 
-        navigator.camera.getPicture(
-          (imagePath) => {
-            console.log(imagePath);
-            this.sourceImage = imagePath;
-          },
-
-          (error) => {
-            console.log(error);
-          }, options
-        );
-    }
+	constructor(private modalCtrl: ModalController) {}
+	
+	onTakePhoto() {
+		// See the documentation for more camera options
+		Camera.getPicture({
+			encodingType: Camera.EncodingType.JPEG,
+			correctOrientation: true
+		})
+		.then(
+			imageData => {
+				this.imageUrl = imageData;
+			}
+		)
+		.catch(
+			err => {console.log(err);}
+		);
+	}
 }
-
 ```
-
-[link : List of camera options](https://github.com/apache/cordova-plugin-camera#module_camera.CameraOptions)
 
 
 #Gallery
