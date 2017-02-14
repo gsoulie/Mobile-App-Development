@@ -1706,10 +1706,11 @@ export class PlacesServices {
 
     // Fetch data from DB
     fetchPlaces() {
-        this.storage.get('places')
+        return this.storage.get('places')
         .then(
             (places: Place[]) => {
                 this.places = places != null ? places : []; // be careful to do not return null 
+		return this.places;
             }
         )
         .catch(err => console.log(err);)
@@ -1759,6 +1760,9 @@ export class HomePage implements OnInit{
 
 	ngOnInit() {
 		this.placesService.fetchPlaces()
+		.then(
+			(places: Place[]) => this.places = places
+		);
 	}
 }
 ```
