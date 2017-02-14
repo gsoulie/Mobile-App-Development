@@ -1343,7 +1343,8 @@ export class HomePage {
 	    	// Save image to File
 		const currentName = imageData.replace(/^.*[\\\/]/, '');	// extract the image name
 		const path = imageData.replace(/[^\/]*$/, '');	// extract the image path
-		File.moveFile(path, currentName, cordova.file.dataDirectory, currentName)	// warning on cordova variable
+		const newFileName = new Date().getUTCMilliseconds() + ".jpg";
+		File.moveFile(path, currentName, cordova.file.dataDirectory, newFileName)	// warning on cordova variable
 		.then(
 			(data: Entry) => {
 				this.imageUrl = data.nativeURL;
