@@ -1768,9 +1768,10 @@ export class HomePage implements OnInit{
 }
 ```
 
+###SQLite method
+
 [link : Using Sqlite storage tutorial](https://devdactic.com/ionic-2-sqlstorage/)
 
-###First solution
 There is two main solutions for data storage. The first one is the local HTML5 storage and the second is using SQLite database storage. HTML5 storage provide a key-value storage. This solution can be useful for small applications, but is not adapted for SQL querying. On the other hand, this solution is limitated to 10MB of data storage.
 
 [link : using sqlite](https://www.thepolyglotdeveloper.com/2015/12/use-sqlite-in-ionic-2-instead-of-local-storage/)
