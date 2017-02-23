@@ -239,7 +239,10 @@ Another very good alternative to Atom is [visual studio code] (https://code.visu
 * [Auto Import extension](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport)    
 * [Angular 2 - TypeScript snippets](https://marketplace.visualstudio.com/items?itemName=johnpapa.Angular2)    
 * [Git History] (https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)    
-* [custom icons theme](https://code.visualstudio.com/blogs/2016/09/08/icon-themes)
+* [custom icons theme](https://code.visualstudio.com/blogs/2016/09/08/icon-themes)    
+* [npm intellisense](https://marketplace.visualstudio.com/items?itemName=christian-kohler.npm-intellisense)    
+* [sass lint](https://marketplace.visualstudio.com/items?itemName=glen-84.sass-lint)    
+* [TSlint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)    
 
 #Concepts
 
