@@ -15,6 +15,7 @@
 	* [Promise vs Observable](#promise-vs-observable)    
 	* [Mapping](#mapping)    
 	* [Arrow function](#arrow-function)    
+* [Directives](#directive)    
 * [Config](#config)    
 * [Global variables](#global-variables)    
 * [Add files to project](#add-files-to-project)    
@@ -770,6 +771,17 @@ ionViewDidLeave(){
 	this.callback();
 }
 ...
+```
+
+#Directive
+[Back to top](#ionic-2)  
+
+###ngFor
+
+To declare more than one variable in ngFor directive, use :
+
+```xml
+<ion-badge *ngFor="let cat of category; let i=index">...</ion-badge>
 ```
 
 
