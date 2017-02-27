@@ -3459,6 +3459,14 @@ Sometimes,  on the emulator or on device, 2 out of 3 clicks it doesn't fire the 
 	</button>
 </ion-list>
 ```
+
+###Slow tap on component and element
+
+If you create custom components or html element and then use click handler like ```(click)="itemTap()"``` you may notice a delay if the element are not an anchor tag or button.
+To fix it, add **tappable** as an attribute to you element or component like ```(click)="itemTap($event)" tappable```
+
+see also : button role on non button clickable elements ```role="button"```
+
 ###Conflict with "this" on callback
 
 refering to **this** has traditionally been a pain point in JavaScript. Fat arrows fix it by capturing the meaning of this from the surrounding context. So it is very useful in case of calling asynchronous callback after a window closing event.
