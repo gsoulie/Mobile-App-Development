@@ -3213,10 +3213,31 @@ According to the latest Android material guideline, you have to follow these rul
 - Less than 3 => use tab on the top
 - More than 5 => use another solution like slide menu
 
-So, by default, ionic 2 tabs project sample is using bottom navigation. To set top navigation, just change your bootstrap (in your **app.ts**) code by :
+So, by default, ionic 2 tabs project sample is using bottom navigation. To set top navigation, just change your bootstrap (in your **app.module.ts**) code by :
 
 ```
-ionicBootstrap(MyApp,[],{tabsPlacement: "top"});
+import { TabsPage } from './../pages/tabs/tabs';
+import { NgModule, ErrorHandler } from '@angular/core';
+import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { MyApp } from './app.component';
+
+@NgModule({
+  declarations: [
+    MyApp,
+    TabsPage
+  ],
+  imports: [
+    IonicModule.forRoot(MyApp,{tabsPlacement: "top"})	// tab placement
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp,
+    TabsPage
+  ],
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+})
+export class AppModule {}
+
 ```
 
 ##Tab icon
