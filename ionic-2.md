@@ -3465,7 +3465,8 @@ Here are some tips to perform your scss
 ```
 ###Center component
 
-use *center* to vertically center a element in a row and use *text-center* to horizontally center the text
+vertical center in row
+
 ```css
  <ion-row center>
         <ion-col text-center>
