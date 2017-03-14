@@ -1239,6 +1239,24 @@ export class RouteListPage {
 
 ```
 
+##Work on JSON array
+
+Return the max value of JSON array. Consider we have an JSON array like :
+
+```javascript
+myArray = [{date: "2017-01-01", cost: 21, qte: 16,  trip: 2999, price: 1.409,conso: 0},
+      {date: "2017-01-01", cost: 21, qte: 16,  trip: 2655, price: 1.409,conso: 0},
+      {date: "2017-01-01", cost: 21, qte: 16,  trip: 2833, price: 1.409,conso: 0}]
+```
+
+And the function which return the max value of *trip* attribute
+
+```javascript
+getMaxTrip() {
+    return Math.max.apply(Math,this.myArray.map(function(o){return o.trip;}));
+}
+```
+
 #MomentJS
 [Back to top](#ionic-2)  
 
