@@ -3465,6 +3465,23 @@ Here are some tips to perform your scss
 ```
 ###Center component
 
+use *center* to vertically center a element in a row and use *text-center* to horizontally center the text
+```css
+ <ion-row center>
+        <ion-col text-center>
+          <ion-label>{{ c.date }}</ion-label>
+        </ion-col>
+        <ion-col text-center>
+          <ion-label>{{ c.cost }}€</ion-label>
+        </ion-col>
+        <ion-col text-center>
+          <ion-label>{{ c.trip }}km</ion-label>
+        </ion-col>
+</ion-row>
+```
+
+###Vertical alignment
+
 ```css
 <div text-center>
 	<button ion-button outline type="submit" text-center [disabled]="!f.valid">VALIDER</button>
