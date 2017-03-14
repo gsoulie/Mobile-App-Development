@@ -3463,7 +3463,13 @@ Here are some tips to perform your scss
     margin-right: auto;
 }
 ```
+###Center component
 
+```css
+<div text-center>
+	<button ion-button outline type="submit" text-center [disabled]="!f.valid">VALIDER</button>
+</div>
+```
 
 #Known issues
 [Back to top](#ionic-2) 
