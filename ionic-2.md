@@ -451,13 +451,13 @@ which would then allow you to implement it in your templates like this:
 `````
 Now someString would be run through your custom myPipe before the value is output to the user.
 
-##Pipe
+## Pipe
 [Back to top](#ionic-2)  
 
 [link : Understanding Pipe](http://mcgivery.com/understanding-ionic-2-pipe/)      
 [link : Josh Morony Pipe documentation](http://www.joshmorony.com/how-to-use-pipes-to-manipulate-data-in-ionic-2/)
 
-###First step : create the pipe class
+### First step : create the pipe class
 
 First, create a "pipe" directory in your project will containing all pipe lib. A basic pipe class looks like below :
 
@@ -488,7 +488,7 @@ export class HelloWorldPipe implements PipeTransform {
 }
 ```
 
-###Using pipe in other page
+### Using pipe in other page
 
 ```javascript
 import {HelloWorld} from 'pipes/HelloWorld';	// pipe import
