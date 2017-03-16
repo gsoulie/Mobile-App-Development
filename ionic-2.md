@@ -22,7 +22,8 @@
 * [Third party lib](#third-party-lib)    
 * [Useful functions](#useful-functions)  
 	* [Get specific platform](#get-specific-platform)   
-	* [Generate UUID](#generate-uuid)    
+	* [Generate UUID](#generate-uuid)  
+	* [Safely displaying data with elvis operator](#safely-displaying-data-with-elvis-operator)    
 	* [Show / hide DOM element](#show-hide-dom-element)    
 	* [Checking network connection](#checking-network-connection)    
 	* [Close modal](#close-modal)    
@@ -1126,7 +1127,7 @@ let uuid = UUID.UUID();
 
 ## Safely displaying data with elvis operator
 
-Elvis operator **?.** aim to avoid error like 'Cannot read property xxxx od undefined'
+Elvis operator (**?.**) aim to avoid error like 'Cannot read property xxxx od undefined'
 
 Consider that we have a situation where we grab some data using **NavParams** inside the **ionViewDidLoad** lifecycle hook, and attempt to display it before it is ready :
 
