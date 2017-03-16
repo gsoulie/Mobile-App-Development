@@ -1,4 +1,4 @@
-#Best practice guide
+# Best practice guide
 
 > **Under construction**
 
@@ -13,7 +13,7 @@
 [Publishing](#publishing)    
 [Performance](#performance)     
 
-##Sass
+## Sass
 [Back to top](#best-practice-guide) 
 
 [link : Sass best practice documentation](https://sass-guidelin.es/fr/#syntaxe--formatage)
@@ -146,7 +146,7 @@ This is one of the most useful features of Sass. Using ```@extend``` lets you sh
 }
 ```
 
-##Javascript
+## Javascript
 [Back to top](#best-practice-guide) 
 
 [link : Javascript guideline](https://github.com/bevacqua/js/blob/master/README.md)    
@@ -203,22 +203,22 @@ var args = arguments[0] || {};
 ```
 Use uppercase and "-" (until column 70)
 
-##Ionic 2
+## Ionic 2
 [Back to top](#best-practice-guide) 
 
 **Page name**
 
 Use upper case on the first letter
 
-##AngularJS 2
+## AngularJS 2
 [Back to top](#best-practice-guide) 
 
-##Typescript
+## Typescript
 [Back to top](#best-practice-guide)  
 
 [link :Typescript guideline](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)     
 
-####Names
+#### Names
 1. Use PascalCase for type names.
 2. Do not use "I" as a prefix for interface names.
 3. Use PascalCase for enum values.
@@ -228,39 +228,39 @@ Use upper case on the first letter
 7. Use whole words in names when possible.
 
 
-####null and undefined
+#### null and undefined
 
 Use **undefined**, do not use null.
 
-####Quotes
+#### Quotes
 
 Use double quote for strings
 
-####Basic types
+#### Basic types
 
 [link : Basic types guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Basic%20Types.md)    
 
-####Classes
+#### Classes
 
 [link : Classes guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Classes.md)    
 
-####Namespace
+#### Namespace
 
 [link : Namespace guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Namespaces%20and%20Modules.md)    
-####Function
+#### Function
 
 [link : Function guideline](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Functions.md)    
 
 
 
-##Commit
+## Commit
 [Back to top](#best-practice-guide)    
 
 _[page] - [element] : [(#ticket number) / description]_
 
 _UserLogin - loginFunction : #123451 success case message updating_
 
-##iOS provisioning profile
+## iOS provisioning profile
 [Back to top](#best-practice-guide)    
 
 To get more clarity in the provisioning profile list on Apple developer account, it's recommanded to format profile's name like :
@@ -287,12 +287,12 @@ COM.ISIA.XPROJECT_PROD
 
 **WARNING** : Accent, punctuation, non conventional characters are strictely forbidden !
 
-##Comments
+## Comments
 [Back to top](#best-practice-guide)    
 
 Use JSDoc style
 
-####Function documentation
+#### Function documentation
 
 ```
 /**
@@ -317,7 +317,7 @@ function Book(title, author) {
  }
  ```
 
-##Publishing
+## Publishing
 [Back to top](#best-practice-guide) 
 
 After publishing app on store, don't forget to save following elements on **SQT project directory** and / or **GitLab project repository** :
@@ -327,7 +327,7 @@ After publishing app on store, don't forget to save following elements on **SQT 
 - iOS certificate and provisioning profile
 
 
-##Performance
+## Performance
 [Back to top](#best-practice-guide) 
 
 Every Android version runs a different WebView (a browser that runs your application). The performance is different across devices, and it can be really bad on the old Android devices. To get the same experience with fluidity and responsiveness on every Android device, you can install [Crosswalk](https://crosswalk-project.org/). It basically embeds the latest Chromium browser into your application, and is adding around 20Mb per APK, both ARM and X86.
