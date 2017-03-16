@@ -1,40 +1,40 @@
-#Mobile App Resources and tools
+# Mobile App Resources and tools
 
-##The 10 commandments of user interface
+## The 10 commandments of user interface
 
 ![alt tag](https://www.designmantic.com/blog/wp-content/uploads/2015/04/ten-Commandments-UI-Design.png)
 
-##Editor
+## Editor
 
 [Visual Studio Code](http://code.visualstudio.com/Docs/?dv=osx)    
 
-##Git
+## Git
 [Simple Git guide](http://rogerdudler.github.io/git-guide/index.fr.html)  
 
-##Printable A4 sketch template
+## Printable A4 sketch template
 [Printable A4 sketch](https://androiduiux.com/2013/01/06/printable-a4-screen-flow-sketch-template-free-download/)    
 
-##Device screen size
+## Device screen size
 
 [Devices metrics](http://www.materialup.com/posts/device-metrics-google-design/responsive)
 
-##JS / TypeScript Guideline
+## JS / TypeScript Guideline
 
 [bevacqua](https://github.com/bevacqua/js/blob/master/README.md)    
 [TypeScript Guildelines](https://github.com/Microsoft/TypeScript/wiki/Coding-guidelines)    
 
-##JS Libraries
+## JS Libraries
 
 [IS.JS](http://arasatasaygin.github.io/is.js/)    
 [Underscore.js](http://underscorejs.org/)    
 [Backbone.js](http://backbonejs.org/)    
 [Moment.js](http://momentjs.com/)    
 
-##Ionic
+## Ionic
 
 [Ionic framework resources](http://mcgivery.com/100-ionic-framework-resources/)
 
-##JS tools
+## JS tools
 
 [ECMAScript6 Lint](http://www.es6fiddle.net/imqlo1x9/)    
 [JSONLint](http://jsonlint.com/)    
@@ -44,7 +44,7 @@
 [JSON Schema](http://jsonschema.net/#/)    
 [TSLint for linting TypeScript code](http://palantir.github.io/tslint/)    
 
-##Graphical resources
+## Graphical resources
 [Imageoptim](https://imageoptim.com/fr.html)    
 [Paletton](http://paletton.com/#uid=23q0u0k++VBrKZTEz+V+VxYZ+pL)    
 [FlatUI colors](http://flatuicolors.com/)     
@@ -54,21 +54,21 @@
 [Android official icons](https://developer.android.com/design/downloads/index.html)   
 [Adobe color CC](https://color.adobe.com/fr/explore/newest/)    
 
-##Fonts
+## Fonts
 [Icomoon](https://icomoon.io/)     
 [FontSquirrel](http://www.fontsquirrel.com/)     
 
-##App distributing
+## App distributing
 [InstallR](https://www.installrapp.com/)     
 
-##Apple resources
+## Apple resources
 [Average App Store Review Times](http://appreviewtimes.com/)     
 [iOS icons generator for apple store](http://appicontemplate.com/ios8)     
 [iPhone mockup](http://appicontemplate.com/iphonescreenshot)      
 [iPad mockup](http://appicontemplate.com/ipadscreenshot)     
 [printable sketch](http://sketchsheets.com/)     
 
-##Android resources
+## Android resources
 [Tools for icon, launch icon...](https://romannurik.github.io/AndroidAssetStudio/index.html)    
 [Device Metrics](https://material.io/devices/)    
 [Google Play Developer Console](https://play.google.com/apps/publish)    
@@ -76,8 +76,8 @@
 [Android icon generator for Google Play Store](http://appicontemplate.com/android)     
 [Material color generator](http://paletton.com)     
 
-##Deeplinking
+## Deeplinking
 [beanch.io](https://branch.io/)    
 
-##File transfer
+## File transfer
 [jaguar](http://share.jaguar-network.com/)      
