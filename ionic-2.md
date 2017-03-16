@@ -1124,6 +1124,49 @@ import { UUID } from 'angular2-uuid';
 let uuid = UUID.UUID();
 ```
 
+## Safely displaying data with elvis operator
+
+Elvis operator **?.** aim to avoid error like 'Cannot read property xxxx od undefined'
+
+Consider that we have a situation where we grab some data using **NavParams** inside the **ionViewDidLoad** lifecycle hook, and attempt to display it before it is ready :
+
+*View file*
+
+```xml
+<ion-content>
+	<p>{{someObject.comProperty}}</p>
+</ion-content>
+```
+*Controller file*
+```javascript
+...
+export class LessonPage{
+	someObject: any;
+	constructor(public navParams: NavParams){ }
+	
+	ionViewDidLoad(){
+		this.someObject = this.navParams.get('someObject');
+	}
+}
+```
+
+At this point, in time, our template which tries to access that data has already attempted to do so. When the template tries to access the data, **someObject** will still be undefined so we would get the following error
+```
+Runtime Error
+...Cannot read property 'someProperty' of undefined
+```
+
+To avoid this, we have to use **Elvis operator** like below :
+
+*View file*
+
+```xml
+<ion-content>
+	<p>{{someObject?.comProperty}}</p>
+</ion-content>
+```
+
+
 ## Show hide DOM element
 [Back to top](#ionic-2) 
 
