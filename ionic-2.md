@@ -1,6 +1,6 @@
 ![alt tag](https://github.com/gsoulie/ionic/blob/master/ionic2ban.png)
 
-#ionic 2
+# ionic 2
 
 > **Warning** this personnal guide is based on the beta of ionic 2. Consequently, some information may be outdated
 
@@ -74,17 +74,17 @@
 * [Other modules](#other-modules)    
 * [Self working components](https://github.com/gsoulie/Ionic2-snippets)    
 
-#TODO
+# TODO
 
 * AngularJS 2 directive
 
 [TODO](#todo)    
 
-#Prerequisites
+# Prerequisites
 
-##Start with ionic
+## Start with ionic
 
-###Some resources
+### Some resources
 
 [link : Good tutorial !!](https://scotch.io/tutorials/build-a-mobile-app-with-angular-2-and-ionic-2)
 
@@ -100,7 +100,7 @@
 
 [link : Most common ionic mistakes](https://www.toptal.com/ionic/most-common-ionic-development-mistakes)
 
-###Typical installation
+### Typical installation
 
 **Install / update Node**
 
@@ -123,7 +123,7 @@ ionic 2 is not yet available in final version, but is it possible to create ioni
 $ sudo npm install -g ionic
 ```
 
-###Configure Android environment variable
+### Configure Android environment variable
 
 ```
 nano ~/.bash_profile
@@ -143,7 +143,7 @@ $ source .bash_profile
 Then, restart your computer and test ANDROID_HOME ```$ANDROID_HOME``` don't forget **$** on the command
 
 
-###Start with ionic
+### Start with ionic
 
 **ionic 2 project creation**
 
@@ -229,12 +229,12 @@ Gulp is a packet manager for JS libraries. You can use it to add libraries to yo
 $ sudo npm install -g bower
 ```
 
-##Visual Studio Code
+## Visual Studio Code
 [Back to top](#ionic-2) 
 
 Another very good alternative to Atom is [visual studio code] (https://code.visualstudio.com/c?utm_expid=101350005-27.GqBWbOBuSRqlazQC_nNSRg.2&utm_referrer=https%3A%2F%2Fwww.google.fr%2F)
 
-###Some useful extensions
+### Some useful extensions
 
 * [Ionic2 extension](https://marketplace.visualstudio.com/items?itemName=Thavarajan.ionic2)    
 * [Auto Import extension](https://marketplace.visualstudio.com/items?itemName=steoates.autoimport)    
@@ -245,9 +245,9 @@ Another very good alternative to Atom is [visual studio code] (https://code.visu
 * [sass lint](https://marketplace.visualstudio.com/items?itemName=glen-84.sass-lint)    
 * [TSlint](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)    
 
-#Concepts
+# Concepts
 
-##Angular 2
+## Angular 2
 [Back to top](#ionic-2)  
 
 [link : become a ninja with Angular 2](https://books.ninja-squad.com/public/samples/Become_a_ninja_with_Angular2_sample.html)    
@@ -260,7 +260,7 @@ Another very good alternative to Atom is [visual studio code] (https://code.visu
 
 AngularJS 2 is the backbone of Ionic 2, is being written for ECMAScript 6
 
-###Some Angular 2 concepts
+### Some Angular 2 concepts
 
 **Binding a Property to a value**
 ```xml
@@ -411,15 +411,15 @@ for (let i = 0; i < a.length; i++) {
     //etc.
 }
 ```
-##Decorators
+## Decorators
 [Back to top](#ionic-2)  
 
 [link : Decorators by Josh MORONY](https://www.joshmorony.com/building-mobile-apps-with-ionic-2/decorators-in-ionic2.html)
 
 
-####@Component
+#### @Component
 
-####@Directive
+#### @Directive
 
 The @Directive decorator allows you to create your own custom directives. Typically, the decorator would look something like this:
 
@@ -435,7 +435,7 @@ Then in your template you could use that selector to trigger the behaviour of th
 ```
 It might be a little confusing as to when to use @Component and @Directive, as they are both quite similar. The easiest thing to remember is that if you want to modify the behaviour of an existing component use a directive, if you want to create a completely new component use a component.
 
-####@Pipe
+#### @Pipe
 
 [link : Understanding Pipe](http://mcgivery.com/understanding-ionic-2-pipe/)
 
@@ -514,7 +514,7 @@ Pipe inline syntax : ```value | myPipe:args[0]:args[1]```
 
 > Note: The first letter of the pipe's name in the view file is in lower case
 
-###Other example
+### Other example
 
 *Pipe file*
 
@@ -561,7 +561,7 @@ The meaning of life: {{mySingleInt | addInt:2}}
 ```
 
 
-###Other example Date format pipe
+### Other example Date format pipe
 
 *Pipe file* (app/pipe/datePipe.js)
 
@@ -610,11 +610,11 @@ export class HomePage {
 ...
 ```
 
-####Conclusion
+#### Conclusion
 
 Pipes are very useful for string formatting like date, hour, regexp...
 
-##Promise vs Observable
+## Promise vs Observable
 [Back to top](#ionic-2) 
 
 [link : RxJS Observables vs Promises](https://egghead.io/lessons/rxjs-rxjs-observables-vs-promises)
@@ -709,7 +709,7 @@ If we change timeout value of 500 ms to 1500
 > "42"
 
 
-##Arrow function
+## Arrow function
 [Back to top](#ionic-2) 
 
 [link : official documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
@@ -733,7 +733,7 @@ If we change timeout value of 500 ms to 1500
 (param1, param2,...) => {/*statement*/}
 ```
 
-###Usage
+### Usage
 
 this has traditionally been a pain point in JavaScript. Fat arrows fix it by capturing the meaning of this from the surrounding context. So it is very useful in case of calling asynchronous callback after a window closing event.
 
@@ -773,10 +773,10 @@ ionViewDidLeave(){
 ...
 ```
 
-#Directive
+# Directive
 [Back to top](#ionic-2)  
 
-###ngFor
+### ngFor
 
 To declare more than one variable in ngFor directive, use :
 
@@ -785,7 +785,7 @@ To declare more than one variable in ngFor directive, use :
 ```
 
 
-#Config
+# Config
 [Back to top](#ionic-2)  
 
 The Config lets you configure your entire app or specific platforms. You can set the tab placement, icon mode, animations, and more for each platform. 
@@ -815,7 +815,7 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 })
 ```
 
-##Mapping
+## Mapping
 [Back to top](#ionic-2)
 
 In Javascript, mapping is a method available on arrays which allows you to “map” or “transform” each value in that array. Keep in mind that in the example above we are not mapping an array, we are mapping an observable – this functionality is provided by the RxJS library (which is included in Ionic 2 & Angular 2), it is not in Javascript by default.
@@ -926,7 +926,7 @@ Note that you can also supply an initial value for previous, rather than using t
 }, 5);
 ```
 
-#Config.xml
+# Config.xml
 
 [link : ionic doc](http://ionicframework.com/docs/v2/api/config/Config/)
 
@@ -944,7 +944,7 @@ Here are some example :
 <preference name="SplashScreenDelay" value="2000"/>
 ```
 
-#Global variables
+# Global variables
 [Back to top](#ionic-2)
 
 Here's a solution to centralize application's globals. The solution consist in using **config.js** file in provider's folder.
@@ -963,7 +963,7 @@ And then in the component or service that requires them, just do this :
 import {VALUE_ONE} from './config';
 ```
 
-###Constant
+### Constant
 
 Constant can be declared after lib import like :
 
@@ -975,24 +975,24 @@ import {File} from 'ionic-native';
 
 const fs:string = cordova.file.dataDirectory;
 ```
-#Add files to project
+# Add files to project
 [Back to top](#ionic-2)
 
 Since RC0, all the files you need to add in your project (like json file, image etc...) must be added in **YOUR_APP/src/assests/data.**
 
-#Third party lib
+# Third party lib
 [Back to top](#ionic-2)
 
-##ES6
+## ES6
 To use a custom lib file in your project, follow the next steps 
 
-###1 Create "lib" folder under app
+### 1 Create "lib" folder under app
 
 ```
 /app/lib/utils.js
 ```
 
-###2 implement lib file
+### 2 implement lib file
 
 *utils.js*
 ```javascript
@@ -1020,7 +1020,7 @@ function square(_value){	// Not exported
 }
 ```
 
-###3 Using the custom lib in the whole project
+### 3 Using the custom lib in the whole project
 
 *From Home.js*
 ```javascript
@@ -1038,15 +1038,15 @@ export class HomePage {
 }
 ```
 
-##TypeScript
+## TypeScript
 
-###1 Create "lib" folder under app
+### 1 Create "lib" folder under app
 
 ```
 /app/lib/utils.ts
 ```
 
-###2 implement lib class
+### 2 implement lib class
 
 *utils.ts*
 ```javascript
@@ -1065,7 +1065,7 @@ export class UTILS {
 ```
 **Be careful** and don't forget **@Injectable** decorator
 
-###3 Inject class in other component
+### 3 Inject class in other component
 
 ```javascript
 import {UTILS} from '../../lib/utils';
@@ -1079,9 +1079,9 @@ export class HomePage {
 }
 ```
 
-#Useful Functions
+# Useful Functions
 
-##Get specific platform
+## Get specific platform
 [Back to top](#ionic-2)  
 
 ```javascript
@@ -1114,7 +1114,7 @@ window.addEventListener("orientationchange", function() {
 ionic.Platform.exitApp(); // stops the app
 ```
  
-##Generate UUID
+## Generate UUID
 [Back to top](#ionic-2) 
 
 To simply generate UUID like "547d8e40-354c-11e6-aa97-083e8ec535fb"
@@ -1124,10 +1124,10 @@ import { UUID } from 'angular2-uuid';
 let uuid = UUID.UUID();
 ```
 
-##Show hide DOM element
+## Show hide DOM element
 [Back to top](#ionic-2) 
 
-####Solution 1
+#### Solution 1
 
 Consider that we have a card with a quote wich can be add/remove to favorites. We only show one of the two button : "add to favorites" when the quote is not in the favorites list, and "remove from favorites" when the quote is already in the favorites list. To do this, we will use a *ngIf* directive.
 
@@ -1157,7 +1157,7 @@ export class HomePage {
 }
 ```
 
-####Solution 2
+#### Solution 2
 
 The next solution is to use the *hidden* property of an element
 
@@ -1192,7 +1192,7 @@ menuIsOpen: boolean = false;
 ```
 
 
-##Checking network connection
+## Checking network connection
 [Back to top](#ionic-2)
 
 ```
@@ -1239,7 +1239,7 @@ export class RouteListPage {
 
 ```
 
-##Work on JSON array
+## Work on JSON array
 
 Return the max value of JSON array. Consider we have an JSON array like :
 
@@ -1257,16 +1257,16 @@ getMaxTrip() {
 }
 ```
 
-#MomentJS
+# MomentJS
 [Back to top](#ionic-2)  
 
-###Package installation
+### Package installation
 
 ```
 npm install angular-moment moment --save
 ```
 
-###Usage
+### Usage
 
 ```javascript
 import * as moment from 'moment';	//syntax for ionic beta
@@ -1276,7 +1276,7 @@ Import moment from 'moment'	//RC0
 let mydate = moment().format('ddd MMM YYYY, h:mm:ss');
 ```
 
-###Customize locale variables
+### Customize locale variables
 
 In the followig example, we define french locale 
 
@@ -1336,7 +1336,7 @@ let formatted = moment().format('dddd D MMMM YYYY'); // will display "jeudi 2 ju
 ```
 
 
-#File storage
+# File storage
 [Back to top](#ionic-2)  
 
 [File Documentation here](https://ionicframework.com/docs/v2/native/file/)    
@@ -1412,12 +1412,12 @@ export class HomePage {
 }
 ```
 
-#Geolocation
+# Geolocation
 [Back to top](#ionic-2)  
 
 [link : google map geolocation](http://www.joshmorony.com/ionic-2-how-to-use-google-maps-geolocation-video-tutorial/)
 
-###Angular2 Google maps integration
+### Angular2 Google maps integration
 
 First we are going to see how to add a map on our application and add / display markers
 
@@ -1630,7 +1630,7 @@ page-add-place {
 
 [Back to top](#ionic-2) 
 
-###Using native geolocation plugin
+### Using native geolocation plugin
 
 Now we have integrated a map on our application, we will use the native geolocation plugin to locate our current position and display it on the previous map.
 
@@ -1700,12 +1700,12 @@ export class LocationPage {
 ```
 
 
-#Database
+# Database
 
-##SQLite database
 [Back to top](#ionic-2)  
+## SQLite database
 
-###Storage method
+### Storage method
 
 Storage is an easy way to store key/value pairs and JSON objects.
 
@@ -1801,7 +1801,7 @@ export class HomePage implements OnInit{
 }
 ```
 
-###SQLite method
+### SQLite method
 
 [link : Using Sqlite storage tutorial](https://devdactic.com/ionic-2-sqlstorage/)
 
@@ -1937,7 +1937,7 @@ export class HomePage {
     </ion-list>
 </ion-content>
 ```
-##SQLStorage
+## SQLStorage
 [Back to top](#ionic-2)  
 
 Is recommanded using **SqlStorage**. 
@@ -1993,7 +1993,7 @@ this.storage.query('insert into projects(name, data) values("Cool Project", "bla
 this.storage.query('select * from projects').then((resp) => {})
 ```
 
-##PouchDB
+## PouchDB
 
 First, install cordova sqlite-storage plugin
 
@@ -2003,13 +2003,13 @@ $ ionic plugin add cordova-sqlite-storage
 
 **TODO - implementing ionic 2 sample app**
 
-####Resources
+#### Resources
 
 [Google chrome PouchDB inspector extension](https://chrome.google.com/webstore/detail/pouchdb-inspector/hbhhpaojmpfimakffndmpmpndcmonkfa?hl=en)    
 
 [Ionic 2 - PouchDB tutorial](http://gonehybrid.com/how-to-use-pouchdb-sqlite-for-local-storage-in-ionic-2/)    
 
-#Camera
+# Camera
 [Back to top](#ionic-2)  
 
 [See documentation here](https://ionicframework.com/docs/v2/native/camera/)    
@@ -2100,7 +2100,7 @@ export class LocationPage {
 ```
 
 
-#Gallery
+# Gallery
 [Back to top](#ionic-2)  
 
 **cordova plugin installation**
@@ -2183,12 +2183,12 @@ p {
 }
 ```
 
-#Barcode scanner
+# Barcode scanner
 [Back to top](#ionic-2)
 
 [link : Barcode scanner documentation](http://ionicframework.com/docs/v2/native/BarcodeScanner/)
 
-#HTTP query
+# HTTP query
 [Back to top](#ionic-2)  
 
 [link : using http](http://www.joshmorony.com/using-http-to-fetch-remote-data-from-a-server-in-ionic-2/)
@@ -2274,10 +2274,10 @@ export class httpProvider {
 ```
 
 
-#Navigation
+# Navigation
 [Back to top](#ionic-2)  
 
-###Using NavController
+### Using NavController
 
 [link : Understanding ionic 2 NavController](http://mcgivery.com/understanding-ionic-2-navigation-navcontroller/)
 
@@ -2346,7 +2346,7 @@ In our template, **Main.html**, we will have a button that will call this method
 
 To summarize, when this button is pressed, it will call the goToAbout method which pushes an instance of the AboutPage class onto the navigation stack which is then compiled and animated into view.
 
-####Passing Data
+#### Passing Data
 In many scenarios we have data in one view that we need to pass to another. Luckily, the push method accepts a second parameter which is an object of data to pass to the ```@Component``` passed into the first parameter.
 
 ```javascript
@@ -2371,7 +2371,7 @@ export class AboutPage {
 	}
 }
 ```
-####Pop
+#### Pop
 
 Pop is super simple to use as well. As an example, if we wanted to create a function called **goBack** that goes back when pressed in our AboutPage, we could just call **nav.pop()** :
 
@@ -2392,10 +2392,10 @@ export class AboutPage {
 }
 ```
 
-####Other Methods
+#### Other Methods
 There is a few more methods available on the NavController such as insert, remove, etc. I would suggest reading the Official Docs.
 
-####Lifecycle Events
+#### Lifecycle Events
 In version 1.0, we had the concept of events being fired when we were entering and leaving the view, among others. In version 2.0, we have a very similar set of events. To handle one of these events, we just need to give our ```@Component``` class a method that matches the event. For example, if we want to run an event when the ```@Component``` is loaded, we will need to give our page the **onPageLoaded** method:
 ```javascript
 import {Component} from '@angular/core';
@@ -2412,7 +2412,7 @@ export class AboutPage {
 
 We can have a set of handlers for a variety of events including then the page is about to be entered, when the page is leaving, etc. Again, I would suggest reading the Official Docs.
 
-####Navigate using navPush directive
+#### Navigate using navPush directive
 
 *View file*
 
@@ -2438,10 +2438,10 @@ export class HomePage {
 
 
 
-#Themes
+# Themes
 [Back to top](#ionic-2)  
 
-###Statusbar
+### Statusbar
 
 **cordova plugin installation**
 
@@ -2476,7 +2476,7 @@ export class MyApp {
 }
 ```
 
-###Change background color of a specific page
+### Change background color of a specific page
 
 ```xml
 <ion-content padding class="masters">
@@ -2502,7 +2502,7 @@ Lastly you make sure this scss is being compiled with your **app.core.scss** by 
 @import "../pages/masters/masters";
 ```
 
-###Override variable.scss
+### Override variable.scss
 
 In the *variable.scss* file, you can define a lot of variables to create your custom style (see more on [ionic 2 overriding variables](#https://ionicframework.com/docs/v2/theming/overriding-ionic-variables/). Here is an example of variable.scss overriding
 
@@ -2525,9 +2525,9 @@ $color: {
 
 *note* : New colors variables must be called with ```<Button color="myNewColor">```
 
-#UI Components
+# UI Components
 
-##Modal
+## Modal
 [Back to top](#ionic-2)  
 
 Consider that we have a page (UserListPage for example) with a button wich open a modal based on UserPage controller.
@@ -2586,7 +2586,7 @@ onClose(remove = false){
 ```
 
 
-##ComboBox
+## ComboBox
 [Back to top](#ionic-2)  
 
 *View file*
@@ -2617,9 +2617,9 @@ selectObject(_selectedItem){
 }
 ```
 
-#Events
+# Events
 
-##Page event
+## Page event
 [Back to top](#ionic-2)
 
 | Page event    | Description   |
@@ -2632,7 +2632,7 @@ selectObject(_selectedItem){
 | ionViewWillUnload | Runs when the page is about to be destroyed and have its elements removed. |
 | ionViewDidUnload | Runs after the page has been destroyed and its elements have been removed. |
 
-##Event propagation
+## Event propagation
 [Back to top](#ionic-2)  
 
 This code show how to stop event propagation
@@ -2661,7 +2661,7 @@ pickDevice(event,_idDevice){
 ```
 
 
-##ion-list
+## ion-list
 [Back to top](#ionic-2)  
 
 Standard dynamic ion-list item
@@ -2680,7 +2680,7 @@ For clickable list you have to use **button ion-item**
 </ion-list>
 ```
 
-###Add filter on ion-list
+### Add filter on ion-list
 
 Consider a ion-list in which we want to hide every items which property "deleted" is set to true
 
@@ -2727,7 +2727,7 @@ Second solution, in case that you prefer to do the filtering in the template the
 ```
 
 
-###Remove item from list
+### Remove item from list
 
 *View file*
 
@@ -2758,7 +2758,7 @@ removePost(post){
 }
 ```
 
-###ion-item-sliding
+### ion-item-sliding
 
 ```xml
 <ion-content class="home">
@@ -2779,9 +2779,9 @@ removePost(post){
 </ion-content>
 ```
 
-###Inifinite scroll in ion-list
+### Inifinite scroll in ion-list
 
-####Solution 1
+#### Solution 1
 
 [link : Scroll performance](http://www.joshmorony.com/boosting-scroll-performance-in-ionic-2/)
 [link : virtual-scroll official doc](http://ionicframework.com/docs/v2/api/components/virtual-scroll/VirtualScroll/)
@@ -2884,7 +2884,7 @@ The syntax is a little different, this time we are using [virtualScroll] and *vi
 
 It’s important for the virtual scroll to know approximately how big your items will be, since it needs to know how many items would be required to fill up the screen. You can help this process by specifying an approxItemWidth and approxItemHeight
 
-####Solution 2
+#### Solution 2
 
 [link : Infinite scroll](http://ionicframework.com/docs/v2/api/components/infinite-scroll/InfiniteScroll/)
 
@@ -2933,7 +2933,7 @@ export class NewsFeedPage {
 }
 ```
 
-###Set colour dynamically of each ion-item
+### Set colour dynamically of each ion-item
 
 *View file*
 
@@ -2997,7 +2997,7 @@ export class Page1 {
 ```
 
 
-###Pull to refresh
+### Pull to refresh
 
 *View file*
 
@@ -3026,8 +3026,8 @@ doRefresh(refresher){
     setTimeout(() => { refresher.complete(); console.log('Async operation has ended'); }, 2000); 
   }
 ```
-
-##Searchbar
+ 
+## Searchbar
 [Back to top](#ionic-2)  
 
 *View file*
@@ -3102,7 +3102,7 @@ constructor(public nav: NavController) {
   }
 ```
 
-##High performance list filtering
+## High performance list filtering
 [Back to top](#ionic-2)  
 
 To increase list filtering, we can use Observable instead of basic filtering shows in searchbar section above.
@@ -3222,7 +3222,7 @@ A delay is fine, and an artificial delay is sometimes even beneficial, but you d
 
 We’re going to make a change now that won’t have any effect on performance, but it will have an impact on the user’s perception of the responsiveness of the app. We’re simply going to add a loading spinner that will display when a search is in progress.
 
-##Tab
+## Tab
 [Back to top](#ionic-2)  
 
 According to the latest Android material guideline, you have to follow these rules :
@@ -3258,7 +3258,7 @@ export class AppModule {}
 
 ```
 
-##Tab icon
+## Tab icon
 [Back to top](#ionic-2)  
 
 Customize tab icon
@@ -3279,7 +3279,7 @@ Then just create a custom css, something like this:
 ```
 
 
-##Alert dialog box
+## Alert dialog box
 [Back to top](#ionic-2)  
 
 Here's a sample code to show a confirmation dialog box. The key is to add Alert import and then, don't miss to add alert object to current navigation stack
@@ -3328,7 +3328,7 @@ export class HomePage {
 }
 ```
 
-##Floating button
+## Floating button
 [Back to top](#ionic-2) 
 
 This snippet show how to fix floating button in front of a list
@@ -3348,19 +3348,19 @@ This snippet show how to fix floating button in front of a list
 </ion-fab>
 ```
 
-##chart
+## chart
 [Back to top](#ionic-2) 
 
 [link : ng2-chart](http://valor-software.com/ng2-charts/)    
 [forum : related post](https://forum.ionicframework.com/t/solved-ionic-2-ng2-charts/42926)    
 
-##grid
+## grid
 [Back to top](#ionic-2) 
 
 
 [link : complex layout using grid and flexbox](http://www.joshmorony.com/an-in-depth-look-at-the-grid-system-in-ionic-2/) 
 
-##toggle
+## toggle
 [Back to top](#ionic-2) 
 
 *View.html*
@@ -3383,7 +3383,7 @@ refreshTracking(e){
 }
 ```
 
-##Popover menu
+## Popover menu
 [Back to top](#ionic-2) 
 
 Create popover menu like Evernote edit menu 
@@ -3402,7 +3402,7 @@ Create popover menu like Evernote edit menu
 </ion-fab>
 ```
 
-##Dynamic style
+## Dynamic style
 [Back to top](#ionic-2) 
 
 You can dynamically change the UI component style with condition like below :
@@ -3411,7 +3411,7 @@ You can dynamically change the UI component style with condition like below :
 <button ion-button [style.backgroundColor]="enable ? '#00CC00' : '#FF0000'">Test</button>
 ```
 
-##Toggle menu
+## Toggle menu
 [Back to top](#ionic-2) 
 
 To add a toggle menu in your pages, follow the example below
@@ -3452,14 +3452,14 @@ To add a toggle menu in your pages, follow the example below
 ```
 
 
-#Sass
+# Sass
 [Back to top](#ionic-2) 
 
 Here are some tips to perform your scss 
 
-##Positioning
+## Positioning
 
-###Bottom positioning
+### Bottom positioning
 ```css
 .cform {
     position: absolute;
@@ -3469,7 +3469,7 @@ Here are some tips to perform your scss
 }
 ```
 
-###Center image
+### Center image
 
 ```css
 .image {
@@ -3481,7 +3481,7 @@ Here are some tips to perform your scss
     margin-right: auto;
 }
 ```
-###Center component
+### Center component
 
 vertical center in row
 
@@ -3499,7 +3499,7 @@ vertical center in row
 </ion-row>
 ```
 
-###Vertical alignment
+### Vertical alignment
 
 ```css
 <div text-center>
@@ -3507,10 +3507,10 @@ vertical center in row
 </div>
 ```
 
-#Known issues
+# Known issues
 [Back to top](#ionic-2) 
 
-###Clicking in list item in simulator sometimes(!) doesn’t work on device
+### Clicking in list item in simulator sometimes(!) doesn’t work on device
 
 Sometimes,  on the emulator or on device, 2 out of 3 clicks it doesn't fire the click function. To solve the issue, change ```<ion-item>``` to ```<button>``` with the styling of ```ion-item```.
 
@@ -3523,14 +3523,14 @@ Sometimes,  on the emulator or on device, 2 out of 3 clicks it doesn't fire the 
 </ion-list>
 ```
 
-###Slow tap on component and element
+### Slow tap on component and element
 
 If you create custom components or html element and then use click handler like ```(click)="itemTap()"``` you may notice a delay if the element are not an anchor tag or button.
 To fix it, add **tappable** as an attribute to you element or component like ```(click)="itemTap($event)" tappable```
 
 see also : button role on non button clickable elements ```role="button"```
 
-###Conflict with "this" on callback
+### Conflict with "this" on callback
 
 refering to **this** has traditionally been a pain point in JavaScript. Fat arrows fix it by capturing the meaning of this from the surrounding context. So it is very useful in case of calling asynchronous callback after a window closing event.
 
@@ -3591,7 +3591,7 @@ save(){
 ```
 
 
-#Using image
+# Using image
 [Back to top](#ionic-2) 
 
 To use image in your app, you can store them into ```src/app/assets/*.png```
@@ -3617,7 +3617,7 @@ let item = {name:"my item", image:"./assets/my_image.png"}
 ```
 
 
-#Forms
+# Forms
 [Back to top](#ionic-2) 
 
 Here is a basic form sample
@@ -3777,13 +3777,13 @@ Displaying data in the *home* page
 </ion-content>
 ```
 
-#Backends
-##Strongloop
+# Backends
+## Strongloop
 [Back to top](#ionic-2) 
 
 [link : Strongloop and bluemix](http://www.raymondcamden.com/2015/10/29/strongloop-ionic-and-ibm-bluemix/)    
 
-###Network app sample
+### Network app sample
 
 [link : ionic 2 oauth social with firebase](http://www.gajotres.net/ionic-2-succesfull-oauth-social-login-with-firebase/)
 [link : ionic framework and firebase](https://www.toptal.com/front-end/building-multi-platform-real-time-mobile-applications-using-ionic-framework-and-firebase)
@@ -3801,10 +3801,10 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
 ```
 
-##Firebase
+## Firebase
 [Back to top](#ionic-2) 
 
-###Install firebase
+### Install firebase
 
 ```
 npm install --save firebase
@@ -3849,7 +3849,7 @@ export class MyApp {
 
 ```
 
-###Authentication with firebase
+### Authentication with firebase
 
 Next, you need to create a new provider for firebase interaction. (Do not forget to add your new service to the *app.module.ts* in the *provider* section
 
@@ -3980,9 +3980,9 @@ export class SigninPage {
 ```
 
 
-###Manipulate data with firebase
+### Manipulate data with firebase
 
-####Save data
+#### Save data
 
 Note : Firebase is using JWT
 
@@ -4017,7 +4017,7 @@ export class ListPage {
 	}
 }
 ```
-###Fetch data
+### Fetch data
 
 Consider that we have a *list* page which display data
 
@@ -4074,7 +4074,7 @@ export class ListPage {
 }
 ```
 
-###Database provider
+### Database provider
 
 Create a provider wich doing all database operation
 
@@ -4143,17 +4143,17 @@ export class Game {
 ```
 
 
-#Authentication
+# Authentication
 [Back to top](#ionic-2)  
 
-##ng2-ui-auth
+## ng2-ui-auth
 [Link](https://github.com/ronzeidman/ng2-ui-auth)
 [Example](ng2-ui-auth-example)
 
-##JWT
+## JWT
 [Link](https://jwt.io/)
 
-#Internationalization
+# Internationalization
 [Back to top](#ionic-2)  
 
 **cordova plugin installation**
@@ -4317,7 +4317,7 @@ export class HomePage {
 </ion-content>
 ```
 
-#Splash screen and appicon
+# Splash screen and appicon
 [Back to top](#ionic-2)
 
 [link : Appicon and Splash screen documentation](http://blog.ionic.io/automating-icons-and-splash-screens/)
@@ -4364,7 +4364,7 @@ Add the following property to config.xml
 <preference name="ShowSplashScreenSpinner" value="false"/>
 ```
 
-#Beta testing
+# Beta testing
 [Back to top](#ionic-2)
 
 Available for iOS and Android, Ionic View makes it easy to **test** and **share** your app directly **on the device**. **A developer, client, customer, or friend** can download Ionic View, enter the App Id for your app, and immediately load and test the app. With hundreds of thousands of installs, Ionic View is becoming a core part of the Ionic development experience.
@@ -4372,7 +4372,7 @@ Available for iOS and Android, Ionic View makes it easy to **test** and **share*
 [link : Ionic View](http://blog.ionic.io/rapid-development-with-ionic-view/)
 
 
-#Push notification
+# Push notification
 [Back to top](#ionic-2) 
 
 [link : working both platform tutorial](https://medium.com/@ankushaggarwal/push-notifications-in-ionic-2-658461108c59#.tqfzfx5dd)
@@ -4478,7 +4478,7 @@ module.exports = {
     });
 ```
 
-#Build for iOS
+# Build for iOS
 [Back to top](#ionic-2)
 ```
 xcode-select --install
@@ -4500,12 +4500,12 @@ Then, in xcode, go to Xcode -> preferences and create or connect to your apple I
 ionic run ios
 ```
 
-#Publishing app
+# Publishing app
 [Back to top](#ionic-2)
 
 [link : publishing app](http://ionicframework.com/docs/guide/publishing.html)    
 
-###Enable prodMode
+### Enable prodMode
 
 To enable prod mode, I configured the following in app.ts:
 
@@ -4528,7 +4528,7 @@ So first, we need to generate a release build of our app, targeted at each platf
 $ cordova plugin rm cordova-plugin-console
 ```
 
-##Android publishing
+## Android publishing
 
 First, check your config.xml file located in :
 
@@ -4576,18 +4576,18 @@ $ zipalign -v 4 HelloWorld-release-unsigned.apk HelloWorld.apk
 Now we have our final release binary called HelloWorld.apk and we can release this on the Google Play Store
 
 
-#Other modules
+# Other modules
 [Back to top](#ionic-2) 
 
-##Make PDF
+## Make PDF
 [make PDF](https://gist.github.com/scalp42/7261508)  
 [tutorial](http://gonehybrid.com/how-to-create-and-display-a-pdf-file-in-your-ionic-app/)
 
 
-#TODO
+# TODO
 [Back to top](#ionic-2)
 
-###Testing Backand backend
+### Testing Backand backend
 
 [link : Backand](https://devdactic.com/ionic-backend-database/)   
 [link : Backand integration](https://www.backand.com/integrations/)    
@@ -4595,7 +4595,7 @@ Now we have our final release binary called HelloWorld.apk and we can release th
 Backand is an alternative to Firebase (only NoSQL approach). The main difference is that Backand can be integrated with ohter database than NoSQL, like MySQL, PostgreSQL, MSSQL and Oracle. 
 On the other hand, Backand doesn't have offline support instead of Firebase
 
-###Testing Telerik backend
+### Testing Telerik backend
 
 Telerik is a company with a lot of cool products (like NativeScript) which I haven’t had much of a chance to play around with yet, and they also offer a BaaS product for mobile applications. As far as a feature set goes they cover just about everything with offline support, data storage, file storage, social integration, push notifications and more.
 
