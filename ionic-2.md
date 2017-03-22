@@ -168,7 +168,7 @@ $ ionic start myTutorial tutorial --v2
 $ ionic platform add android
 ```
 
-**Generate new page in ionic 2 project**
+**Generate new page**
 
 It creates new folder in the project treeview with js, html and scss files
 
@@ -176,7 +176,7 @@ It creates new folder in the project treeview with js, html and scss files
 $ ionic g page myNewPage
 ```
 
-**Generate new provider in ionic 2 project**
+**Generate new provider**
 
 It creates new folder in the project treeview
 
@@ -184,6 +184,21 @@ It creates new folder in the project treeview
 $ ionic g provider myProvider
 ```
 
+**Generate new component**
+
+```
+$ ionic g component myComponent
+```
+
+You can use it with 
+
+```javascript
+<ion-content>
+	<mycomponent>
+	
+	</mycomponent>
+</ion-content>
+```
 **Display log with ionic serve**
 
 ```
