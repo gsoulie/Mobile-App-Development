@@ -3517,8 +3517,116 @@ To add a toggle menu in your pages, follow the example below
 ## Expandable header
 [Back to top](#ionic-2) 
 
+See the complete Josh Morony's tutorial at : 
 [link : Josh Morony tutorial](https://www.joshmorony.com/creating-a-custom-expandable-header-component-for-ionic-2/)     
 
+Here is a little sample :
+
+First, create a new component in your ionic project ```ionic g component expandableHeader```
+
+*Home.html*
+
+```html
+<ion-header>
+    <expandable [scrollArea]="mycontent">
+        <ion-item no-lines>
+            <ion-label>Username</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+        <ion-item no-lines>
+            <ion-label>Password</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+    </expandable>
+</ion-header>
+
+<ion-content #mycontent fullscreen padding>
+
+</ion-content>
+```
+
+*Home.scss*
+```css
+.ios, .md {
+    page-home {
+        ion-item {
+            border-radius: 50px !important;
+            padding-left: 10px !important;
+            margin-bottom: 10px;
+            background-color: #fff;
+            opacity: 0.7;
+            transition: 0.3s linear;
+        }
+    }
+}
+```
+
+*expandableHeader.html*
+```html
+<ng-content></ng-content>
+```
+
+*expandableHeader.ts*
+
+```javascript
+import { Component, Input, ElementRef, Renderer} from '@angular/core';
+
+classe du composant
+export class expandableHeader {
+
+    @Input('scrollArea'): any;
+
+    headerHeight: any;
+    newHeaderHeight: any;
+
+    constructor(public element: ElementRef, public renderer: Renderer) {
+        this.headerHeight = 150;
+        this.renderer.setElementStyle(this.element.nativeElement, 'height', this.headerHeight + 'px');
+    }
+
+    ngOnInit() {
+	// Listen to the scroll event
+        this.scrollArea.ionScroll.subscribe((ev) => {
+            this.resizeHeader(ev);
+        });
+    }
+
+    // Resize header content when scrolling
+    resizeHeader(ev){
+        // update dom
+        ev.domWrite(() => {
+
+            this.newHeaderHeight = this.headerHeight - ev.scrollTop;
+
+            if(this.newHeaderHeight < 0){
+                this.newHeaderHeight = 0;
+            }
+            this.renderer.setElementStyle(this.element.nativeElement, 'height', this.newHeaderHeight + 'px');
+
+            // Trigger when the fileds must be masked
+            for(let headerElement of this.element.nativeElement.children){
+                let totalHeight = headerElement.offsetTop + headerElement.clientHeight;
+
+                if(totalHeight > this.newHeaderHeight){
+                    this.renderer.setElementStyle(headerElement, 'opacity', '0');
+                } else {
+                    this.renderer.setElementStyle(headerElement, 'opacity', '1');
+                }
+            }
+        });
+    }
+}
+```
+
+*expandableHeader.scss*
+
+```css
+expadableHeader {
+    display: block;
+    background-color: map-get($color, light);
+    overflow: hidden;
+}
+```
 
 
 # Sass
