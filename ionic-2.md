@@ -3545,6 +3545,8 @@ First, create a new component in your ionic project ```ionic g component expanda
 </ion-content>
 ```
 
+**Warning** Do not forget *fullscreen* property in the <ion-content>
+
 *Home.scss*
 ```css
 .ios, .md {
