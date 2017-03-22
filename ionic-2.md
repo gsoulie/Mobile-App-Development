@@ -3518,6 +3518,14 @@ To add a toggle menu in your pages, follow the example below
 
 Here are some tips to perform your scss 
 
+## Get color variables from *variable.scss*
+
+```css
+myClass {
+    background-color: map-get($color, primary);
+}
+```
+
 ## Positioning
 
 ### Bottom positioning
