@@ -58,6 +58,7 @@
 	* [popover menu](#popover-menu)    
 	* [dynamic style](#dynamic-style)    
 	* [Toggle menu](#toggle-menu)    
+	* [Expandable header](#expandable-header)    
 * [Sass](#sass)    	
 * [Known issues](#known-issues)    
 * [Using image](#using-image)    
@@ -3511,6 +3512,13 @@ To add a toggle menu in your pages, follow the example below
 	</ion-list>
 </ion-content>
 ```
+
+
+## Expandable header
+[Back to top](#ionic-2) 
+
+[link : Josh Morony tutorial](https://www.joshmorony.com/creating-a-custom-expandable-header-component-for-ionic-2/)     
+
 
 
 # Sass
