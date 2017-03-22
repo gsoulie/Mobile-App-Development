@@ -87,6 +87,8 @@
 
 ### Some resources
 
+[link : Driftyco github](https://github.com/driftyco/ionic/tree/master/src)    
+
 [link : Good tutorial !!](https://scotch.io/tutorials/build-a-mobile-app-with-angular-2-and-ionic-2)
 
 [link : ng-conf-workshop](https://github.com/chrisgriffith/ng-conf-workshop)    
