@@ -454,6 +454,36 @@ Then in your template you could use that selector to trigger the behaviour of th
 ```
 It might be a little confusing as to when to use @Component and @Directive, as they are both quite similar. The easiest thing to remember is that if you want to modify the behaviour of an existing component use a directive, if you want to create a completely new component use a component.
 
+#### @Input
+
+*View File*
+```xml
+<ion-content>
+	<my-component [myText]="something"></my-component>
+</ion-content>
+```
+
+*Controller File*
+```javascript
+@Component({
+...
+})
+export class MyComponent {
+	@Input('myText') textToUse;
+	
+	text: string;
+	
+	constructor() {
+		this.text = "Hello";
+	}
+	
+	ngAfterViewInit(){
+		this.text = this.textToUse;
+	}
+}
+```
+
+
 #### @Pipe
 
 [link : Understanding Pipe](http://mcgivery.com/understanding-ionic-2-pipe/)
