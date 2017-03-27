@@ -483,6 +483,33 @@ export class MyComponent {
 }
 ```
 
+#### @ViewChild - @ViewChildren
+
+[link : ViewChild - ViewChildren](https://www.joshmorony.com/the-difference-between-viewchildren-and-contentchildren/)    
+
+You can supply these with either a local variable or you can provide it with the class of the component you are attempting to grab. So, you could do something like this:
+
+```@ViewChildren(Item) items;```
+
+so that you could access all of the ```<ion-item>``` elements in your template through this.items
+
+This would return the ```<ion-item>``` elements that are inside of the ```<ion-content>``` but it will also grab the ```<ion-item>``` elements that are inside of the ```<expandable-header>``` tags. This is an important distinction, because as you will see in the next section, the elements that are inside of the ```<expandable-header>``` custom component can also be grabbed with @ContentChildren, but only from the context of the ExpandableHeader component, not the HomePage component (remember, a page in Ionic is still just a normal component). I will elaborate on this in the next section, but in this case, I have added those elements directly to the HomePage template so I can grab them with @ViewChildren.
+
+If I just wanted to grab the <ion-content> area, I could select it in a similar way to the way that I selected the Item‘s, but I could also use the #mycontent local variable that I added by doing this:
+
+```@ViewChild('mycontent') contentArea;``` or just ```@ViewChild(Content) contentArea;```
+
+Or you could do:
+
+```@ViewChild('someVariable') something;```
+
+to grab a reference to an element that you have set up a local template variable on, like this:
+
+```<some-component #someVariable></some-component>```
+
+**When to use @ViewChildren**
+
+You should use @ViewChildren when you have added the element you are trying to grab directly to the component yourself, in other words, if the element you are grabbing is not added to the component you are working with through content projection with ```<ng-content>```. If you are working with pages in an Ionic application, then this will likely be the most common scenario, and unless you are building your own custom components then you likely would only need to use @ViewChild and @ViewChildren.
 
 #### @Pipe
 
