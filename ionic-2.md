@@ -567,18 +567,27 @@ export class HelloWorldPipe implements PipeTransform {
 
 ### Using pipe in other page
 
-```javascript
-import {HelloWorld} from 'pipes/HelloWorld';	// pipe import
+Simply add the declaration of your pipe in your *app.module.ts*
 
-@Component({
-	templateUrl: 'myPage/myPage.html',
-	pipes: [HelloWorld]	// pipe declaration
+```javascript
+...
+import { datePipe } from './../pipe/datePipe';
+
+@NgModule({
+  declarations: [
+    MyApp,
+    myPipe
+  ],
+  imports: [
+    IonicModule.forRoot(MyApp,{tabsPlacement: "top"})
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp
+  ],
+  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
-export class MyPage {
-	constructor(){
-		this.name = "Andrew";
-	}
-}
+...
 ```
 
 *View file*
@@ -611,11 +620,8 @@ export class AddInt {
 *Page file*
 
 ```javascript
-import {AddInt} from 'pipes/AddInt';
-
 @Component({
-	templateUrl: 'myPage/myPage.html',
-	pipes: [AddInt]
+	templateUrl: 'myPage/myPage.html'
 })
 export class MyPage {
 	constructor(){
@@ -662,23 +668,6 @@ export class datePipe implements PipeTransform{
     }
 }
 ```
-
-*Controller file*
-
-```javascript
-import {datePipe} from '../../pipe/datePipe';
-
-@Component({
-  templateUrl: 'build/pages/about/home.html',
-  providers: [Utils],
-  pipes: [datePipe]
-})
-export class HomePage {
-...
-
-}
-```
-
 *View file*
 
 ```xml
