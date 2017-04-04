@@ -676,6 +676,25 @@ export class datePipe implements PipeTransform{
 ...
 ```
 
+### Pipe with parameters
+
+```javascript
+import {Pipe, PipeTransform} from '@angular/core';
+
+@Pipe({
+    name: 'truncatePipe'  // pipe name
+})
+export class truncatePipe implements PipeTransform{
+    // Pipe function
+    transform(value, fixed) {
+        if(value){
+            fixed = fixed || 3;
+            return value.toFixed(fixed);
+        }
+    }
+}
+```
+
 #### Conclusion
 
 Pipes are very useful for string formatting like date, hour, regexp...
