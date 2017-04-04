@@ -3706,7 +3706,7 @@ Here are some tips to perform your scss
 
 ```css
 myClass {
-    background-color: map-get($color, primary);
+    background-color: map-get($colors, primary);
 }
 ```
 
