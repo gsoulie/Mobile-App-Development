@@ -27,6 +27,7 @@
 	* [Show / hide DOM element](#show-hide-dom-element)    
 	* [Checking network connection](#checking-network-connection)    
 	* [Close modal](#close-modal)    
+	* [Accessing DOM element @ViewChild](#accessing-dom-element)    
 * [Moment JS](#momentjs)    
 * [File storage](#file-storage)  
 * [Geolocation](#geolocation)  
@@ -1382,6 +1383,43 @@ And the function which return the max value of *trip* attribute
 ```javascript
 getMaxTrip() {
     return Math.max.apply(Math,this.myArray.map(function(o){return o.trip;}));
+}
+```
+## Accessing DOM element
+
+Here, we are going to see how to accessing to a DOM element with the directive ```@ViewChild```. In the following sample, we want to change the label of the top left back button.
+
+*View File*
+
+````xml
+<ion-header color="primary">
+
+  <ion-navbar color="primary">
+    <ion-title>Gestion du carburant</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+...
+</ion-content>
+```
+
+*Controller file*
+
+```javascript
+import { Component, ViewChild } from '@angular/core';
+import { Navbar } from 'ionic-angular';
+
+@Component({
+  selector: 'page-user',
+  templateUrl: 'user.html'
+})
+export class UserPage {
+ @ViewChild(Navbar) navbar: Navbar;
+ 
+ ionViewWillEnter(){
+ 	this.navbar.setBacButtonText('Home');	// change back button title
+ }
 }
 ```
 
