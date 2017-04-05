@@ -1423,7 +1423,7 @@ export class UserPage {
 }
 ```
 
-see more @ViewChild - @ViewChildren](#### @ViewChild - @ViewChildren)
+see more @ViewChild - @ViewChildren](####@viewvhild-@viewvhildren)
 
 # MomentJS
 [Back to top](#ionic-2)  
