@@ -1391,7 +1391,7 @@ Here, we are going to see how to accessing to a DOM element with the directive `
 
 *View File*
 
-````xml
+```xml
 <ion-header color="primary">
 
   <ion-navbar color="primary">
