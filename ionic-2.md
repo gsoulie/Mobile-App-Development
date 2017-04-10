@@ -1881,6 +1881,8 @@ Storage is an easy way to store key/value pairs and JSON objects.
 
 *Service file*
 
+*@Injectable()* Do not forget this line !
+
 ```javascript
 import { Storage } from "@ionic/storage";
 import { Injectable } from "@angular/core";
