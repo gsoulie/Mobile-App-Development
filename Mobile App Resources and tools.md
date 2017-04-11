@@ -62,6 +62,7 @@
 [InstallR](https://www.installrapp.com/)     
 
 ## Apple resources
+[iOS Console](http://lemonjar.com/iosconsole/)    
 [Average App Store Review Times](http://appreviewtimes.com/)     
 [iOS icons generator for apple store](http://appicontemplate.com/ios8)     
 [iPhone mockup](http://appicontemplate.com/iphonescreenshot)      
