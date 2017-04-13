@@ -3511,11 +3511,16 @@ This snippet show how to fix floating button in front of a list
     </ion-item>
   </ion-list>
 </ion-content>
+<ion-fab right bottom>
+    <button ion-fab icon-only><ion-icon name="person-add" center></ion-icon></button>
+</ion-fab>
+<!-- OLD VERSION
 <ion-fab>
 	<button ion-fab icon-only fab-bottom fab-right fab-fixed style="z-index:100">
   		<ion-icon name="add"></ion-icon>
 	</button>
 </ion-fab>
+-->
 ```
 
 ## chart
