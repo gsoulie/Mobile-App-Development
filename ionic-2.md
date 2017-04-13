@@ -1392,8 +1392,8 @@ Here, we are going to see how to accessing to a DOM element with the directive `
 *View File*
 
 ```xml
-<ion-header color="primary">
-  <ion-navbar>
+<ion-header>
+  <ion-navbar color="primary">
     <ion-title>Gestion du carburant</ion-title>
   </ion-navbar>
 </ion-header>
@@ -3202,8 +3202,8 @@ doRefresh(refresher){
 *View file*
 
 ```xml
-<ion-header color="primary">
-  <ion-navbar>
+<ion-heade>
+  <ion-navbar color="primary">
     <ion-title>
       Annuaire
     </ion-title>
@@ -3279,8 +3279,8 @@ To increase list filtering, we can use Observable instead of basic filtering sho
 *View file*
 
 ```xml
-<ion-header color="primary">
-  <ion-navbar>
+<ion-header>
+  <ion-navbar color="primary">
     <ion-title>
       Ionic Blank
     </ion-title>
@@ -3603,8 +3603,8 @@ To add a toggle menu in your pages, follow the example below
 </ion-menu>
 
 <!-- the page header -->
-<ion-header color="githubviolet">
-  <ion-navbar>
+<ion-header>
+  <ion-navbar color="githubviolet">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
