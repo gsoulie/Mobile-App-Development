@@ -68,6 +68,7 @@
 [iPhone mockup](http://appicontemplate.com/iphonescreenshot)      
 [iPad mockup](http://appicontemplate.com/ipadscreenshot)     
 [printable sketch](http://sketchsheets.com/)     
+[Install Certificates on new Mac](https://www.digicert.com/ssl-support/p12-import-export-mac-mavericks-server.htm)    
 
 ## Android resources
 [Tools for icon, launch icon...](https://romannurik.github.io/AndroidAssetStudio/index.html)    
