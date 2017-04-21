@@ -53,6 +53,7 @@
 [Material design](http://www.google.com/design/spec/style/color.html#color-color-palette)    
 [Android official icons](https://developer.android.com/design/downloads/index.html)   
 [Adobe color CC](https://color.adobe.com/fr/explore/newest/)    
+[Icon pack for prototyping](https://fr.icons8.com/web-app/category/ios7/Photo-Video)    
 
 ## Fonts
 [Icomoon](https://icomoon.io/)     
