@@ -72,6 +72,7 @@
 * [Splash screen and appicon](#splash-screen-and-appicon)  
 * [Beta testing](#beta-testing)    
 * [Push notification](#push-notification)   
+* [Build for Android](#build-for-android)  
 * [Build for iOS](#build-for-ios)    
 * [Publishing App](#publishing-app)  
 * [Other modules](#other-modules)    
@@ -4776,6 +4777,11 @@ module.exports = {
         console.log("Device token:", data.token);
     });
 ```
+
+# Build for Android
+[Back to top](#ionic-2)
+
+Tip for get a faster boot time is to add ```--prod``` in your ```ionic run android --prod```. This will uses an other build process and decrease the app boot time.
 
 # Build for iOS
 [Back to top](#ionic-2)
