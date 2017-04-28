@@ -3301,6 +3301,25 @@ export class Contacts {
             currentContacts.push(value);
         });
     }
+    
+    //Searchbar adaptation
+    onSearchPatient(ev: any){
+        this.initializeItems();
+        this.groupedPatients = [];
+        let val = ev.target.value;
+        var temp = [];
+
+        if (val && val.trim() != '') {
+            this.patients = this.patients.filter((item) => {
+                if (item.nom.toLowerCase().indexOf(val.toLowerCase()) > -1 || item.prenom.toLowerCase().indexOf(val.toLowerCase()) > -1) {
+              temp.push(item);
+            }
+        })
+            this.groupPatients(temp);
+        } else {
+           this.groupPatients(this.patients);
+      }    
+  }
 }
 ```
 
