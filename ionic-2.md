@@ -2834,7 +2834,28 @@ pickDevice(event,_idDevice){
 ## ion-list
 [Back to top](#ionic-2)  
 
-Standard dynamic ion-list item
+### Show list right arrow
+
+To show the right arrow (like ios list item), just add ```detail-push``` property on ion-item :
+
+*View File*
+
+```xml
+<ion-item *ngFor="let item of group.patients" detail-push>{{ item }}</ion-item>
+```
+
+And modify your *variable.sass* file to reflect the following 
+
+```javascript
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+$item-ios-detail-push-show: true;
+```
+
+After that refresh your browser
+
+### Standard dynamic ion-list item
 
 ```xml
 <ion-list> 
