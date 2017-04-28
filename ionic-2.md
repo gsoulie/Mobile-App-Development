@@ -3928,7 +3928,11 @@ expadableHeader {
 # Sass
 [Back to top](#ionic-2) 
 
-Here are some tips to perform your scss 
+Here are some tips to perform your scss.
+
+## Global sass file
+
+You can use your *app.scss* file to define the global style 
 
 ## Get color variables from *variable.scss*
 
