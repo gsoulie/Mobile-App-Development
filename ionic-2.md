@@ -3196,7 +3196,148 @@ doRefresh(refresher){
     setTimeout(() => { refresher.complete(); console.log('Async operation has ended'); }, 2000); 
   }
 ```
+
+
+### List with dividers
+
+*View file*
+
+```xml
+<ion-header>
+  <ion-navbar>
+    <ion-title>Contacts</ion-title>
+  </ion-navbar>
+</ion-header>
  
+<ion-content>
+    <ion-item-group *ngFor="let group of groupedContacts">
+      <ion-item-divider light>{{group.letter}}</ion-item-divider>
+      <ion-item *ngFor="let contact of group.contacts">{{contact}}</ion-item>
+    </ion-item-group>
+</ion-content>
+```
+
+*Controller file*
+
+```javascript
+import { Component } from '@angular/core';
+import { IonicPage, NavController } from 'ionic-angular';
+ 
+@IonicPage()
+@Component({
+  selector: 'page-contacts',
+  templateUrl: 'contacts.html'
+})
+export class Contacts {
+ 
+    contacts;
+    groupedContacts = [];
+ 
+    constructor(public navCtrl: NavController) {
+ 
+        this.contacts = [
+            'Kate Beckett',
+            'Richard Castle',
+            'Alexis Castle',
+            'Lanie Parish',
+            'Javier Esposito',
+            'Kevin Ryan',
+            'Martha Rodgers',
+            'Roy Montgomery',
+            'Jim Beckett',
+            'Stana Katic',
+            'Nathan Fillion',
+            'Molly Quinn',
+            'Tamala Jones',
+            'Jon Huertas',
+            'Seamus Dever',
+            'Susan Sullivan'
+        ];
+ 
+        this.groupContacts(this.contacts);
+    }
+ 
+    groupContacts(contacts){
+ 
+        let sortedContacts = contacts.sort();
+        let currentLetter = false;
+        let currentContacts = [];
+ 
+        sortedContacts.forEach((value, index) => {
+ 
+            if(value.charAt(0) != currentLetter){
+                currentLetter = value.charAt(0);
+ 
+                let newGroup = {
+                    letter: currentLetter,
+                    contacts: []
+                };
+ 
+                currentContacts = newGroup.contacts;
+                this.groupedContacts.push(newGroup);
+            } 
+ 
+            currentContacts.push(value);
+        });
+    }
+}
+```
+
+**Other example on complex list**
+
+*JSON objects list*
+
+```javascript
+...
+
+this.patients = [{nom:"ABBANTI", prenom:"OLIVIER", ville: "Castelnau-le-lez (34)"},{nom:"ABIDAL",  prenom:"GEORGES", ville: "Montpellier (34)"},
+    {nom:"AVRIL", prenom:"GERARD", ville: "Lattes (34)"},{nom:"BARLOT",prenom:"NICOLAS", ville: "Pérols (34)"},{nom:"BOURDIN",prenom:"GAETAN", ville: "Maugio (34)"},
+    {nom:"BOURET",prenom:"FREDERIC", ville: "Palavas (34)"},{nom:"CASAL",prenom:"GERARD", ville: "Montpellier (34)"},{nom:"CATHERON",prenom:"DAVID", ville: "Montpellier (34)"},
+    {nom:"DAUPHIN",prenom:"EMILIE", ville: "Carnon (34)"},{nom:"DICHON",prenom:"GUILLAUME", ville: "Montpellier (34)"},{nom:"LABROU",prenom:"ANGELE", ville: "Montpellier (34)"},
+    {nom:"MARIN",prenom:"PIERRE", ville: "Lattes (34)"},{nom:"MARTIN",prenom:"ALPHONSE", ville: "Montpellier (34)"},{nom:"MARTIN",prenom:"JEAN", ville: "Montpellier (34)"},
+    {nom:"MERMOZ",prenom:"VERONIQUE", ville: "Montpellier (34)"},{nom:"RICHARD",prenom:"STEPHANIE", ville: "Montpellier (34)"},{nom:"RIVIERE",prenom:"AMELIE", ville: "Montpellier (34)"},
+    {nom:"ROI",prenom:"STEFFY", ville: "Maugio (34)"}];
+    
+...
+    
+groupPatients(patients){
+ 
+	let sortedPatients = patients;//.sort();
+	let currentLetter = false;
+	let currentPatients = [];
+
+	sortedPatients.forEach((value, index) => {
+
+    		if(value.nom.charAt(0) != currentLetter){
+
+			currentLetter = value.nom.charAt(0);
+
+			let newGroup = {
+			    letter: currentLetter,
+			    patients: []
+			};
+
+			currentPatients = newGroup.patients;
+			this.groupedPatients.push(newGroup);
+
+    		} 
+
+    		currentPatients.push(value);
+
+	});
+
+}   
+ ```
+
+*View file*
+
+```xml
+<ion-item *ngFor="let item of group.patients" (click)="onSelectPatient(item)"> 
+      {{ item.nom }} {{ item.prenom }}
+      <p class="subtitle">{{ item.ville }}
+</ion-item>
+```   
+
 ## Searchbar
 [Back to top](#ionic-2)  
 
