@@ -3627,6 +3627,28 @@ To hide tabs on sub pages, just add ---- in your app.module.ts
 })
 ```
 
+### Hide tab on specific page
+
+You can need to hide tabgroup just on a specific page with this :
+
+```javascript
+export class MyClass implements OnInit{
+
+  tabBarElement: any;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.tabBarElement = document.querySelector('.tabbar.show-tabbar');
+  }
+  
+  ionViewWillEnter(){
+    this.tabBarElement.style.display = 'none';
+  }
+  ionViewWillLeave(){
+    this.tabBarElement.style.display = 'flex';
+  }
+}
+```
+
 ## Tab icon
 [Back to top](#ionic-2)  
 
