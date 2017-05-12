@@ -4006,6 +4006,50 @@ myClass {
     margin-right: auto;
 }
 ```
+
+### Center overlayed images
+
+*View file*
+
+```html
+<div class="mainContent">
+	<img class="image1" src="..."/>
+	<img class="image2" src="..."/>
+</div>
+```
+
+*Style sheet*
+
+```css
+.image1 {
+	width: 100%;
+	height: 200px;
+	z-index:0;
+	position: absolute;
+}
+.image2 {
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	top: 10px;
+	bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	display: block;
+	z-index: 1;
+}
+.mainContent {
+        width: 100%;
+        height: 200px;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+        position: relative;
+    }
+```
+
 ### Center component
 
 vertical center in row
