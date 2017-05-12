@@ -54,6 +54,7 @@
 [Android official icons](https://developer.android.com/design/downloads/index.html)   
 [Adobe color CC](https://color.adobe.com/fr/explore/newest/)    
 [Icon pack for prototyping](https://fr.icons8.com/web-app/category/ios7/Photo-Video)    
+[Icon pack for prototyping 2](https://thenounproject.com/)    
 
 ## Fonts
 [Icomoon](https://icomoon.io/)     
