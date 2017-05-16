@@ -114,6 +114,8 @@
 
 [link : advanced forms](https://www.joshmorony.com/advanced-forms-validation-in-ionic-2/)    
 
+[link : Deep linking](https://www.joshmorony.com/link-to-pages-via-urls-with-deep-linking-in-ionic/)    
+
 # Prerequisites
 
 ## Start with ionic
