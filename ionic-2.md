@@ -86,7 +86,7 @@
 
 [TODO](#todo)    
 
-#Resources
+# Resources
 
 [link : Driftyco github](https://github.com/driftyco/ionic/tree/master/src)    
 
