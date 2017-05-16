@@ -4119,6 +4119,15 @@ vertical center in row
 	<button ion-button outline type="submit" text-center [disabled]="!f.valid">VALIDER</button>
 </div>
 ```
+##Remove Android input green highlight
+
+add the following to your *variable.scss*
+
+```javascript
+$text-input-md-show-focus-highlight: false !default;
+$text-input-md-show-valid-highlight: $text-input-md-show-focus-highlight !default;
+$text-input-md-show-invalid-highlight: $text-input-md-show-focus-highlight !default;
+```
 
 # Known issues
 [Back to top](#ionic-2) 
