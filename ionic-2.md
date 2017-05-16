@@ -915,6 +915,37 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 })
 ```
 
+Or multiple config :
+
+```javascript
+import { IonicApp, IonicModule } from 'ionic-angular';
+
+@NgModule({
+  declarations: [ MyApp ],
+  imports: [
+    IonicModule.forRoot(MyApp, {
+      platforms: {
+      	ios: {
+		backButtonText: 'Go Back',
+      		iconMode: 'ios',
+      		modalEnter: 'modal-slide-in',
+      		modalLeave: 'modal-slide-out',
+      		tabsPlacement: 'bottom',
+      		pageTransition: 'ios'
+	},
+	android: {
+	
+	}
+      }
+      
+    }, {}
+  )],
+  bootstrap: [IonicApp],
+  entryComponents: [ MyApp ],
+  providers: []
+})
+```
+
 ## Mapping
 [Back to top](#ionic-2)
 
