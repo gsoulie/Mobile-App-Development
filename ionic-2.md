@@ -5,6 +5,7 @@
 > **Warning** this personnal guide is based on the beta of ionic 2. Consequently, some information may be outdated
 
 ##### Table of Contents  
+* [Resources](#resources)    
 * [Prerequisites](#prerequisites)    
 	* [Start with ionic](#start-with-ionic)  
 	* [Visual Studio Code](#visual-studio-code)    
@@ -85,11 +86,7 @@
 
 [TODO](#todo)    
 
-# Prerequisites
-
-## Start with ionic
-
-### Some resources
+#Resources
 
 [link : Driftyco github](https://github.com/driftyco/ionic/tree/master/src)    
 
@@ -106,6 +103,18 @@
 [link : Josh MORONY resources](http://www.joshmorony.com/category/ionic-tutorials/)
 
 [link : Most common ionic mistakes](https://www.toptal.com/ionic/most-common-ionic-development-mistakes)
+
+[link : expandable header](https://www.joshmorony.com/creating-a-custom-expandable-header-component-for-ionic-2/)    
+
+[link : sliding content like iWallet](https://www.joshmorony.com/how-to-create-a-sliding-drawer-component-for-ionic-2/)    
+
+[link : pinterest grid](https://www.joshmorony.com/creating-a-pinterest-layout-in-ionic/)    
+
+[link : advanced forms](https://www.joshmorony.com/advanced-forms-validation-in-ionic-2/)    
+
+# Prerequisites
+
+## Start with ionic
 
 ### Typical installation
 
