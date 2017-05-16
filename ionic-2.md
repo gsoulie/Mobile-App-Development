@@ -106,6 +106,8 @@
 
 [link : expandable header](https://www.joshmorony.com/creating-a-custom-expandable-header-component-for-ionic-2/)    
 
+[link : shrinking header](https://www.joshmorony.com/creating-a-shrinking-header-for-segments-in-ionic/)    
+
 [link : sliding content like iWallet](https://www.joshmorony.com/how-to-create-a-sliding-drawer-component-for-ionic-2/)    
 
 [link : pinterest grid](https://www.joshmorony.com/creating-a-pinterest-layout-in-ionic/)    
