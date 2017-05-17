@@ -2,7 +2,8 @@
 
 # ionic 2
 
-> **Warning** this personnal guide is based on ionic 2. Consequently, some information may be outdated
+> **Warning** this personnal guide is based on ionic 2. Consequently, some information may be outdated     
+
 > **last update** : updateing command syntax for CLI 3.0
 
 ##### Table of Contents  
