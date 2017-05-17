@@ -4125,7 +4125,7 @@ vertical center in row
 	<button ion-button outline type="submit" text-center [disabled]="!f.valid">VALIDER</button>
 </div>
 ```
-##Remove Android input green highlight
+## Remove Android input green highlight
 
 add the following to your *variable.scss*
 
