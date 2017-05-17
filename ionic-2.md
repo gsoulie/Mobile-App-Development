@@ -4153,8 +4153,8 @@ Sometimes,  on the emulator or on device, 2 out of 3 clicks it doesn't fire the 
 
 ### Slow tap on component and element
 
-If you create custom components or html element and then use click handler like ```(click)="itemTap()"``` you may notice a delay if the element are not an anchor tag or button.
-To fix it, add **tappable** as an attribute to you element or component like ```(click)="itemTap($event)" tappable```
+If you create custom components or html element (div or ion-card) and then use click handler like ```(click)="itemTap()"``` you may notice a delay if the element are not an anchor tag or button.
+To fix it, add **tappable** as an attribute to you element or component like ```(click)="itemTap($event)" tappable``` or add it on your view file like ```<ion-card tappable="true" (click)="onOpen()">```
 
 see also : button role on non button clickable elements ```role="button"```
 
