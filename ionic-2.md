@@ -1,4 +1,5 @@
 ![alt tag](https://pbs.twimg.com/profile_images/834457277830541312/bYMCvtHD.jpg {width=80px height=80px})
+<img src="https://pbs.twimg.com/profile_images/834457277830541312/bYMCvtHD.jpg" width="80">
 
 # ionic 2
 
