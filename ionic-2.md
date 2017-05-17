@@ -1,5 +1,6 @@
+<p align="center">
 <img src="https://pbs.twimg.com/profile_images/834457277830541312/bYMCvtHD.jpg" align="center" width="100">
-
+</p>
 # ionic 2
 
 > **Warning** this personnal guide is based on ionic 2. Consequently, some information may be outdated     
