@@ -2,7 +2,8 @@
 
 # ionic 2
 
-> **Warning** this personnal guide is based on the beta of ionic 2. Consequently, some information may be outdated
+> **Warning** this personnal guide is based on ionic 2. Consequently, some information may be outdated
+> **last update** : updateing command syntax for CLI 3.0
 
 ##### Table of Contents  
 * [Resources](#resources)    
@@ -246,7 +247,7 @@ $ ionic serve --lab
 
 ```
 $ ionic cordova build ios
-$ ionic emulate ios
+$ ionic cordova emulate ios
 ```
 
 **Run on device**
@@ -1558,7 +1559,7 @@ let formatted = moment().format('dddd D MMMM YYYY'); // will display "jeudi 2 ju
 First install the plugin :
 
 ```
-$ ionic plugin add cordova-plugin-file
+$ ionic cordova plugin add cordova-plugin-file
 ```
 
 Next let see an example of photo storage in a new file
@@ -1851,7 +1852,7 @@ Now we have integrated a map on our application, we will use the native geolocat
 So, first install cordova plugin :
 
 ```
-$ ionic plugin add cordova-plugin-geolocation
+$ ionic cordova plugin add cordova-plugin-geolocation
 ```
 
 Then implement the *onLocate* function and add the import of *Geolocation* plugin. Note that we also add loading and toast components for more cool stuff.
@@ -2032,7 +2033,7 @@ This solution using the local device database. **You can make some complex SQL q
 After the project is created, intall cordova sqlite storage plugin
 
 ```
-$ ionic plugin add cordova-sqlite-storage
+$ ionic cordova plugin add cordova-sqlite-storage
 ```
 
 *Database initialization (app.js)*
@@ -2214,7 +2215,7 @@ this.storage.query('select * from projects').then((resp) => {})
 First, install cordova sqlite-storage plugin
 
 ```
-$ ionic plugin add cordova-sqlite-storage
+$ ionic cordova plugin add cordova-sqlite-storage
 ```
 
 **TODO - implementing ionic 2 sample app**
@@ -2239,7 +2240,7 @@ $ npm install ionic-native --save
 Then install cordova camera plugin
 
 ```
-$ ionic plugin add cordova-plugin-camera
+$ ionic cordova plugin add cordova-plugin-camera
 ```
 
 Implement code
@@ -2322,7 +2323,7 @@ export class LocationPage {
 **cordova plugin installation**
 
 ```
-$ ionic plugin add cordova-plugin-camera
+$ ionic cordova plugin add cordova-plugin-camera
 ```
 
 *import plugin in ts file*
@@ -2662,7 +2663,7 @@ export class HomePage {
 **cordova plugin installation**
 
 ```
-$ ionic plugin add cordova-plugin-statusbar
+$ ionic cordova plugin add cordova-plugin-statusbar
 ```
 
 **Customize**
@@ -4971,8 +4972,8 @@ $ ionic resources
 > Note : If splash screen doesn't showing, update your cordova plugin
 
 ```
-ionic plugin rm cordova-plugin-splashscreen
-ionic plugin add https://github.com/apache/cordova-plugin-splashscreen.git
+ionic cordova plugin rm cordova-plugin-splashscreen
+ionic cordova plugin add https://github.com/apache/cordova-plugin-splashscreen.git
 ```
 
 **Remove fade-in / fade-out effect**
@@ -5045,7 +5046,7 @@ Using push notification when app is closed needed to use background service beca
 - plugins installation
 ```
 $ ionic add ionic-platform-web-client
-$ ionic plugin add phonegap-plugin-push
+$ ionic cordova plugin add phonegap-plugin-push
 $ ionic io init
 $ ionic config set dev_push true
 ```
@@ -5105,7 +5106,7 @@ module.exports = {
 # Build for Android
 [Back to top](#ionic-2)
 
-Tip for get a faster boot time is to add ```--prod``` in your ```ionic run android --prod```. This will uses an other build process and decrease the app boot time.
+Tip for get a faster boot time is to add ```--prod``` in your ```ionic cordova run android --prod```. This will uses an other build process and decrease the app boot time.
 
 # Build for iOS
 [Back to top](#ionic-2)
@@ -5126,7 +5127,7 @@ Then, in xcode, go to Xcode -> preferences and create or connect to your apple I
 
 *Run on ios device or simulator*
 ```
-ionic run ios
+ionic cordova run ios
 ```
 
 # Publishing app
