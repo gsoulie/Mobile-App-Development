@@ -4143,6 +4143,26 @@ To change ios searchbar background color, add the following code to your *variab
 $searchbar-ios-background-color: rgba(247,247,247,1);
 ```
 
+## Disable scrolling on ion-content
+
+*View file*
+
+```javascript
+<ion content class="no-scroll">
+...
+</ion-content>
+```
+
+*Style file*
+
+```css
+.no-scroll {
+        .scroll-content {
+            overflow: hidden !important;
+        }
+}
+```
+
 # Known issues
 [Back to top](#ionic-2) 
 
