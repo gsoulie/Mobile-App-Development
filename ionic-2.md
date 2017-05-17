@@ -184,7 +184,7 @@ $ ionic start myTutorial tutorial --v2
 (run it inside you're project folder)
 
 ```
-$ ionic platform add android
+$ ionic cordova platform add android
 ```
 
 **Generate new page**
@@ -243,7 +243,7 @@ $ ionic serve --lab
 **Running Emulator**
 
 ```
-$ ionic build ios
+$ ionic cordova build ios
 $ ionic emulate ios
 ```
 
@@ -5114,8 +5114,8 @@ sudo npm install -g ios-deploy --unsafe-perm=true
 
 *in your app folder*
 ```
-ionic platform add ios
-ionic build ios
+ionic cordova platform add ios
+ionic cordova build ios
 ```
 
 For the first time, you need to open your project in XCode. To do this, navigate into your app folder and open your *.xcodeproj* file
