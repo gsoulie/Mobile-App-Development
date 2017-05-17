@@ -4135,6 +4135,14 @@ $text-input-md-show-valid-highlight: $text-input-md-show-focus-highlight !defaul
 $text-input-md-show-invalid-highlight: $text-input-md-show-focus-highlight !default;
 ```
 
+## Styling Searchbar
+
+To change ios searchbar background color, add the following code to your *variable.scss* file :
+
+```
+$searchbar-ios-background-color: rgba(247,247,247,1);
+```
+
 # Known issues
 [Back to top](#ionic-2) 
 
