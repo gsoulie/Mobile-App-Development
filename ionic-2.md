@@ -5113,6 +5113,8 @@ Tip for get a faster boot time is to add ```--prod``` in your ```ionic cordova r
 
 # Build for iOS
 [Back to top](#ionic-2)
+
+[Build without using XCode](https://github.com/phonegap/ios-deploy)      
 ```
 xcode-select --install
 sudo npm install -g ios-deploy --unsafe-perm=true
