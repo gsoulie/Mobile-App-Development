@@ -1,10 +1,10 @@
-![alt tag](https://github.com/gsoulie/ionic/blob/master/ionic2ban.png)
+![alt tag](https://pbs.twimg.com/profile_images/834457277830541312/bYMCvtHD.jpg)
 
 # ionic 2
 
 > **Warning** this personnal guide is based on ionic 2. Consequently, some information may be outdated     
 
-> **last update** : updateing command syntax for CLI 3.0
+> **last update** : updating command syntax for CLI 3.0
 
 ##### Table of Contents  
 * [Resources](#resources)    
