@@ -122,6 +122,8 @@
 
 ### Typical installation
 
+[CLI 3 Command cheat sheet](https://docs.google.com/document/d/1r8nTAaJ5hLIJ1DCwBozU-JGV480Du0xCMIg2dj3JRQo/edit#heading=h.kk1966kbedef)     
+
 **Install / update Node**
 
 First, ensure you have latest version of node
