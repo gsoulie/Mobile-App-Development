@@ -5007,6 +5007,21 @@ ionic cordova plugin rm cordova-plugin-splashscreen
 ionic cordova plugin add https://github.com/apache/cordova-plugin-splashscreen.git
 ```
 
+Or create all the images with those dimensions :
+
+```
+src="resources/ios/splash/Default-568h@2x~iphone.png" width="640" height="1136"
+src="resources/ios/splash/Default-667h.png" width="750" height="1334"
+src="resources/ios/splash/Default-736h.png" width="1242" height="2208"
+src="resources/ios/splash/Default-Landscape-736h.png" width="2208" height="1242"
+src="resources/ios/splash/Default-Landscape@2x~ipad.png" width="2048" height="1536"
+src="resources/ios/splash/Default-Landscape~ipad.png" width="1024" height="768" 
+src="resources/ios/splash/Default-Portrait@2x~ipad.png" width="1536" height="2048"
+src="resources/ios/splash/Default-Portrait~ipad.png" width="768" height="1024"
+src="resources/ios/splash/Default@2x~iphone.png" width="640" height="960" 
+src="resources/ios/splash/Default~iphone.png" width="320" height="480" 
+```
+
 **Remove fade-in / fade-out effect**
 
 Add the following property to config.xml
