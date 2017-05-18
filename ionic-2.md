@@ -4985,19 +4985,19 @@ Save a splash.png, splash.psd or splash.ai file within the resources directory a
 For the appicon, the minimum dimension should be 192x192 px with no rounded corner. 1024x1024 px file is better 
 
 ```
-$ ionic resources --splash
+$ ionic cordova resources --splash
 ```
 
 You can also run 
 
 ```
-$ ionic resources --icon
+$ ionic cordova resources --icon
 ```
 
 Or simply
 
 ```
-$ ionic resources
+$ ionic cordova resources
 ```
 
 > Note : If splash screen doesn't showing, update your cordova plugin
