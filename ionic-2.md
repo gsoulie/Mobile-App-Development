@@ -2415,6 +2415,24 @@ p {
 
 [link : reddit API url for testing app](https://www.reddit.com/r/gifs/top/.json?limit=10&sort=hot)
 
+**Warning** You may encountered a ```Uncaught (in promise): Error: No provider for Http!``` error during serving the app. To avoid this, you have to include HttpModule in your *app.module.ts*
+
+*app.module.ts*
+
+```
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule, ErrorHandler } from '@angular/core';
+import { HttpModule } from '@angular/http';
+...
+  imports: [
+    BrowserModule,
+    HttpModule,
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
+  ],
+...
+```
+
 **Retrieve remote data**
 
 First, create a provider with the code below :
