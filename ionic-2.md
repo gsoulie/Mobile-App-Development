@@ -4194,6 +4194,23 @@ $searchbar-ios-background-color: rgba(247,247,247,1);
 }
 ```
 
+## Label with full width inside ion-item
+
+Tips to avoid ion-label truncate
+
+```html
+<button ion-item>
+	<ion-label>my very long text labe</ion-label>
+</button>
+```
+
+```css
+ion-label{
+	width: 100%;
+	display: table:
+}
+```
+
 # Known issues
 [Back to top](#ionic-2) 
 
