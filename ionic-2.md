@@ -4143,6 +4143,19 @@ vertical center in row
 	<button ion-button outline type="submit" text-center [disabled]="!f.valid">VALIDER</button>
 </div>
 ```
+
+### Add button at the bottom of listview
+
+```html
+<ion-content>
+...
+</ion-content>
+
+<ion-footer no-shadow>
+	<button ion-button block>MY BUTTON</button>
+</ion-footer>
+```
+
 ## Remove Android input green highlight
 
 add the following to your *variable.scss*
