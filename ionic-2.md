@@ -2923,6 +2923,12 @@ $item-ios-detail-push-show: true;
 
 After that refresh your browser
 
+####Remove list arrow from button
+
+```html
+<button ion-item detail-none>My button</button>
+```
+
 ### Standard dynamic ion-list item
 
 ```xml
