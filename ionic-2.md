@@ -4142,6 +4142,14 @@ vertical center in row
 </ion-row>
 ```
 
+### Center button text
+
+```css
+.myButtonStyle{
+	text-align: center;
+}
+```
+
 ### Vertical alignment
 
 ```css
