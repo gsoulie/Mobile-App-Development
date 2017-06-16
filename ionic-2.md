@@ -65,6 +65,7 @@
 	* [dynamic style](#dynamic-style)    
 	* [Toggle menu](#toggle-menu)    
 	* [Expandable header](#expandable-header)    
+	* [List accordion](#list-accordion)    
 * [Sass](#sass)    	
 * [Known issues](#known-issues)    
 * [Using image](#using-image)    
@@ -4038,6 +4039,9 @@ expadableHeader {
 }
 ```
 
+## List accordion
+
+[link : accordion-list](https://ionicacademy.com/accordion-list-ionic/)
 
 # Sass
 [Back to top](#ionic-2) 
