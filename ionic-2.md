@@ -2830,8 +2830,8 @@ Here you can see **title** parameter which provides the title for the component.
 
 ## Call custom component functions from parent
 
-Previous, we have see that we can pass parameters to the component with the **@Input** decorator, but sometimes we need to call some component's functions from the parent Page. 
-We can access to a component and its method by using **@ViewChild** decorator. 
+Previous, we have see that we can pass parameters to the component with the **@Input** decorator, but sometimes we need to call  component's functions from the parent Page. 
+We can access to a component and its methods by using **@ViewChild** decorator. 
 
 [@ViewChild documentation](http://learnangular2.com/viewChild/)
 
