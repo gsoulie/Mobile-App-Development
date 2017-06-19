@@ -2821,7 +2821,7 @@ Add your custom component in your view file by simply adding a tag with the name
 </ion-header>
 
 <ion-content class="window">
-  <compo id="myCompo" title="My custom title"></compo>
+  <compo title="My custom title"></compo>
 </ion-content>
 
 ```
