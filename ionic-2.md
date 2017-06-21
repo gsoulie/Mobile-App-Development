@@ -2681,6 +2681,10 @@ export class HomePage {
 # Themes
 [Back to top](#ionic-2)  
 
+### Dynamic theming
+
+[devdactic dynamic theming](https://devdactic.com/dynamic-theming-ionic/)    
+
 ### Statusbar
 
 **cordova plugin installation**
