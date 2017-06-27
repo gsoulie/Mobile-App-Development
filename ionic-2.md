@@ -4177,6 +4177,12 @@ page-map {
 }
 ```
 
+## Lock screen orientation
+
+[Documentation screen orientation](https://ionicframework.com/docs/native/screen-orientation/)    
+
+**Warning** You can not test the screen orientation on ionic serve, this will throw an exception
+
 ## Positioning
 
 ### Bottom positioning
