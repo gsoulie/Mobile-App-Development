@@ -4160,6 +4160,19 @@ myClass {
 }
 ```
 
+## Set background image to content
+
+```css
+page-map {
+    .main {
+        background-image: url('../assets/img/my_background.jpg');
+        -webkit-background-image: url('../assets/img/my_background.jpg');
+        background-repeat: no-repeat;
+        background-size:cover;
+    }
+}
+```
+
 ## Positioning
 
 ### Bottom positioning
