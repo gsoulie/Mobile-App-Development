@@ -4160,6 +4160,10 @@ myClass {
 }
 ```
 
+## Set transparent NavBar
+
+Put the following code in your *variable.scss* : ```$toolbar-background: transparent;```
+
 ## Set background image to content
 
 ```css
