@@ -5407,11 +5407,12 @@ app/platforms/android/res/xml
 ```
 
 more information about it's configuration [here](http://cordova.apache.org/docs/en/latest/config_ref/index.html)
+[V1 documentation](https://ionicframework.com/docs/v1/guide/publishing.html)    
 
 To generate a release build for Android :
 
 ```
-$ cordova build --release android
+$ cordova build --release --prod android
 ```
 
 This will generate a release build based on the settings in your config.xml. Your Ionic app will have preset default values in this file, but if you need to customize how your app is built, you can edit this file to fit your preferences
