@@ -20,7 +20,8 @@
 
 ## Device screen size
 
-[Devices metrics](http://www.materialup.com/posts/device-metrics-google-design/responsive)
+[Devices metrics](http://www.materialup.com/posts/device-metrics-google-design/responsive)    
+[Deveics width](https://mydevice.io/devices/#sortTablets)    
 
 ## JS / TypeScript Guideline
 
