@@ -5374,37 +5374,15 @@ ionic cordova run ios
 
 [link : publishing app](http://ionicframework.com/docs/guide/publishing.html)    
 
-### Enable prodMode
-
-To enable prod mode, I configured the following in app.ts:
-
-```javascript
-import {enableProdMode} from '@angular/core';
-enableProdMode();
-```
-
-or other solution
-
-```javascript
-let prodMode: boolean = window.hasOwnProperty('cordova');
-```
-
 Now that we have a working app, we are ready to push it live to the world! Since the Ionic team already submitted the Todo app from this guide to the app store, chances are you’ll want to follow this chapter with a new app that you make on your own.
 
 So first, we need to generate a release build of our app, targeted at each platform we wish to deploy on. Before we deploy, we should take care to adjust plugins needed during development that should not be in production mode. For example, we probably don’t want the debug console plugin enabled, so we should remove it before generating the release builds:
 
-```
-$ cordova plugin rm cordova-plugin-console
-```
+```$ ionic cordova plugin rm cordova-plugin-console```
 
 ## Android publishing
 
-First, check your config.xml file located in :
-
-```
-app/platforms/ios/AppName/config.xml
-app/platforms/android/res/xml
-```
+First, check your config.xml file and modify the author, name, description etc...
 
 more information about it's configuration [here](http://cordova.apache.org/docs/en/latest/config_ref/index.html)
 [V1 documentation](https://ionicframework.com/docs/v1/guide/publishing.html)    
@@ -5432,6 +5410,9 @@ You will first be prompted to create a password for the keystore. Then, answer t
 **Note:** Make sure to save this file somewhere safe, if you lose it you won’t be able to submit updates to your app!
 
 To sign the unsigned APK, run the **jarsigner** tool which is also included in the JDK:
+
+**WARNING** you must copy your apk in the same folder that your keystore were generated ! Else you will have the following error 
+```jarsigner: unable to open jar file: android-release-unsigned.apk```
 
 ```
 $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore HelloWorld-release-unsigned.apk alias_name
