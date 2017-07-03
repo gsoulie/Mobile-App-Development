@@ -4277,6 +4277,13 @@ vertical center in row
 }
 ```
 
+### Center text inside ion-input
+
+In the view file
+```xml
+<ion-input text-center></ion-input>
+```
+
 ### Vertical alignment
 
 ```css
