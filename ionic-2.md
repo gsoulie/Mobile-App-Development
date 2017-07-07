@@ -85,6 +85,7 @@
 * [Other modules](#other-modules)    
 * [Self working components](https://github.com/gsoulie/Ionic2-snippets)    
 * [Unit testing](#unit-testing)    
+* [PWA](#pwa)    
 
 # TODO
 
@@ -5498,3 +5499,8 @@ And finally, add your test files to the excludes section of your tsconfig so the
 ],
 ```
 You can now run your tests with ```npm test```
+
+
+# PWA
+[Back to top](#ionic-2)
+[discussion](https://forum.ionicframework.com/t/building-for-browsers-pwa/72689/2)    
