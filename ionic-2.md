@@ -5405,6 +5405,8 @@ $ cordova build --release --prod android
 
 This will generate a release build based on the settings in your config.xml. Your Ionic app will have preset default values in this file, but if you need to customize how your app is built, you can edit this file to fit your preferences
 
+[Other build option](https://ionicframework.com/docs/cli/cordova/build/)    
+
 Next, we can find our unsigned **APK** file in ```platforms/android/build/outputs/apk```
 
 Now, we need to sign the unsigned APK and run an alignment utility on it to optimize it and prepare it for the app store. If you already have a signing key, skip these steps and use that one instead.
