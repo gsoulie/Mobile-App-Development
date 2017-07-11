@@ -5550,4 +5550,5 @@ You can use ```ionic run browser``` to test the site
 [discussion with firebase hosting](https://forum.ionicframework.com/t/building-for-browsers-pwa/72689)    
 [discussion](https://forum.ionicframework.com/t/building-for-browsers-pwa/72689/2)    
 [discussion](https://forum.ionicframework.com/t/pwa-my-experience-creating-a-pwa-with-ionic-from-scratch-to-deployment/94541)    
-[discussion](https://forum.ionicframework.com/t/deploying-pwa/73749)    
+[discussion](https://forum.ionicframework.com/t/deploying-pwa/73749)   
+[firebase hosting](https://coryrylan.com/blog/deploy-angular-cli-apps-to-firebase)    
