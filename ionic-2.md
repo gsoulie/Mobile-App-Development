@@ -5537,5 +5537,15 @@ You can now run your tests with ```npm test```
 
 
 # PWA
-[Back to top](#ionic-2)
+[Back to top](#ionic-2)    
+
+**1** Add browser platform with ```ionic platform add browser```
+**2** Build with ```ionic build browser --prod```
+**3** Upload the content of ```platforms/browser/www``` in your server (can use firebase hosting)
+
+You can use ```ionic run browser``` to test the site
+
+[discussion with firebase hosting](https://forum.ionicframework.com/t/building-for-browsers-pwa/72689)    
 [discussion](https://forum.ionicframework.com/t/building-for-browsers-pwa/72689/2)    
+[discussion](https://forum.ionicframework.com/t/pwa-my-experience-creating-a-pwa-with-ionic-from-scratch-to-deployment/94541)    
+[discussion](https://forum.ionicframework.com/t/deploying-pwa/73749)    
