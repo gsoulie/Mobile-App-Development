@@ -1930,7 +1930,40 @@ export class LocationPage {
 
 Storage is an easy way to store key/value pairs and JSON objects.
 
-[documentation here](https://ionicframework.com/docs/v2/storage/)    
+[documentation here](https://ionicframework.com/docs/v2/storage/)   
+
+First, install *sqlite storage* plugin 
+
+```
+ionic cordova plugin add cordova-sqlite-storage
+```
+
+Then add it in the imports list in *app.module.ts* file
+
+```
+import { IonicStorageModule } from '@ionic/storage';
+
+@NgModule({
+  declarations: [
+    // ...
+  ],
+  imports: [      
+    BrowserModule,
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    // ...
+  ],
+  providers: [
+    // ...
+  ]
+})
+export class AppModule {}
+```
+
+You can now use it as below
 
 *Service file*
 
