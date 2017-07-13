@@ -5547,6 +5547,33 @@ You can now run your tests with ```npm test```
 
 You can use ```ionic run browser``` to test the site
 
+
+```
+Create your firebase project on Firebase, then
+
+ionic cordova platform add browser
+
+ionic build browser --prod
+
+npm install -g firebase-tools
+
+firebase login
+
+firebase init
+--> select "hosting"
+
+Choose de default directory :
+--> platforms/browser/www
+
+single page ?
+--> yes
+
+overwrite index.html 
+--> no
+
+firebase deploy
+```
+
 [discussion with firebase hosting](https://forum.ionicframework.com/t/building-for-browsers-pwa/72689)    
 [discussion](https://forum.ionicframework.com/t/building-for-browsers-pwa/72689/2)    
 [discussion](https://forum.ionicframework.com/t/pwa-my-experience-creating-a-pwa-with-ionic-from-scratch-to-deployment/94541)    
