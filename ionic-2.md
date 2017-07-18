@@ -5545,7 +5545,7 @@ You can now run your tests with ```npm test```
 
 **3** Upload the content of ```platforms/browser/www``` in your server (can use firebase hosting)    
 
-You can use ```ionic run browser``` to test the site
+You can use ```ionic cordova run browser``` to test the site
 
 
 ```
