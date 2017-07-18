@@ -5541,12 +5541,27 @@ You can now run your tests with ```npm test```
 
 **1** Add browser platform with ```ionic cordova platform add browser```    
 
-**2** Build with ```ionic cordova build browser --prod```    
+**2** Uncomment the following code in the index.html to activate service worker to enabling caching resources
 
-**3** Upload the content of ```platforms/browser/www``` in your server (can use firebase hosting)    
+```
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(() => console.log('service worker installed'))
+      .catch(err => console.error('Error', err));
+  }
+</script>
+```
+
+**3** If you have need to caching resources, add them in ```service-worker.js```
+
+**4** Build with ```ionic cordova build browser --prod```    
+
+**5** Upload the content of ```platforms/browser/www``` in your server (can use firebase hosting)    
 
 You can use ```ionic cordova run browser``` to test the site
 
+**favicon** the favicon must be placed in the src/assets/icon/ folder, then use ionic cordova resources --icon
 
 ```
 Create your firebase project on Firebase, then
@@ -5573,7 +5588,7 @@ overwrite index.html
 
 firebase deploy
 ```
-
+[josh morony tutorial](https://www.joshmorony.com/the-bare-necessities-progressive-web-apps-in-ionic/)    
 [discussion with firebase hosting](https://forum.ionicframework.com/t/building-for-browsers-pwa/72689)    
 [discussion](https://forum.ionicframework.com/t/building-for-browsers-pwa/72689/2)    
 [discussion](https://forum.ionicframework.com/t/pwa-my-experience-creating-a-pwa-with-ionic-from-scratch-to-deployment/94541)    
