@@ -5539,9 +5539,9 @@ You can now run your tests with ```npm test```
 # PWA
 [Back to top](#ionic-2)    
 
-**1** Add browser platform with ```ionic platform add browser```    
+**1** Add browser platform with ```ionic cordova platform add browser```    
 
-**2** Build with ```ionic build browser --prod```    
+**2** Build with ```ionic cordova build browser --prod```    
 
 **3** Upload the content of ```platforms/browser/www``` in your server (can use firebase hosting)    
 
