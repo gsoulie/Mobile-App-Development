@@ -3958,6 +3958,8 @@ This snippet show how to fix floating button in front of a list
 
 [link : ng2-chart](http://valor-software.com/ng2-charts/)    
 [forum : related post](https://forum.ionicframework.com/t/solved-ionic-2-ng2-charts/42926)    
+[highchart](https://www.highcharts.com/blog/post/setting-chart-ionic-app-using-highcharts/)    
+
 
 ## grid
 [Back to top](#ionic-2) 
