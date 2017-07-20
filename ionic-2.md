@@ -5553,28 +5553,24 @@ You can now run your tests with ```npm test```
 </script>
 ```
 
-**3** If you have need to caching resources, add them in ```service-worker.js```
+**3** If you need to caching some resources, add them in ```service-worker.js```
 
-**4** Build with ```ionic cordova build browser --prod```    
-
-**5** Upload the content of ```platforms/browser/www``` in your server (can use firebase hosting)    
-
-You can use ```ionic cordova run browser``` to test the site
+**4** Run with ```ionic cordova run browser``` to test the site
 
 **favicon** the favicon must be placed in the src/assets/icon/ folder, then use ionic cordova resources --icon
+
+**Steps for hosting and deploying on Firebase**
 
 ```
 Create your firebase project on Firebase, then
 
-ionic cordova platform add browser
+$ionic cordova build browser --prod
 
-ionic build browser --prod
+$npm install -g firebase-tools
 
-npm install -g firebase-tools
+$firebase login
 
-firebase login
-
-firebase init
+$firebase init
 --> select "hosting"
 
 Choose de default directory :
