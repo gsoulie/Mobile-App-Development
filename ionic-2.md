@@ -2,6 +2,7 @@
 <img src="https://pbs.twimg.com/profile_images/834457277830541312/bYMCvtHD.jpg" align="center" width="100">
 </p>     
 
+
 # ionic 2
 
 > **Warning** this personnal guide is based on ionic 2. Consequently, some information may be outdated     
@@ -737,6 +738,11 @@ Moreover, Observables can be retried using one of the retry operators provided b
 
 - Promises will only emit a value once
 - Promises require the caller to have access to the original function that returned the promise in order to have a retry capability.
+
+<p align="center">
+<img src="https://i.stack.imgur.com/Ewn3b.png" align="center" width="300">
+</p>     
+
 
 A promise resolves to a single value asynchronously, an observable resolves to (or emits) multiple values asynchronously (over time).
 
