@@ -735,7 +735,8 @@ Both Promises and Observables provide us with abstractions that help us deal wit
 - Observables can define both the setup and teardown aspects of asynchronous behavior.
 - Observables are cancellable.
 Moreover, Observables can be retried using one of the retry operators provided by the API, such as retry and retryWhen. On the other hand, 
-
+- [Observable operators](https://gist.github.com/btroncone/d6cf141d6f2c00dc6b35#map)    
+    
 - Promises will only emit a value once
 - Promises require the caller to have access to the original function that returned the promise in order to have a retry capability.
 
