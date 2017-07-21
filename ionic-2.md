@@ -740,7 +740,7 @@ Moreover, Observables can be retried using one of the retry operators provided b
 - Promises require the caller to have access to the original function that returned the promise in order to have a retry capability.
 
 <p align="center">
-<img src="https://i.stack.imgur.com/Ewn3b.png" align="center" width="300">
+<img src="https://i.stack.imgur.com/Ewn3b.png" align="center" width="600">
 </p>     
 
 
