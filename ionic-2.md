@@ -739,6 +739,7 @@ Moreover, Observables can be retried using one of the retry operators provided b
     
 - Promises will only emit a value once
 - Promises require the caller to have access to the original function that returned the promise in order to have a retry capability.
+- Use *then* with promises and *subscribe* with Observables
 
 <p align="center">
 <img src="https://i.stack.imgur.com/Ewn3b.png" align="center" width="600">
@@ -753,7 +754,7 @@ Concrete examples:
 - Observable: Click events
 
 
-For example, **http.get** return Observable, so you must use **subscribe** instead of **then**
+For example, **http.get** return Observable, so you **must** use **subscribe** instead of **then**
 
 ```javascript
 this.http.get('location/of/data').map(res => res.json()).subscribe(data => {
