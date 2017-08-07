@@ -4486,6 +4486,19 @@ save(){
 ...
 ```
 
+### Scrolling when entering input field
+
+To remove scrolling when entering input field focus, add the code below in you *app.component.ts*
+
+```javascript
+ imports: [
+    BrowserModule,
+    IonicModule.forRoot(MyApp,{
+      scrollAssist: false, 
+      autoFocusAssist: false
+    })    
+  ],
+  ```
 
 # Using image
 [Back to top](#ionic-2) 
