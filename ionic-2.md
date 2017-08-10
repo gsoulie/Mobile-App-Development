@@ -4205,6 +4205,17 @@ myClass {
 }
 ```
 
+## Set transparent color to element
+
+Add new transparent color in your *variable.scss* and use it as a standard color
+```css
+$colors: (
+  primary:    #ed2f2f,
+  secondary:  #be2625,
+  hide: transparent,
+);
+```
+
 ## Set transparent NavBar
 
 Put the following code in your *variable.scss* : ```$toolbar-background: transparent;```
