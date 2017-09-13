@@ -68,7 +68,8 @@
 	* [Toggle menu](#toggle-menu)    
 	* [Expandable header](#expandable-header)    
 	* [List accordion](#list-accordion)    
-* [Sass](#sass)    	
+	* [Picker](#picker)     
+* [Sass](#sass)      	
 * [Known issues](#known-issues)    
 * [Using image](#using-image)    
 * [Forms](#forms)    
@@ -4187,6 +4188,58 @@ expadableHeader {
 ## List accordion
 
 [link : accordion-list](https://ionicacademy.com/accordion-list-ionic/)
+
+## Picker
+
+[Custom picker component]https://github.com/raychenfj/ion-multi-picker
+
+First install the component with the following comand line ```npm install ion-multi-picker --save```
+
+*Controller file*
+
+```javascript
+import { Component } from '@angular/core';
+import { NavController } from 'ionic-angular';
+
+@Component({
+  selector: 'page-home',
+  templateUrl: 'home.html'
+})
+export class HomePage {
+  temperature: any[] = [];
+  simpleColumns: any[] = [];
+
+  getDataset(min: number, max: number, step: number, unit: string = ""){
+    for(let i = min; i < max; i+= step){
+      this.temperature.push({
+        text: i.toFixed(1).toString()+unit,
+        value: i.toFixed(1).toString()
+      });
+    }
+  }
+  constructor(public navCtrl: NavController) {
+    this.getDataset(35,43,0.10,"°C");
+   
+    this.simpleColumns = [
+      {
+        name: 'col1',
+        options: this.temperature
+      }
+    ];
+  }
+}
+```
+
+*View file*
+
+```html
+<ion-content padding>
+  <ion-item>
+    <ion-label>Simple Picker</ion-label>
+    <ion-multi-picker cancelText="Fermer" doneText="Valider" item-content [multiPickerColumns]="simpleColumns"></ion-multi-picker>
+  </ion-item>
+</ion-content>
+```
 
 # Sass
 [Back to top](#ionic-2) 
