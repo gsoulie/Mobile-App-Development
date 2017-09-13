@@ -4195,6 +4195,36 @@ expadableHeader {
 
 First install the component with the following comand line ```npm install ion-multi-picker --save```
 
+*app.module.ts*
+
+```javascript
+import { MultiPickerModule } from 'ion-multi-picker';
+
+@NgModule({
+  declarations: [
+    MyApp,
+    AboutPage,
+    ContactPage,
+    HomePage,
+    TabsPage,
+  ],
+  imports: [
+    IonicModule.forRoot(MyApp),
+    MultiPickerModule //Import MultiPickerModule
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp,
+    AboutPage,
+    ContactPage,
+    HomePage,
+    TabsPage,
+  ],
+  providers: []
+})
+export class AppModule {}
+```
+
 *Controller file*
 
 ```javascript
