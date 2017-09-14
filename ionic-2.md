@@ -5529,8 +5529,9 @@ sudo npm install -g ios-deploy --unsafe-perm=true
 ionic cordova platform add ios
 ionic cordova build ios
 ```
+**You may get a build error at the first time**
 
-For the first time, you need to open your project in XCode. To do this, navigate into your app folder and open your *.xcodeproj* file
+So, for the first time, you need to open your project in XCode. To do this, navigate into your app folder and open your *.xcodeproj* file
 
 Then, in xcode, go to Xcode -> preferences and create or connect to your apple ID. You need to create a provisioning profile or select one in the Xcode project settings tab
 
@@ -5538,6 +5539,8 @@ Then, in xcode, go to Xcode -> preferences and create or connect to your apple I
 ```
 ionic cordova run ios
 ```
+
+use *ionic cordova build ios --prod* to build in prod mode
 
 # Publishing app
 [Back to top](#ionic-2)
