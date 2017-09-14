@@ -4498,6 +4498,17 @@ ion-label{
 }
 ```
 
+## Change ion-item height
+
+To reduce the size of *ion-item* element you need to override *min-height* property in your css. Then apply your size in pixels.
+
+```css
+.my_ion_item_class{
+	min-height: 3rem; // Or less
+        height: 20px; 
+}
+```
+
 # Known issues
 [Back to top](#ionic-2) 
 
