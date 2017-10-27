@@ -5669,7 +5669,9 @@ You can now run your tests with ```npm test```
 
 
 # PWA
-[Back to top](#ionic-2)    
+[Back to top](#ionic-2)   
+
+[ionic blog post](http://blog.ionic.io/how-to-make-pwas-with-ionic/)    
 
 **1** Add browser platform with ```ionic cordova platform add browser```    
 
