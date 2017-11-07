@@ -4509,6 +4509,44 @@ To reduce the size of *ion-item* element you need to override *min-height* prope
 }
 ```
 
+## Split screen in 2 views
+
+*View File*
+```css
+<ion-header>
+  <ion-navbar>
+    <ion-title>test</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="no-scroll">
+  <div class="top"></div>
+  <div class="bottom">
+      <p class="val">{{ very_long_text }}</p>
+  </div>
+</ion-content>
+```
+
+*Style file*
+```css
+    .top{
+        height: 50%;
+        background-color: #e3e3e3;
+    }
+    .bottom{
+        height: 50%;
+        background-color: #e3b5e5;
+    }
+    .val{
+        overflow: scroll;
+        height: 100%;
+    }
+    .no-scroll{
+        overflow: hidden;
+    }
+```
+
+
 # Known issues
 [Back to top](#ionic-2) 
 
