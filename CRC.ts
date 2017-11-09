@@ -187,6 +187,10 @@ export class crc{
             }
             return str;
         },
+        /**
+         * str: the frame to compute
+         * inputType: "ASCII" or "hex"
+         **/
         Calculate:function(str,inputType){
             this.StringToCheck=str;
             if(this.CleanString(inputType)){
