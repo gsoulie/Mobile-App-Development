@@ -84,7 +84,8 @@
 * [Build for Android](#build-for-android)  
 * [Build for iOS](#build-for-ios)    
 * [Publishing App](#publishing-app)  
-* [Other modules](#other-modules)    
+* [Other modules](#other-modules)   
+	* [CRC computation](#crc-computation)    
 * [Self working components](https://github.com/gsoulie/Ionic2-snippets)    
 * [Unit testing](#unit-testing)    
 * [PWA](#pwa)    
@@ -5645,7 +5646,7 @@ Now we have our final release binary called HelloWorld.apk and we can release th
 # Other modules
 [Back to top](#ionic-2) 
 
-## Calculate CRC
+## CRC Computation
 
 Here is a library which permit CRC computation. This lib return a JSON object which contains all type of CRC (see usage below).
 
