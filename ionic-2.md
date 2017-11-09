@@ -5645,6 +5645,65 @@ Now we have our final release binary called HelloWorld.apk and we can release th
 # Other modules
 [Back to top](#ionic-2) 
 
+## Calculate CRC
+
+Here is a library which permit CRC computation.
+**Important** : you must modify the *Calculate* function to return your type of CRC (CRC16, CRC32...). In this example we return the *CRCXmodem*
+
+[lib : CRC.ts](https://github.com/gsoulie/Mobile-App-Development/blob/master/CRC.ts)
+
+**Usage**
+
+*app.module.ts*
+
+```javascript
+import { crc } from './../models/crc';
+@NgModule({
+  declarations: [
+    MyApp,
+    HomePage
+  ],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(MyApp)
+  ],
+  bootstrap: [IonicApp],
+  entryComponents: [
+    MyApp,
+    HomePage
+  ],
+  providers: [
+    StatusBar,
+    SplashScreen,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    crc
+  ]
+})
+export class AppModule {}
+
+```
+*Controller file*
+
+```javascript
+import { crc } from './../../models/crc';
+
+@Component({
+  selector: 'page-mode-expert',
+  templateUrl: 'mode-expert.html',
+})
+export class ModeExpertPage {
+
+ constructor(public navCtrl: NavController, 
+              public navParams: NavParams, 
+              private utils: crc) {
+        
+        this.utils.CRCMaster.init();  //init CRC lib
+        alert(this.utils.CRCMaster.Calculate("01040706","hex");	// calculate the CRCXmodem of the frame "01040706"
+  }
+  
+}
+```
+
 ## Make PDF
 [make PDF](https://gist.github.com/scalp42/7261508)  
 [tutorial](http://gonehybrid.com/how-to-create-and-display-a-pdf-file-in-your-ionic-app/)
