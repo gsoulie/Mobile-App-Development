@@ -5647,8 +5647,7 @@ Now we have our final release binary called HelloWorld.apk and we can release th
 
 ## Calculate CRC
 
-Here is a library which permit CRC computation.
-**Important** : you must modify the *Calculate* function to return your type of CRC (CRC16, CRC32...). In this example we return the *CRCXmodem*
+Here is a library which permit CRC computation. This lib return a JSON object which contains all type of CRC (see usage below).
 
 [lib : CRC.ts](https://github.com/gsoulie/Mobile-App-Development/blob/master/CRC.ts)
 
@@ -5698,7 +5697,9 @@ export class ModeExpertPage {
               private utils: crc) {
         
         this.utils.CRCMaster.init();  //init CRC lib
-        alert(this.utils.CRCMaster.Calculate("01040706","hex");	// calculate the CRCXmodem of the frame "01040706"
+	let result = this.utils.CRCMaster.Calculate("01040706","hex");
+	console.log("All results : " + JSON.stringify(result));
+        console.log("CRCXmodem : " + result.crcxmodem);
   }
   
 }
