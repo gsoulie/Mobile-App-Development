@@ -189,16 +189,33 @@ export class crc{
             this.StringToCheck=str;
             if(this.CleanString(inputType)){
               return this.CRCXModem().toString(16).toUpperCase(); // return only CRCXmode value
-               /* $("#crc-input-crc8").val(this.CRC8().toString().toUpperCase());
-                $("#crc-input-crcccitt-xmodem").val("0x"+ this.CRCXModem().toString(16).toUpperCase());
-                $("#crc-input-crc16").val("0x"+ this.CRC16().toString(16).toUpperCase());
-                $("#crc-input-crc16-sick").val("0x"+ this.CRC16Sick().toString(16).toUpperCase());
-                $("#crc-input-crc16-modbus").val("0x"+ this.CRC16Modbus().toString(16).toUpperCase());
-                $("#crc-input-crcccitt-ffff").val("0x"+ this.CRCFFFF().toString(16).toUpperCase());
-                $("#crc-input-crcccitt-1d0f").val("0x"+ this.CRC1D0F().toString(16).toUpperCase());
-                $("#crc-input-crcccitt-kermit").val("0x"+ this.CRCKermit().toString(16).toUpperCase());
-                $("#crc-input-crcdnp").val("0x"+ this.CRCDNP().toString(16).toUpperCase());
-                $("#crc-input-crc32").val("0x"+ this.CRC32().toString(16).toUpperCase());*/
+                
+                // 
+               /* 
+                return {
+                    crc8: this.CRC8().toString().toUpperCase(),
+                    crccitt-xmodem: "0x"+ this.CRCXModem().toString(16).toUpperCase(),
+                    crc16: "0x"+ this.CRC16().toString(16).toUpperCase(),
+                    crc16sick: "0x"+ this.CRC16Sick().toString(16).toUpperCase(),
+                    crc16modbus: "0x"+ this.CRC16Modbus().toString(16).toUpperCase(),
+                    crccitt-ffff: "0x"+ this.CRCFFFF().toString(16).toUpperCase(),
+                    crccitt-1d0f: "0x"+ this.CRC1D0F().toString(16).toUpperCase(),
+                    crckermit: "0x"+ this.CRCKermit().toString(16).toUpperCase(),
+                    crcdnp: "0x"+ this.CRCDNP().toString(16).toUpperCase(),
+                    crc32: "0x"+ this.CRC32().toString(16).toUpperCase()
+                }
+                */
+              /*  return this.CRC8().toString().toUpperCase();   // CRC8
+                return "0x"+ this.CRCXModem().toString(16).toUpperCase(); // CRC CITT-Xmodem
+                return "0x"+ this.CRC16().toString(16).toUpperCase();   // CRC16 
+                return "0x"+ this.CRC16Sick().toString(16).toUpperCase(); // CRC16 Sick
+                return "0x"+ this.CRC16Modbus().toString(16).toUpperCase();  // CRC16 Modbus
+                return "0x"+ this.CRCFFFF().toString(16).toUpperCase(); // CRC CITT-FFFF
+                return "0x"+ this.CRC1D0F().toString(16).toUpperCase(); // CRC CITT-1D0F
+                return "0x"+ this.CRCKermit().toString(16).toUpperCase(); // CRC-KERMIT
+                return "0x"+ this.CRCDNP().toString(16).toUpperCase(); // CRC DNP
+                return "0x"+ this.CRC32().toString(16).toUpperCase(); // CRC32
+                */
             }
         }
       };
