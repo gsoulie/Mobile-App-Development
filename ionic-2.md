@@ -5834,7 +5834,9 @@ firebase deploy
 
 First install *cordova-native-ble-central* plugin
 
-(native ble)[ttps://ionicframework.com/docs/native/ble/]    
+[native ble](ttps://ionicframework.com/docs/native/ble/)    
+
+[personal BLE repo](https://github.com/gsoulie/ionicBLE)
 
 ### Reading advertising data
 
@@ -6049,10 +6051,167 @@ export class HomePage {
 ## Bluetooth serial
 [Back to top](#ionic-2)  
 
+[link : official documentation](https://ionicframework.com/docs/native/bluetooth-serial/)    
+
+First, install *cordova-plugin-bluetooth-serial* plugin according to the documentation
+
+```
+$ ionic cordova plugin add cordova-plugin-bluetooth-serial
+$ npm install --save @ionic-native/bluetooth-serial
+```
+
+[personnal bluetooth serial repo](https://github.com/gsoulie/bluetooth-serial)    
+
 ### Scan
+
+*Controller file*
+
+```javascript
+ /**
+  * Scan for bounded devices and just displaying devices which name contains "BLUE-READ"
+  */
+  onScan(refresher = null){
+    this.devices = [];
+    this.bluetoothSerial.list()
+    .then(data => {
+      for(let i = 0; i<data.length; i++){
+        if(data[i].name.toUpperCase().indexOf("BLUE-READ") >= 0){
+          this.devices.push(data[i]);
+        }
+      }
+      if(refresher){refresher.complete();}
+    })
+    .catch(error => {
+      alert(JSON.stringify(error));
+      this.devices = [];
+    })
+  }
+```
 
 ### Connect
 
+Connect selected device
+
+*Controller file*
+
+```javascript
+ /**
+  * Connect to bluetooth device
+  * @param btObject : selected device
+  */
+  onConnect(btObject){
+    var loader = this.loadingCtrl.create({
+      content: "Connecting " + btObject.name + "...",
+      dismissOnPageChange: true
+    });
+
+    this.bluetoothSerial.isEnabled()
+    .then(data => {
+      this.btEnabled = true;
+      this.macAddress = btObject.address.toUpperCase();
+      loader.present();
+
+      // Connection
+      this.bluetoothSerial.connect(this.macAddress)
+      .subscribe(
+        (data) => {
+          this.bluetoothSerial.isConnected()
+          .then(data => {
+            this.blueReadConnected = true;
+            this.btName = btObject.name;
+            this.btMac = btObject.address;
+
+            loader.onDidDismiss(() => {
+              this.navCtrl.push(ModeExpertPage,{btName:btObject.name, btMac: btObject.address})
+            });
+            loader.dismiss();
+          })
+          .catch(error => {
+            loader.dismiss();
+            alert("\r\nBlueRead disconnected\r\n");
+            this.blueReadConnected = false;
+          });
+      },
+      (error) => {
+        alert("\r\nConnection status : " + JSON.stringify(error));
+        loader.dismiss();
+      });
+        // Tiemout function to refresh connexion status
+        setTimeout(function(){
+        },4500);
+    })
+    .catch(err => {
+      this.btEnabled = false;
+      loader.dismiss();
+    });    
+  }
+  
+  
+   /**
+   * Return true if the bluetooth device is connected
+   */
+  isConnected(){
+    var res = false;
+    this.bluetoothSerial.isConnected()
+    .then(data => {
+      alert("Blue-Read connected");
+      this.blueReadConnected = true;
+      res = true;
+    })
+    .catch(error => {
+      alert("Blue-Read disconnected");
+      this.blueReadConnected = false;
+    });
+
+    return res;
+  }
+```
+
 ### Read
 
+*Controller file*
+
+```javascript
+ /**
+  * Subscribe to be notified when data is received.
+  */
+  onRawData(){
+    this.bluetoothSerial.subscribeRawData().subscribe(
+      (data) => {
+        var temp = new Uint8Array(data);
+        for(let x=0; x < temp.length; x++){
+          this.output += ("0" + parseInt(temp[x].toString(16),16).toString(16)).slice(-2).toUpperCase() + " "; 
+        }            
+      },
+      (error) => {
+        alert("\r\nReception error : " + JSON.stringify(error) + "\r\n");
+    });
+  }
+```
+
 ### Write
+
+*Controller file*
+
+```javascript
+  /**
+   * Write data from input field to the bluetooth device
+   */
+  onWrite(){
+    var frame = this.onBuildFrame(this.stringToWrite); // optionnal, in this case the function onBuildFrame generate CRC of the hexadecimal frame
+    
+    this.bluetoothSerial.isConnected()
+    .then(data => {
+      this.bluetoothSerial.write(new Buffer(frame,"hex"))
+      .then(data => {
+        this.output += "\r\n\r\nTx : " + frame + "\r\n";  
+        this.onRawData();	// Read the response
+        setTimeout(function(){},1500);
+      })
+      .catch(error => {this.output += "\r\nWrite Error : " + JSON.stringify(error);});
+    })
+    .catch(error => {
+      this.output += "\r\nBT disconnected";
+    });    
+  }
+  ```
