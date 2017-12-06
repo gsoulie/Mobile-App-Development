@@ -52,7 +52,7 @@
 	* [Event propagation](#event-propagation)    
 * [Async Data](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-async-data.md)    
 * [Custom Component](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-custom-component.md)    
-* [UI Components](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-ui-components.md)    
+* [UI Components](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-ui-component.md)    
 	* [modal](#modal)    
 	* [comboBox](#combobox)    
 	* [ion-list](#ion-list)  
