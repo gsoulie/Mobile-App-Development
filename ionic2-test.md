@@ -75,7 +75,7 @@
 * [Known issues](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-known-issues.md)    
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)    
 * [Forms](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-forms.md)    
-* [Backends](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-backends.md)    
+* [Backends](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-backend.md)    
 	* [Strongloop](#strongloop)     
 	* [Firebase with angularfire2](#firebase-with-angularfire2)    
 	* [Firebase](#firebase)     	
