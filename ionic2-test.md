@@ -12,15 +12,14 @@
 ##### Table of Contents  
 * [Resources](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-resources.md)    
 * [Prerequisites](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-prerequisites.md)    
-	* [Start with ionic]
-	* [Visual Studio Code]
+	* Start with ionic
+	* Visual Studio Code
 * [Concepts](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-concepts.md)    
-	* [Angular 2](#angular-2)  
-	* [Decorators](#decorators)    	
-	* [Pipe](#pipe)    
-	* [Promise vs Observable](#promise-vs-observable)    
-	* [Mapping](#mapping)    
-	* [Arrow function](#arrow-function)    
+	* Angular 2
+	* Decorators
+	* Pipe
+	* Promise vs Observable
+	* Arrow function
 * [Directives](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-directive.md)    
 * [Config](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config.md)    
 * [Config XML](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config-xml.md)    
@@ -28,19 +27,20 @@
 * [Add files to project](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-add-files-to-project.md)    
 * [Third party lib](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-third-party-lib.md)    
 * [Useful functions](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-useful-functions.md)  
-	* [Get specific platform](#get-specific-platform)   
-	* [Generate UUID](#generate-uuid)  
-	* [Safely displaying data with elvis operator](#safely-displaying-data-with-elvis-operator)    
-	* [Show / hide DOM element](#show-hide-dom-element)    
-	* [Checking network connection](#checking-network-connection)    
-	* [Close modal](#close-modal)    
-	* [Accessing DOM element @ViewChild](#accessing-dom-element)    
+	* Get specific platform
+	* Generate UUID
+	* Safely displaying data with elvis operator
+	* Show / hide DOM element
+	* Checking network connection
+	* Close modal
+	* Accessing DOM element @ViewChild
 * [Moment JS](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-momentjs.md)    
 * [File storage](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-file-storage.md)  
 * [Geolocation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-geolocation.md)  
 * [Database](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-database.md)  
-	* [SQLite database](#sqlite-database)    
-	* [SQLStorage](#sqlstorage)    
+	* SQLite database
+	* SQLStorage
+	* PouchDB
 * [Camera](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-camera.md)   
 * [Gallery](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gallery.md)    
 * [Barcode Scanner](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-barcode.md)  
@@ -48,37 +48,37 @@
 * [Navigation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-navigation.md)  
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
 * [Events](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-events.md)    
-	* [Page event](#page-event)    
-	* [Event propagation](#event-propagation)    
+	* Page event
+	* Event propagation
 * [Async Data](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-async-data.md)    
 * [Custom Component](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-custom-component.md)    
 * [UI Components](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-ui-component.md)    
-	* [modal](#modal)    
-	* [comboBox](#combobox)    
-	* [ion-list](#ion-list)  
-	* [searchbar](#searchbar)    
-	* [list filtering](#high-performance-list-filtering)    
-	* [tab](#tab)       
-	* [tab icon](#tab-icon)    
-	* [alert dialog box](#alert-dialog-box)    
-	* [floating button](#floating-button)  
-	* [chart](#chart)    
-	* [grid](#grid)    
-	* [toggle](#toggle)    
-	* [popover menu](#popover-menu)    
-	* [dynamic style](#dynamic-style)    
-	* [Toggle menu](#toggle-menu)    
-	* [Expandable header](#expandable-header)    
-	* [List accordion](#list-accordion)    
-	* [Picker](#picker)     
+	* modal
+	* comboBox
+	* ion-list
+	* searchbar
+	* list filtering
+	* tab
+	* tab icon
+	* alert dialog box
+	* floating button
+	* chart
+	* grid
+	* toggle
+	* popover menu
+	* dynamic style
+	* Toggle menu
+	* Expandable header
+	* List accordion
+	* Picker
 * [Sass](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-sass.md)      	
 * [Known issues](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-known-issues.md)    
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)    
 * [Forms](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-forms.md)    
 * [Backends](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-backend.md)    
-	* [Strongloop](#strongloop)     
-	* [Firebase with angularfire2](#firebase-with-angularfire2)    
-	* [Firebase](#firebase)     	
+	* Strongloop
+	* Firebase with angularfire2
+	* Firebase
 * [Authentication](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-authentication.md)    
 * [Internationalization](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-i18n.md)  
 * [Splash screen and appicon](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-splashscreen.md)  
@@ -88,7 +88,7 @@
 * [Build for iOS](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-build-ios.md)    
 * [Publishing App](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-publishing.md)  
 * [Other modules](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-other-modules.md)   
-	* [CRC computation](#crc-computation)    
+	* CRC computation
 * [Self working components](https://github.com/gsoulie/Ionic2-snippets)    
 * [Unit testing](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-unit-testing.md)    
 * [PWA](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-pwa.md)    
