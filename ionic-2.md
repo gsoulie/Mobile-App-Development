@@ -4879,7 +4879,7 @@ cordova plugin add cordova-plugin-inappbrowser@1.1.0
 <meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline' 'unsafe-eval' *; style-src  'self' 'unsafe-inline' *">
 ```
 
-##Firebase with angularfire2
+## Firebase with angularfire2
 [Back to top](#ionic-2) 
 
 [link : Josh morony tutorial](https://www.joshmorony.com/building-a-crud-ionic-2-application-with-firebase-angularfire/)
