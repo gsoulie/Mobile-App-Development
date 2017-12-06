@@ -12,8 +12,8 @@
 ##### Table of Contents  
 * [Resources](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-resources.md)    
 * [Prerequisites](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-prerequisites.md)    
-	* [Start with ionic](#start-with-ionic)  
-	* [Visual Studio Code](#visual-studio-code)    
+	* [Start with ionic]
+	* [Visual Studio Code]
 * [Concepts](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-concepts.md)    
 	* [Angular 2](#angular-2)  
 	* [Decorators](#decorators)    	
