@@ -78,7 +78,6 @@
 * [Forms](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-forms.md)    
 * [Backends](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-backend.md)    
 	* Strongloop
-	* Firebase with angularfire2
 	* Firebase
 * [Authentication](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-authentication.md)    
 * [Internationalization](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-i18n.md)  
