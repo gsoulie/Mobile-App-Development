@@ -42,6 +42,8 @@
 	* SQLStorage
 	* PouchDB    
 * [Firebase Services](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-firebase-angularfire2.md#angularfire2)    
+	* AngularFire2 Authentication
+	* AngularFire2 real-time database
 * [Camera](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-camera.md)   
 * [Gallery](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gallery.md)    
 * [Barcode Scanner](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-barcode.md)  
