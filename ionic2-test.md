@@ -27,6 +27,7 @@
 * [Add files to project](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-add-files-to-project.md)    
 * [Third party lib](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-third-party-lib.md)    
 * [Useful functions](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-useful-functions.md)  
+	* Snippets repo
 	* Get specific platform
 	* Generate UUID
 	* Safely displaying data with elvis operator
