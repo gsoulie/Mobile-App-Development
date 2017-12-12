@@ -40,7 +40,8 @@
 * [Database](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-database.md)  
 	* SQLite database
 	* SQLStorage
-	* PouchDB
+	* PouchDB    
+* [Firebase Services](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-firebase-angularfire2.md#angularfire2)    
 * [Camera](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-camera.md)   
 * [Gallery](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gallery.md)    
 * [Barcode Scanner](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-barcode.md)  
