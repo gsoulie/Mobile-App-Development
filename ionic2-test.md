@@ -95,7 +95,7 @@
 * [Unit testing](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-unit-testing.md)    
 * [PWA](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-pwa.md)    
 * [Bluetooth](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-bluetooth.md)    
-	* [BLE](#ble)    
-	* [Bluetooth Serial](#bluetooth-serial)    
+	* BLE
+	* Bluetooth Serial
 
 [TODO](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-todo.md)    
