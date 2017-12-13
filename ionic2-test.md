@@ -76,6 +76,7 @@
 	* List accordion
 	* Picker
 * [Sass](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-sass.md)      	
+* [Animation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-animation.md)    
 * [Known issues](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-known-issues.md)    
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)    
 * [Forms](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-forms.md)    
