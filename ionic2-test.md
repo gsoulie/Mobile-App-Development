@@ -3,9 +3,7 @@
 </p>     
 
 
-# ionic 2
-
-> **Warning** this personnal guide is based on ionic 2. Consequently, some information may be outdated     
+# ionic 2 
 
 > **last update** : updating command syntax for CLI 3.0
 
