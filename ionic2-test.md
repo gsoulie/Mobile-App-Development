@@ -18,6 +18,7 @@
 	* Pipe
 	* Promise vs Observable
 	* Arrow function
+	* Async / Await functions
 * [Directives](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-directive.md)    
 * [Config](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config.md)    
 * [Config XML](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config-xml.md)    
