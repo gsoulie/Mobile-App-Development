@@ -5,7 +5,7 @@
 
 # ionic 2 
 
-> **last update** : updating command syntax for CLI 3.0
+> **last update** : updating angularfire2 5.0 syntax
 
 ##### Table of Contents  
 * [Resources](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-resources.md)    
