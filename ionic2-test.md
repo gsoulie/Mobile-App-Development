@@ -16,7 +16,7 @@
 	* Angular 2
 	* Decorators
 	* Pipe
-	* Promise vs Observable
+	* Promise vs Observable (map and subscribe operators)
 	* Arrow function
 	* Async / Await functions
 * [Directives](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-directive.md)    
