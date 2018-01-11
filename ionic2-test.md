@@ -80,7 +80,7 @@
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)    
 * [Forms](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-forms.md)    
 * [Backends](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-backend.md)    
-	* Communicating between Ionic app and NodeJS backend    
+	* [Communicating between Ionic app and NodeJS backend](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-nodejs-backend.md)    
 	* Strongloop
 	* Firebase
 * [Authentication](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-authentication.md)    
