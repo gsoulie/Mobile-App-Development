@@ -74,7 +74,15 @@
 	* Expandable header
 	* List accordion
 	* Picker
-* [Sass](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-sass.md)      	
+* [Sass](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-sass.md)
+	* Set transparent color to element
+	* Set transparent NavBar
+	* Set background image to content
+	* Lock screen orientation
+	* Positioning
+	* Remove Android input green highlight
+	* Styling Searchbar
+	* overlay
 * [Animation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-animation.md)    
 * [Known issues](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-known-issues.md)    
 * [Common errors](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-error.md)    
