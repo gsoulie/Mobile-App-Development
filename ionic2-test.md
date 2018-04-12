@@ -52,7 +52,8 @@
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
 * [Events](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-events.md)    
 	* Page event
-	* Event propagation
+	* Event propagation    
+* [Screen Orientation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-screen-orientation.md)        
 * [Async Data](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-async-data.md)    
 * [Custom Component](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-custom-component.md)    
 * [UI Components](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-ui-component.md)    
