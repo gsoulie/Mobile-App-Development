@@ -4,6 +4,19 @@
 
 ![alt tag](https://www.designmantic.com/blog/wp-content/uploads/2015/04/ten-Commandments-UI-Design.png)
 
+## Graphical resources
+[Imageoptim](https://imageoptim.com/fr.html)    
+[Paletton](http://paletton.com/#uid=23q0u0k++VBrKZTEz+V+VxYZ+pL)    
+[FlatUI colors](http://flatuicolors.com/)     
+[Material Design palette](http://www.materialpalette.com/)         
+[Color trends by OS](http://tintui.com/index.html)     
+[Material design](http://www.google.com/design/spec/style/color.html#color-color-palette)    
+[Android official icons](https://developer.android.com/design/downloads/index.html)   
+[Adobe color CC](https://color.adobe.com/fr/explore/newest/)    
+[Icon pack for prototyping](https://fr.icons8.com/web-app/category/ios7/Photo-Video)    
+[Icon pack for prototyping 2](https://thenounproject.com/)    
+[Favicon Generator](https://www.favicon-generator.org/)    
+
 ## Editor
 
 [Visual Studio Code](http://code.visualstudio.com/Docs/?dv=osx)    
@@ -48,18 +61,6 @@
 [JSON viewer](http://jsonviewer.stack.hu/)     
 [JSON Schema](http://jsonschema.net/#/)    
 [TSLint for linting TypeScript code](http://palantir.github.io/tslint/)    
-
-## Graphical resources
-[Imageoptim](https://imageoptim.com/fr.html)    
-[Paletton](http://paletton.com/#uid=23q0u0k++VBrKZTEz+V+VxYZ+pL)    
-[FlatUI colors](http://flatuicolors.com/)     
-[Material Design palette](http://www.materialpalette.com/)         
-[Color trends by OS](http://tintui.com/index.html)     
-[Material design](http://www.google.com/design/spec/style/color.html#color-color-palette)    
-[Android official icons](https://developer.android.com/design/downloads/index.html)   
-[Adobe color CC](https://color.adobe.com/fr/explore/newest/)    
-[Icon pack for prototyping](https://fr.icons8.com/web-app/category/ios7/Photo-Video)    
-[Icon pack for prototyping 2](https://thenounproject.com/)    
 
 ## Fonts
 [font google](https://fonts.google.com/specimen/Nunito?selection.family=Nunito)    
