@@ -17,6 +17,10 @@
 [Icon pack for prototyping 2](https://thenounproject.com/)    
 [Favicon Generator](https://www.favicon-generator.org/)    
 
+## Tools
+
+[sequence diagram tool](https://www.websequencediagrams.com/)    
+
 ## Editor
 
 [Visual Studio Code](http://code.visualstudio.com/Docs/?dv=osx)    
