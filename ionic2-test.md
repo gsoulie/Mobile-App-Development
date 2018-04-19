@@ -110,4 +110,5 @@
 	* BLE
 	* Bluetooth Serial
 * [Code documentation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-code-documentation.md)    
+* [Drawing](https://devdactic.com/ionic-canvas-drawing-files/)    
 [TODO](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-todo.md)    
