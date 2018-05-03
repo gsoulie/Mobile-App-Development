@@ -51,6 +51,7 @@
 * [HTTP Remote and Local data](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-http-query.md)  
 * [Navigation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-navigation.md)  
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
+	* font
 * [Events](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-events.md)    
 	* Page event
 	* Event propagation    
