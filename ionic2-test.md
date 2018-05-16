@@ -92,7 +92,8 @@
 	* Positioning
 	* Remove Android input green highlight
 	* Styling Searchbar
-	* overlay
+	* Overlay
+	* Remove ion-card shadow
 * [Animation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-animation.md)    
 * [Known issues](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-known-issues.md)    
 * [Common errors](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-error.md)    
