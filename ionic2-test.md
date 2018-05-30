@@ -96,7 +96,9 @@
 	* Remove ion-card shadow
 * [Animation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-animation.md)    
 * [Known issues](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-known-issues.md)    
-* [Common errors](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-error.md)    
+* [Common errors](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-error.md)  
+	* Typescript error    
+	* iOS xcassets error - Distill failed for unknown reasons
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)    
 * [Forms](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-forms.md)    
 * [Backends](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-backend.md)    
