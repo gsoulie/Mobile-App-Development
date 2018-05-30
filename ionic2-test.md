@@ -98,7 +98,8 @@
 * [Known issues](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-known-issues.md)    
 * [Common errors](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-error.md)  
 	* Typescript error    
-	* iOS xcassets error - Distill failed for unknown reasons
+	* iOS xcassets error - Distill failed for unknown reasons    
+	* Android build failed In <declare-styleable> FontFamilyFont
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)    
 * [Forms](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-forms.md)    
 * [Backends](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-backend.md)    
