@@ -121,6 +121,7 @@
 * [Other modules](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-other-modules.md)   
 	* CRC computation
 * [Self working components](https://github.com/gsoulie/Ionic2-snippets)    
+* [Debug Ionic Application](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-debug.md)    
 * [Unit testing](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-unit-testing.md)    
 * [PWA](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-pwa.md)    
 * [Bluetooth](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-bluetooth.md)    
