@@ -105,7 +105,8 @@
 	* Typescript error    
 	* iOS xcassets error - Distill failed for unknown reasons    
 	* Android build failed In <declare-styleable> FontFamilyFont    
-	* CORS issues
+	* CORS issues    
+	* HTTP query issues
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)    
 * [Forms](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-forms.md)    
 * [Backends](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-backend.md)    
