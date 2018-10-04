@@ -101,6 +101,7 @@
 	* Remove ion-card shadow
 * [Animation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-animation.md)    
 * [Known issues](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-known-issues.md)    
+	* Display carriage return \r\n    
 * [Common errors](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-error.md)  
 	* Typescript error    
 	* iOS xcassets error - Distill failed for unknown reasons    
