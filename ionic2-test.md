@@ -36,6 +36,8 @@
 	* Accessing DOM element @ViewChild
 * [Moment JS](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-momentjs.md)    
 * [File storage](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-file-storage.md)  
+	* File storage    
+	* File size    
 * [Geolocation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-geolocation.md)  
 * [Google Map integration](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-google-map-agm.md)    
 * [Database](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-database.md)  
