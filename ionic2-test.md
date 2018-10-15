@@ -99,7 +99,8 @@
 	* Lock screen orientation
 	* Positioning
 	* Remove Android input green highlight
-	* Styling Searchbar
+	* Styling Searchbar    
+	* Change ion-item height    
 	* Overlay
 	* Remove ion-card shadow
 * [Animation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-animation.md)    
