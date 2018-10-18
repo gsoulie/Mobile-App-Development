@@ -58,6 +58,7 @@
 * [HTTP Remote and Local data](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-http-query.md)  
 	* PUT query    
 * [Navigation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-navigation.md)  
+	* Disable Android hardware back button
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
 	* Dynamic theming
 	* Navbar
