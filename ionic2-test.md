@@ -114,6 +114,7 @@
 	* Android build failed In <declare-styleable> FontFamilyFont    
 	* CORS issues    
 	* HTTP query issues
+	* Android build error
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)    
 * [Forms](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-forms.md)    
 * [Backends](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-backend.md)    
