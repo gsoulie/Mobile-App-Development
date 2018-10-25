@@ -128,6 +128,7 @@
 * [Push notification](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-push-notification.md)   
 * [Build for Android](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-build-android.md)  
 * [Build for iOS](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-build-ios.md)    
+	* Adding iOS permissions to plist automatically
 * [Publishing App](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-publishing.md)  
 * [Other modules](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-other-modules.md)   
 	* CRC computation
