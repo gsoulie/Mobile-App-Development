@@ -108,6 +108,8 @@
 * [Known issues](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-known-issues.md)    
 	* Display carriage return \r\n    
 	* Remove iOS cache    
+	* Gradle build failure app:debugCompileClasspath
+	* iOS 12 keyboard issue
 * [Common errors](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-error.md)  
 	* Typescript error    
 	* iOS xcassets error - Distill failed for unknown reasons    
