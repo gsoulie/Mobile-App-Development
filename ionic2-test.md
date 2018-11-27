@@ -52,6 +52,7 @@
 	* Add data with custom key    
 	* angularfire issue    
 	* Querying on Firebase    
+	* Firebase Cloud functions     
 * [Camera](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-camera.md)   
 * [Gallery](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gallery.md)    
 * [Barcode Scanner](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-barcode.md)  
