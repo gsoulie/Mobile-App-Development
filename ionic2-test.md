@@ -141,6 +141,7 @@
 * [Debug Ionic Application](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-debug.md)    
 * [Unit testing](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-unit-testing.md)    
 * [PWA](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-pwa.md)    
+	* Firebase Hosting    
 * [Bluetooth](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-bluetooth.md)    
 	* BLE
 	* Bluetooth Serial
