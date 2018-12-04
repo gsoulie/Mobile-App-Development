@@ -54,6 +54,7 @@
 	* angularfire issue    
 	* Querying on Firebase    
 	* Firebase Cloud functions     
+	* Firebase hosting
 * [Camera](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-camera.md)   
 * [Gallery](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gallery.md)    
 * [Barcode Scanner](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-barcode.md)  
@@ -141,7 +142,9 @@
 * [Debug Ionic Application](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-debug.md)    
 * [Unit testing](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-unit-testing.md)    
 * [PWA](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-pwa.md)    
-	* Firebase Hosting    
+	* Creation
+	* Settings
+	* Deployment    
 * [Bluetooth](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-bluetooth.md)    
 	* BLE
 	* Bluetooth Serial
