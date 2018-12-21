@@ -55,6 +55,7 @@
 	* Querying on Firebase    
 	* Firebase Cloud functions     
 	* Firebase hosting
+	* Lazy loading on firebase dataset    
 * [Camera](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-camera.md)   
 * [Gallery](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gallery.md)    
 * [Barcode Scanner](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-barcode.md)  
