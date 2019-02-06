@@ -23,7 +23,6 @@
 * [Config](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config.md)    
 * [Config XML](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config-xml.md)    
 * [Add files to project](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-add-files-to-project.md)    
-* [Third party lib](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-third-party-lib.md)    
 * [Useful functions](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-useful-functions.md)  
 	* Snippets repo
 	* Get specific platform
