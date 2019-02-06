@@ -3,9 +3,9 @@
 </p>     
 
 
-# ionic 3 
+# Ionic Framework resources
 
-> **last update** : updating angularfire2 5.0 syntax
+> **Work in progress** : updating repos with new ionic 4 requirements
 
 ##### Table of Contents  
 * [Resources](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-resources.md)    
