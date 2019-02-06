@@ -22,7 +22,6 @@
 * [Directives](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-directive.md)    
 * [Config](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config.md)    
 * [Config XML](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config-xml.md)    
-* [Global variables](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-global-variables.md)    
 * [Add files to project](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-add-files-to-project.md)    
 * [Third party lib](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-third-party-lib.md)    
 * [Useful functions](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-useful-functions.md)  
