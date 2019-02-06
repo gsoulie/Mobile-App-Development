@@ -52,7 +52,11 @@
 	* Settings
 	* Deployment   
 * [Navigation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-navigation.md)  
-	* Disable Android hardware back button    
+	* Navigation by routing    
+	* Tab Routing    
+	* Routing Guards    
+	* Using NavController (Ionic 3)    
+	* Disable Android hardware back button    	
 * [Sass](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-sass.md)
 	* Set transparent color to element
 	* Set transparent NavBar
