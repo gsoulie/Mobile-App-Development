@@ -32,13 +32,6 @@
 	* Checking network connection
 	* Close modal
 	* Accessing DOM element @ViewChild
-* [Moment JS](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-momentjs.md)    
-* [File](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-file-storage.md)  
-	* File storage    
-	* File size    
-	* Write file in PWA
-* [Geolocation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-geolocation.md)  
-* [Google Map integration](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-google-map-agm.md)    
 * [Database](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-database.md)  
 	* SQLite database
 	* SQLStorage
@@ -54,13 +47,23 @@
 	* Firebase Cloud functions     
 	* Firebase hosting
 	* Lazy loading on firebase dataset    
-* [Camera](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-camera.md)   
-* [Gallery](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gallery.md)    
-* [Barcode Scanner](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-barcode.md)  
-* [HTTP Remote and Local data](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-http-query.md)  
-	* PUT query    
+* [PWA](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-pwa.md)    
+	* Creation
+	* Settings
+	* Deployment   
 * [Navigation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-navigation.md)  
-	* Disable Android hardware back button
+	* Disable Android hardware back button    
+* [Sass](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-sass.md)
+	* Set transparent color to element
+	* Set transparent NavBar
+	* Set background image to content
+	* Lock screen orientation
+	* Positioning
+	* Remove Android input green highlight
+	* Styling Searchbar    
+	* Change ion-item height    
+	* Overlay
+	* Remove ion-card shadow
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
 	* Dynamic theming
 	* Navbar
@@ -69,13 +72,7 @@
 	* Override Sass variable
 	* Remove Android input green highlight
 	* Remove android navbar border
-	* Custom fonts
-* [Events](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-events.md)    
-	* Page event
-	* Event propagation    
-* [Screen Orientation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-screen-orientation.md)        
-* [Async Data](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-async-data.md)    
-* [Custom Component](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-custom-component.md)    
+	* Custom fonts    
 * [UI Components](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-ui-component.md)    
 	* modal
 	* comboBox
@@ -95,17 +92,24 @@
 	* Expandable header
 	* List accordion
 	* Picker
-* [Sass](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-sass.md)
-	* Set transparent color to element
-	* Set transparent NavBar
-	* Set background image to content
-	* Lock screen orientation
-	* Positioning
-	* Remove Android input green highlight
-	* Styling Searchbar    
-	* Change ion-item height    
-	* Overlay
-	* Remove ion-card shadow
+* [Moment JS](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-momentjs.md)    
+* [File](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-file-storage.md)  
+	* File storage    
+	* File size    
+	* Write file in PWA
+* [Geolocation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-geolocation.md)  
+* [Google Map integration](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-google-map-agm.md)    
+* [Camera](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-camera.md)   
+* [Gallery](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gallery.md)    
+* [Barcode Scanner](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-barcode.md)  
+* [HTTP Remote and Local data](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-http-query.md)  
+	* PUT query    
+* [Events](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-events.md)    
+	* Page event
+	* Event propagation    
+* [Screen Orientation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-screen-orientation.md)        
+* [Async Data](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-async-data.md)    
+* [Custom Component](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-custom-component.md)    
 * [Animation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-animation.md)    
 * [Known issues](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-known-issues.md)    
 	* Display carriage return \r\n    
@@ -140,10 +144,6 @@
 * [Self working components](https://github.com/gsoulie/Ionic2-snippets)    
 * [Debug Ionic Application](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-debug.md)    
 * [Unit testing](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-unit-testing.md)    
-* [PWA](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-pwa.md)    
-	* Creation
-	* Settings
-	* Deployment    
 * [Bluetooth](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-bluetooth.md)    
 	* BLE
 	* Bluetooth Serial
