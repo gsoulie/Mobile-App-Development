@@ -81,24 +81,25 @@
 	* Remove android navbar border
 	* Custom fonts    
 * [UI Components](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-ui-component.md)    
-	* modal
-	* comboBox
-	* ion-list
-	* searchbar
-	* list filtering
-	* tab
-	* tab icon
-	* alert dialog box
-	* floating button
-	* chart
-	* grid
-	* toggle
-	* popover menu
-	* dynamic style
-	* Toggle menu
-	* Expandable header
-	* List accordion
-	* Picker
+	* ion-button    
+	* modal    
+	* comboBox    
+	* ion-item    
+	* ion-list    
+	* ion-label    
+	* searchbar    
+	* list filtering    
+	* tab    
+	* tab icon    
+	* floating button    
+	* chart    
+	* grid    
+	* toggle        
+	* dynamic style    
+	* Toggle menu    
+	* Expandable header    
+	* List accordion    
+	* Picker    
 * [Moment JS](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-momentjs.md)    
 * [File](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-file-storage.md)  
 	* File storage    
