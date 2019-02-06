@@ -3,7 +3,7 @@
 </p>     
 
 
-# ionic 2 
+# ionic 3 
 
 > **last update** : updating angularfire2 5.0 syntax
 
