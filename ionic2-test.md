@@ -58,16 +58,19 @@
 	* Using NavController (Ionic 3)    
 	* Disable Android hardware back button    	
 * [Sass](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-sass.md)
-	* Set transparent color to element
-	* Set transparent NavBar
-	* Set background image to content
-	* Lock screen orientation
-	* Positioning
-	* Remove Android input green highlight
-	* Styling Searchbar    
-	* Change ion-item height    
-	* Overlay
-	* Remove ion-card shadow
+	* Component variables    
+	* Add color     
+	* Set transparent color to element    
+	* Set transparent NavBar     
+	* Set background image to content    
+	* Lock screen orientation     
+	* Positioning     
+	* Remove Android input green highlight    
+	* Styling Searchbar     
+	* Overlay    
+	* Remove ion-card shadow    
+	* Remove header shadow    
+	* Dynamic class    
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
 	* Dynamic theming
 	* Navbar
