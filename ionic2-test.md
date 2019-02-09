@@ -16,7 +16,7 @@
 	* Angular 2
 	* Decorators
 	* Pipe    
-	* Map operator    
+	* Map operator (new syntax since Ionic 4)   
 	* Promise vs Observable (map and subscribe operators)
 	* Arrow function
 	* Async / Await functions
