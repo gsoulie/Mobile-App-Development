@@ -15,7 +15,8 @@
 * [Concepts](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-concepts.md)    
 	* Angular 2
 	* Decorators
-	* Pipe
+	* Pipe    
+	* Map operator    
 	* Promise vs Observable (map and subscribe operators)
 	* Arrow function
 	* Async / Await functions
