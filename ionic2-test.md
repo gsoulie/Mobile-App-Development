@@ -103,8 +103,6 @@
 	* Expandable header    
 	* List accordion    
 	* Picker    
-	* ion-loading-controller (new in Ionic 4)    
-	* ion-alert-controller (new in Ionic 4)   
 * [Moment JS](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-momentjs.md)    
 * [File](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-file-storage.md)  
 	* File storage    
