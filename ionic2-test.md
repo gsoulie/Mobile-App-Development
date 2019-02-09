@@ -7,7 +7,7 @@
 
 > **Work in progress** : updating repos with new ionic 4 requirements    
 
-> **What's new with Ionic 4** : Navigation, Rxjs Map operator, Content module become IonContent, component syntax etc...
+> **What's new with Ionic 4** : Navigation, Rxjs Map operator, Content module become IonContent, Loading controller, component syntax etc...
 
 ##### Table of Contents  
 * [Resources](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-resources.md)    
