@@ -86,7 +86,7 @@
 * [UI Components](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-ui-component.md)    
 	* ion-button    
 	* modal    
-	* comboBox    
+	* ion-select    
 	* ion-item    
 	* ion-list    
 	* ion-label    
