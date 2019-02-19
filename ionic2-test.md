@@ -59,7 +59,9 @@
 	* Tab Routing    
 	* Routing Guards    
 	* Using NavController (Ionic 3)    
-	* Disable Android hardware back button    	
+	* Passing Data
+	* Passing Data on close event
+	* Disable Android hardware back button    
 * [Sass](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-sass.md)
 	* Component variables    
 	* Add color     
