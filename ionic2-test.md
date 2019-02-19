@@ -27,6 +27,7 @@
 * [Config XML](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config-xml.md)    
 * [Add files to project](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-add-files-to-project.md)    
 * [Useful functions](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-useful-functions.md)  
+	* Find element in array    
 	* Snippets repo
 	* Get specific platform
 	* Generate UUID
