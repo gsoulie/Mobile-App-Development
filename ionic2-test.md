@@ -139,6 +139,10 @@
 	* HTTP query issues
 	* Android build error
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)    
+	* SVG    
+	* Using cascading SVG    
+	* Add blur    
+	* Upload image    
 * [Forms](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-forms.md)    
 * [Backends](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-backend.md)    
 	* [Communicating between Ionic app and NodeJS backend](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-nodejs-backend.md)    
