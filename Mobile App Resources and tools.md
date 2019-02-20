@@ -5,7 +5,7 @@
 ![alt tag](https://www.designmantic.com/blog/wp-content/uploads/2015/04/ten-Commandments-UI-Design.png)
 
 ## Angular
-[Angular material resources](https://material.angular.io/)    
+[Angular material resources](https://material.angular.io/components/categories)    
 
 ## Graphical resources
 [Ionic color generator](https://ionicframework.com/docs/theming/color-generator)    
