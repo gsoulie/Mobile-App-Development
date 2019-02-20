@@ -13,7 +13,8 @@
 * [Resources](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-resources.md)    
 * [Prerequisites](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-prerequisites.md)    
 	* Start with ionic
-	* Visual Studio Code - Snippet
+	* Visual Studio Code - Snippet    
+	* Android debugging with logcat    
 * [Concepts](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-concepts.md)    
 	* Angular 2
 	* Decorators
