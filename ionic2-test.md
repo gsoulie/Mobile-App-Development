@@ -144,6 +144,8 @@
 	* Add blur    
 	* Upload image    
 * [Forms](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-forms.md)    
+	* NgModel Forms    
+	* Form in Ionic 4    
 * [Backends](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-backend.md)    
 	* [Communicating between Ionic app and NodeJS backend](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-nodejs-backend.md)    
 	* Strongloop
