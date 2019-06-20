@@ -136,13 +136,13 @@
 	* Gradle build failure app:debugCompileClasspath
 	* iOS 12 keyboard issue    
 	* iOS 12 Webview issue    
-* [Common errors](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-error.md)  
 	* Typescript error    
 	* iOS xcassets error - Distill failed for unknown reasons    
 	* Android build failed In <declare-styleable> FontFamilyFont    
 	* CORS issues    
 	* HTTP query issues
-	* Android build error
+	* Android build error    
+	* Android Failed to execute aapt    
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)    
 	* SVG    
 	* Using cascading SVG    
