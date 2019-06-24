@@ -54,6 +54,7 @@
 	* Firebase hosting
 	* Lazy loading on firebase dataset    
 	* Multiple database    
+	* Firestore    
 * [PWA](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-pwa.md)    
 	* Creation
 	* Settings
