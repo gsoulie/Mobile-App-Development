@@ -122,7 +122,9 @@
 * [Camera](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-camera.md)   
 * [Gallery](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gallery.md)    
 * [Barcode Scanner](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-barcode.md)  
-* [HTTP Remote and Local data](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-http-query.md)  
+* [HTTP queries](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-http-query.md)  
+	* GET    
+	* POST    
 	* PUT query    
 * [Events](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-events.md)    
 	* Page event
