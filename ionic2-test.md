@@ -31,7 +31,8 @@
 * [Useful functions](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-useful-functions.md)  
 	* Find element in array    
 	* Snippets repo
-	* Get specific platform
+	* Get specific platform    
+	* Force screen refresh    
 	* Generate UUID
 	* Safely displaying data with elvis operator
 	* Show / hide DOM element
