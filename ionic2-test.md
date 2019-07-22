@@ -160,6 +160,7 @@
 	* Strongloop
 	* Firebase
 * [Authentication](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-authentication.md)    
+	* Ionic Auth    
 * [Internationalization](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-i18n.md)  
 * [Splash screen and appicon](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-splashscreen.md)  
 * [Beta testing](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-beta-testing.md)    
