@@ -63,6 +63,8 @@
 	* Deployment   
 * [Navigation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-navigation.md)  
 	* Navigation by routing    
+	* Routing params    
+	* Reset Routing params    
 	* Tab Routing    
 	* Routing Guards    
 	* Using NavController (Ionic 3)    
