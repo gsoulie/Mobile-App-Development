@@ -67,6 +67,7 @@
 	* Reset Routing params    
 	* Tab Routing    
 	* Routing Guards    
+	* Wildcard route (404)   
 	* Using NavController (Ionic 3)    
 	* Passing Data
 	* Passing Data on close event
