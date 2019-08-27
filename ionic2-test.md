@@ -86,6 +86,7 @@
 	* Remove ion-card shadow    
 	* Remove header shadow    
 	* Dynamic class    
+	* Increase ion-icon size    
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
 	* Dynamic theming
 	* Navbar
