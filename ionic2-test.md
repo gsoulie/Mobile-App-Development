@@ -24,6 +24,7 @@
 	* Arrow function
 	* Async / Await functions     
 	* Resolver     
+	* Environments DEV / PROD     
 * [Capacitor](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-capacitor.md)    
 * [Directives](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-directive.md)    
 * [Config](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config.md)    
