@@ -139,7 +139,9 @@
 * [Screen Orientation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-screen-orientation.md)        
 * [Async Data](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-async-data.md)    
 * [Custom Component](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-custom-component.md)    
-* [Animation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-animation.md)    
+* [Animation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-animation.md)  
+	* Rotating Border animation     
+	* Resources     
 * [Known issues](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-known-issues.md)    
 	* Display carriage return \r\n    
 	* Remove iOS cache    
