@@ -66,6 +66,7 @@
 	* Navigation by routing    
 	* Routing params    
 	* Reset Routing params    
+	* Child routes    
 	* Tab Routing    
 	* Passing static data to a Route     
 	* Passing dynamic data to a Route     
