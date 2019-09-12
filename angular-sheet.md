@@ -40,11 +40,12 @@
   * Custom pipe    
   * ngFor pipe    
 * [Http](https://github.com/gsoulie/angular-resources/blob/master/angular-http.md)        
-  * Introduction     
+  * COnfiguration     
   * Map operator    
   * Error handling    
   * Headers, Params, responseType    
   * Http interceptor    
+  * POST vs PUT     
 * [CSS](https://github.com/gsoulie/angular-resources/blob/master/angular-css.md)    
   * Dynamic styling    
   * Css class    
