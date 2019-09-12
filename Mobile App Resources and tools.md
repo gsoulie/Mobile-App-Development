@@ -12,6 +12,7 @@
 [Angular material resources](https://material.angular.io/components/categories)    
 
 ## Graphical resources
+[Loading.io](https://loading.io/)    
 [Ionic color generator](https://ionicframework.com/docs/theming/color-generator)    
 [Imageoptim](https://imageoptim.com/fr.html)    
 [Paletton](http://paletton.com/#uid=23q0u0k++VBrKZTEz+V+VxYZ+pL)    
