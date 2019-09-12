@@ -3,11 +3,11 @@
 ##### Table of Contents  
 * [Resources](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-resources.md)    
 * [Prerequisites](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-prerequisites.md)    
-	* Start with Angular    
-	* Configure bootstrap    
-	* CLI    
-  * Tips    
-  * Dynamic styling    
+  * Start with Angular    
+  * Configure bootstrap    
+  * CLI    
+  * NgModel    
+  * Tips      
 * [Directives]    
 * [Data binding]    
   * Binding property to component    
@@ -46,4 +46,5 @@
   * Headers, Params, responseType    
   * Http interceptor    
 * [CSS]
+  * Dynamic styling    
 
