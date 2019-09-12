@@ -40,7 +40,7 @@
   * Custom pipe    
   * ngFor pipe    
 * [Http](https://github.com/gsoulie/angular-resources/blob/master/angular-http.md)        
-  * COnfiguration     
+  * Configuration     
   * Map operator    
   * Error handling    
   * Headers, Params, responseType    
