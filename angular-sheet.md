@@ -45,6 +45,8 @@
   * Error handling    
   * Headers, Params, responseType    
   * Http interceptor    
-* [CSS]()    
+* [CSS](https://github.com/gsoulie/angular-resources/blob/master/angular-css.md)    
   * Dynamic styling    
+  * Css class    
+  * Styling input when error occurs    
 
