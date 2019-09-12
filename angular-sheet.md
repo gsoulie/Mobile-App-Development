@@ -8,38 +8,38 @@
   * CLI    
   * NgModel    
   * Tips      
-* [Directives]()     
-* [Data binding]()        
+* [Directives](https://github.com/gsoulie/angular-resources/blob/master/directives.md)     
+* [Data binding](https://github.com/gsoulie/angular-resources/blob/master/data-binding.md)        
   * Binding property to component    
   * Binding to custom event    
-* [Event]()        
-* [Component lifecycle]()        
-* [Components]()        
+* [Event](https://github.com/gsoulie/angular-resources/blob/master/event.md)        
+* [Component lifecycle](https://github.com/gsoulie/angular-resources/blob/master/component-lifecycle.md)        
+* [Components](https://github.com/gsoulie/angular-resources/blob/master/components.md)        
   * Drowpdown
-* [Navigating]()        
+* [Navigating](https://github.com/gsoulie/angular-resources/blob/master/navigation.md)        
   * Routing parameters    
   * Relative route    
   * Wildcard routes    
   * Route guards    
   * Child routes    
   * Routing strategies    
-* [Observable]()        
+* [Observable](https://github.com/gsoulie/angular-resources/blob/master/observable.md)        
   * Subscription     
   * Custom observable    
   * RxJS operators    
   * Observable vs Subject    
-* [Forms]()        
+* [Forms](https://github.com/gsoulie/angular-resources/blob/master/forms.md)        
   * FormsModule    
   * Template driven form    
   * Validators    
   * Setting default values    
   * FormGroup    
   * ReactiveForm    
-* [Pipes]()        
+* [Pipes](https://github.com/gsoulie/angular-resources/blob/master/pipe.md)        
   * Introduction    
   * Custom pipe    
   * ngFor pipe    
-* [Http]()        
+* [Http](https://github.com/gsoulie/angular-resources/blob/master/http.md)        
   * Introduction     
   * Map operator    
   * Error handling    
