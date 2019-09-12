@@ -2,8 +2,8 @@
 
 ##### Table of Contents  
 * [Resources](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-resources.md)    
-* [Prerequisites](https://github.com/gsoulie/ionic2-resources/blob/master/angular-starting.md)    
-  * Start with Angular    
+* [Start with Angular](https://github.com/gsoulie/angular-resources/blob/master/angular-starting.md)    
+  * Starting        
   * Configure bootstrap    
   * CLI    
   * NgModel    
