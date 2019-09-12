@@ -38,7 +38,7 @@
 * [Pipes](https://github.com/gsoulie/angular-resources/blob/master/angular-pipe.md)        
   * Introduction    
   * Custom pipe    
-  * ngFor pipe    
+  * Using pipe with ngFor    
 * [Http](https://github.com/gsoulie/angular-resources/blob/master/angular-http.md)        
   * Configuration     
   * Map operator    
