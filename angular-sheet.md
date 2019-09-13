@@ -50,4 +50,5 @@
   * Dynamic styling    
   * Css class    
   * Styling input when error occurs    
+* [Deployment](https://github.com/gsoulie/angular-resources/blob/master/angular-deployment.md)        
 
