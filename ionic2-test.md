@@ -86,7 +86,7 @@
 	* Positioning     
 	* Remove Android input green highlight    
 	* Styling Searchbar     
-	* Overlay    
+	* Modale with overlay    
 	* Remove ion-card shadow    
 	* Remove header shadow    
 	* Dynamic class    
