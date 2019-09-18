@@ -27,6 +27,7 @@
   * Relative route "relativeTo"      
   * Child routes     
   * Angular routing strategie Hash    
+  * Reset routing params    
 * [Observable](https://github.com/gsoulie/angular-resources/blob/master/angular-observable.md)        
   * Subscription     
   * Custom observable    
