@@ -17,6 +17,8 @@
   * Binding property to component    
   * Binding on custom event    
 * [Event](https://github.com/gsoulie/angular-resources/blob/master/angular-event.md)        
+  * Exposing event      
+  * Local reference     
 * [Component lifecycle](https://github.com/gsoulie/angular-resources/blob/master/angular-component-lifecycle.md)        
 * [Components](https://github.com/gsoulie/angular-resources/blob/master/angular-component.md)        
   * Drowpdown
