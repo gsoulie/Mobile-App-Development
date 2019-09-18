@@ -23,6 +23,7 @@
 * [Components](https://github.com/gsoulie/angular-resources/blob/master/angular-component.md)        
   * Drowpdown
 * [Navigating](https://github.com/gsoulie/angular-resources/blob/master/angular-navigation.md)        
+  * routerLink    
   * Relative route "relativeTo"      
   * Child routes     
   * Angular routing strategie Hash    
