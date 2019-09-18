@@ -15,7 +15,7 @@
   * ngClass     
 * [Data binding](https://github.com/gsoulie/angular-resources/blob/master/angular-data-binding.md)        
   * Binding property to component    
-  * Binding to custom event    
+  * Binding on custom event    
 * [Event](https://github.com/gsoulie/angular-resources/blob/master/angular-event.md)        
 * [Component lifecycle](https://github.com/gsoulie/angular-resources/blob/master/angular-component-lifecycle.md)        
 * [Components](https://github.com/gsoulie/angular-resources/blob/master/angular-component.md)        
