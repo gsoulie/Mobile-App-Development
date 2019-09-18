@@ -9,6 +9,10 @@
   * NgModel    
   * Tips      
 * [Directives](https://github.com/gsoulie/angular-resources/blob/master/angular-directive.md)     
+  * Generalities    
+  * ngIf - else    
+  * ngStyle     
+  * ngClass     
 * [Data binding](https://github.com/gsoulie/angular-resources/blob/master/angular-data-binding.md)        
   * Binding property to component    
   * Binding to custom event    
