@@ -8,13 +8,13 @@
   * CLI    
   * NgModel    
   * Tips      
-* [Directives](https://github.com/gsoulie/angular-resources/blob/master/angular-directives.md)     
+* [Directives](https://github.com/gsoulie/angular-resources/blob/master/angular-directive.md)     
 * [Data binding](https://github.com/gsoulie/angular-resources/blob/master/angular-data-binding.md)        
   * Binding property to component    
   * Binding to custom event    
 * [Event](https://github.com/gsoulie/angular-resources/blob/master/angular-event.md)        
 * [Component lifecycle](https://github.com/gsoulie/angular-resources/blob/master/angular-component-lifecycle.md)        
-* [Components](https://github.com/gsoulie/angular-resources/blob/master/angular-components.md)        
+* [Components](https://github.com/gsoulie/angular-resources/blob/master/angular-component.md)        
   * Drowpdown
 * [Navigating](https://github.com/gsoulie/angular-resources/blob/master/angular-navigation.md)        
   * Routing parameters    
