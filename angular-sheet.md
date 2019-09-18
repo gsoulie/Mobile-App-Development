@@ -23,12 +23,9 @@
 * [Components](https://github.com/gsoulie/angular-resources/blob/master/angular-component.md)        
   * Drowpdown
 * [Navigating](https://github.com/gsoulie/angular-resources/blob/master/angular-navigation.md)        
-  * Routing parameters    
-  * Relative route    
-  * Wildcard routes    
-  * Route guards    
-  * Child routes    
-  * Routing strategies    
+  * Relative route "relativeTo"      
+  * Child routes     
+  * Angular routing strategie Hash    
 * [Observable](https://github.com/gsoulie/angular-resources/blob/master/angular-observable.md)        
   * Subscription     
   * Custom observable    
