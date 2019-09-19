@@ -56,4 +56,5 @@
   * Css class    
   * Styling input when error occurs    
 * [Deployment](https://github.com/gsoulie/angular-resources/blob/master/angular-deployment.md)        
+* [Offline mode and Service worker](https://github.com/gsoulie/angular-resources/blob/master/angular-offline.md)        
 
