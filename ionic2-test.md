@@ -20,7 +20,8 @@
 	* Decorators
 	* Pipe    
 	* Map operator (new RxJS 6)   
-	* Promise vs Observable (map and subscribe operators)
+	* Promise vs Observable (map and subscribe operators)    
+	* BehaviorSubject    
 	* Arrow function
 	* Async / Await functions     
 	* Resolver     
