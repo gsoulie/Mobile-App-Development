@@ -41,7 +41,8 @@
 	* Show / hide DOM element
 	* Checking network connection
 	* Close modal
-	* Accessing DOM element @ViewChild
+	* Accessing DOM element @ViewChild    
+	* Switch statement with complex expression
 * [Database](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-database.md)  
 	* SQLite database
 	* SQLStorage
