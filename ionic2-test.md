@@ -131,7 +131,8 @@
 * [File](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-file-storage.md)  
 	* File storage    
 	* File size    
-	* Write file in PWA
+	* Write file in PWA    
+	* Loading Json File    
 * [Geolocation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-geolocation.md)  
 * [Google Map integration](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-google-map-agm.md)    
 * [Camera](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-camera.md)   
