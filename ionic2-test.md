@@ -80,6 +80,7 @@
 	* Disable Android hardware back button    
 * [Sass](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-sass.md)
 	* Component variables    
+	* Using sass variable    
 	* Add color     
 	* Set transparent color to element    
 	* Set transparent NavBar     
