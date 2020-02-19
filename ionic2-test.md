@@ -150,7 +150,7 @@
 * [Async Data](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-async-data.md)    
 * [Custom Component](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-custom-component.md)   
 	* Alert component    
-	* Complete example    
+	* Working example    
 * [Animation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-animation.md)  
 	* Rotating Border animation     
 	* Resources     
