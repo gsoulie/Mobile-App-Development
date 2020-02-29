@@ -43,6 +43,9 @@
 	* Close modal
 	* Accessing DOM element @ViewChild    
 	* Switch statement with complex expression
+* [Phone call and Social sharing](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-phone.md)    
+	* Phone call    
+	* Social sharing    
 * [Database](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-database.md)  
 	* SQLite database
 	* SQLStorage
