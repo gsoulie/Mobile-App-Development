@@ -44,7 +44,7 @@
 * [Phone call and Social sharing](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-phone.md)    
 	* Phone call (Cordova and Capacitor)    
 	* Social sharing (Cordova and Capacitor)    
-* [Local Storage](Cordova and Capacitor)(https://github.com/gsoulie/ionic2-resources/blob/master/ionic-local-storage.md)    
+* [Local Storage - Cordova and Capacitor](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-local-storage.md)    
 * [Database](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-database.md)  
 	* SQLite database
 	* SQLStorage
