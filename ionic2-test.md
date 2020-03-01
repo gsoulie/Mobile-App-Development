@@ -137,6 +137,10 @@
 	* Write file in PWA    
 	* Loading Json File    
 * [Geolocation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-geolocation.md)  
+	* Angular2 Google maps integration    
+	* Customize map markers    
+	* Reverse geocoding    
+	* Geolocation on capacitor    
 * [Google Map integration](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-google-map-agm.md)    
 * [Camera](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-camera.md)   
 * [Gallery](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gallery.md)    
