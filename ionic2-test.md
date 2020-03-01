@@ -5,9 +5,7 @@
 
 # Ionic Framework resources
 
-> **Work in progress** : updating repos with new ionic 4 requirements    
-
-> **What's new with Ionic 4** : Navigation, Rxjs Map operator, Content module become IonContent, Loading controller, component syntax etc...
+> **Work in progress** : updating repos with new ionic 5 requirements, adding Capacitor usage
 
 ##### Table of Contents  
 * [Resources](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-resources.md)    
@@ -45,7 +43,8 @@
 	* Switch statement with complex expression
 * [Phone call and Social sharing](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-phone.md)    
 	* Phone call (Cordova and Capacitor)    
-	* Social sharing (Cordova and Capacitor)      
+	* Social sharing (Cordova and Capacitor)    
+* [Local Storage (Cordova and Capacitor)(https://github.com/gsoulie/ionic2-resources/blob/master/ionic-local-storage.md)    
 * [Database](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-database.md)  
 	* SQLite database
 	* SQLStorage
