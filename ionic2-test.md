@@ -96,6 +96,7 @@
 	* Remove header shadow    
 	* Dynamic class    
 	* Increase ion-icon size    
+	* Css Stepper    
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
 	* Dynamic theming
 	* Navbar
