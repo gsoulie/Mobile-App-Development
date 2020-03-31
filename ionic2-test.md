@@ -97,6 +97,8 @@
 	* Dynamic class    
 	* Increase ion-icon size    
 	* Css Stepper    
+	* Transparent scroll    
+	* Create fixed menu with scrollable content     
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
 	* Dynamic theming
 	* Navbar
