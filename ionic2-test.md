@@ -176,7 +176,8 @@
 	* HTTP query issues
 	* Android build error    
 	* Android Failed to execute aapt    
-* [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)    
+* [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)   
+	* Background image    
 	* SVG    
 	* Using cascading SVG    
 	* Add blur    
