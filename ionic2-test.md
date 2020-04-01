@@ -160,6 +160,7 @@
 * [Custom Component](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-custom-component.md)   
 	* Alert component    
 	* Working example    
+	* Popover example capacitor    
 * [Animation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-animation.md)  
 	* Rotating Border animation     
 	* Resources     
