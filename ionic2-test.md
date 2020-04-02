@@ -99,6 +99,7 @@
 	* Css Stepper    
 	* Transparent scroll    
 	* Create fixed menu with scrollable content     
+	* Flex grid    
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
 	* Dynamic theming
 	* Navbar
