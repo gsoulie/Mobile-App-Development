@@ -81,24 +81,32 @@
 	* Passing Data on close event
 	* Disable Android hardware back button    
 * [Sass](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-sass.md)
-	* Component variables    
-	* Using sass variable    
-	* Add color     
+	* Component variables     
+	* Using variables    
+	* Add color   
+	* Get color variables from variable.scss   
 	* Set transparent color to element    
-	* Set transparent NavBar     
+	* Configure NavBar color    
+	* Set transparent NavBar    
 	* Set background image to content    
-	* Lock screen orientation     
-	* Positioning     
+	* Lock screen orientation    
+	* Positioning    
 	* Remove Android input green highlight    
 	* Styling Searchbar     
+	* Disable scrolling on ion-content     
+	* Label with full width inside ion-item     
+	* Change ion-item height     
+	* Split screen in two views    
 	* Modale with overlay    
 	* Remove ion-card shadow    
 	* Remove header shadow    
 	* Dynamic class    
+	* Spacer   
 	* Increase ion-icon size    
-	* Css Stepper    
+	* Remove header border    
+	* Create CSS stepper    
 	* Transparent scroll    
-	* Create fixed menu with scrollable content     
+	* Create fixed menu with scrollable content   
 	* Flex grid    
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
 	* Dynamic theming
