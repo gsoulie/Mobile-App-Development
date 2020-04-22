@@ -186,6 +186,7 @@
 	* HTTP query issues
 	* Android build error    
 	* Android Failed to execute aapt    
+	* ViewDestroyError      
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)   
 	* Background image    
 	* SVG    
