@@ -130,7 +130,6 @@
 	* tab    
 	* tab icon    
 	* floating button    
-	* chart    
 	* grid    
 	* toggle        
 	* dynamic style    
