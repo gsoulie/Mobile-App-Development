@@ -143,7 +143,8 @@
 	* ion-slide    
 	* Hiding header on scroll     
 * [Chart](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-chart.md)
-	* chartjs     
+	* Chartjs     
+	* Chart grid 50%    
 	* ng2-google-chart worldmap      
 * [Moment JS](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-momentjs.md)    
 * [File](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-file-storage.md)  
