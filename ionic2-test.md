@@ -122,7 +122,8 @@
 	* ion-select    
 	* ion-item    
 	* ion-list    
-	* Lazy loading on scroll
+	* Lazy loading on scroll    
+	* pagination    
 	* ion-label    
 	* searchbar    
 	* list filtering    
