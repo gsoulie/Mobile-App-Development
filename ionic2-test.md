@@ -192,6 +192,7 @@
 	* Android build error    
 	* Android Failed to execute aapt    
 	* ViewDestroyError      
+	* Updating nodejs for window    
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)   
 	* Background image    
 	* SVG    
