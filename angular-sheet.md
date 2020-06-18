@@ -8,6 +8,7 @@
   * CLI    
   * NgModel    
   * Tips      
+  * isDevMode()    
 * [Directives](https://github.com/gsoulie/angular-resources/blob/master/angular-directive.md)     
   * Generalities    
   * ngIf - else    
