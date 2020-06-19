@@ -429,12 +429,38 @@ Syntaxes possibles :
 <button [routerLink]="['./client', 'product']">Navigate</button> <!-- concatène les 2 routes avec un / automatiquement -->
 ````
 
+### Routing parameters
+[Back to top](#angular) 
+
+````
+{
+	path: 'ticket/edit/:id'
+	component: TicketComponent
+}
+````
+
+````
+
+````
+
 ### Naviguer depuis le controller
 [Back to top](#angular) 
 
 ````
-this.route.nagivate(['./route'], {relativeTo: this.});
+this.route.nagivate(['./ticket', 'edit', idTicket], {relativeTo: this.asctivatedRoute});	// => /ticket/edit/12
 ````
+
+*Récupérer les paramètres de route dans le controller*
+````
+ngOnInit() {
+	//this.ticketId = this.activatedRoute.snapshot.params.id // ATTENTION one shot !! ne sera plus mis à jour
+	this.activatedRoute.params.subscribe((params) => {
+		this.ticketId = params.idTicket;
+	});
+}
+````
+
+> **IMPORTANT** - **BONNE PRATIQUE** : il faut récupérer le paramètre dans un observable pour éviter la problématique d'appel multiple d'une même route avec un paramètre différent. En effet Angular ne recréé pas un composant si on vient déjà de ce dernier. De fait il ne rééxécute pas la logique codée dans ngOnInit() (appel ws pour récupération des données par exemple).
 
 ### Lazy-loading routes
 [Back to top](#angular) 
