@@ -476,6 +476,7 @@ C'est webpack qui va prendre en charge le lazy loading et créer un chunk du mod
 ````
 
 #### Preloading
+[Back to top](#angular) 
 
 Permet en background d'une page, de charger le contenu des autres pages
 
@@ -486,4 +487,22 @@ On peut définir plusieurs <router-outlet>. Mais faire **ATTENTION** de bien les
 
 https://www.techiediaries.com/angular-router-multiple-outlets/
 
+### Guards
+[Back to top](#angular) 
 
+Le guard retourne toujours un boolean. Soit un boolean directement, soit une promise qui retourne un boolean, soit un observable qui retourne un boolean
+
+````
+CanActivate() {
+	return this.isLogged().then((res) => {
+		if(res){
+			return true;
+		} else {
+			this.router.navigate(['./login']);
+			return false;
+		}
+	}
+}
+````
+
+**CanDeactivate** permet de vérifier si j'ai le droit de quitter la route actuelle. C'est utilisé dans le cas ou l'utilisaateur est entrain de modifier un formulaire par exemple.
