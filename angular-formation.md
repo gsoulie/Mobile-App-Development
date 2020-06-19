@@ -521,11 +521,14 @@ ng test
 ## Directives
 [Back to top](#angular) 
 
-Lss directives permettent de modifier les éléments du DOM
+Lss directives permettent de modifier les éléments du DOM. **Leur responsabilité est relative à la vue**
 
-*Appel d'une directive*
+*Appel d'une directive (ici : appHighlight)*
 ````
-<div appHighlight></div>
+<div appHighlight (click)="maFonction()">TEXT</div>
+
+<!-- Une directive peut aussi envoyer un EventEmitter -->
+<div appHighlight (eventDirective)="gererEmitterDeLaDirective()">TEXT</div>
 ````
 
 *Directive qui applique un fond rouge sur un click de la div*
@@ -546,6 +549,43 @@ export class HighlightDirective {
 }
 ````
 
-Voir ````<ng-content>````
+### Ajouter des propriétés à une directive
+[Back to top](#angular) 
+
+````
+<div [appHighlight]="'red'" [isMaj]="true"">TEXT</div>
+````
+
+*Directive qui applique un fond rouge sur un click de la div*
+````
+@Directive({
+	selector: '[appHighlight]'
+})
+
+export class HighlightDirective {
+	@Input('appHighlight') actualColorText: string;
+	@Input() isMaj: boolean;
+
+	constuctor(private _element: ElementRef) { }
+
+	// Ecouter événement click. Sur un click il applique la fonction onClick()
+	@HostListener('click') 
+	onClick(){
+		const colorToApply = this.actualCOlorText || 'green';
+		this._element.nativeElement.style.backgroundColor = 
+		colorToApply;
+	
+		if(this.isMaj) {
+			this._element.nativeElement.style.textTransform = 'uppercase';
+		}
+	}
+}
+````
+
+### ng-content
 
 https://wizbii.tech/un-layout-dynamique-avec-ng-content-d00e27ab26d9
+
+````<ng-content></ng-content>````
+
+
