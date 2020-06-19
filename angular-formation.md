@@ -584,6 +584,12 @@ export class HighlightDirective {
 }
 ````
 
+### ngclass
+Selon le contexte, si un traitement conditionnel est utilisé plusieurs fois dans l'appli et/ou avec de l'algo à faire, utiliser une directive.
+
+Si c'est un cas très ponctuel, utiliser ````[ngClass]````
+
+
 ### ng-content
 
 https://wizbii.tech/un-layout-dynamique-avec-ng-content-d00e27ab26d9
