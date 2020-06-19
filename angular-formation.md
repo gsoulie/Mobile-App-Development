@@ -1,5 +1,36 @@
 # Angular
 
+* [Ressources](#ressources)     
+* [VSCode plugins](#vscode-plugins)     
+* [Généralités](#generalites)     
+* [Best practices](#best-practices)     
+* [Spread & Rest operators](#spread-&-res-operators)     
+* [Object destructuration](#object-destructuration)     
+* [Angular project lifecycle](#angular-project-lifecycle)     
+* [Components interactions](#components-interactions)     
+* [Directive structurelle](#directive-structurelle)     
+* [Typescript](#typescript)     
+* [Web worker](#web-worker)     
+* [injection de dépendance (services)](#)     
+* [Promise](#promise)     
+* [RxJs ](#rxjs)     
+* [Codes retour http](#codes-retour-http)     
+* [Form](#form)     
+* [ViewChild](#viewchild)     
+* [Composants gratuits](#composants-geatuits)     
+* [Routing](#routing)     
+* [Tests unitaires](#tests-unitaires)     
+* [Directives](#directives)     
+* [Design](#design)     
+
+
+## Ressources
+
+https://alligator.io/angular/
+https://blog.thoughtram.io/
+https://nitayneeman.com/posts/all-talks-from-ng-conf-2018/
+
+
 ## VSCode plugins
 [Back to top](#angular) 
 
