@@ -508,7 +508,7 @@ CanActivate() {
 **CanDeactivate** permet de vérifier si j'ai le droit de quitter la route actuelle. C'est utilisé dans le cas ou l'utilisaateur est entrain de modifier un formulaire par exemple.
 
 ## Tests unitaires
-
+[Back to top](#angular) 
 Karma 
 
 Jasmine
@@ -518,4 +518,34 @@ Lancer les tests
 ng test
 ````
 
+## Directives
+[Back to top](#angular) 
 
+Lss directives permettent de modifier les éléments du DOM
+
+*Appel d'une directive*
+````
+<div appHighlight></div>
+````
+
+*Directive qui applique un fond rouge sur un click de la div*
+````
+@Directive({
+	selector: '[appHighlight]'
+})
+
+export class HighlightDirective {
+	constuctor(private _element: ElementRef) { }
+
+	// Ecouter événement click. Sur un click il applique la fonction onClick()
+	@HostListener('click') 
+	onClick(){
+		this._element.nativeElement.style.backgroundColor = 
+		this._element.nativeElement.style.backgroundColor ? null : 'red';
+	}
+}
+````
+
+Voir ````<ng-content>````
+
+https://wizbii.tech/un-layout-dynamique-avec-ng-content-d00e27ab26d9
