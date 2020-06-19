@@ -309,16 +309,142 @@ Le FormControl définit la logique d'un input du FormGroup
 
 Pour faciliter l'écriture des formulaires, utiliser Angular FormBuilder : https://angular.io/guide/reactive-forms
 
+### FormBuilder
+
+Permet de simplifier l'écriture des formulaires ReactiveForm
+
+````
+loginForm: FormGroup;
+
+// Méthode avec FormBuilder
+constructor (private fb: FormBuilder) { }
+
+this.loginForm = this.fb.group({
+	login: [isDevMode() ? 'admin' : '', Validators.required],
+	password: [isDevMode() ? 'password' : '', Validators.required]
+});
+
+// Méthode sans FormBuilder
+
+this.loginForm = new FormGroup({
+	login: new FormControl('admin', Validators.required),
+	password: new FormControl('password', Validators.required)
+});
+````
+
 ### Custom validator
 [Back to top](#angular) 
 
-retourne null si tout va bien et retourne un objet en cas d'erreur
+#### Validator asynchrone
+
+retourne null si tout va bien et retourne un objet en cas d'erreur.
+
+**ATTENTION** Ne jamais faire de *reject* mais un *resolve(<quelque-chose>)* en cas d'erreur
 
 Un validator custom est une classe dans lequel on défini une methode statique.
 => this.champ = new FormControl(null, monvalidator.saMethodeStatique);
+
+## ViewChild
+[Back to top](#angular) 
+
+Permet de contrôler un élément de la vue, depuis le controller
+
+````
+@ViewChild('userForm', {static: true}) monUserForm: NgForm;
+//{static: true/false} => Avoir le droit d'y accéder avant (true) ou après (false) que la vue ne soit prête
+````
 
 ## Composants gratuits
 [Back to top](#angular) 
 
 codepen.io
+
+## Routing
+[Back to top](#angular) 
+
+route par défaut, doit toujours être à la fin du fichier de routing !!
+
+````
+{
+	redirectTo: '/default',
+	path: '**'
+}
+````
+
+**A savoir :** *href* recharge la page, pas le *routerLink*
+
+### Deep linking - routes enfants
+
+Deux solution : 
+
+- Définir les childroutes dans le app.route.ts
+- Créer un fichier route dans chaque composant qui aura besoin de routes enfant. **Bonne pratique**
+
+La seconde solution est une meilleure pratique pour éviter d'avoir un fichier app.routes.ts trop conséquent.
+
+*app.routes.ts*
+````
+export const APP_ROUTES: Routes = [
+	{
+		path: 'home'
+		component: HomeComponent,
+		children: HOME_ROUTES
+	}
+]
+````
+
+*home.routes.ts*
+````
+export const HOME_ROUTES: Routes = [
+	{
+		path: 'child1'
+		component: ChildComponent
+	},
+	{
+		path: 'child2'
+		component: ChildComponent
+	},
+
+	},
+	{
+		redirectTo: '/default',
+		path: '**'
+	}
+]
+````
+Ajoute ensuite le router-outlet du Home
+
+*home.component.html*
+````
+<router-outlet></router-outlet>
+````
+
+### Naviguer depuis la vue
+[Back to top](#angular) 
+
+Syntaxes possibles :
+````
+<button [routerLink]="['./login']">Navigate</button> <!-- tableau de routes -->
+<button routerLink="/login">Navigate</button> <!-- route seule -->
+<button [routerLink]="['./client', 'product']">Navigate</button> <!-- concatène les 2 routes avec un / automatiquement -->
+````
+
+### Naviguer depuis le controller
+[Back to top](#angular) 
+
+````
+this.route.nagivate(['./route'], {relativeTo: this.});
+````
+
+### Lazy-loading routes
+[Back to top](#angular) 
+
+
+### router-outlet multiple
+[Back to top](#angular) 
+
+On peut définir plusieurs <router-outlet>. Mais faire **ATTENTION** de bien les nommer différemment
+
+https://www.techiediaries.com/angular-router-multiple-outlets/
+
 
