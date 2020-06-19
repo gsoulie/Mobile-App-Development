@@ -465,6 +465,19 @@ ngOnInit() {
 ### Lazy-loading routes
 [Back to top](#angular) 
 
+C'est webpack qui va prendre en charge le lazy loading et créer un chunk du module
+
+*Syntaxe Angular 8*
+````
+{
+	path: 'tickets',
+	loadChildren:() => import('./lazy/Lazy.module').then(m=>m.NomModule)
+}
+````
+
+#### Preloading
+
+Permet en background d'une page, de charger le contenu des autres pages
 
 ### router-outlet multiple
 [Back to top](#angular) 
