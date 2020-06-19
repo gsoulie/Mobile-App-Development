@@ -19,6 +19,8 @@ app.component.ts
 
 ### Cycle de vie d'un composant
 
+| Tables   |
+|----------|
 |constructor|
 |nbOnChanges|
 |ngOnInit|
