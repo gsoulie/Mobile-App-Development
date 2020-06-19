@@ -506,3 +506,16 @@ CanActivate() {
 ````
 
 **CanDeactivate** permet de vérifier si j'ai le droit de quitter la route actuelle. C'est utilisé dans le cas ou l'utilisaateur est entrain de modifier un formulaire par exemple.
+
+## Tests unitaires
+
+Karma 
+
+Jasmine
+
+Lancer les tests
+````
+ng test
+````
+
+
