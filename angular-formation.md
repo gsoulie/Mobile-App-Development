@@ -8,12 +8,25 @@ Auto import
 typescript hero => permet de créer des compos / pipe etc... en faisant un clic droit plutôt que la console
 tslint / eslint
 
-## Les 3 fichiers principaux pour créer une appli angular
+## Généralités
+
+### Les 3 fichiers principaux pour créer une appli angular
 [Back to top](#angular) 
 
 main.ts permet de définir le type d'application (mobile, web, ...). Ensuite il appelle le module racine (AppModule)
 app.module.ts
 app.component.ts
+
+### Cycle de vie d'un composant
+
+|constructor|
+|nbOnChanges|
+|ngOnInit|
+|ngDoCheck|
+|ngAfterContentInit|
+|ngAfterContentChecked|
+|ngAfterViewInit|
+|ngAfterViewChecked|
 
 ## Best practices
 [Back to top](#angular) 
