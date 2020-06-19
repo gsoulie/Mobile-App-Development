@@ -523,6 +523,10 @@ ng test
 
 Lss directives permettent de modifier les éléments du DOM. **Leur responsabilité est relative à la vue**
 
+Dans l'idéal :
+- Si on **modifie l'aspect** d'un élément on utilise une **directive**. 
+- SI on **créé un élément** alors on utilise un **component**
+
 *Appel d'une directive (ici : appHighlight)*
 ````
 <div appHighlight (click)="maFonction()">TEXT</div>
@@ -568,10 +572,8 @@ export class HighlightDirective {
 
 	constuctor(private _element: ElementRef) { }
 
-	// Ecouter événement click. Sur un click il applique la fonction onClick()
-	@HostListener('click') 
 	onClick(){
-		const colorToApply = this.actualCOlorText || 'green';
+		const colorToApply = this.actualColorText || 'green';
 		this._element.nativeElement.style.backgroundColor = 
 		colorToApply;
 	
