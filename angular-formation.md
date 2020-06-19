@@ -1,6 +1,7 @@
 # Angular
 
 ## VSCode plugins
+[Back to top](#angular) 
 
 Angular schematics
 Auto import
@@ -8,18 +9,21 @@ typescript hero => permet de créer des compos / pipe etc... en faisant un clic 
 tslint / eslint
 
 ## Les 3 fichiers principaux pour créer une appli angular
+[Back to top](#angular) 
 
 main.ts permet de définir le type d'application (mobile, web, ...). Ensuite il appelle le module racine (AppModule)
 app.module.ts
 app.component.ts
 
 ## Best practices
+[Back to top](#angular) 
 
 ### Pipe
 
 Tout traitement qui modifie la vue doit préférablement utiliser les pipes plutôt qu'une méthode. Les pipes sont très optimisés et offrent un gain de performance énorme.
 
 ### Optimisation lancement application
+[Back to top](#angular) 
 
 1 - lazy loading
 ne charger que les routes nécessaires au démarrage
@@ -30,6 +34,7 @@ C'est juste une capture, le client ne peut pas intérragir. C'est juste en atten
 cf : https://angular.io/guide/universal
 
 ### zone.js
+[Back to top](#angular) 
 
 Un changeDetector par composant. Il gère pour chacun les 3 zones à écouter (events, timers, network).
 Par défaut, Angular écoûte les 3 zones de chacun en permanence.
@@ -74,7 +79,17 @@ Le **detectChanges** est instantané, on force Angular à rafraichir tout de sui
 
 L'utilisation de l'un ou l'autre est à voir au cas par cas mais de manière générale, préférer le markForCheck qui est moins violent car c'est Angular qui le gère.
 
+### Detacher - Réattacher 
+
+On peut aussi manuellement désactiver / réactiver l'écoute des zones pour un composant avec :
+
+````
+this.cd.detach();	// ne sera plus mis à jour
+this.cd.reattach();	// se remet à jour
+````
+
 ## Spread & Rest operators
+[Back to top](#angular) 
 
 ````
 let arr = [1, 2, 3]; 
@@ -93,30 +108,36 @@ console.log(obj2); // {a: 1, b: 2, c: 3}
 ````
 
 ## Object destructuration
+[Back to top](#angular) 
 
+````
 const user = [{nom: 'toto', prenom: 'paul'},{nom: 'titi', prenom: 'luc'}];
 let [o1, o2] = user;
-
+````
 
 ### Function parameters destructuration
+[Back to top](#angular) 
 
+````
 maFunct = ({param1, param2}) {
 
 }
 
 maFunct({param2: 5, param1: 1});
+````
 
 ==> permet de s'affranchir de l'ordre des paramètres et de gérer plus facilement les 
 paramètres optionnels
 
-
 ## Angular project lifecycle
+[Back to top](#angular) 
 
 1 - main.ts
 2 - app.module.ts => déclare tous les composants/directive/pipe/services de l'appli
 3 - app.component.ts => c'est le bootstrap component
 
 ## Components interactions
+[Back to top](#angular) 
 
 Angular fonction en single way data-binding, c'est à dire que les enfants ne peuvent communiquer qu'avec leur parent direct. C'est donc le parent qui transmet ses propriété via un @Input. Si l'enfant souhaite modifier une valeur, il doit en notifier son parent via un Event Emitter dans avec un @Output
 
@@ -151,6 +172,7 @@ ngOnInit() {
 Si l'enfant modifie l'objet, il doit remonter l'information au père avec event emitter
 
 ### Event emitter
+[Back to top](#angular) 
 
 **Enfant**
 
@@ -178,6 +200,7 @@ public onVider(val) {
 ````
 
 ## Directive structurelle
+[Back to top](#angular) 
 
 ````
 <p *ngIf="name; else noName">
@@ -202,16 +225,19 @@ Il existe trois mots clés pour le ngFor : *index, first, last*
 ````
 
 ## Typescript
+[Back to top](#angular) 
 
 codage en TS qui sera transpilé en JS car le navigateur ne sait pas interpreter le TS
 
 ## Web worker
+[Back to top](#angular) 
 
 Webworker permet de déleguer une tâche lourde (ex afficher un objet 3D calculé). Cela permet au thread principal, d'alléger sa mémoire
 et de déléguer les tâches lourdes au webworker qui va s'en charger?
 
 
 ## injection de dépendance (services)
+[Back to top](#angular) 
 
 permet de pallier la communication entre un compo 1 avec un compo 100. 
 Cela évite de passer 99 input et remonter par 99 output
@@ -227,6 +253,7 @@ maFunct() {
 ````
 
 ## Promise
+[Back to top](#angular) 
 
 ````
 let promise = new Promise((resolve, reject) => {
@@ -242,11 +269,13 @@ promise.then((data) => {
 ````
 
 ## RxJs 
+[Back to top](#angular) 
 
 https://rxjs-dev.firebaseapp.com/guide/subject
 https://makina-corpus.com/blog/metier/2017/premiers-pas-avec-rxjs-dans-angular
 
 ## Codes retour http
+[Back to top](#angular) 
 
 faire toujours une surcouche à httpclient voir APIHelper correction TP2
 
@@ -254,6 +283,7 @@ catch récupérer code erreur et le traiter dans ton service surcouche (retourne
 redirige l'erreur vers le composant concerné
 
 ## Form
+[Back to top](#angular) 
 
 **Template-driven** : la logique de validation du formulaire est dans la vue (C'EST MAL la vue ne doit faire QUE de la vue !)
 
@@ -265,12 +295,15 @@ Le FormControl définit la logique d'un input du FormGroup
 Pour faciliter l'écriture des formulaires, utiliser Angular FormBuilder : https://angular.io/guide/reactive-forms
 
 ### Custom validator
+[Back to top](#angular) 
+
 retourne null si tout va bien et retourne un objet en cas d'erreur
 
 Un validator custom est une classe dans lequel on défini une methode statique.
 => this.champ = new FormControl(null, monvalidator.saMethodeStatique);
 
 ## Composants gratuits
+[Back to top](#angular) 
 
 codepen.io
 
