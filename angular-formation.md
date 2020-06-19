@@ -19,7 +19,7 @@ app.component.ts
 
 ### Cycle de vie d'un composant
 
-| Tables   |
+| Order   |
 |----------|
 |constructor|
 |nbOnChanges|
