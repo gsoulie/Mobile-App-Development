@@ -39,6 +39,7 @@
 	* Checking network connection
 	* Close modal
 	* Accessing DOM element @ViewChild    
+	* Show - Hide Dom element by screen size    
 	* Switch statement with complex expression
 * [Phone call and Social sharing](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-phone.md)    
 	* Phone call (Cordova and Capacitor)    
