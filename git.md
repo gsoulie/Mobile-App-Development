@@ -1,5 +1,10 @@
 # Git basic commands
 
+
+## Documentation 
+
+https://www.atlassian.com/fr/git/tutorials/using-branches/git-checkout
+
 ## Create repos
 
 In your app folder, initialize your git repos with :
@@ -72,6 +77,12 @@ git remote add origin
 Branches allows you to work on specific features without impact the rest of your project
 
 By default, the **master** branch is created by the init. Then you you can create all the branches you want, but don't forget to merge them with the master when you have finished.
+
+### Get all branches
+
+```
+git fetch --all
+```
 
 ### Create branch
 
