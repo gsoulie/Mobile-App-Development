@@ -164,6 +164,7 @@
 * [Gallery](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gallery.md)    
 * [Barcode Scanner](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-barcode.md)  
 * [HTTP queries](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-http-query.md)  
+	* api-helper service     
 	* GET    
 	* POST    
 	* PUT query    
