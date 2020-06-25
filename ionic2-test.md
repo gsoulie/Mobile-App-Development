@@ -196,6 +196,7 @@
 	* Android Failed to execute aapt    
 	* ViewDestroyError      
 	* Updating nodejs for window    
+	* Cannot read property id of undefined    
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)   
 	* Background image    
 	* SVG    
