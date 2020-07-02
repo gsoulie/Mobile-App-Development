@@ -231,4 +231,5 @@
 	* Bluetooth Serial
 * [Code documentation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-code-documentation.md)    
 * [Drawing](https://devdactic.com/ionic-canvas-drawing-files/)    
+* [html2PDF](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-html2pdf.md)    
 [TODO](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-todo.md)    
