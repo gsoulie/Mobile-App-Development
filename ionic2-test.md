@@ -109,6 +109,7 @@
 	* Create fixed menu with scrollable content   
 	* Flex grid    
 	* Flex box    
+	* Make modale flexible    
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
 	* Dynamic theming
 	* Navbar
