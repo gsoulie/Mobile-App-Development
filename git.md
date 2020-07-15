@@ -138,6 +138,21 @@ To get an overview of updates
 git diff
 ```
 
+## Change remote URL
+https://git-scm.com/book/fr/v2/Les-bases-de-Git-Travailler-avec-des-d%C3%A9p%C3%B4ts-distants
+
+To show all remote
+````
+git remote -v
+````
+
+### Set the new url
+
+To change your remote url
+````
+set-url origin <my-new-url>
+````
+
 ## Tags
 
 It is recommanded to create tag to identify your releases. To create a tag, you have to get the first 10 characters of your last commit id (you can use other string as id but the id must be unique)
