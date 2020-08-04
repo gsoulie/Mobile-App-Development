@@ -108,6 +108,18 @@ git branch -d <branch name>
 git push origin
 ```
 
+### Push new branch to remote
+
+What to do if you get a *git no upstream configured for branch 'myNewBranch'* error
+```
+git branch --set-upstream-to=origin/master myNewBranch
+```
+
+And push your new branch to your remote repos
+```
+git push -u origin myNewBranch
+```
+
 ## Update and Merge
 
 ### Update local repos
