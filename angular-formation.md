@@ -3,6 +3,7 @@
 * [Ressources](#ressources)     
 * [VSCode plugins](#vscode-plugins)     
 * [Généralités](#generalites)     
+* [Update angular](#update-angular)     
 * [Best practices](#best-practices)     
 * [Spread & Rest operators](#spread-&-res-operators)     
 * [Object destructuration](#object-destructuration)     
@@ -60,6 +61,27 @@ app.component.ts
 |ngAfterContentChecked|
 |ngAfterViewInit|
 |ngAfterViewChecked|
+
+## Update angular
+[Back to top](#angular) 
+
+To update Angular CLI to a new version, you must update both the global package and your project's local package.
+
+note : lancer l'invité de commande en mode administrateur
+
+````
+Global package:
+
+npm uninstall -g @angular/cli
+npm cache verify
+# if npm version is < 5 then use `npm cache clean` 
+npm install -g @angular/cli@latest
+Local project package:
+
+rm -rf node_modules dist # use rmdir /S/Q node_modules dist in Windows Command Prompt; use rm -r -fo node_modules,dist in Windows PowerShell 
+npm install --save-dev @angular/cli@latest
+npm install
+````
 
 ## Best practices
 [Back to top](#angular) 
