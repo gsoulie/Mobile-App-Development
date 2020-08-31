@@ -675,6 +675,118 @@ https://ng.ant.design/components/button/en
 http://ng.mobile.ant.design/#/docs/getting-started/en    
 https://alyle.io/getting-started/installation    
 
+### Material Angular
+
+Pour faciliter la gestion des composants material :
+
+Créer un fichier **material.module.ts** dans le répertoire **app** (avec app.module.ts) dans lequel on va importer tous les modules material nécessaire ex :
+
+````
+import {NgModule} from '@angular/core';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+
+import {
+  MatIconModule,
+  MatButtonModule,
+  MatInputModule,
+  MatAutocompleteModule,
+  MatChipsModule,
+  MatListModule,
+  MatGridListModule,
+  MatExpansionModule,
+  MatToolbarModule,
+  MatProgressSpinnerModule,
+  MatDialogModule,
+  MatTooltipModule,
+  MatMenuModule,
+  MatCardModule,
+  MatSelectModule,
+  MatCheckboxModule,
+  MatTableModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
+} from '@angular/material';
+
+
+@NgModule({
+  exports: [
+    FormsModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    MatIconModule,
+    MatButtonModule,
+    MatInputModule,
+    MatAutocompleteModule,
+    MatChipsModule,
+    MatListModule,
+    MatGridListModule,
+    MatExpansionModule,
+    MatToolbarModule,
+    MatProgressSpinnerModule,
+    MatDialogModule,
+    MatTooltipModule,
+    MatMenuModule,
+    MatCardModule,
+    MatSelectModule,
+    MatCheckboxModule,
+    MatTableModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+  ]
+})
+export class AppMaterialModule {}
+````
+
+Ensuite importer ce fichier dans le **app.module.ts**
+
+````
+import { HomeComponent } from './components/home/home.component';
+import { AppMaterialModule } from './material.module';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HomeComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    AppMaterialModule,
+    BrowserAnimationsModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+````
+
+*Exemple d'utilisation*
+
+````
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Home</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+````
+
+
 ## Theming
 [Back to top](#angular)   
 
