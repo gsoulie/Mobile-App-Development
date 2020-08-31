@@ -23,6 +23,7 @@
 * [Tests unitaires](#tests-unitaires)     
 * [Directives](#directives)     
 * [UI frameworks](#ui-frameworks)     
+* [Theming](#theming)     
 
 
 ## Ressources
@@ -673,3 +674,88 @@ http://ng-lightning.github.io/ng-lightning/#/get-started
 https://ng.ant.design/components/button/en    
 http://ng.mobile.ant.design/#/docs/getting-started/en    
 https://alyle.io/getting-started/installation    
+
+## Theming
+[Back to top](#angular)   
+
+[Documentation](https://material.angular.io/guide/theming)     
+
+Créer un fichier src/mon-theme**.scss** contenant la structure suivante :
+
+````
+@import '~@angular/material/theming';
+@include mat-core();
+
+// $my-app-primary: mat-palette($mat-blue-grey);
+// $my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
+// $my-app-warn:    mat-palette($mat-deep-orange);
+// $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+// @include angular-material-theme($my-app-theme);
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$my-app-primary: mat-palette($mat-green);
+$my-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$my-app-warn:    mat-palette($mat-red);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as `color` or `typography`.
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($my-app-theme);
+
+.alternate-theme {
+  $alternate-primary: mat-palette($mat-light-blue);
+  $alternate-accent:  mat-palette($mat-yellow, 400);
+  $alternate-theme: mat-light-theme($alternate-primary, $alternate-accent);
+  @include angular-material-theme($alternate-theme);
+}
+
+````
+
+Mettre à jour le *angular.json* pour pointer sur ce fichier thème
+
+````
+"styles": [
+      {
+	"input": "src/mon-theme.scss"
+      },
+      "src/styles.scss"
+],
+````
+
+*Utilisation*
+
+````
+<mat-card>
+      Main Theme:
+      <button mat-raised-button color="primary">
+        Primary
+      </button>
+      <button mat-raised-button color="accent">
+        Accent
+      </button>
+      <button mat-raised-button color="warn">
+        Warning
+      </button>
+    </mat-card>
+    <br>
+    <mat-card class="alternate-theme">
+      Alternate Theme:
+      <button mat-raised-button color="primary">
+        Primary
+      </button>
+      <button mat-raised-button color="accent">
+        Accent
+      </button>
+      <button mat-raised-button color="warn">
+        Warning
+      </button>
+</mat-card>
+````
