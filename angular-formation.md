@@ -22,7 +22,7 @@
 * [Routing](#routing)     
 * [Tests unitaires](#tests-unitaires)     
 * [Directives](#directives)     
-* [Design](#design)     
+* [UI frameworks](#design)     
 
 
 ## Ressources
@@ -649,17 +649,17 @@ https://wizbii.tech/un-layout-dynamique-avec-ng-content-d00e27ab26d9
 
 ````<ng-content></ng-content>````
 
-## Design
+## UI frameworks
 
-[officials links](https://angular.io/resources?category=development)
+[officials links](https://angular.io/resources?category=development)    
 
 Best 4
-[official] https://material.angular.io/guide/getting-started
-https://valor-software.com/ngx-bootstrap/#/documentation
-https://primefaces.org/primeng/showcase/#/setup
-https://ng-bootstrap.github.io/#/home
+[official] https://material.angular.io/guide/getting-started    
+https://valor-software.com/ngx-bootstrap/#/documentation    
+https://primefaces.org/primeng/showcase/#/setup    
+https://ng-bootstrap.github.io/#/home    
 
-http://ng-lightning.github.io/ng-lightning/#/get-started
-https://ng.ant.design/components/button/en
-http://ng.mobile.ant.design/#/docs/getting-started/en
-https://alyle.io/getting-started/installation
+http://ng-lightning.github.io/ng-lightning/#/get-started    
+https://ng.ant.design/components/button/en    
+http://ng.mobile.ant.design/#/docs/getting-started/en    
+https://alyle.io/getting-started/installation    
