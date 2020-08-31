@@ -34,10 +34,10 @@ https://nitayneeman.com/posts/all-talks-from-ng-conf-2018/
 ## VSCode plugins
 [Back to top](#angular) 
 
-Angular schematics
-Auto import
-typescript hero => permet de créer des compos / pipe etc... en faisant un clic droit plutôt que la console
-tslint / eslint
+Angular schematics    
+Auto import    
+typescript hero => permet de créer des compos / pipe etc... en faisant un clic droit plutôt que la console    
+tslint / eslint    
 
 ## Généralités
 
