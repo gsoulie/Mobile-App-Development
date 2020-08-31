@@ -680,17 +680,11 @@ https://alyle.io/getting-started/installation
 
 [Documentation](https://material.angular.io/guide/theming)     
 
-Créer un fichier src/mon-theme**.scss** contenant la structure suivante :
+Créer un fichier src/mon-theme.scss contenant la structure suivante (attention le fichier doit être de type **scss**):
 
 ````
 @import '~@angular/material/theming';
 @include mat-core();
-
-// $my-app-primary: mat-palette($mat-blue-grey);
-// $my-app-accent:  mat-palette($mat-pink, 500, 900, A100);
-// $my-app-warn:    mat-palette($mat-deep-orange);
-// $my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
-// @include angular-material-theme($my-app-theme);
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
