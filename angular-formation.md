@@ -62,6 +62,15 @@ app.component.ts
 |ngAfterViewInit|
 |ngAfterViewChecked|
 
+### Commandes
+
+Créer un composant
+
+````
+ng g c components/home --module app
+````
+
+
 ## Update angular
 [Back to top](#angular) 
 
