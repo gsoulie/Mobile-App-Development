@@ -2,7 +2,7 @@
 
 * [Ressources](#ressources)     
 * [VSCode plugins](#vscode-plugins)     
-* [Généralités](#generalites)     
+* [Généralités](#généralités)     
 * [Update angular](#update-angular)     
 * [Best practices](#best-practices)     
 * [Spread & Rest operators](#spread-&-res-operators)     
