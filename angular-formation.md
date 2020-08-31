@@ -17,7 +17,7 @@
 * [Codes retour http](#codes-retour-http)     
 * [Form](#form)     
 * [ViewChild](#viewchild)     
-* [Composants gratuits](#composants-geatuits)     
+* [Composants gratuits](#composants-gratuits)     
 * [Routing](#routing)     
 * [Tests unitaires](#tests-unitaires)     
 * [Directives](#directives)     
