@@ -204,6 +204,7 @@
 	* Using cascading SVG    
 	* Add blur    
 	* Upload image    
+	* Converting base64 string to blob	 
 * [Forms](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-forms.md)    
 	* NgModel Forms    
 	* Form in Ionic 4    
