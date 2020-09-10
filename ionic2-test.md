@@ -145,6 +145,7 @@
 	* Round progress bar     
 	* ion-slide    
 	* Hiding header on scroll     
+	* Input with autocomplete datalist     
 * [Chart](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-chart.md)
 	* Chartjs     
 	* Chart grid 50%    
