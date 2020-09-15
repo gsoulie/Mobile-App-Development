@@ -662,24 +662,30 @@ https://wizbii.tech/un-layout-dynamique-avec-ng-content-d00e27ab26d9
 ## UI frameworks
 [Back to top](#angular)      
 
-[officials links](https://angular.io/resources?category=development)    
+[officials links](https://angular.io/resources?category=development)       
 
-Best 4     
-[official] https://material.angular.io/guide/getting-started    
-https://valor-software.com/ngx-bootstrap/#/documentation    
-https://primefaces.org/primeng/showcase/#/setup    
-https://ng-bootstrap.github.io/#/home    
+Best 4       
+[official] https://material.angular.io/guide/getting-started       
+https://valor-software.com/ngx-bootstrap/#/documentation       
+https://primefaces.org/primeng/showcase/#/setup        
+https://ng-bootstrap.github.io/#/home       
+       
+http://ng-lightning.github.io/ng-lightning/#/get-started       
+https://ng.ant.design/components/button/en        
+http://ng.mobile.ant.design/#/docs/getting-started/en      
+https://alyle.io/getting-started/installation       
 
-http://ng-lightning.github.io/ng-lightning/#/get-started    
-https://ng.ant.design/components/button/en    
-http://ng.mobile.ant.design/#/docs/getting-started/en    
-https://alyle.io/getting-started/installation    
+### Material icons
+
+Liste des icônes Material : https://www.angularjswiki.com/fr/angular/angular-material-icons-list-mat-icon-list/       
 
 ### Material Angular
 
 Pour faciliter la gestion des composants material :
 
 Créer un fichier **material.module.ts** dans le répertoire **app** (avec app.module.ts) dans lequel on va importer tous les modules material nécessaire ex :
+
+> ATTENTION : selon la version d'angular, tous les composants ne sont pas à importer depuis *@angular/material* bien vérifier dans la doc
 
 ````
 import {NgModule} from '@angular/core';
