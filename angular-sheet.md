@@ -22,7 +22,8 @@
   * Local reference     
 * [Component lifecycle](https://github.com/gsoulie/angular-resources/blob/master/angular-component-lifecycle.md)        
 * [Components](https://github.com/gsoulie/angular-resources/blob/master/angular-component.md)        
-  * Drowpdown
+  * Drowpdown      
+  * mat-table     
 * [Navigating](https://github.com/gsoulie/angular-resources/blob/master/angular-navigation.md)        
   * routerLink    
   * Relative route "relativeTo"      
