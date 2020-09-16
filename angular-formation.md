@@ -63,6 +63,25 @@ app.component.ts
 |ngAfterViewInit|
 |ngAfterViewChecked|
 
+### Découpage projet
+
+app
+ |-- Home
+ |-- Compo 1
+ |-- Compo 2
+ |-- Login
+ |-- shared
+ |-- |-- class
+ |-- |-- cst
+ |-- |-- ...
+ |-- pipes
+ |-- services
+ |-- app.component.html
+ |-- app.component.ts
+ |-- app.component.css
+ |-- app.module.ts
+ 
+
 ### Commandes
 
 Créer un composant
