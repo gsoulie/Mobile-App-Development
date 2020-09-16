@@ -65,10 +65,19 @@ app.component.ts
 
 ### Découpage projet
 
+````
 app
- |-- Home
- |-- Compo 1
- |-- Compo 2
+ |-- home
+ |-- user
+ |-- |-- userList
+ |-- |-- userDetail
+ |-- |-- user.component.ts
+ |-- |-- user.component.html
+ |-- |-- user.component.css
+ |-- |-- user.routes.ts
+ |-- ticket
+ |-- |-- ticketList
+ |-- |-- addTicket
  |-- Login
  |-- shared
  |-- |-- class
@@ -80,7 +89,7 @@ app
  |-- app.component.ts
  |-- app.component.css
  |-- app.module.ts
- 
+ ````
 
 ### Commandes
 
