@@ -9,7 +9,7 @@
 * [Object destructuration](#object-destructuration)     
 * [Angular project lifecycle](#angular-project-lifecycle)     
 * [Components interactions](#components-interactions)     
-* [Directive structurelle](#directive-structurelle)     
+* [Directive structurelle ng-template](#directive-structurelle)     
 * [Typescript](#typescript)     
 * [Web worker](#web-worker)     
 * [injection de dépendance (services)](#)     
@@ -335,6 +335,25 @@ public onVider(val) {
 ````
 
 Rq : *ngIf avec else est équivalent à double blocs *ngIf
+
+*Autre exemple*
+
+````
+<ng-container *ngIf="tickets; then okTickets else noTickets"></ng-container>
+
+<ng-template #okTickets>
+ <div *ngFor="let ticket of tickets; let i = index" class="ticket">
+    <div class="actions" *ngIf="!loadingRequest">
+	<span class="remove" (click)="removeTicket(i)">X</span>
+	<span class="edit" (click)="editTicket(i)">| Edit |</span>
+    </div>
+
+    <div class="left">
+	<img [src]="ticket.urlImage"/>
+    </div>
+ </div>
+</ng-template>
+````
 
 ### mots clés réservés de ngFor 
 
