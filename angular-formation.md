@@ -124,6 +124,21 @@ npm install
 ## Best practices
 [Back to top](#angular) 
 
+### Blocs conditionnels
+
+Il est bien d'encadrer les blocs conditionnels *ngIf* avec des **ng-content**
+
+````
+<ng-container *ngIf="requestLoading">
+     <app-loading></app-loading>
+</ng-container>
+
+<ng-container *ngIf="!requestLoading">
+     <button type="submit" *ngIf="!isEdit" [disabled]="!formTicket.valid" (click)="create()">Créer</button>
+     <button type="submit" *ngIf="isEdit" [disabled]="!formTicket.valid" (click)="edit()">Editer</button>
+</ng-container>
+````
+
 ### Pipe
 
 Tout traitement qui modifie la vue doit préférablement utiliser les pipes plutôt qu'une méthode. Les pipes sont très optimisés et offrent un gain de performance énorme.
