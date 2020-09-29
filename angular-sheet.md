@@ -53,7 +53,8 @@
   * Headers, Params, responseType    
   * Http interceptor    
   * POST vs PUT     
-* [CSS](https://github.com/gsoulie/angular-resources/blob/master/angular-css.md)    
+* [CSS](https://github.com/gsoulie/angular-resources/blob/master/angular-css.md)   
+  * variable.scss      
   * Dynamic styling    
   * Css class    
   * Styling input when error occurs    
