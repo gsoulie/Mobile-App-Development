@@ -135,6 +135,7 @@ If you want to merge your **dev** branch to your **master**, first switch to tar
 ```
 git checkout master
 git merge dev
+git push
 ```
 
 ### Merge conflicts
