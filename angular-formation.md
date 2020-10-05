@@ -311,7 +311,7 @@ public vider() {
 <!-- <button (click)="vider()">vider</button>-->
 ````
 
-**Parent **
+**Parent**
 
 ````
 <app-compo-enfant (vider)="onVider($event)">
@@ -412,7 +412,8 @@ promise.then((data) => {
 ## Observable
 [Back to top](#angular) 
 
-https://makina-corpus.com/blog/metier/2017/premiers-pas-avec-rxjs-dans-angular
+https://makina-corpus.com/blog/metier/2017/premiers-pas-avec-rxjs-dans-angular       
+https://guide-angular.wishtack.io/angular/observables/creation-dun-observable
 
 ## RxJs 
 [Back to top](#angular) 
