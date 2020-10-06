@@ -111,6 +111,7 @@
 	* Flex grid    
 	* Flex box    
 	* Make modale flexible    
+	* 2 columns layout      
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
 	* Dynamic theming
 	* Navbar
