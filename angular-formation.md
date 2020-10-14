@@ -559,6 +559,31 @@ Syntaxes possibles :
 <button [routerLink]="['./login']">Navigate</button> <!-- tableau de routes -->
 <button routerLink="/login">Navigate</button> <!-- route seule -->
 <button [routerLink]="['./client', 'product']">Navigate</button> <!-- concatène les 2 routes avec un / automatiquement -->
+<button [routerLink]="['/client', client.id]">Navigate</button> <!-- routing avec paramètres -->
+<button routerLink="/client/{{ client.id }}">Navigate</button> <!-- routing avec paramètres idem syntaxe ci-dessus -->
+<button [routerLink]="['/client', { foo: 'foo' }]">Navigate</button>
+````
+
+**routerLinkActive**
+
+Vérifie si l'itinéraire lié d'un élément est actuellement actif et vous permet de spécifier une ou plusieurs classes CSS à ajouter à l'élément lorsque l'itinéraire lié est actif.
+
+````
+<a routerLink="/first-component" routerLinkActive="active">
+````
+
+*Exemple*
+
+Chaque fois que l'URL est */user* ou */user/bob*, la classe *active-link* est ajoutée à la balise d'ancrage. Si l'URL change, la classe est supprimée.
+
+````
+<a routerLink="/user/bob" routerLinkActive="active-link">Bob</a>
+````
+
+On peut aussi définir plusieurs classes à l'aide d'une chaîne séparée par des espaces ou d'un tableau. 
+````
+<a routerLink="/user/bob" routerLinkActive="class1 class2">Bob</a>
+<a routerLink="/user/bob" [routerLinkActive]="['class1', 'class2']">Bob</a>
 ````
 
 ### Routing parameters
@@ -569,10 +594,6 @@ Syntaxes possibles :
 	path: 'ticket/edit/:id'
 	component: TicketComponent
 }
-````
-
-````
-
 ````
 
 ### Naviguer depuis le controller
