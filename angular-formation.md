@@ -562,6 +562,7 @@ Syntaxes possibles :
 <button [routerLink]="['/client', client.id]">Navigate</button> <!-- routing avec paramètres -->
 <button routerLink="/client/{{ client.id }}">Navigate</button> <!-- routing avec paramètres idem syntaxe ci-dessus -->
 <button [routerLink]="['/client', { foo: 'foo' }]">Navigate</button>
+<button [routerLink]="['area', businessArea, 'projects']"</button>
 ````
 
 **routerLinkActive**
