@@ -661,6 +661,20 @@ CanActivate() {
 
 **CanDeactivate** permet de vérifier si j'ai le droit de quitter la route actuelle. C'est utilisé dans le cas ou l'utilisaateur est entrain de modifier un formulaire par exemple.
 
+### Connaître la route depuis laquelle on vient
+
+````
+private routerEventsSubscription: Subscription;
+
+ngOnInit() {
+// On détecte les changements d'URL pour ne pas afficher les boutons de navigation vers la page sur laquelle on est déjà
+    this.routerEventsSubscription = this.router.events.subscribe(() => {
+      this.isOnLoginPage = this.router.url === '/login';
+      this.isOnHomePage = this.router.url === '/home';
+    });
+}
+````
+
 ## Tests unitaires
 [Back to top](#angular) 
 Karma 
