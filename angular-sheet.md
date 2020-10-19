@@ -24,6 +24,7 @@
 * [Components](https://github.com/gsoulie/angular-resources/blob/master/angular-component.md)        
   * Drowpdown      
   * mat-table     
+  * Fullcalendar      
 * [Navigating](https://github.com/gsoulie/angular-resources/blob/master/angular-navigation.md)        
   * routerLink    
   * Relative route "relativeTo"      
