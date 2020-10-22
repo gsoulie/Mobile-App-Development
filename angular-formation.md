@@ -25,6 +25,7 @@
 * [Directives](#directives)     
 * [UI frameworks](#ui-frameworks)     
 * [Theming](#theming)     
+* [Adapter pattern](#adapter-pattern)     
 
 
 ## Ressources
@@ -976,3 +977,9 @@ Mettre à jour le *angular.json* pour pointer sur ce fichier thème
       </button>
 </mat-card>
 ````
+
+## Adapter pattern
+
+Le Model Adapter Pattern permet de simplifier le code des retours d'observable et aussi de respecter la pratique du DRY (Don't repeat yourself)
+
+https://florimond.dev/blog/articles/2018/09/consuming-apis-in-angular-the-model-adapter-pattern/
