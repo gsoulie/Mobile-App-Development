@@ -126,6 +126,10 @@ npm install
 ## Best practices
 [Back to top](#angular) 
 
+### Model Adapter Pattern
+
+Utiliser au maximum cette technique (#adapter-pattern) pour gagner en maintenabilité
+
 ### Blocs conditionnels
 
 Il est bien d'encadrer les blocs conditionnels *ngIf* avec des **ng-content**
