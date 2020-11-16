@@ -123,6 +123,15 @@ npm install --save-dev @angular/cli@latest
 npm install
 ````
 
+### Solution 2
+The Angular team recommends updating the CLI and Core first:
+
+````$ ng update @angular/cli @angular/core````
+Afterward, update the rest of the Angular packages if there are no errors.
+
+Another resource to check out is the Angular update guide: https://update.angular.io. Select the version your app is currently on, then the version you’re updating to. The guide will show you what to do before, during, and after the update. In my experience, updating is painless since there’s very little manual work to do. 
+
+
 ## Best practices
 [Back to top](#angular) 
 
