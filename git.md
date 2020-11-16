@@ -1,11 +1,23 @@
 # Git basic commands
 
+* [Documentation](#documentation)     
+* [Initialization](#initialisation)     
+* [Tree](#tree)     
+* [Add and validate](#add-and-validate)     
+* [Sending updates](#sending-updates)     
+* [Branches](#branches)     
+* [Push new branche to remote](#push-new-branch-to-remote)     
+* [Update and merge](#update-and-merge)     
+* [Change remote url](#change-remote-url)     
+* [Tags](#tags)     
 
 ## Documentation 
 
 https://www.atlassian.com/fr/git/tutorials/using-branches/git-checkout
 
-## Create repos
+## Initialization
+
+### Create repos
 
 In your app folder, initialize your git repos with :
 
@@ -13,7 +25,7 @@ In your app folder, initialize your git repos with :
 git init
 ```
 
-## Clone repos
+### Clone repos
 
 To create a local copy of your repos :
 
@@ -108,7 +120,7 @@ git branch -d <branch name>
 git push origin
 ```
 
-### Push new branch to remote
+## Push new branch to remote
 
 What to do if you get a *git no upstream configured for branch 'myNewBranch'* error
 ```
