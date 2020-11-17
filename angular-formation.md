@@ -3,6 +3,7 @@
 * [Ressources](#ressources)     
 * [VSCode plugins](#vscode-plugins)     
 * [Généralités](#généralités)     
+* [Commandes](#commandes)     
 * [Update angular](#update-angular)     
 * [Best practices](#best-practices)     
 * [Spread & Rest operators](#spread-&-res-operators)     
@@ -93,14 +94,12 @@ app
  |-- app.module.ts
  ````
 
-### Commandes
-
-Créer un composant
+## Commandes
 
 ````
 ng g c components/home --module app
+ng g s shared/services/myService --skipTests
 ````
-
 
 ## Update angular
 [Back to top](#angular) 
