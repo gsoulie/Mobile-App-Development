@@ -1,8 +1,3 @@
-<p align="center">
-<img src="https://pbs.twimg.com/profile_images/834457277830541312/bYMCvtHD.jpg" align="center" width="100">
-</p>     
-
-
 # Ionic Framework resources
 
 > **Work in progress** : updating repos with new ionic 5 requirements, adding Capacitor usage
@@ -13,6 +8,7 @@
 	* Start with ionic
 	* Visual Studio Code - Snippet    
 	* Android debugging with logcat    
+	* Update environment npm / nodejs      
 * [Concepts](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-concepts.md)    
 	* Angular 2
 	* Decorators
