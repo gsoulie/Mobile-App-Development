@@ -145,6 +145,7 @@
 	* Input with autocomplete datalist     
 * [Chart](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-chart.md)
 	* Chartjs     
+	* Angular issues      
 	* Chart grid 50%    
 	* ng2-google-chart worldmap      
 	* Chart customization     
