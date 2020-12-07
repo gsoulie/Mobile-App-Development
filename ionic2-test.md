@@ -9,6 +9,7 @@
 	* Start with ionic
 	* Visual Studio Code - Snippet    
 	* Android debugging with logcat    
+	* Using multiple version of Node with NVM    
 * [Concepts](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-concepts.md)    
 	* Angular 2
 	* Decorators
