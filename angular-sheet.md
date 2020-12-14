@@ -32,6 +32,7 @@
   * Child routes     
   * Angular routing strategie Hash    
   * Reset routing params    
+  * Tab routing with routing back from modale     
 * [Observable](https://github.com/gsoulie/angular-resources/blob/master/angular-observable.md)        
   * Subscription     
   * Custom observable    
