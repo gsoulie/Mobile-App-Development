@@ -236,4 +236,4 @@ git reset -hard origin/master
 
 ## gitignore
 
-[collection](https://github.com/github/gitignore)       
+[large collection of gitignore files](https://github.com/github/gitignore)       
