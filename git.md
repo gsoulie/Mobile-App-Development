@@ -10,6 +10,7 @@
 * [Update and merge](#update-and-merge)     
 * [Change remote url](#change-remote-url)     
 * [Tags](#tags)     
+* [gitignore](#gitignore)     
 
 ## Documentation 
 
@@ -232,3 +233,7 @@ If you want delete all updates and local values, get the last history from the r
 git fetch origin
 git reset -hard origin/master
 ```
+
+## gitignore
+
+[collection](https://github.com/github/gitignore)       
