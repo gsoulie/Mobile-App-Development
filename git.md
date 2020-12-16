@@ -50,14 +50,16 @@ It's recommanded to create the following basic git flow in your projects
 - **master** which is the last version of your application in production
 - **develop** the current working branch
 
-**4 kind of working branches**
+> important : **master** and **develop** must not be modified directly. You must merge on it from the 4 following branches
+
+**4 types of working branches**
 
 - **feature** : create one feature branch for each feature, named like "feature/<feature-name>". this branch is based on **develop** and must be merged on **develop** 
 - **hotfix** : for fixing bug in production, named like "hotfix/<fix-name>". this branch is base on **master** and must be merged on **master AND develop**
 - **fix** : for fixing bug in current working branch, named like "fix/<fix-name>". this branch is based on **develop** and must be merged on **develop**
 - **release** : named like "release/<release-name>" (ex : release/mvp). this branch is based on **develop** and must be merged on **develop AND master**
   
-> info : naming your branches with **/** which create a tree and make easier to regroup your branch cathegory 
+> info : naming your branches with **/** will create a tree to regroup your branches 
   
 ## Tree
 
