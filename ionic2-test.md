@@ -145,6 +145,7 @@
 	* ion-slide    
 	* Hiding header on scroll     
 	* Input with autocomplete datalist     
+	* Action sheet customization     
 * [Chart](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-chart.md)
 	* Chartjs     
 	* Angular issues      
