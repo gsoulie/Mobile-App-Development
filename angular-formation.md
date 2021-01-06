@@ -614,7 +614,7 @@ On peut aussi définir plusieurs classes à l'aide d'une chaîne séparée par d
 [Back to top](#angular) 
 
 ````
-this.route.nagivate(['./ticket', 'edit', idTicket], {relativeTo: this.activatedRoute});	// => /ticket/edit/12
+this.route.navigate(['./ticket', 'edit', idTicket], {relativeTo: this.activatedRoute});	// => /ticket/edit/12
 ````
 
 *Récupérer les paramètres de route dans le controller*
