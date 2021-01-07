@@ -222,7 +222,7 @@
 * [Authentication](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-authentication.md)    
 	* Ionic Auth    
 * [Internationalization](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-i18n.md)  
-* [Splash screen and appicon](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-splashscreen.md)  
+* [Splash screen and appicon - Cordova](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-splashscreen.md)  
 * [Beta testing](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-beta-testing.md)    
 * [Push notification](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-push-notification.md)   
 * [Build for Android](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-build-android.md)  
@@ -242,5 +242,5 @@
 * [Drawing](https://devdactic.com/ionic-canvas-drawing-files/)    
 * [PDF export](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-html2pdf.md)    
 	* html2pdf      
-	* css print     
-[TODO](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-todo.md)    
+	* css print      
+[TODO](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-todo.md)      
