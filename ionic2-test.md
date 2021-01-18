@@ -150,6 +150,7 @@
 	* Hiding header on scroll     
 	* Input with autocomplete datalist     
 	* Action sheet customization     
+	* ion-toast      
 * [Gesture](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gesture.md)      
 * [Chart](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-chart.md)
 	* Chartjs     
