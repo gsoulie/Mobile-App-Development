@@ -21,6 +21,7 @@
 	* Async / Await functions     
 	* Resolver     
 	* Environments DEV / PROD     
+	* Function declaration       
 * [Capacitor](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-capacitor.md)    
 	* Requirements      
 	* Build     
