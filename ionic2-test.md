@@ -210,6 +210,7 @@
 	* ViewDestroyError      
 	* Updating nodejs for window    
 	* Cannot read property id of undefined    
+	* npm ERR! code EINVALIDPACKAGENAME      
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)   
 	* Background image    
 	* SVG    
