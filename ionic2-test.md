@@ -237,6 +237,9 @@
 	* Adding iOS permissions to plist automatically    
 	* Restrict plist to iphone only    
 * [Publishing App](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-publishing.md)  
+	* Android     
+	* Publishing with cordova (old)     
+	* iOS      
 * [Other modules](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-other-modules.md)   
 	* CRC computation
 * [Self working components](https://github.com/gsoulie/Ionic2-snippets)    
