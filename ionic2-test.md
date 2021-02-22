@@ -226,7 +226,8 @@
 	* [Communicating between Ionic app and NodeJS backend](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-nodejs-backend.md)    
 	* Strongloop
 	* Firebase
-* [Authentication](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-authentication.md)    
+* [Authentication](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-authentication.md)  
+	* Ionic appauth         
 	* Ionic Auth    
 * [Internationalization](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-i18n.md)  
 * [Splash screen and appicon - Cordova](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-splashscreen.md)  
