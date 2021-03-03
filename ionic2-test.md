@@ -14,7 +14,7 @@
 	* Angular 2
 	* Decorators
 	* Pipe    
-	* Map operator (new RxJS 6)   
+	* RxJS operators     
 	* Promise vs Observable (map and subscribe operators)    
 	* Observable and operators      
 	* BehaviorSubject    
