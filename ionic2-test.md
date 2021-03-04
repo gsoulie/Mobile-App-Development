@@ -66,9 +66,7 @@
 	* Multiple database    
 	* Firestore    
 * [PWA](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-pwa.md)    
-	* Creation
-	* Settings
-	* Deployment   
+	* Make a pwa with photo and geolocation      
 * [Navigation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-navigation.md)  
 	* Navigation by routing    
 	* Routing params    
