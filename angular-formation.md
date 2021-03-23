@@ -1094,7 +1094,107 @@ Mettre à jour le *angular.json* pour pointer sur ce fichier thème
 ````
 
 ## Adapter pattern
-
+[Back to top](#angular)      
 Le Model Adapter Pattern permet de simplifier le code des retours d'observable et aussi de respecter la pratique du DRY (Don't repeat yourself)
 
 https://florimond.dev/blog/articles/2018/09/consuming-apis-in-angular-the-model-adapter-pattern/
+
+The aim is to simplify the following code : 
+
+*course.model.ts*
+````
+export class Course {
+  constructor(
+    public id: number,
+    public code: string,
+    public name: string,
+    public created: Date
+  ) {}
+}
+````
+
+*course.service.ts*
+````
+export class CourseService {
+  private baseUrl = "http://api.myapp.com/courses";
+
+  constructor(private http: HttpClient) {}
+
+  // return list of courses
+  list(): Observable<Course[]> {
+    const url = `${this.baseUrl}/`;
+    return this.http
+      .get(url)
+      .pipe(
+        map((data: any[]) =>
+          data.map(
+            (item: any) =>
+              new Course(item.id, item.code, item.name, new Date(item.created))
+          )
+        )
+      );
+  }
+}
+````
+
+By creating an Adapter : 
+
+
+*course.model.ts*
+````
+import { Injectable } from "@angular/core";
+import { Adapter } from "./adapter";
+
+export class Course {
+  // ...
+}
+
+@Injectable({
+  providedIn: "root",
+})
+export class CourseAdapter implements Adapter<Course> {
+  adapt(item: any): Course {
+    return new Course(item.id, item.code, item.name, new Date(item.created));
+  }
+}
+````
+
+*course.service.ts*
+````
+export class CourseService {
+  private baseUrl = "http://api.myapp.com/courses";
+
+  constructor(private http: HttpClient, private adapter: CourseAdapter) {}
+
+  list(): Observable<Course[]> {
+    const url = `${this.baseUrl}/`;
+    return this.http.get(url).pipe(
+      // Adapt each item in the raw data array
+      map((data: any[]) => data.map((item) => this.adapter.adapt(item)))
+    );
+  }
+}
+````
+
+This helps to be more adaptive if the backend makes changes on the object format.
+
+For example, if the backend changes "name" by "label", we just have to modify our adapter class without changing anything else in our code.
+
+*course.model.ts*
+````
+@Injectable({
+  providedIn: 'root'
+})
+export class CourseAdapter implements Adapter<Course> {
+
+  adapt(item: any): Course {
+    return new Course(
+      item.id,
+      item.code,
+-     item.name,
++     item.label,
+      new Date(item.created),
+    );
+  }
+}
+````
