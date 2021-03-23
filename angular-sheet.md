@@ -26,6 +26,7 @@
   * mat-table     
   * Fullcalendar   
   * mat-button-toggle-group      
+  * Swiper       
 * [Navigating](https://github.com/gsoulie/angular-resources/blob/master/angular-navigation.md)        
   * routerLink    
   * Relative route "relativeTo"      
