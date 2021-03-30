@@ -38,7 +38,7 @@ https://nitayneeman.com/posts/all-talks-from-ng-conf-2018/
 
 ## Notions avancées
 
-https://makina-corpus.com/blog/metier/2019/des-boucles-generiques-de-composants-avec-angular         
+[composant extend/collapse générique avec boucle de composants](https://makina-corpus.com/blog/metier/2019/des-boucles-generiques-de-composants-avec-angular)         
 [content projection - attention ne fonctionne PAS avec les boucles](https://codecraft.tv/courses/angular/components/content-projection/)        
 
 ## VSCode plugins
