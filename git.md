@@ -60,6 +60,23 @@ It's recommanded to create the following basic git flow in your projects
 - **release** : named like "release/<release-name>" (ex : release/mvp). this branch is based on **develop** and must be merged on **develop AND master**
   
 > info : naming your branches with **/** will create a tree to regroup your branches 
+
+### initialize git flow
+
+To initialize git flow in your project, just run the following command and choose your branches prefix (it is recommanded to keep the suggested prefix)
+
+````
+git flow init
+````
+
+*Commands to create branches*
+````
+git flow feature start <Nom de la feature>
+git flow release start <Numéro de la release>
+git flow bugfix start <Numéro du bug>
+git flow hotfix start <Nom du bug>
+
+````
   
 ## Tree
 
