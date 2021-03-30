@@ -75,7 +75,13 @@ git flow feature start <Nom de la feature>
 git flow release start <Numéro de la release>
 git flow bugfix start <Numéro du bug>
 git flow hotfix start <Nom du bug>
+````
 
+*Commands to close feature to prepare merging*
+````
+git flow feature finish <Nom de la feature>
+git flow fixbug finish <Numéro du bug>
+git flow hotfix finish <Numéro du bug>
 ````
   
 ## Tree
