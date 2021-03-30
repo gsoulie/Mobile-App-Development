@@ -28,6 +28,7 @@
 * [UI frameworks](#ui-frameworks)     
 * [Theming](#theming)     
 * [Adapter pattern](#adapter-pattern)     
+* [Flex layout](#flex-layout)        
 
 
 ## Ressources
@@ -1202,4 +1203,17 @@ export class CourseAdapter implements Adapter<Course> {
     );
   }
 }
+````
+
+## Flex layout
+[Back to top](#angular)       
+
+[Tutorial flex-layout](https://zoaibkhan.com/blog/create-a-responsive-card-grid-in-angular-using-flex-layout-part-1/)       
+[Flex-layout Demos](https://tburleson-layouts-demos.firebaseapp.com/#/responsive)      
+[Documentation](https://github.com/angular/flex-layout/wiki/API-Documentation)      
+
+### installation
+
+````
+npm install -s @angular/flex-layout
 ````
