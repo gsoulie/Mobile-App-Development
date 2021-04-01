@@ -30,6 +30,7 @@
 * [Adapter pattern](#adapter-pattern)     
 * [Flex layout](#flex-layout)        
 * [ng-content](#ng-content)      
+* [workspace](#workspace)      
 
 
 ## Ressources
@@ -1311,3 +1312,30 @@ Et notre composant :
     </article>
 <app-layout>
 ````
+
+## Workspace
+[Back to top](#angular)     
+
+générer un workspace : ````ng new <mon-workspace> --create-application=false````
+générer une librairie : ````ng g library <ma-lib>````
+générer une application : ````ng g application <mon-ammplication>````
+générer un composant dans un projet/lib du workspace (spécifier le projet/lib) : ````ng g c composant/mon-compo --project=<ma-lib>````
+
+la création d'une application dans un workspace diffère de la création d'un projet classique dans le sens ou cette dernière n'a pas de package.json. Elle va utiliser le package.json du workspace. Ainsi en crééant plusieurs applications dans un même workspace, elles partageront toutes le même workspace.
+
+Pour exposer un composant d'une librairie aux autres projets / lib, ajouter sa dépendance dans le fichier public.api.ts
+//export * from './lib/composant/mon-composant';
+
+Une librairie est en fait un projet angular dans lequel on peut déclarer des classes / services / composants que l'on va ensuite partager dans un **MEME** workspace. 
+C'est utile si plusieurs projet doivent partager des composants / classes / services / helpers etc...
+
+Si l'on souhaite utiliser une librairie dans des projets externes au workspace, il faut publier la librairie sur NPM privée ou publique (payant)
+
+Si un projet du workspace souhaite rajouter des features à un composant / service / classe du workspace, il faut alors créer un nouveau composant / classe / service et le faire "extend" du composant / classe / service initial
+
+
+**Liaison entre les applications et les librairies**
+
+Afin de ne pas avoir à redéployer les librairies à chaque modification et permettre la mise à jour du code à chaud il faut configurer le fichier *tsconfig.json* du projet en définissant des redirections vers les chemins physique des fichiers. 
+
+Par défaut ces redirections se font vers le répertoire "dist" du workspace. 
