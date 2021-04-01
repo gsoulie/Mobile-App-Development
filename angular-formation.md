@@ -1316,9 +1316,9 @@ Et notre composant :
 ## Workspace
 [Back to top](#angular)     
 
-générer un workspace : ````ng new <mon-workspace> --create-application=false````
-générer une librairie : ````ng g library <ma-lib>````
-générer une application : ````ng g application <mon-ammplication>````
+générer un workspace : ````ng new <mon-workspace> --create-application=false````      
+générer une librairie : ````ng g library <ma-lib>````       
+générer une application : ````ng g application <mon-ammplication>````       
 générer un composant dans un projet/lib du workspace (spécifier le projet/lib) : ````ng g c composant/mon-compo --project=<ma-lib>````
 
 la création d'une application dans un workspace diffère de la création d'un projet classique dans le sens ou cette dernière n'a pas de package.json. Elle va utiliser le package.json du workspace. Ainsi en crééant plusieurs applications dans un même workspace, elles partageront toutes le même workspace.
