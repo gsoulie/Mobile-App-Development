@@ -1226,7 +1226,7 @@ npm install -s @angular/flex-layout
 
 https://blog.angular-university.io/angular-ng-template-ng-container-ngtemplateoutlet/
 
-*ng-template* défini un template, n'affiche rien tant qu'il n'est pas utilisé
+*ng-template* défini un template qui n'affiche rien tant qu'il n'est pas utilisé
 
 ````
 <div class="lessons-list" *ngIf="lessons else loading">
@@ -1239,10 +1239,8 @@ https://blog.angular-university.io/angular-ng-template-ng-container-ngtemplateou
 </ng-template>
 ````
 
-Il n'est pas possible d'appliquer plusieurs directive a un même élément, par exemple un *ngIf* et *ngFor* sur un même conteneur.
-Pour palier ce problème, on peut créer une div pour le *ngIf* et une div pour le *ngFor*.
-
-Cela fonctionne mais oblige à créer une nouvelle div.
+Il n'est pas possible d'appliquer plusieurs directives à un même élément, par exemple un *ngIf* et *ngFor* sur un même conteneur.
+Pour palier ce problème, on peut créer une div pour le *ngIf* et une div pour le *ngFor*. Cela fonctionne mais oblige à créer une nouvelle div.
 
 Il est donc possible d'utiliser un *ng-container*
 
@@ -1291,14 +1289,15 @@ Il est possible de passer un template à un composant enfant :
 
 #### Exemple 1
 
-Les ng-template peuvent prendre des paramètres. Ici le paramètre when contient une valeur comme "morning", "afternoon" ou "evening" :
+Les ng-template peuvent prendre des paramètres. Ici le paramètre *when* contient une valeur comme "morning", "afternoon" ou "evening" :
 
 ````
 <ng-template #hello let-when="whenValue">
   Good {{ when }} !
 </ng-template>
 ````
-let-xxx permet de définir des variables utilisables dans le ng-template (ici when) à partir de la propriété (ici whenValue) d'un objet passé en "context" du *ngTemplateOutlet*
+*let-xxx* permet de définir des variables utilisables dans le ng-template (ici when) à partir de la propriété (ici whenValue) d'un objet passé en "context" du *ngTemplateOutlet*. Ces variables ne sont pas accessible depuis l'extérieur directement. Pour accéder à ces variables depuis le ng-container, il faut créer un contexte (objet json par exemple) qui a un attribut
+ayant le nom de la variable à toucher :
 
 ````
 <ng-container *ngTemplateOutlet="itemTemplate;context:{whenValue: 'morning'}">
@@ -1307,28 +1306,23 @@ let-xxx permet de définir des variables utilisables dans le ng-template (ici wh
 
 #### Exemple 2
 ````
-    <ng-template #testTemplate let-clientVar="client">
-        <div class="customTemplate">
-            <h1>Hello {{ clientVar }} !</h1>
-            <p>This is my custom template</p>
-        </div>
-    </ng-template>
-    
-    <ng-container *ngTemplateOutlet="testTemplate;context:ctx"></ng-container>
-````
-un template peut utiliser des variables qu'il va définir avec le préfixe "let-" et les utiliser à l'intérieur de sa balise
-ng-template. Ces variables ne sont pas accessible depuis l'extérieur directement
+<ng-template #testTemplate let-clientVar="client">
+    <div class="customTemplate">
+        <h1>Hello {{ clientVar }} !</h1>
+        <p>This is my custom template</p>
+    </div>
+</ng-template>
 
-Pour accéder à ces variables depuis le ng-container, il faut créer un contexte (objet json par exemple) qui a un attribut
-ayant le nom de la variable à toucher :
+<ng-container *ngTemplateOutlet="testTemplate;context:ctx"></ng-container>
+````
 
 *controller*
-
 ````
 client = "gsoulie";
 ctx = {client: this.client};
 ````
-Accéder au contexte depuis un composant enfant 
+
+### Accéder au contexte depuis un composant enfant 
 
 *View*
 
