@@ -467,10 +467,10 @@ getAlertMsg(): Observable<string> {
 }
 ````
 
-**filter**
-**every**
-**map**
-**reduce**
+**filter**     
+**every**      
+**map**       
+**reduce**      
 
 > Important : les opérateurs appliqués **ne modifient jamais l'observable d'origine**, ils produisent une copie et renvoient un nouvel observable.
 
