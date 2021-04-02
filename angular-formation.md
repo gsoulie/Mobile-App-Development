@@ -660,6 +660,14 @@ search(name: string): Observable<string[]> {
 https://rxjs-dev.firebaseapp.com/guide/subject
 https://makina-corpus.com/blog/metier/2017/premiers-pas-avec-rxjs-dans-angular
 
+### opérateurs
+
+|operator|description|
+|-|-|
+|pipe|permet le chaînage de plusieurs opérateurs|
+|map|L'opérateur map permet de créer un nouvel Observable à partir de l'Observable d'origine en transformant simplement chacune de ses valeurs.|
+|tap|obsolète|
+
 ## Codes retour http
 [Back to top](#angular) 
 
