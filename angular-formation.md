@@ -436,6 +436,223 @@ promise.then((data) => {
 
 https://makina-corpus.com/blog/metier/2017/premiers-pas-avec-rxjs-dans-angular       
 https://guide-angular.wishtack.io/angular/observables/creation-dun-observable
+https://www.youtube.com/watch?v=TrDqaABq-UY&ab_channel=DevoxxFR        
+
+on utilise les observables pour représenter l'arrivée de données synchrone ou asynchrone.
+
+on peut recevoir une seule données ex : appel http
+ou plusieurs données étalées dans le temps ex : websocket
+
+l'observable a 3 type de notifications :
+
+- next chaque arrivée d'une data
+- error va casser l'observable, plus rien ne se passe
+- complete est la terminaison, plus rien ne se passe
+
+### opérateurs
+
+**pipe** : opérateur principal qui va permettre le branchement de plusieurs autres opérateurs à la suite les uns des autres et ainsi travailler sur le flux de données
+ 
+ex :
+````
+import {filter, map} from 'rxjs/operators;
+
+getAlertMsg(): Observable<string> {
+	const notif: Observable<Notification> = this.getNotifications();
+
+   return notif.pipe(
+	filter(notif => notif.type === 'ALERT'),
+	map(notif => notif.code + ' : ' + notif.message)
+   );
+}
+````
+
+**filter**
+**every**
+**map**
+**reduce**
+
+> Important : les opérateurs appliqués **ne modifient jamais l'observable d'origine**, ils produisent une copie et renvoient un nouvel observable.
+
+
+Pour pouvoir récupérer les données d'un observable, il faut s'y abonner via subscribe.
+
+La souscription peut prendre 3 paramètres (next, error et complete) soit :
+subscribe(value, error, ())
+ou un objet de type observer
+subscribe({value, error, ()})
+
+> Important : Toujours penser à annuler les souscription !!
+
+### 2 types d'observables 
+
+- **cold (unicast)** = source démarrée pour chaque souscription. 10 souscriptions = 10 démarrage. recommence du début pour chaque utilisateur
+ex appel http, redémarre à chaque appel
+
+- **hot (multicasted)** = 1 seule source diffusé à tout le monde (toutes les souscriptions) simultanément. Si on arrive en cours de route on aura pas les données depuis le début.
+ex données qui arrivent sur une websocket
+
+> remarque : on peut transformer un cold en hot
+
+### Création 
+of(1, 2, 3); est un observable qui fait next(1); next(2); next(3); complete();
+
+Création d'un hot observable
+On va utiliser un Subject qui est à la fois un Observer et un hot Observable
+
+````
+const subject = new Subject<number>();
+subject.subscribe(v => console.log('observerA : ' + v));
+subject.next(1);
+// observerA : 1
+subject.subscribe(v => console.log('observerB : ' + v));
+subject.next(2);
+// observerA : 2
+// observerB : 2
+````
+
+**behaviorSubject** : permet de conserver un état (valeur courante)
+
+**ReplaySubject** : quand on souscrit on reçoit les dernières valeurs qui ont été mises en cache
+
+**fromPromise(p)** : créer un observable à partir d'une promise
+**toPromise()** : créer une promise à partir d'un observable
+**fromEvent()** : créer un observable à partir d'un event (ex click bouton)
+
+### Transformer un cold (ex : requête http) en hot
+
+#### share() : partager un cold à tout un ensemble de souscripteurs
+````
+// attention exécution se fait à la première souscription. Si on souscrit et que la réponse est déjà arrivée on aura rien
+const hot$ = cold$.pipe(share());
+````
+
+#### shareReplay(5) 
+
+> Important notion NR. Voir rubrique exemple plus bas
+
+````
+const hot$ = cold$.pipe(shareReplay(1));
+// si la réponse été déjà passée, au moment de la souscription on reçoit immédiatement la réponse (il rejoue le dernier résultat à chaque nouvelle souscription)
+// remarque, ne rejoue PAS la requête
+````
+
+### Observable imbriqués 
+
+#### Aplatir 
+
+|action|opération|opérateur unique|
+|-|-|-|
+|exécution parallèle|map(), mergeAll()|mergeMap()|
+|exécuter à la suite|map(), concatAll()|concatMap()|
+|annuler la précédente|map(), switch()|switchMap()|
+|annuler la nouvelle|map(), exhaust()|exhaustMap()|
+
+**switchMap** utilisé dans le cas d'une complétion automatique. On veut les résultat de la dernière requête (ce que l'utilisateur a tappé en dernier)
+=> A chaque nouvelle frappe on annule la requête précédente
+
+**exhaustMap** : tant que le traitement en cours n'est pas terminé on ne tient pas compte des traitements suivants
+
+### Bonnes pratiques
+
+#### Services asynchrones 
+
+Quand on fait un service qui retourne un observable, **on ne souscrit JAMAIS à l'observable dans le service** pour renvoyer les données directement,
+car on ne sait pas quand les données arriveront
+
+#### Erreurs
+
+Remonter les erreurs là où on peut les traiter.
+
+interception : catchError
+rééssayer : retry ou retryWhen
+
+ex : 
+
+````
+find(id: string): Observable<Resource> {
+	const url = `http://.../.../${id}`;
+	return this.httpClient.get<Resource>(url)
+	.pipe(
+		catchError(error => {
+			if (error && error.status === 404) {
+				return of(null);
+			}
+			throw error;
+		});
+		);
+}
+````
+
+### Exemples
+
+#### cold to hot observable
+On veut créer une liste de livres qui ne va pas souvent être mise à jour, on utilise une requête http (cold donc)
+pour renseigner la liste. Le soucis c'est que pour chaque souscription, on va rejouer la requête.
+
+Si on ne veut pas que cela se produise, on va convertir le cold en hot observable
+
+*1 requête http*
+````
+list$: Observable<Book[]>;
+
+constructor(private httpClient: HttpClient) {
+	this.list$ = this.buildRequestObservable();
+}
+
+buildRequestObservable() {
+	return this.httpClient
+	.get<Book[]>(url, {param: params})
+	.pipe(
+		shareReplay(1);
+		);
+}
+
+getList(): Observable<Book[]> {
+	return this.list$;
+}
+````
+
+Si on souhaite maintenant rafraichir nos data toutes les heures (uniquement si il y a une nouvelle souscription), il suffira d'ajouter un interval 
+
+*1 requête http max / 1h*
+````
+constructor(private httpClient: HttpClient) {
+	this.list$ = this.buildRequestObservable();
+	setInterval(() => {
+		this.list$ = this.buildRequestObservable(),
+	}, 3600 * 1000);
+}
+...
+
+````
+
+#### auto-complete de recherche
+
+````
+this.countryList$ = this.countryControl.valueChanges
+.pipe(
+	map(name => name.trim()),
+	filter(name => length >= 2), // filtrer uniquement si au moins 2 caractères
+	debounceTime(200), //attente 200ms après dernière valeur, avant envoi requête
+	distinctUntilChanged(), // filtrer uniquement si valeur différente de la valeur précédente
+	switchMap(name => this.countryService.search(name))
+	);
+
+
+search(name: string): Observable<string[]> {
+	name = name && name.trim();
+	if (name) {
+		const url = 'https://.......';
+		return this.httpClient.get<Country[]>(url + name)
+		.pipe(
+		map(countries => countries.map(country => country.translations.fr)),
+		catchError(error => of([]))
+		);
+	}
+	return of([]);
+}
+````
 
 ## RxJs 
 [Back to top](#angular) 
