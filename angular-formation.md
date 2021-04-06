@@ -1678,8 +1678,10 @@ Si on ne spécifie pas dans quel projet / lib on souhaite générer un composant
 
 la création d'une application dans un workspace diffère de la création d'un projet classique dans le sens ou cette dernière n'a pas de package.json. Elle va utiliser le package.json du workspace. Ainsi en crééant plusieurs applications dans un même workspace, elles partageront toutes le même workspace.
 
-Pour exposer un composant d'une librairie aux autres projets / lib, ajouter sa dépendance dans le fichier *public.api.ts*       
+Pour exposer un composant d'une librairie aux autres projets / lib, il faut penser à ajouter ce composant dans la propriété *exports* du module.ts associé et ajouter sa dépendance dans le fichier *public.api.ts*       
 //export * from './lib/composant/mon-composant';
+ex : export * from './lib/componants/demo-composant/demo-composant.component';
+Ensuite il faut faire un build de la lib : ng build lib-demo
 
 Une librairie est en fait un projet angular dans lequel on peut déclarer des classes / services / composants que l'on va ensuite partager dans un **MEME** workspace. 
 C'est utile si plusieurs projet doivent partager des composants / classes / services / helpers etc...
