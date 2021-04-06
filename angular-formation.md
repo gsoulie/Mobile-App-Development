@@ -1039,7 +1039,7 @@ ng test
 ## Directives
 [Back to top](#angular) 
 
-Lss directives permettent de modifier les éléments du DOM. **Leur responsabilité est relative à la vue**
+Les directives permettent de modifier les éléments du DOM. **Leur responsabilité est relative à la vue**
 
 Dans l'idéal :
 - Si on **modifie l'aspect** d'un élément on utilise une **directive**. 
