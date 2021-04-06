@@ -1667,6 +1667,8 @@ Et notre composant :
 ## Workspace
 [Back to top](#angular)     
 
+Un workspace Angular est ensemble d'application et de librairies. Toutes les applications d'un même workspace partageront les mêmes dépendances (angular.json / package.json)
+
 générer un workspace : ````ng new <mon-workspace> --create-application=false````      
 générer une librairie : ````ng g library <ma-lib>````       
 générer une application : ````ng g application <mon-ammplication>````       
