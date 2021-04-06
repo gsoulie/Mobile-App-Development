@@ -1678,18 +1678,28 @@ Si on ne spécifie pas dans quel projet / lib on souhaite générer un composant
 
 la création d'une application dans un workspace diffère de la création d'un projet classique dans le sens ou cette dernière n'a pas de package.json. Elle va utiliser le package.json du workspace. Ainsi en crééant plusieurs applications dans un même workspace, elles partageront toutes le même workspace.
 
-Pour exposer un composant d'une librairie aux autres projets / lib, il faut penser à ajouter ce composant dans la propriété *exports* du module.ts associé et ajouter sa dépendance dans le fichier *public.api.ts*       
-//export * from './lib/composant/mon-composant';
-ex : export * from './lib/componants/demo-composant/demo-composant.component';
-Ensuite il faut faire un build de la lib : ng build lib-demo
-
 Une librairie est en fait un projet angular dans lequel on peut déclarer des classes / services / composants que l'on va ensuite partager dans un **MEME** workspace. 
 C'est utile si plusieurs projet doivent partager des composants / classes / services / helpers etc...
 
 Si l'on souhaite utiliser une librairie dans des projets externes au workspace, il faut publier la librairie sur NPM privée ou publique (payant)
 
-Si un projet du workspace souhaite rajouter des features à un composant / service / classe du workspace, il faut alors créer un nouveau composant / classe / service et le faire "extend" du composant / classe / service initial
+### Exposer un composant aux autres libs / projets
 
+Comme pour un projet angular classique, lors de la création d'un composant, service etc... dans la lib, vérifier que sa dépendance est ajoutée dans le noeud *exports* du fichier module.ts associé. 
+Ensuite il faut ajouter sa dépendance dans le fichier *public.api.ts*       
+
+````
+//export * from './lib/composant/mon-composant';
+ex : export * from './lib/componants/demo-composant/demo-composant.component';
+````
+
+Ensuite il faut faire un build de la lib : ````ng build lib-demo````
+
+Les composants / services etc... de la lib sont maintenant accessibles à toutes les applications du workspace à condition de penser à ajouter l'import du module de la lib concernée dans le *app.module.ts* de chaque application.
+
+### Etendre un composant / classe
+
+Si un projet du workspace souhaite rajouter des features à un composant / service / classe du workspace, il faut alors créer un nouveau composant / classe / service et le faire "extend" du composant / classe / service initial
 
 **Liaison entre les applications et les librairies**
 
