@@ -1671,7 +1671,7 @@ Un workspace Angular est ensemble d'application et de librairies. Toutes les app
 
 générer un workspace : ````ng new <mon-workspace> --create-application=false````      
 générer une librairie : ````ng g library <ma-lib>````       
-générer une application : ````ng g application <mon-ammplication>````       
+générer une application : ````ng g application <mon-application>````       
 générer un composant dans un projet/lib du workspace (spécifier le projet/lib) : ````ng g c composant/mon-compo --project=<ma-lib>````
 
 Si on ne spécifie pas dans quel projet / lib on souhaite générer un composant, ce dernier sera généré dans la cible par défaut spécifiée dans le angular.json sous la clé "defaultProject"
