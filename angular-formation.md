@@ -1,5 +1,7 @@
 # Angular
 
+[Notions Importantes](https://github.com/gsoulie/angular-resources/blob/master/angular-summary.md#ng-template)      
+
 * [Ressources](#ressources)     
 * [Notions avancées](#notions-avancees)      
 * [VSCode plugins](#vscode-plugins)     
