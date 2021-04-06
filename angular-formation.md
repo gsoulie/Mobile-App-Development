@@ -1703,6 +1703,8 @@ Si un projet du workspace souhaite rajouter des features à un composant / servi
 
 **Liaison entre les applications et les librairies**
 
+> Remarque : la modification d'un élément d'une lib n'est pas répercuté à chaud dans les applications en cours d'exécution. Il faut obligatoirement recompiler la lib puis relancer les applications pour voir apparaître les modifications.
+
 Afin de ne pas avoir à redéployer les librairies à chaque modification et permettre la mise à jour du code à chaud il faut configurer le fichier *tsconfig.json* du projet en définissant des redirections vers les chemins physique des fichiers. 
 
 Par défaut ces redirections se font vers le répertoire "dist" du workspace. 
