@@ -1674,6 +1674,8 @@ générer une librairie : ````ng g library <ma-lib>````
 générer une application : ````ng g application <mon-ammplication>````       
 générer un composant dans un projet/lib du workspace (spécifier le projet/lib) : ````ng g c composant/mon-compo --project=<ma-lib>````
 
+Si on ne spécifie pas dans quel projet / lib on souhaite générer un composant, ce dernier sera généré dans la cible par défaut spécifiée dans le angular.json sous la clé "defaultProject"
+
 la création d'une application dans un workspace diffère de la création d'un projet classique dans le sens ou cette dernière n'a pas de package.json. Elle va utiliser le package.json du workspace. Ainsi en crééant plusieurs applications dans un même workspace, elles partageront toutes le même workspace.
 
 Pour exposer un composant d'une librairie aux autres projets / lib, ajouter sa dépendance dans le fichier *public.api.ts*       
