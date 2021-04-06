@@ -1572,7 +1572,7 @@ https://makina-corpus.com/blog/metier/2019/des-boucles-generiques-de-composants-
 ## ng-content
 [Back to top](#angular)
 
-La balise <ng-content> permet de définir un modèle de vue fixe et de définir un emplacement pour du contenu dynamique.
+La balise ````<ng-content>```` permet de définir un modèle de vue fixe et de définir un emplacement pour du contenu dynamique.
 Par exemple, imaginons un template dans lequel on aurait un header et du contenu :
 
 *layout.component.ts*
@@ -1615,8 +1615,8 @@ Maintenant, utilisons ce layout dans un autre composant :
 <app-layout>
 ````
 	
-Et voilà ! Le slot de transclusion<article class="content__article">…</article> remplacera le<ng-content></ng-content> dans notre layout.
-Simple, me direz-vous, mais imaginons avoir besoin de plusieurs blocs de contenu dynamique… C’est possible ! <ng-content> accepte un attribut select, qui nous permet de nommer un slot. Modifions notre layout pour accepter un 2nd slot.
+Le slot de transclusion ````<article class="content__article">…</article>```` remplacera le ````<ng-content></ng-content>```` dans notre layout.
+Imaginons avoir besoin de plusieurs blocs de contenu dynamique… C’est possible ! ````<ng-content>```` accepte un attribut ````select````, qui nous permet de nommer un slot. Modifions notre layout pour accepter un 2nd slot.
 
 *layout.component.html*
 ````
@@ -1632,7 +1632,7 @@ Simple, me direz-vous, mais imaginons avoir besoin de plusieurs blocs de contenu
 </section>
 ````
 	
-Notez que l’on utilise select=[cardNav] && select=[cardContent]. Les “[]” veulent dire “à remplacer uniquement si l’élément possède l’attribut card-…”.
+Notez que l’on utilise ````select=[cardNav] && select=[cardContent]````. Les "[]" veulent dire "à remplacer uniquement si l'élément possède l'attribut *card-…*".
 Et notre composant :
 	
 *articles.component.html*
@@ -1651,12 +1651,12 @@ Et notre composant :
     </article> 
        
     <article cardContent class="content__article">
-       <h2>Article 1</h2>
+       <h2>Article 2</h2>
        <p>Mon super résumé...</p>
     </article>   
      
     <article cardContent class="content__article">
-       <h2>Article 1</h2>
+       <h2>Article 3</h2>
        <p>Mon super résumé...</p>
     </article>
 <app-layout>
