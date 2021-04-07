@@ -1,6 +1,6 @@
 # Angular
 
-[NOTIONS IMPORTANTES](https://github.com/gsoulie/angular-resources/blob/master/angular-summary.md#ng-template)      
+[NOTIONS IMPORTANTES](https://github.com/gsoulie/angular-resources/blob/master/angular-summary.md)      
 
 * [Ressources](#ressources)     
 * [Notions avancées](#notions-avancees)      
