@@ -1720,19 +1720,57 @@ Par défaut ces redirections se font vers le répertoire "dist" du workspace.
 {
     "version": "0.2.0",
     "configurations": [
-        {
-            "type": "pwa-chrome",
+       "name": "launch ng serve and chrome",
+            "type": "chrome",
             "request": "launch",
-            "name": "Launch Chrome against localhost",
-            "url": "http://localhost:8080",	// ATTENTION : pour angular il faut remplacer le port par 4200 ici
-            "webRoot": "${workspaceFolder}"
-        }
+            "preLaunchTask": "npm: start",
+            "url": "http://localhost:4200/",
+            "webRoot": "${workspaceFolder}",
+            "sourceMaps": true,
+            "sourceMapPathOverrides": {
+                "webpack:/*": "${webRoot}/*",
+                "/./*": "${webRoot}/*",
+                "/src/*": "${webRoot}/*",
+                "/*": "*",
+                "/./~/*": "${webRoot}/node_modules/*"
+              }
     ]
 }
 ````
 
-- 3 : placer des points d'arrêts dans le code et exécuter ````ng serve````
-- 4 : aller dans l'onglet debug et exécuter le fichier *launch.json* voulu (important : il faut avoir lancé un ng serve avant sinon cela ne fonctionnera pas)
+- 3 : créer une nouvelle task dans le fichier *task.json*
+
+````
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "start",
+			"isBackground": true,
+			"presentation": {
+				"focus": false,
+				"panel": "dedicated",
+				"showReuseMessage": true,
+				"clear": false
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"label": "npm: start",
+			"detail": "ng serve --open",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			}
+		}
+	]
+}
+````
+
+- 4 : placer des points d'arrêts dans le code
+- 5 : aller dans l'onglet debug et exécuter le fichier *launch.json* voulu (important : il est possible qu'il faille le lancer 2 fois)
 
 Depuis le volet debug on a alors accès aux variables du scope dans le volet *variables* et il est possible d'ajouter des variables spécifiques à surveiller en les ajoutant dans l'onglet *watch*
 
