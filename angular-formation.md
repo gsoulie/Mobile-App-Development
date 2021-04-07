@@ -1713,7 +1713,8 @@ Par défaut ces redirections se font vers le répertoire "dist" du workspace.
 ## Debug avec vscode
 [Back to top](#angular)   
 
-- 1 : Dans l'onglet debug, créer une nouvelle configuration. Ceci va créer un répertoire .vscode contenant un fichier *launch.json*
+- 1 : Installer l'extension vscode debugger for chrome
+- 2 : Dans l'onglet debug, créer une nouvelle configuration. Ceci va créer un répertoire .vscode contenant un fichier *launch.json*
 
 ````
 {
@@ -1730,8 +1731,8 @@ Par défaut ces redirections se font vers le répertoire "dist" du workspace.
 }
 ````
 
-- 2 : placer des points d'arrêts dans le code et exécuter ````ng serve````
-- 3 : aller dans l'onglet debug et exécuter le fichier *launch.json* voulu (important : il faut avoir lancé un ng serve avant sinon cela ne fonctionnera pas)
+- 3 : placer des points d'arrêts dans le code et exécuter ````ng serve````
+- 4 : aller dans l'onglet debug et exécuter le fichier *launch.json* voulu (important : il faut avoir lancé un ng serve avant sinon cela ne fonctionnera pas)
 
 Depuis le volet debug on a alors accès aux variables du scope dans le volet *variables* et il est possible d'ajouter des variables spécifiques à surveiller en les ajoutant dans l'onglet *watch*
 
