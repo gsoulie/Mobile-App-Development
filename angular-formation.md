@@ -34,6 +34,7 @@
 * [ng-template](#ng-template)     
 * [ng-content](#ng-content)      
 * [workspace](#workspace)      
+* [debug avec vscode](#debug-avec-vscode)       
 
 
 ## Ressources
@@ -1708,3 +1709,26 @@ Si un projet du workspace souhaite rajouter des features à un composant / servi
 Afin de ne pas avoir à redéployer les librairies à chaque modification et permettre la mise à jour du code à chaud il faut configurer le fichier *tsconfig.json* du projet en définissant des redirections vers les chemins physique des fichiers. 
 
 Par défaut ces redirections se font vers le répertoire "dist" du workspace. 
+
+## Debug avec vscode
+[Back to top](#angular)   
+
+- 1 : Dans l'onglet debug, créer une nouvelle configuration. Ceci va créer un répertoire .vscode contenant un fichier *launch.json*
+
+````
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-chrome",
+            "request": "launch",
+            "name": "Launch Chrome against localhost",
+            "url": "http://localhost:8080",	// ATTENTION : pour angular il faut remplacer le port par 4200 ici
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
+````
+
+- 2 : placer des points d'arrêts dans le code et exécuter ````ng serve````
+- 3 : aller dans l'onglet debug et exécuter le fichier *launch.json* voulu (important : il faut avoir lancé un ng serve avant sinon cela ne fonctionnera pas)
