@@ -1732,3 +1732,7 @@ Par défaut ces redirections se font vers le répertoire "dist" du workspace.
 
 - 2 : placer des points d'arrêts dans le code et exécuter ````ng serve````
 - 3 : aller dans l'onglet debug et exécuter le fichier *launch.json* voulu (important : il faut avoir lancé un ng serve avant sinon cela ne fonctionnera pas)
+
+Depuis le volet debug on a alors accès aux variables du scope dans le volet *variables* et il est possible d'ajouter des variables spécifiques à surveiller en les ajoutant dans l'onglet *watch*
+
+> remarque : il est possible d'éditer un point d'arrêt pour lui dire de se déclencher sur une valeur précise par exemple
