@@ -700,24 +700,53 @@ Générateur automatique de formulaires : http://zerocodeform.com/
 
 Permet de simplifier l'écriture des formulaires ReactiveForm
 
+*vue.html*
+````
+<form [formGroup]="loginForm" novalidate (ngSubmit)="onSubmit()">
+    
+    <div>
+        <label>Login</label>
+        <input type="text" formControlName="login" placeholder="">
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="password" formControlName="password" placeholder="">
+    </div>
+    
+    <button type="submit">Submit</button>
+</form>
+````
+
+*controller.ts*
 ````
 loginForm: FormGroup;
 
 // Méthode avec FormBuilder
 constructor (private fb: FormBuilder) { }
 
-this.loginForm = this.fb.group({
-	login: [isDevMode() ? 'admin' : '', Validators.required],
-	password: [isDevMode() ? 'password' : '', Validators.required]
-});
+ngOnInit() {
+	this.loginForm = this.fb.group({
+		login: [isDevMode() ? 'admin' : '', Validators.required],
+		password: [isDevMode() ? 'password' : '', Validators.required]
+	});
+	
+	// Méthode sans FormBuilder
 
-// Méthode sans FormBuilder
+	this.loginForm = new FormGroup({
+		login: new FormControl('admin', Validators.required),
+		password: new FormControl('password', Validators.required)
+	});
+}
 
-this.loginForm = new FormGroup({
-	login: new FormControl('admin', Validators.required),
-	password: new FormControl('password', Validators.required)
-});
+onSubmit() {
+   console.log(this.fb.value.login);
+   console.log(this.fb.value.password);
+}
 ````
+
+**Remarque** : penser à importer le module *ReactiveFormsModule* dans le *app.module.ts*
+
+> Exemple complet : https://github.com/gsoulie/angular-resources/blob/master/angular-forms.md#reactive-form
 
 ### Custom validator
 [Back to top](#angular) 
