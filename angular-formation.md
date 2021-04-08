@@ -186,7 +186,7 @@ Another resource to check out is the Angular update guide: https://update.angula
 
 ### Model Adapter Pattern
 
-Utiliser au maximum cette technique (#adapter-pattern) pour gagner en maintenabilité
+Utiliser au maximum la technique du [adapter patters](#adapter-pattern) pour gagner en maintenabilité
 
 ### Blocs conditionnels
 
