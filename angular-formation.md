@@ -186,7 +186,7 @@ Another resource to check out is the Angular update guide: https://update.angula
 
 ### Model Adapter Pattern
 
-Utiliser au maximum la technique du [adapter patters](#adapter-pattern) pour gagner en maintenabilité
+Utiliser au maximum la technique du [adapter pattern](#adapter-pattern) pour gagner en maintenabilité
 
 ### Blocs conditionnels
 
@@ -310,8 +310,7 @@ maFunct = ({param1, param2}) {
 
 maFunct({param2: 5, param1: 1});
 ````
-
-==> permet de s'affranchir de l'ordre des paramètres et de gérer plus facilement les 
+> Important : permet de s'affranchir de l'ordre des paramètres et de gérer plus facilement les 
 paramètres optionnels
 
 ## Angular project lifecycle
@@ -324,7 +323,7 @@ paramètres optionnels
 ## Components interactions
 [Back to top](#angular) 
 
-Angular fonction en single way data-binding, c'est à dire que les enfants ne peuvent communiquer qu'avec leur parent direct. C'est donc le parent qui transmet ses propriété via un @Input. Si l'enfant souhaite modifier une valeur, il doit en notifier son parent via un Event Emitter dans avec un @Output
+Angular fonctionne en single way data-binding, c'est à dire que les enfants ne peuvent communiquer qu'avec leur parent direct. C'est donc le parent qui transmet ses propriété via un *@Input*. Si l'enfant souhaite modifier une valeur, il doit en notifier son parent via un Event Emitter dans avec un *@Output*
 
 ### @Input
 
@@ -353,7 +352,7 @@ ngOnInit() {
 ````
 
 
-> //!\\ l'enfant ne peut pas modifier l'objet fourni par le parent !
+> Important : l'enfant ne peut pas modifier l'objet fourni par le parent !
 Si l'enfant modifie l'objet, il doit remonter l'information au père avec event emitter
 
 ### Event emitter
@@ -824,7 +823,22 @@ route par défaut, doit toujours être à la fin du fichier de routing !!
 }
 ````
 
-**A savoir :** *href* recharge la page, pas le *routerLink*
+> A savoir : *href* recharge la page, pas le *routerLink*
+
+### Exemple de routing avec children
+
+````
+const ROUTES: Routes = [
+	{ path: 'user', children: [
+		{ path: '', component: UserListComponent },
+		{ path: 'edit/:id', component: UserEditComponent },
+		{ path: 'add', component: UserAddComponent },
+		{ path: 'delete/:id', component: UserDeleteComponent },
+		{ path: ':id', component: UserComponent }	// ATTENTION à mettre en dernier sinon elle interceptera tous les autres routes
+	]},
+	{ path: '**', component: ErrorComponent }
+]
+````
 
 ### Deep linking - routes enfants
 
@@ -840,7 +854,7 @@ La seconde solution est une meilleure pratique pour éviter d'avoir un fichier a
 export const APP_ROUTES: Routes = [
 	{
 		path: 'home'
-		component: HomeComponent,
+		component: HomeComponent,	// si on souhaite toujours afficher le composant Home en plus de ses enfants
 		children: HOME_ROUTES
 	}
 ]
@@ -999,15 +1013,14 @@ ngOnInit() {
 ### Tab Routing with routing back from modale
 [Back to top](#angular)
 
-Here is a full sample of tab routing with routing back integration from child modale. 
+Exemple complet d'un routing via un tagGroup (onglet) avec retour sur le parent depuis une modale enfant. 
 
-Use case : main page *home-tabs* gets 3 tabs (home, queries, lists). From *queries* and *lists* tabs we have a button which open a new modale named *results*
+Cas d'utilisation : Une page principale contient un tab *home-tabs* contenant 3  onglets (home, queries, lists). Depuis les onglets *queries* et *lists* on a un bouton qui ouvre une modale *results*. A la fermeture de la modale on souhaite revenir sur le tab principal
 
 *app.routing.module.ts*
 ```
 // Contains the route of the home-tabs page
-const routes: Routes = [
- 
+const routes: Routes = [ 
   {
     path: '',
     loadChildren: () => import('./home-tabs/home-tabs.module').then( m => m.HomeTabsPageModule)
@@ -1077,7 +1090,7 @@ export class HomeTabsPageRoutingModule {}
 
 ````
 
-Navigate on *results* modale 
+Naviguer vers la modale *results*
 
 ````
 // Navigating from queries page 
@@ -1087,7 +1100,7 @@ Navigate on *results* modale
 <ion-button routerLink="results">results</ion-button>
 ````
 
-Routing back from modale to current tab
+Revenir sur l'onglet parent courant depuis la modale
 
 ````
 <ion-header>
@@ -1407,7 +1420,7 @@ Le Model Adapter Pattern permet de simplifier le code des retours d'observable e
 
 https://florimond.dev/blog/articles/2018/09/consuming-apis-in-angular-the-model-adapter-pattern/
 
-The aim is to simplify the following code : 
+Le but est de simplifier le code suivant : 
 
 *course.model.ts*
 ````
@@ -1445,7 +1458,7 @@ export class CourseService {
 }
 ````
 
-By creating an Adapter : 
+En utilisant un Adapter : 
 
 
 *course.model.ts*
@@ -1484,9 +1497,9 @@ export class CourseService {
 }
 ````
 
-This helps to be more adaptive if the backend makes changes on the object format.
+Ceci permet de rendre le code plus adaptable si le backend venait à être modifié (ex : renommage d'un paramètre, changement de type etc...)
 
-For example, if the backend changes "name" by "label", we just have to modify our adapter class without changing anything else in our code.
+Ex : Côté backend on renomme le paramètre "name" par "label". Il y a juste à modifier l'adapter sans changer la classe initiale sans rien changer d'autre dans le code.
 
 *course.model.ts*
 ````
