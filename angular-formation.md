@@ -81,29 +81,67 @@ app.component.ts
 ### Découpage projet
 
 ````
-app
- |-- home
- |-- user
- |-- |-- userList
- |-- |-- userDetail
- |-- |-- user.component.ts
- |-- |-- user.component.html
- |-- |-- user.component.css
- |-- |-- user.routes.ts
- |-- ticket
- |-- |-- ticketList
- |-- |-- addTicket
- |-- Login
- |-- shared
- |-- |-- class
- |-- |-- cst
- |-- |-- ...
- |-- pipes
- |-- services
- |-- app.component.html
- |-- app.component.ts
- |-- app.component.css
- |-- app.module.ts
+src
+|
++ app
+|  |
+|  + components
+|  |     |
+|  |     + user
+|  |     |  |
+|  |     |  + user-list
+|  |     |  |    |
+|  |     |  |    + user-list.component.ts
+|  |     |  |    + user-list.component.html
+|  |     |  |    + user-list.component.scss
+|  |     |  |    + user-list.component.spec.ts
+|  |     |  |    
+|  |     |  + user-detail
+|  |     |  + ...
+|  |     |  |
+|  |     |  + shared
+|  |     |  |   |
+|  |     |  |   + user.service.ts
+|  |     |  |   + user.service.spec.ts
+|  |     |  |   + user.model.ts
+|  |     |  |   + user.guard.ts
+|  |     |  |   + ...
+|  |     |  |
+|  |     |  + user.module.ts
+|  |     |  + user-routing.module.ts
+|  |     |  
+|  |     + ... 
+|  |     
+|  + shared     
+|  |   |
+|  |   + models
+|  |   + pipes
+|  |   + enum
+|  |   + services
+|  |   + guards
+|  |   + interfaces
+|  |
+|  + app.module.ts
+|  + app.component.ts
+|  + app.component.html
+|  + app.component.scss 
+|  + app.component.spec.ts 
+|  + material.module.ts
+|  + app-routing.module.ts
+|
++ maint.ts
++ index.html
++ style.scss
++ assets
+|   |
+|   + imgs
+|   |  |
+|   |  + icons
+|   |  + ...
+|   |  
+|   + fonts
+|
++ ...
  ````
 
 ## Commandes
