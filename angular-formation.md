@@ -674,10 +674,9 @@ https://makina-corpus.com/blog/metier/2017/premiers-pas-avec-rxjs-dans-angular
 ## Codes retour http
 [Back to top](#angular) 
 
-faire toujours une surcouche à httpclient voir APIHelper correction TP2
+Il est conseillé de toujours faire un service qui surcharge httpClient (voir apiHelper).
 
-catch récupérer code erreur et le traiter dans ton service surcouche (retourner un enum) et interpréter
-redirige l'erreur vers le composant concerné
+On peut ensuite l'améliorer en ajoutant un catch en cas d'erreur qui permet de récupérer le code erreur et le traiter dans le helper (retourner un enum) et rediriger l'erreur vers le composant concerné.
 
 ## Form
 [Back to top](#angular) 
