@@ -717,6 +717,10 @@ this.loginForm = new FormGroup({
 ### Custom validator
 [Back to top](#angular) 
 
+### Générateur de formulaires
+
+Générateur automatique de formulaires : http://zerocodeform.com/
+
 #### Validator asynchrone
 
 retourne null si tout va bien et retourne un objet en cas d'erreur.
