@@ -691,6 +691,11 @@ Le FormControl définit la logique d'un input du FormGroup
 
 Pour faciliter l'écriture des formulaires, utiliser Angular FormBuilder : https://angular.io/guide/reactive-forms
 
+
+### Générateur de formulaires
+
+Générateur automatique de formulaires : http://zerocodeform.com/
+
 ### FormBuilder
 
 Permet de simplifier l'écriture des formulaires ReactiveForm
@@ -716,10 +721,6 @@ this.loginForm = new FormGroup({
 
 ### Custom validator
 [Back to top](#angular) 
-
-### Générateur de formulaires
-
-Générateur automatique de formulaires : http://zerocodeform.com/
 
 #### Validator asynchrone
 
