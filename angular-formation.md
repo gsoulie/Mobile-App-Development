@@ -1961,6 +1961,122 @@ Il est maintenant possible de modifier le fichier json de configuration présent
 
 ### Utilisation d'une factory dans le APP_INITIALIZER app.module.ts
 
+https://www.prestonlamb.com/blog/loading-app-config-in-app-initializer
+
+#### exemple perso
+
+*assets/env/settings.json*
+````
+{
+    "AppSettings": {
+        "site": "kalya-01",
+        "url": "url-de-prod",
+        "traceLog": false,
+        "api": "https://api-prod"
+    }
+}
+````
+
+*interfaces*
+````
+export interface IEnvironmentVariable {
+    AppSettings: IAppSettings
+}
+export interface IAppSettings {
+    site: string,
+    url: string,
+    tracelog: boolean,
+    api: string
+}
+````
+
+*app.module.ts*
+
+````
+import { AppconfigService } from './shared/services/appconfig.service';
+import { BrowserModule } from '@angular/platform-browser';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
+...
+
+export function initConfig(appConfigService: AppconfigService) {
+  return () => appConfigService.loadConfig();
+}
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ...
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ...
+  ],
+  providers: [{
+		provide: APP_INITIALIZER,
+		useFactory: initConfig,
+		deps: [ AppconfigService ],
+		multi: true
+	}],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+````
+
+*AppConfigService.ts*
+````
+import { IEnvironmentVariable } from './../models/config.interface';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class AppconfigService {
+  private _config: IEnvironmentVariable;
+  configSubject$;
+
+  public get config(): IEnvironmentVariable {
+    return this._config;
+  }
+  public set config(value: IEnvironmentVariable) {
+    this._config = value;
+  }
+  
+  constructor(private _http: HttpClient) {}
+
+  public loadConfig() {
+      
+      return this._http.get('assets/env/settings.json')
+          .toPromise()
+          .then((config: IEnvironmentVariable) => {
+              this.config = config;
+              return this.config;
+              //this.configSubject$.next(this.config);	// error  
+          })
+          .catch((err: any) => {
+              console.error(err);
+          });
+  }
+}
+````
+
+*app.component.ts*
+````
+  env: IEnvironmentVariable;
+  settings: IAppSettings;
+
+  constructor(private appconfigService: AppconfigService) { }
+  
+  ngOnInit() {
+    this.env = this.appconfigService.config;
+    this.settings = this.env.AppSettings;
+  }
+````
+
+
+#### Exemple complexe
+
 *exemple*
 
 ````
@@ -2022,6 +2138,50 @@ export function resolveNgxLoggerConfig(): LoggerConfig {
     serverLogLevel: NgxLoggerLevel.INFO
   };
   return config;
+}
+````
+
+*config.ts*
+````
+import { Injectable } from '@angular/core';
+import configForTest from './config.json';
+import configEnvForTest from './config.test.json';
+import { ConfigService } from 'angular-helpers';
+import { ApisConfigurationInterface } from 'apis-helpers';
+
+@Injectable({ providedIn: 'root' })
+export class Config extends ConfigService {
+
+  static params: ApisConfigurationInterface;
+  public params: ApisConfigurationInterface;
+  public paramsPromise: Promise<ApisConfigurationInterface>;
+
+  configUrl = 'configs/config.json';
+  configEnvUrl = 'configs/config.env.json';
+
+  static loadConfigForTest() {
+    ConfigService.params = Object.assign({}, configForTest, configEnvForTest);
+  }
+
+  static apiUseGateway(api: string): boolean {
+    return api.startsWith(this.params.gatewayApi);
+  }
+
+  static getApiSuffix(api: string): string {
+    return this.apiUseGateway(api) ? '' : '/api';
+  }
+
+  static getHubSuffix(api: string): string {
+    return this.apiUseGateway(api) ? 'Hub' : '';
+  }
+
+  static loadConfig(callback: (config: ApisConfigurationInterface) => void) {
+    super.loadConfig(callback);
+  }
+
+  public loadConfig(): Promise<ApisConfigurationInterface> {
+    return <Promise<ApisConfigurationInterface>> super.loadConfig();
+  }
 }
 
 ````
