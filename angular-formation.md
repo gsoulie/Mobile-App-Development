@@ -36,7 +36,7 @@
 * [Workspace](#workspace)      
 * [Debug avec vscode](#debug-avec-vscode)       
 * [Variables d'environnement modifiables](#variables-d-environnement-modifiables)       
-* [Test build prod en loca](#test-build-prod-en-local)        
+* [Test build prod en local](#test-build-prod-en-local)        
 
 
 ## Ressources
