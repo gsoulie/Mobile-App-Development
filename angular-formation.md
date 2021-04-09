@@ -33,9 +33,10 @@
 * [Flex layout](#flex-layout)        
 * [ng-template](#ng-template)     
 * [ng-content](#ng-content)      
-* [workspace](#workspace)      
-* [debug avec vscode](#debug-avec-vscode)       
-* [variables d'environnement modifiables](#variables-d-environnement-modifiables)        
+* [Workspace](#workspace)      
+* [Debug avec vscode](#debug-avec-vscode)       
+* [Variables d'environnement modifiables](#variables-d-environnement-modifiables)       
+* [Test build prod en loca](#test-build-prod-en-local)        
 
 
 ## Ressources
@@ -1862,9 +1863,6 @@ Depuis le volet debug on a alors accès aux variables du scope dans le volet *va
 > remarque : il est possible d'éditer un point d'arrêt pour lui dire de se déclencher sur une valeur précise par exemple
 
 ## Variables d'environnement modifiables
-
-
-## Variables environnement
 [Back to top](#angular)   
 
 Dans certains cas il est nécessaire de pouvoir changer certaines variables d'environnement après compilation (ex : déploiement multi-sites, multi-environnements etc...)
@@ -1872,15 +1870,13 @@ Dans certains cas il est nécessaire de pouvoir changer certaines variables d'en
 Angular met à disposition un répertoire *environnements* contenant les fichiers *environment.prod.ts* et *environment.ts*. Ces fichier sont pratiques dans le cas du déploiement d'une application simple, sur un environnement unique. Mais pose quelques problèmes dans le cas d'un déploiement plus complexe. 
 En effet les fichiers du répertoire *environments* sont compilés lors du build et ne sont alors plus accessibles ce qui pose problème si l'on souhaite pouvoir modifier certaines variables après compilation.
 
-Pour pallier ce problème, il existe plusieurs solutions.
+Pour pallier ce problème, il existe plusieurs solutions. Dans tous les cas, la première étape consiste à créer un fichier json qui contiendra les variables d'environnement et qui sera placé dans le répertoire *assets* ou dans un autre répertoire au même niveau. 
 
-### Utilisation des assets
+> En effet, les fichiers présents dans le répertoire *assets* restent accessibles et modifiables après compilation.
 
-Une première solution consiste à déporter les éventuelles variables de configuration d'environnement dans un fichier json de configuration, localisé dans le répertoire *assets*.
-En effet, les fichiers présents dans le répertoire *assets* restent accessibles et modifiables après compilation.
+Par exemple :
 
 *assets/env/settings.json*
-
 ````
 {
     "AppSettings": {
@@ -1897,9 +1893,11 @@ En effet, les fichiers présents dans le répertoire *assets* restent accessible
 }
 ````
 
+### Solution 1 : Utilisation des assets avec HttpClient
+
 Ensuite la lecture peut se faire au lancement de l'application via un httpClient
 
-> ATTENTION : version non optimisée, en effet il est préférable d'injecter le service qui lit les données dans une factory appellée dans le APP_INITIALIZER
+> ATTENTION : version non optimisée, en effet il est préférable d'injecter le service qui lit les données dans une factory appellée dans le APP_INITIALIZER (voir solution 2)
 
 *app.component.ts*
 
@@ -1947,35 +1945,12 @@ export class DataService {
 }
 ````
 
-#### Test du build en local
-
-Pour pouvoir tester le résultat du *build --prod* en local sur la machine :
-
-````
-npm install http-server -g	// installer le serveur http en local
-http-server dist/your-project-name // se placer dans le répertoire de l'application pour démarrer le serveur http
-// ouvrir un navigateur et aller sur http://localhost:8080/
-````
-
-Il est maintenant possible de modifier le fichier json de configuration présent dans le répertoire *assets* et faire un ctrl-f5 pour voir la modification des variables.
-
-### Utilisation d'une factory dans le APP_INITIALIZER app.module.ts
+### Solution 2 : Utilisation d'une factory dans le APP_INITIALIZER app.module.ts
+[Back to top](#angular)   
 
 https://www.prestonlamb.com/blog/loading-app-config-in-app-initializer
 
 #### exemple perso
-
-*assets/env/settings.json*
-````
-{
-    "AppSettings": {
-        "site": "kalya-01",
-        "url": "url-de-prod",
-        "traceLog": false,
-        "api": "https://api-prod"
-    }
-}
-````
 
 *interfaces*
 ````
@@ -2076,6 +2051,7 @@ export class AppconfigService {
 
 
 #### Exemple complexe
+[Back to top](#angular)   
 
 *exemple*
 
@@ -2183,5 +2159,17 @@ export class Config extends ConfigService {
     return <Promise<ApisConfigurationInterface>> super.loadConfig();
   }
 }
+````
+
+## Test build prod en local
+[Back to top](#angular)   
+
+Procédure pour pouvoir tester le résultat du *build --prod* en local sur la machine :
 
 ````
+npm install http-server -g	// installer le serveur http en local
+http-server dist/your-project-name // se placer dans le répertoire de l'application pour démarrer le serveur http
+// ouvrir un navigateur et aller sur http://localhost:8080/
+````
+
+Il est maintenant possible de modifier le fichier json de configuration présent dans le répertoire *assets* et faire un ctrl-f5 pour voir la modification des variables.
