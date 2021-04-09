@@ -1945,6 +1945,29 @@ export class DataService {
 }
 ````
 
+### APP_INITIALIZER 
+
+APP_INITIALIZE est un type multi-provider qui permet de spécifier une factory qui retourne une promise. Quand la promise est *complete* l'application continue son exécution. Ainsi, lorsqu'on arrive à l'endroit du code code où nous avons besoin des informations de configuration, on est certain qu'elles ont été chargées.
+
+import { APP_INITIALIZER } from '@angular/core'
+
+@NgModule({
+    ....
+    providers: [
+        ...
+        {
+            provide: APP_INITIALIZER,
+            useFactory: load,
+            multi: true
+        }
+    ]
+)
+*load* est une fonction qui retourne une fonction qui retourne une **Promise**. La fonction Promise charge les informations de configuration et les enregistre dans l'application. Une fois que les infos de configuration ont été chargées, il faut resolve la promise **resolve(true)**.
+
+Dernier point vraiment **important**, sans ça le code n'attendra pas d'avoir terminé avant de continuer, *useFactory* **DOIT** pointer vers une fonction qui pointe sur une **Promise**
+
+*multi* : true est appliqué car APP_INITIALIZER autorise plusieurs instances de ce provider. Toutes les instances sont exécutées simultanément mais le code ne continuera pas tant que toutes les instances (Promises) ne sont pas terminées.
+
 ### Solution 2 : Utilisation d'une factory dans le APP_INITIALIZER app.module.ts
 [Back to top](#angular)   
 
