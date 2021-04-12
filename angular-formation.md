@@ -489,8 +489,8 @@ promise.then((data) => {
 [Back to top](#angular) 
 
 https://makina-corpus.com/blog/metier/2017/premiers-pas-avec-rxjs-dans-angular       
-https://guide-angular.wishtack.io/angular/observables/creation-dun-observable
-https://www.youtube.com/watch?v=TrDqaABq-UY&ab_channel=DevoxxFR        
+https://guide-angular.wishtack.io/angular/observables/creation-dun-observable       
+https://www.youtube.com/watch?v=TrDqaABq-UY&ab_channel=DevoxxFR         
 
 on utilise les observables pour représenter l'arrivée de données synchrone ou asynchrone.
 
@@ -711,8 +711,8 @@ search(name: string): Observable<string[]> {
 ## RxJs 
 [Back to top](#angular) 
 
-https://rxjs-dev.firebaseapp.com/guide/subject
-https://makina-corpus.com/blog/metier/2017/premiers-pas-avec-rxjs-dans-angular
+https://rxjs-dev.firebaseapp.com/guide/subject       
+https://makina-corpus.com/blog/metier/2017/premiers-pas-avec-rxjs-dans-angular       
 
 ### opérateurs
 
