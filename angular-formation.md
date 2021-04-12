@@ -1211,9 +1211,8 @@ Si c'est un cas très ponctuel, utiliser ````[ngClass]````
 
 ### ng-content
 [Back to top](#angular)    
-https://wizbii.tech/un-layout-dynamique-avec-ng-content-d00e27ab26d9
-
-````<ng-content></ng-content>````
+https://wizbii.tech/un-layout-dynamique-avec-ng-content-d00e27ab26d9      
+https://github.com/gsoulie/angular-resources/blob/master/angular-summary.md#ng-content       
 
 ## UI frameworks
 [Back to top](#angular)      
