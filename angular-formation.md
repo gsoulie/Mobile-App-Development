@@ -53,10 +53,22 @@ https://nitayneeman.com/posts/all-talks-from-ng-conf-2018/
 ## VSCode plugins
 [Back to top](#angular) 
 
-Angular schematics    
-Auto import    
-typescript hero => permet de créer des compos / pipe etc... en faisant un clic droit plutôt que la console    
-tslint / eslint    
+* Angular Essentials (john papa)       
+* Angular Language Service        
+* Angular Snippets (v11 john papa)       
+* Peacock (john papa)       
+* Prettier Code formatter       
+* Auto close tag       
+* Auto Rename tag      
+* Angular schematics    
+* Auto import    
+* Beautify (HookyQR)     
+* Bookmarks (Alessandro Fragnagni)      
+* Bracket Pair Colorizer      
+* typescript hero => permet de créer des compos / pipe etc... en faisant un clic droit plutôt que la console    
+* tslint / eslint    
+* sass lint     
+* Template String converter        
 
 ## Généralités
 
