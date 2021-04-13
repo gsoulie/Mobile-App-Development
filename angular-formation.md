@@ -157,6 +157,15 @@ src
 |
 + ...
  ````
+ 
+### ngModel
+[Back to top](#angular)   
+
+| Name | Description |
+| --- | --- |
+| ngModel | Bind element to formControl | 
+| [ngModel] | Simple-way binding (i.e. property binding) | 
+| [(ngModel)] | Two-way binding | 
 
 ## Commandes
 
@@ -1203,11 +1212,22 @@ export class HighlightDirective {
 }
 ````
 
-### ngclass
+### ngClass
+[Back to top](#angular)    
+
 Selon le contexte, si un traitement conditionnel est utilisé plusieurs fois dans l'appli et/ou avec de l'algo à faire, utiliser une directive.
 
 Si c'est un cas très ponctuel, utiliser ````[ngClass]````
 
+````<label [ngClass]="{'myCssClass': i > 5 ? true : false}">my content</label>````
+
+### ngStyle
+
+````
+<p [ngStyle]="{backgroundColor: getColor()}"></p>
+
+<label [ngStyle]="{'background-color':myVar < 5 ? 'blue' : 'green'}">my content</label>
+````
 
 ### ng-content
 [Back to top](#angular)    
@@ -1235,6 +1255,8 @@ https://alyle.io/getting-started/installation
 Liste des icônes Material : https://www.angularjswiki.com/fr/angular/angular-material-icons-list-mat-icon-list/       
 
 ### Material Angular
+
+````ng add @angular/material````
 
 Pour faciliter la gestion des composants material :
 
@@ -1347,6 +1369,18 @@ export class AppModule { }
   </mat-toolbar>
 ````
 
+### Bootstrap
+[Back to top](#prerequisites)   
+
+Installation : ```npm install --save bootstrap```, ensuite ajouter la configuration dans le **angular.json** sous la rubrique ```architect/build/styles``` :
+
+```
+"styles": [
+    "node_modules/bootstrap/dist/css/bootstrap.min.css",
+    "src/styles.css"
+]
+
+```
 
 ## Theming
 [Back to top](#angular)   
