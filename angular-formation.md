@@ -1229,11 +1229,6 @@ Si c'est un cas très ponctuel, utiliser ````[ngClass]````
 <label [ngStyle]="{'background-color':myVar < 5 ? 'blue' : 'green'}">my content</label>
 ````
 
-### ng-content
-[Back to top](#angular)    
-https://wizbii.tech/un-layout-dynamique-avec-ng-content-d00e27ab26d9      
-https://github.com/gsoulie/angular-resources/blob/master/angular-summary.md#ng-content       
-
 ## UI frameworks
 [Back to top](#angular)      
 
@@ -1778,6 +1773,9 @@ https://makina-corpus.com/blog/metier/2019/des-boucles-generiques-de-composants-
 
 ## ng-content
 [Back to top](#angular)
+
+https://wizbii.tech/un-layout-dynamique-avec-ng-content-d00e27ab26d9      
+https://github.com/gsoulie/angular-resources/blob/master/angular-summary.md#ng-content    
 
 La balise ````<ng-content>```` permet de définir un modèle de vue fixe et de définir un emplacement pour du contenu dynamique.
 Par exemple, imaginons un template dans lequel on aurait un header et du contenu :
