@@ -1366,7 +1366,7 @@ export class AppModule { }
 ````
 
 ### Bootstrap
-[Back to top](#prerequisites)   
+[Back to top](#angular)   
 
 Installation : ```npm install --save bootstrap```, ensuite ajouter la configuration dans le **angular.json** sous la rubrique ```architect/build/styles``` :
 
@@ -1455,6 +1455,44 @@ Mettre à jour le *angular.json* pour pointer sur ce fichier thème
         Warning
       </button>
 </mat-card>
+````
+
+### Global sass variables
+
+Regrouper les variables sass dans le fichier *src/variables.scss*
+
+*variables.scss*
+
+````
+:root
+{
+  --darkgrey: #23272D;
+  --mediumgrey: #3F464B;
+  --mediumgrey2: #5B6164;
+  --lightgrey: #ECEDED;
+  --labelgrey: #D9D9D9;
+  --yellow: #FFD400;
+  --lightblue: #75C4D5;
+  --mediumblue: #009CBE;
+  --green: #70B62C;
+}
+````
+
+Il suffit ensuite d'injecter le fichier variable.scss dans le *angular.json* 
+
+````
+...
+"styles": [
+              {"input":"src/variables.scss"}
+            ],
+````
+
+*component.scss file*
+
+````
+.container {
+  background-color: var(--mediumgrey);
+}
 ````
 
 ## Adapter pattern
