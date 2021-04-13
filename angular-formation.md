@@ -37,6 +37,7 @@
 * [Debug avec vscode](#debug-avec-vscode)       
 * [Variables d'environnement modifiables](#variables-d-environnement-modifiables)       
 * [Test build prod en local](#test-build-prod-en-local)        
+* [UI Components](#ui-components)      
 
 
 ## Ressources
@@ -2312,3 +2313,8 @@ http-server dist/your-project-name // se placer dans le répertoire de l'applica
 ````
 
 Il est maintenant possible de modifier le fichier json de configuration présent dans le répertoire *assets* et faire un ctrl-f5 pour voir la modification des variables.
+
+## UI Components
+[Back to top](#angular)        
+
+https://github.com/gsoulie/angular-resources/blob/master/angular-component.md#components 
