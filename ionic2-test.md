@@ -84,7 +84,7 @@
 	* Disable Android hardware back button    
 	* Navigating in modal with ion-nav     
 	* Routing static html file     
-* [Sass](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-sass.md)
+* [Stylesheet](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-sass.md)
 	* Component variables     
 	* Using variables    
 	* Add color   
