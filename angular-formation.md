@@ -8,6 +8,7 @@
 * [Généralités](#généralités)     
 * [Commandes](#commandes)     
 * [Update angular](#update-angular)     
+* [ESLint](#eslint)       
 * [Best practices](#best-practices)     
 * [Spread & Rest operators](#spread-&-res-operators)     
 * [Object destructuration](#object-destructuration)     
@@ -204,6 +205,27 @@ Afterward, update the rest of the Angular packages if there are no errors.
 
 Another resource to check out is the Angular update guide: https://update.angular.io. Select the version your app is currently on, then the version you’re updating to. The guide will show you what to do before, during, and after the update. In my experience, updating is painless since there’s very little manual work to do. 
 
+## ESLint
+[Back to top](#angular) 
+
+Depuis 2019, TSLint est déprécié, il est donc temps de basculer vers ESLint
+
+[Ionic blog](https://ionicframework.com/blog/eslint-for-ionic-angular/)       
+
+````
+git add .
+git commit -m "pre eslint"
+git checkout -b feat-eslint
+
+ng add @angular-eslint/schematics
+
+// convert current tslint to eslint file
+ng g @angular-eslint/schematics:convert-tslint-to-eslint {{YOUR_PROJECT_NAME_GOES_HERE}}
+
+// once it's done you can run eslint and remove old tslint file and dependcies
+rm tslint.json
+npm uninstall tslint
+````
 
 ## Best practices
 [Back to top](#angular) 
