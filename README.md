@@ -1,4 +1,4 @@
-# Mobile App Development
+# Mobile and Web Apps Development
 
 ##### Table of Contents  
 * [Ionic Framework resources](https://github.com/gsoulie/ionic/blob/master/ionic2-test.md)    
