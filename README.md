@@ -4,6 +4,7 @@
 * [Ionic Framework resources](https://github.com/gsoulie/ionic/blob/master/ionic2-test.md)    
 * [Angular resources (fr)](https://github.com/gsoulie/Mobile-App-Development/blob/master/angular-formation.md)       
 * [Angular resources](https://github.com/gsoulie/ionic/blob/master/angular-sheet.md)    
+* [VSCode tasks examples](https://github.com/gsoulie/ionic-angular-snippets/blob/master/vscode-tasks.json)      
 * [Docker (fr)](https://github.com/gsoulie/angular-resources/blob/master/docker.md)       
 * [Mobile App resources and tools](https://github.com/gsoulie/ionic/blob/master/Mobile%20App%20Resources%20and%20tools.md)
 * [Bests practices](https://github.com/gsoulie/ionic/blob/master/best-practice.md)
