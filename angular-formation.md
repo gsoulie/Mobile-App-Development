@@ -39,6 +39,7 @@
 * [Variables d'environnement modifiables](#variables-d-environnement-modifiables)       
 * [Test build prod en local](#test-build-prod-en-local)        
 * [UI Components](#ui-components)      
+* [mat-dialog template générique](https://github.com/gsoulie/angular-resources/blob/master/angular-dialog-template.md)        
 
 
 ## Ressources
