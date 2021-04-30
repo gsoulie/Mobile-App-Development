@@ -3,7 +3,7 @@
 ##### Table of Contents  
 * [Ionic Framework resources](https://github.com/gsoulie/ionic/blob/master/ionic2-test.md)    
 * [Angular resources (fr)](https://github.com/gsoulie/angular-resources/blob/master/ng-sheet.md)       
-* [Angular resources](https://github.com/gsoulie/ionic/blob/master/angular-sheet.md)    
+* [Angular resources](https://github.com/gsoulie/angular-resources/blob/master/angular-sheet.md)    
 * [VSCode resources](https://github.com/gsoulie/angular-resources/blob/master/vscode-sheet.md)      
 * [Docker (fr)](https://github.com/gsoulie/angular-resources/blob/master/docker.md)       
 * [Mobile App resources and tools](https://github.com/gsoulie/ionic/blob/master/Mobile%20App%20Resources%20and%20tools.md)
