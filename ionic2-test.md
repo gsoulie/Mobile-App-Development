@@ -25,6 +25,7 @@
 	* Environments DEV / PROD     
 	* Function declaration       
 * [Capacitor](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-capacitor.md)    
+	* Capacitor 3.0       	
 	* Requirements      
 	* Build     
 	* Appicon and Splash screen     
