@@ -177,6 +177,7 @@
 	* Customize map markers    
 	* Reverse geocoding    
 	* Geolocation on capacitor    
+	* Leaflet and Mapbox      
 * [Google Map integration](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-google-map-agm.md)    
 * [Camera](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-camera.md)   
 * [Gallery](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gallery.md)    
