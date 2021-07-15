@@ -158,6 +158,7 @@
 	* Action sheet customization     
 	* ion-toast      
 	* ion-sliding-item swipe to delete        
+	* swipe to delete with gesture      
 	* iOS keyboard scroll      
 * [Gesture](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gesture.md)      
 	* Swipe on ion-list with animation
