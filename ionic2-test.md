@@ -6,7 +6,7 @@
 * [Resources](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-resources.md)    
 * [Prerequisites](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-prerequisites.md)    
 	* Update environment npm / nodejs / ionic / angular      
-	* Start with ionic
+	* CLI
 	* Visual Studio Code - Snippet    
 	* Android debugging with logcat    
 	* Using multiple version of Node with NVM    
