@@ -29,7 +29,7 @@
 	* Requirements      
 	* Build     
 	* Appicon and Splash screen     
-	* Local Storage       
+	* Storage : Local Storage, Caching API response, SQLite       
 	* Listening Internet connection      
 	* Haptics      
 * [Directives](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-directive.md)    
