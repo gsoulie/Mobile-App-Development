@@ -3,7 +3,8 @@
 > **Work in progress** : updating repos with new ionic 5 requirements, adding Capacitor usage
 
 ##### Table of Contents  
-* [Good Start]
+
+* Good Start
 	* Devdactic Ionic 5 App navigation with Login, Guards & Tabs Area [code](https://devdactic.com/ionic-5-navigation-with-login/) and [video](https://www.youtube.com/watch?v=RuuOdfz9Kxc&ab_channel=SimonGrimm)      
 * [Prerequisites](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-prerequisites.md)    
 	* Update environment npm / nodejs / ionic / angular      
