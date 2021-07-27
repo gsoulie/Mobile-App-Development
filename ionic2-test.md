@@ -5,7 +5,7 @@
 ##### Table of Contents  
 
 * Good Start
-	* Devdactic Ionic 5 App navigation with Login, Guards & Tabs Area [code](https://devdactic.com/ionic-5-navigation-with-login/) and [video](https://www.youtube.com/watch?v=RuuOdfz9Kxc&ab_channel=SimonGrimm)      
+	* [Devdactic Ionic 5 App navigation with Login, Guards & Tabs Area](https://github.com/gsoulie/ionic-capacitor-starter)       
 * [Prerequisites](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-prerequisites.md)    
 	* Update environment npm / nodejs / ionic / angular      
 	* CLI
