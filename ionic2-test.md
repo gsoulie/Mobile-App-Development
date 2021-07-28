@@ -138,7 +138,6 @@
 	* ion-tab
 	* tab icon
 	* ion-fab
-	* [chart](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-chart.md)    
 	* ion-grid
 	* ion-toggle
 	* dynamic style
