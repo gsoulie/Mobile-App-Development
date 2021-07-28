@@ -39,7 +39,6 @@
 * [Config](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config.md)    
 	* App platform specific behaviour configuration
 	* Mapping 	
-* [Config XML](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config-xml.md)    
 * [Useful functions](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-useful-functions.md)  
 	* Find element in array    
 	* Snippets repo
