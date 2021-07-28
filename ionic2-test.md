@@ -78,7 +78,6 @@
 	* Passing dynamic data to a Route     
 	* Routing Guards    
 	* Wildcard route (404)   
-	* Using NavController (Ionic 3)    
 	* Passing Data
 	* Passing Data on close event
 	* Disable Android hardware back button    
