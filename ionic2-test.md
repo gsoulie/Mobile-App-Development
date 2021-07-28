@@ -126,36 +126,36 @@
 	* Remove android navbar border
 	* Custom fonts    
 * [UI Components](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-ui-component.md)    
-	* ion-button    
-	* modal    
-	* ion-select    
-	* ion-item    
-	* ion-list    
-	* Lazy loading on scroll    
-	* pagination    
-	* ion-label    
-	* searchbar    
-	* list filtering    
-	* tab    
-	* tab icon    
-	* floating button    
-	* grid    
-	* toggle        
-	* dynamic style    
-	* Toggle menu    
-	* Expandable header    
-	* List accordion    
-	* Picker    
-	* Alert Controller (new ionic 4)    
-	* Round progress bar     
-	* ion-slide    
-	* Hiding header on scroll     
-	* Input with autocomplete datalist     
-	* Action sheet customization     
-	* ion-toast      
-	* ion-sliding-item swipe to delete        
-	* swipe to delete with gesture      
-	* iOS keyboard scroll      
+	* ion-button
+	* ModalController
+	* ion-select
+	* ion-item
+	* ion-list
+	* pagination
+	* ion-label
+	* ion-searchbar
+	* list filtering
+	* ion-tab
+	* tab icon
+	* ion-fab
+	* [chart](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-chart.md)    
+	* ion-grid
+	* ion-toggle
+	* dynamic style
+	* Toggle menu
+	* Expandable header
+	* List accordion
+	* Picker
+	* round progress bar
+	* ion-slide
+	* Hiding header on scroll
+	* Notification badge on icon
+	* Input with autocomplete datalist
+	* Action sheet customization
+	* ion-toast
+	* ion-sliding-item swipe to delete
+	* swipe to delete with gesture
+	* iOS keyboard scroll
 * [Gesture](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gesture.md)      
 	* Swipe on ion-list with animation
 * [Chart](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-chart.md)
