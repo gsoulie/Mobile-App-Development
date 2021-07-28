@@ -34,6 +34,7 @@
 	* Storage : Local Storage, Caching API response, SQLite       
 	* Listening Internet connection      
 	* Haptics      
+	* Android permissions      
 * [Directives](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-directive.md)    
 * [Config](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config.md)    
 * [Config XML](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config-xml.md)    
