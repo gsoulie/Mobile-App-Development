@@ -1,6 +1,6 @@
 # Ionic Framework resources
 
-> **Work in progress** : updating repos with new ionic 5 requirements, adding Capacitor usage
+> **Work in progress** : updating repos with new ionic 5 and Capacitor 3.0 usage
 
 ##### Table of Contents  
 
