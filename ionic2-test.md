@@ -7,12 +7,12 @@
 * Good Start
 	* [Devdactic Ionic 5 App navigation with Login, Guards & Tabs Area](https://github.com/gsoulie/ionic-capacitor-starter)       
 * [Prerequisites](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-prerequisites.md)    
-	* Update environment npm / nodejs / ionic / angular      
-	* CLI
-	* Visual Studio Code - Snippet    
-	* Android debugging with logcat    
-	* Using multiple version of Node with NVM    
-	* Switching to ESLint from TSLint       
+	* Update environment npm / nodejs
+	* Chrome inspect device
+	* Using gulp
+	* Android debugging with logcat
+	* Using multiple version of Node with npm
+	* Switching to ESLint
 * [Concepts](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-concepts.md)    
 	* Angular 2
 	* Decorators
