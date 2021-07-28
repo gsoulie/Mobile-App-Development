@@ -53,7 +53,7 @@
 	* Phone call
 	* Social sharing
 * [Local Storage](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-local-storage.md)    
-* [Firebase Services](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-firebase-angularfire2.md#angularfire2)    
+* [Firebase Services (need to be updated for Capacitor 3.0)](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-firebase-angularfire2.md#angularfire2)    
 	* CRUD angularfire2    
 	* Demo example     
 	* Authentication    
