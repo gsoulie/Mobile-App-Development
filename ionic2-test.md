@@ -31,7 +31,7 @@
 	* Requirements      
 	* Build     
 	* Appicon and Splash screen     
-	* Storage : Local Storage, Caching API response, SQLite       
+	* Storage and Database : Local Storage, Caching API response, SQLite       
 	* Listening Internet connection      
 	* Haptics      
 	* Android permissions      
@@ -53,10 +53,6 @@
 	* Phone call
 	* Social sharing
 * [Local Storage](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-local-storage.md)    
-* [Database](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-database.md)  
-	* SQLite database
-	* SQLStorage
-	* PouchDB    
 * [Firebase Services](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-firebase-angularfire2.md#angularfire2)    
 	* CRUD angularfire2    
 	* Demo example     
