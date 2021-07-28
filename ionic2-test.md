@@ -163,7 +163,6 @@
 	* Chart grid 50%    
 	* ng2-google-chart worldmap      
 	* Chart customization     
-* [Moment JS](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-momentjs.md)    
 * [File](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-file-storage.md)  
 	* Capacitor FileSystem    
 	* File size    
