@@ -40,17 +40,14 @@
 	* App platform specific behaviour configuration
 	* Mapping 	
 * [Useful functions](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-useful-functions.md)  
-	* Find element in array    
-	* Snippets repo
-	* Get specific platform    
-	* Force screen refresh    
+	* Find element in array
+	* Ionic Angular snippets
+	* Properly display error
+	* Get platform info
 	* Generate UUID
-	* Safely displaying data with elvis operator
 	* Show / hide DOM element
-	* Checking network connection
-	* Close modal
-	* Accessing DOM element @ViewChild    
-	* Show - Hide Dom element by screen size    
+	* Accessing DOM element @ViewChild
+	* Show - Hide DOM element by screen size
 	* Switch statement with complex expression
 * [Phone call and Social sharing](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-phone.md)    
 	* Phone call (Cordova and Capacitor)    
