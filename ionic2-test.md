@@ -35,6 +35,7 @@
 	* Listening Internet connection      
 	* Haptics      
 	* Android permissions      
+	* Photo (PWA and Mobile)   
 * [Directives](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-directive.md)    
 * [Config](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config.md)    
 	* App platform specific behaviour configuration
