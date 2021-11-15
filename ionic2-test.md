@@ -2,6 +2,19 @@
 
 > **Work in progress** : updating repos with new ionic 5 and Capacitor 3.0 usage
 
+Ionic permet de créer des applications hybrides basées sur les technologies web (html, css, js). Il permet aussi
+de déployer des application mobile native Andoird / iOS.
+
+Lorsqu'il est exécuté sur mobile, Ionic s'exécute dans un conteneur natif à l'aide de Capacitor, 
+ce qui permet un accès complet à toutes les fonctionnalités ou API de l'appareil natif.
+
+l'UI de ionic est exécuté dans une WebView qui est un navigateur sans en-tête. En mode web, le code est directement exécuté dans le 
+navigateur.
+
+Les composants UI utilisés par ionic utilisent les standards Web Components, de fait ils peuvent être exécutés dans n'importe quel 
+navigateur et sont compatibles avec tous les frameworks JS / React / Vue et Angular.
+
+
 ##### Table of Contents  
 
 * Good Start
