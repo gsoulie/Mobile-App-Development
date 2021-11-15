@@ -2,7 +2,9 @@
 
 > **Work in progress** : updating repos with new ionic 5 and Capacitor 3.0 usage
 
-Ionic permet de créer des applications hybrides basées sur les technologies web (html, css, js). Il permet aussi
+## Ionic en quelques mots
+
+Ionic est un framework javascript, basé sur Angular et Typescript. Il permet de créer des applications hybrides basées sur les technologies web (html, css, js). Il permet aussi
 de déployer des application mobile native Andoird / iOS.
 
 Lorsqu'il est exécuté sur mobile, Ionic s'exécute dans un conteneur natif à l'aide de Capacitor, 
