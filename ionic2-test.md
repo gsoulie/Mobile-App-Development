@@ -191,6 +191,7 @@ navigateur et sont compatibles avec tous les frameworks JS / React / Vue et Angu
 	* Customize map markers    
 	* Reverse geocoding    
 	* Geolocation on capacitor    
+	* Using Google Map navigation      
 	* Leaflet and Mapbox      
 * [Google Map integration](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-google-map-agm.md)    
 * [Camera](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-camera.md)   
