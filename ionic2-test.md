@@ -4,7 +4,7 @@
 
 ## Ionic en quelques mots
 
-Ionic est un framework javascript, basé sur Angular et Typescript. Il permet de créer des applications hybrides basées sur les technologies web (html, css, js). Il permet aussi
+Ionic est un framework javascript, basé sur Angular et Typescript. Il permet de créer des applications mobiles hybrides basées sur les technologies web (html, css, js). Il permet aussi
 de déployer des application mobile native Andoird / iOS.
 
 Lorsqu'il est exécuté sur mobile, Ionic s'exécute dans un conteneur natif à l'aide de Capacitor, 
