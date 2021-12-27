@@ -163,7 +163,8 @@ navigateur et sont compatibles avec tous les frameworks JS / React / Vue et Angu
 	* List accordion
 	* Picker
 	* round progress bar
-	* ion-slide (deprecated) and new Swiper JS   
+	* Swiper (replace ion-slide from v6)     
+	* ion-slide (deprecated since v6)     
 	* Hiding header on scroll
 	* Notification badge on icon
 	* Input with autocomplete datalist
