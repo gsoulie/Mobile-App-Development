@@ -1,21 +1,17 @@
 # Mobile App Resources and tools
 
-## The 10 commandments of user interface
-
-![alt tag](https://www.designmantic.com/blog/wp-content/uploads/2015/04/ten-Commandments-UI-Design.png)
-
 ## PWA
 
 [Features available](https://whatwebcando.today/)    
-
-## Angular
-[Angular material resources](https://material.angular.io/components/categories)    
 
 ## Tools
 
 [https://institutnr.org/outils-ecoconception-accessibilite](https://institutnr.org/outils-ecoconception-accessibilite)       
 
 ## Graphical resources
+
+### Icônes font et svg gratuites
+- [https://icones.js.org/](https://icones.js.org/)      
 
 ### Gradiant generators
 - [https://cssgradient.io/](https://cssgradient.io/)    
@@ -73,17 +69,10 @@
 ## JS Libraries
 
 [IS.JS](http://arasatasaygin.github.io/is.js/)    
-[Underscore.js](http://underscorejs.org/)    
-[Backbone.js](http://backbonejs.org/)    
-[Moment.js](http://momentjs.com/)    
-
-## Ionic
-
-[Ionic framework resources](http://mcgivery.com/100-ionic-framework-resources/)
+[Dayjs](https://day.js.org/docs/en/installation/installation)    
 
 ## JS tools
-
-[ECMAScript6 Lint](http://www.es6fiddle.net/imqlo1x9/)    
+  
 [JSONLint](http://jsonlint.com/)    
 [JSHint](http://jshint.com/)    
 [JSON editor](http://www.jsoneditoronline.org/)    
