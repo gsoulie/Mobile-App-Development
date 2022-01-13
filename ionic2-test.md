@@ -174,7 +174,8 @@ navigateur et sont compatibles avec tous les frameworks JS / React / Vue et Angu
 	* ion-sliding-item swipe to delete
 	* swipe to delete with gesture
 	* iOS keyboard scroll      
-	* ion-range     
+	* ion-range    
+	* ion-title      
 * [Gesture](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gesture.md)      
 	* Swipe on ion-list with animation
 * [Chart](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-chart.md)
