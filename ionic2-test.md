@@ -134,6 +134,7 @@ navigateur et sont compatibles avec tous les frameworks JS / React / Vue et Angu
 	* &::before and &::after       
 	* Popover      
 	* Accessing shadow parts      
+	* Text overflow ellipsis       
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
 	* Dynamic theming
 	* Navbar
