@@ -248,6 +248,7 @@ navigateur et sont compatibles avec tous les frameworks JS / React / Vue et Angu
 	* Strongloop
 	* Firebase
 * [Authentication](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-authentication.md)  
+	* SSO with IS4 and redirect with Capacitor      
 	* Ionic appauth         
 	* Ionic Auth    
 * [Internationalization](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-i18n.md)  
