@@ -56,6 +56,7 @@ navigateur et sont compatibles avec tous les frameworks JS / React / Vue et Angu
 * [Config](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config.md)    
 	* App platform specific behaviour configuration
 	* Mapping 	
+	* Color generator (add custom color) https://ionicframework.com/docs/theming/colors#new-color-generator      
 * [Useful functions](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-useful-functions.md)  
 	* Find element in array
 	* Ionic Angular snippets
