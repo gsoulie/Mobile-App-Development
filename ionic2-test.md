@@ -193,6 +193,7 @@ navigateur et sont compatibles avec tous les frameworks JS / React / Vue et Angu
 	* Write file in PWA    
 	* Loading Json File    
 	* File upload with file explorer    
+	* Open file with native system viewer    
 * [Geolocation](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-geolocation.md)  
 	* Angular2 Google maps integration    
 	* Customize map markers    
