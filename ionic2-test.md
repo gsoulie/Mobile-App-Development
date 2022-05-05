@@ -53,6 +53,7 @@ navigateur et sont compatibles avec tous les frameworks JS / React / Vue et Angu
 	* Photo (PWA and Mobile)   
 	* Azure pipeline CI/CD     
 	* Live reload     
+	* Azure msal authentication with Capacitor Msal plugin     
 * [Directives](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-directive.md)    
 * [Config](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-config.md)    
 	* App platform specific behaviour configuration
