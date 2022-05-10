@@ -181,6 +181,7 @@ navigateur et sont compatibles avec tous les frameworks JS / React / Vue et Angu
 	* ion-range    
 	* ion-title      
 	* ion-datetime      
+	* ion-inifinite-scroll      
 * [Gesture](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-gesture.md)      
 	* Swipe on ion-list with animation
 * [Chart](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-chart.md)
