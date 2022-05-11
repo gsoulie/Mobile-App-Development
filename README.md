@@ -3,6 +3,7 @@
 ##### Table of Contents  
 * [Ionic Framework resources](https://github.com/gsoulie/ionic/blob/master/ionic2-test.md)    
 * [Angular resources (fr)](https://github.com/gsoulie/angular-resources/blob/master/ng-sheet.md)       
+* [Vue resources (fr)](https://github.com/gsoulie/vue-resources/blob/main/vue-index.md)       
 * [Javascript from Basics to Advanced](https://javascript.info/)     
 * [Node JS](https://github.com/gsoulie/angular-resources/blob/master/node-sheet.md)     
 * [Angular resources](https://github.com/gsoulie/angular-resources/blob/master/angular-sheet.md)    
