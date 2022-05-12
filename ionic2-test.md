@@ -238,6 +238,7 @@ navigateur et sont compatibles avec tous les frameworks JS / React / Vue et Angu
 	* Updating nodejs for window    
 	* Cannot read property id of undefined    
 	* npm ERR! code EINVALIDPACKAGENAME      
+	* Android SSL certificate error     
 * [Using image](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-using-images.md)   
 	* Background image    
 	* SVG    
