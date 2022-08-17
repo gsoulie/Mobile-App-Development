@@ -3,7 +3,7 @@
 # Git basic commands
 
 * [Documentation](#documentation)     
-* [Initialization](#initialisation)   
+* [Initialization](#initialization)   
 * [git flow](#git-flow)      
 * [Tree](#tree)     
 * [Add and validate](#add-and-validate)     
