@@ -2,11 +2,8 @@
 
 ##### Table of Contents  
 * [<img src="https://img.shields.io/badge/Resources-IONIC-68ADFE.svg?logo=LOGO">](https://github.com/gsoulie/ionic/blob/master/ionic2-test.md)
-* [Ionic Framework resources](https://github.com/gsoulie/ionic/blob/master/ionic2-test.md)    
-[<img src="https://img.shields.io/badge/Resources-ANGULAR-DD0031.svg?logo=LOGO">](https://github.com/gsoulie/angular-resources/blob/master/ng-sheet.md)
-* [Angular resources (fr)](https://github.com/gsoulie/angular-resources/blob/master/ng-sheet.md)      
-[<img src="https://img.shields.io/badge/Resources-VUE-42D392.svg?logo=LOGO">](https://github.com/gsoulie/vue-resources/blob/main/vue-index.md)
-* [Vue resources (fr)](https://github.com/gsoulie/vue-resources/blob/main/vue-index.md)       
+* [<img src="https://img.shields.io/badge/Resources-ANGULAR-(Fr)-DD0031.svg?logo=LOGO">](https://github.com/gsoulie/angular-resources/blob/master/ng-sheet.md)
+* [<img src="https://img.shields.io/badge/Resources-VUE-42D392.svg?logo=LOGO">](https://github.com/gsoulie/vue-resources/blob/main/vue-index.md)
 * [Javascript from Basics to Advanced](https://javascript.info/)     
 * [Node JS](https://github.com/gsoulie/angular-resources/blob/master/node-sheet.md)     
 * [Angular resources](https://github.com/gsoulie/angular-resources/blob/master/angular-sheet.md)    
@@ -21,9 +18,6 @@
 
 |exemple de badges|
 |-|
-|[<img src="https://img.shields.io/badge/Resources-Ionic-68ADFE.svg?logo=LOGO">](testBadge)|
-||
-||
 | [<img src="https://img.shields.io/badge/Badge-brightgreen-brightgreen.svg?logo=LOGO" >](testBadge) |
 | [<img src="https://img.shields.io/badge/Badge-green-green.svg?logo=LOGO" >](testBadge) |
 | [<img src="https://img.shields.io/badge/Badge-yellow-yellow.svg?logo=LOGO" >](testBadge) |
