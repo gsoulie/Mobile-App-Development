@@ -10,23 +10,4 @@
 * [<img src="https://img.shields.io/badge/Resources-Docker%20(Fr)-lightgrey.svg?logo=LOGO">](https://github.com/gsoulie/angular-resources/blob/master/docker.md)       
 * [<img src="https://img.shields.io/badge/Ressources-Best%20practices-orange.svg?logo=LOGO" >](https://github.com/gsoulie/ionic/blob/master/best-practice.md)
 * [<img src="https://img.shields.io/badge/Site-JS%20from%20basics%20to%20adavanced-brightgreen.svg?logo=LOGO" >](https://javascript.info/)     
-* [<img src="https://img.shields.io/badge/Ressources-NodeJS%20bases%20(Fr)-blue.svg?logo=LOGO" >](https://github.com/gsoulie/angular-resources/blob/master/node-sheet.md)     
-
-## Markdown badges
-
-|exemple de badges|
-|-|
-|[<img src="https://img.shields.io/badge/Badge%20test-message%20with%20spaces-brightgreen.svg?logo=LOGO" >](testBadge)|
-| [<img src="https://img.shields.io/badge/Badge-brightgreen-brightgreen.svg?logo=LOGO" >](testBadge) |
-| [<img src="https://img.shields.io/badge/Badge-green-green.svg?logo=LOGO" >](testBadge) |
-| [<img src="https://img.shields.io/badge/Badge-yellow-yellow.svg?logo=LOGO" >](testBadge) |
-|[<img src="https://img.shields.io/badge/Badge-orange-orange.svg?logo=LOGO" >](testBadge) |
-|[<img src="https://img.shields.io/badge/Badge-red-red.svg?logo=LOGO" >](testBadge) |
-|[<img src="https://img.shields.io/badge/Badge-blue-blue.svg?logo=LOGO" >](testBadge) |
-|[<img src="https://img.shields.io/badge/Badge-lightgrey-lightgrey.svg?logo=LOGO" >](testBadge) |
-| [<img src="https://img.shields.io/badge/Badge-important-important.svg?logo=LOGO" >](testBadge) |
-| [<img src="https://img.shields.io/badge/Badge-critical-critical.svg?logo=LOGO" >](testBadge) |
-| [<img src="https://img.shields.io/badge/Badge-informational-informational.svg?logo=LOGO" >](testBadge) |
-| [<img src="https://img.shields.io/badge/Badge-blueviolet-blueviolet.svg?logo=LOGO" >](testBadge) |
-| [<img src="https://img.shields.io/badge/Badge-ff69b4-ff69b4.svg?logo=LOGO" >](testBadge) |
-|[<img src="https://img.shields.io/badge/Badge-ffcc00-ffcc00.svg?logo=LOGO" >](testBadge) |
+* [<img src="https://img.shields.io/badge/Ressources-NodeJS%20bases%20(Fr)-blue.svg?logo=LOGO" >](https://github.com/gsoulie/angular-resources/blob/master/node-sheet.md) 
