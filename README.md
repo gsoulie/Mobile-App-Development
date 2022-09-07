@@ -4,14 +4,14 @@
 * [<img src="https://img.shields.io/badge/Resources-Ionic-68ADFE.svg?logo=LOGO">](https://github.com/gsoulie/ionic/blob/master/ionic2-test.md)
 * [<img src="https://img.shields.io/badge/Resources-Angular%20(Fr)-DD0031.svg?logo=LOGO">](https://github.com/gsoulie/angular-resources/blob/master/ng-sheet.md)
 * [<img src="https://img.shields.io/badge/Resources-Vue%20(Fr)-42D392.svg?logo=LOGO">](https://github.com/gsoulie/vue-resources/blob/main/vue-index.md)
+* [<img src="https://img.shields.io/badge/Resources-VSCode-blueviolet.svg?logo=LOGO">](https://github.com/gsoulie/angular-resources/blob/master/vscode-sheet.md)      
 * [Javascript from Basics to Advanced](https://javascript.info/)     
 * [Node JS](https://github.com/gsoulie/angular-resources/blob/master/node-sheet.md)     
 * [Angular resources](https://github.com/gsoulie/angular-resources/blob/master/angular-sheet.md)    
-* [VSCode resources](https://github.com/gsoulie/angular-resources/blob/master/vscode-sheet.md)      
-* [Docker (fr)](https://github.com/gsoulie/angular-resources/blob/master/docker.md)       
-* [Mobile App resources and tools](https://github.com/gsoulie/ionic/blob/master/Mobile%20App%20Resources%20and%20tools.md)
-* [Bests practices](https://github.com/gsoulie/ionic/blob/master/best-practice.md)
-* [Git usage](https://github.com/gsoulie/Mobile-App-Development/blob/master/git.md)
+* [<img src="https://img.shields.io/badge/Resources-Docker%20(Fr)-lightgrey.svg?logo=LOGO">](https://github.com/gsoulie/angular-resources/blob/master/docker.md)       
+* [<img src="https://img.shields.io/badge/Resources%20and%20Tools-Mobile%20Front-lightgrey.svg?logo=LOGO">](https://github.com/gsoulie/ionic/blob/master/Mobile%20App%20Resources%20and%20tools.md)
+* [<img src="https://img.shields.io/badge/Badge-orange-Best%20practices.svg?logo=LOGO" >](https://github.com/gsoulie/ionic/blob/master/best-practice.md)
+* [<img src="https://img.shields.io/badge/Ressources-Git%20usage-critical.svg?logo=LOGO" >](https://github.com/gsoulie/Mobile-App-Development/blob/master/git.md)
 
 ## Markdown badges
 
