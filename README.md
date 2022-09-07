@@ -1,9 +1,9 @@
 # Mobile and Web Apps Development
 
 ##### Table of Contents  
-* [<img src="https://img.shields.io/badge/Resources-IONIC-68ADFE.svg?logo=LOGO">](https://github.com/gsoulie/ionic/blob/master/ionic2-test.md)
-* [<img src="https://img.shields.io/badge/Resources-ANGULAR-(Fr)-DD0031.svg?logo=LOGO">](https://github.com/gsoulie/angular-resources/blob/master/ng-sheet.md)
-* [<img src="https://img.shields.io/badge/Resources-VUE-42D392.svg?logo=LOGO">](https://github.com/gsoulie/vue-resources/blob/main/vue-index.md)
+* [<img src="https://img.shields.io/badge/Resources-Ionic-68ADFE.svg?logo=LOGO">](https://github.com/gsoulie/ionic/blob/master/ionic2-test.md)
+* [<img src="https://img.shields.io/badge/Resources-Angular%20(Fr)-DD0031.svg?logo=LOGO">](https://github.com/gsoulie/angular-resources/blob/master/ng-sheet.md)
+* [<img src="https://img.shields.io/badge/Resources-Vue-42D392.svg?logo=LOGO">](https://github.com/gsoulie/vue-resources/blob/main/vue-index.md)
 * [Javascript from Basics to Advanced](https://javascript.info/)     
 * [Node JS](https://github.com/gsoulie/angular-resources/blob/master/node-sheet.md)     
 * [Angular resources](https://github.com/gsoulie/angular-resources/blob/master/angular-sheet.md)    
@@ -12,7 +12,6 @@
 * [Mobile App resources and tools](https://github.com/gsoulie/ionic/blob/master/Mobile%20App%20Resources%20and%20tools.md)
 * [Bests practices](https://github.com/gsoulie/ionic/blob/master/best-practice.md)
 * [Git usage](https://github.com/gsoulie/Mobile-App-Development/blob/master/git.md)
-
 
 ## Markdown badges
 
