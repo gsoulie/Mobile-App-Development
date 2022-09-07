@@ -9,10 +9,9 @@
 * [<img src="https://img.shields.io/badge/Resources%20and%20Tools-Mobile%20Front-yellow.svg?logo=LOGO">](https://github.com/gsoulie/ionic/blob/master/Mobile%20App%20Resources%20and%20tools.md)
 * [<img src="https://img.shields.io/badge/Ressources-Best%20practices-orange.svg?logo=LOGO" >](https://github.com/gsoulie/ionic/blob/master/best-practice.md)
 * [<img src="https://img.shields.io/badge/Ressources-Git%20usage-critical.svg?logo=LOGO" >](https://github.com/gsoulie/Mobile-App-Development/blob/master/git.md)
-* [Javascript from Basics to Advanced](https://javascript.info/)     
-* [Node JS](https://github.com/gsoulie/angular-resources/blob/master/node-sheet.md)     
-* [Angular resources](https://github.com/gsoulie/angular-resources/blob/master/angular-sheet.md)    
-*
+* [<img src="https://img.shields.io/badge/Site-JS%20from%20basics%20to%20adavanced-brightgreen.svg?logo=LOGO" >](https://javascript.info/)     
+* [<img src="https://img.shields.io/badge/Ressources-NodeJS%20bases%20(Fr)-blue.svg?logo=LOGO" >](https://github.com/gsoulie/angular-resources/blob/master/node-sheet.md)     
+
 ## Markdown badges
 
 |exemple de badges|
