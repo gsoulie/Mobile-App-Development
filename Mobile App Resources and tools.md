@@ -14,6 +14,7 @@
 - [https://icones.js.org/](https://icones.js.org/)      
 
 ### Gradiant generators
+- [Gradient color palette](https://dribbble.com/shots/13662178-Gradients/attachments/5267324?mode=media)      
 - [https://cssgradient.io/](https://cssgradient.io/)    
 - [https://mycolor.space/gradient](https://mycolor.space/gradient)     
 - [https://www.colorzilla.com/gradient-editor/](https://www.colorzilla.com/gradient-editor/)     
