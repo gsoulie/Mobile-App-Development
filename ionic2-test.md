@@ -1,21 +1,5 @@
 # Ionic Framework resources
 
-> **Work in progress** : updating repos with new ionic 5 and Capacitor 3.0 usage
-
-## Ionic en quelques mots
-
-Ionic est un framework javascript, basé sur Angular et Typescript. Il permet de créer des applications mobiles hybrides basées sur les technologies web (html, css, js) via des webview. En outre ionic n'utilise pas les composants natifs mais propose une bibliothèque de composant web natif-like qui reproduisent le look-and-feel natif.
-Couplé à Capacitor, il permet un accès complet à toutes les fonctionnalités d'API native Android / iOS en les embarquant dans une webview.
-
-l'UI de ionic est exécuté dans une WebView qui est un navigateur sans en-tête. En mode web, le code est directement exécuté dans le 
-navigateur.
-
-Les composants UI utilisés par ionic utilisent les standards Web Components, de fait ils peuvent être exécutés dans n'importe quel 
-navigateur et sont compatibles avec tous les frameworks JS / React / Vue et Angular.
-
-
-##### Table of Contents  
-
 * Good Start
 	* [Devdactic Ionic 5 App navigation with Login, Guards & Tabs Area](https://github.com/gsoulie/ionic-capacitor-starter)       
 * [Prerequisites](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-prerequisites.md)    
