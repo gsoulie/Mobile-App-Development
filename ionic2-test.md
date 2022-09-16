@@ -7,8 +7,7 @@
 Ionic est un framework javascript, basé sur Angular et Typescript. Il permet de créer des applications mobiles hybrides basées sur les technologies web (html, css, js). Il permet aussi
 de déployer des application mobile native Andoird / iOS.
 
-Lorsqu'il est exécuté sur mobile, Ionic s'exécute dans un conteneur natif à l'aide de Capacitor, 
-ce qui permet un accès complet à toutes les fonctionnalités ou API de l'appareil natif.
+Couplé à Capacitor, il permet un accès complet à toutes les fonctionnalités d'API native Android / iOS en les embarquant dans une webview.
 
 l'UI de ionic est exécuté dans une WebView qui est un navigateur sans en-tête. En mode web, le code est directement exécuté dans le 
 navigateur.
