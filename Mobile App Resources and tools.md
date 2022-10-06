@@ -1,5 +1,15 @@
 # Mobile App Resources and tools
 
+## Form factor screen breakpoints
+
+👉 0px - 480px - small phones
+
+👉 481px - 768px - Tablets / big phones. 
+
+👉 769px - 1279px - Laptop
+
+👉 1280px+ - Computer and Wide screens
+
 ## PWA
 
 [Features available](https://whatwebcando.today/)    
