@@ -28,6 +28,8 @@
 - [https://icones.js.org/](https://icones.js.org/)      
 
 ### Gradiant generators
+
+<img src="https://img.shields.io/badge/2f80ed-2f80ed.svg?logo=LOGO"> <img src="https://img.shields.io/badge/b2ffda-b2ffda.svg?logo=LOGO">
 - [Josh Comeau Gradient generator](https://www.joshwcomeau.com/gradient-generator/)     
 - [Gradient color palette](https://dribbble.com/shots/13662178-Gradients/attachments/5267324?mode=media)      
 - [https://cssgradient.io/](https://cssgradient.io/)    
