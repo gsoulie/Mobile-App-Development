@@ -10,6 +10,8 @@
 
 👉 1280px+ - Computer and Wide screens
 
+````@media screen and (max-width: 480px){}````
+
 ## PWA
 
 [Features available](https://whatwebcando.today/)    
