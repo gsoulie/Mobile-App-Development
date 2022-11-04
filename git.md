@@ -31,6 +31,14 @@ In your app folder, initialize your git repos with :
 git init
 ```
 
+````
+git init --initial-branch=main
+git remote add origin https://<git-path>.git
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+````
+
 ### Clone repos
 
 To create a local copy of your repos :
