@@ -239,7 +239,7 @@ git remote -v
 
 To change your remote url
 ````
-set-url origin <my-new-url>
+git remote set-url origin <my-new-url>
 ````
 
 ## Tags
