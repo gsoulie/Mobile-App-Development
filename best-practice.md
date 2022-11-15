@@ -21,10 +21,12 @@ stateDiagram-v2
   Ionic --> Angular
   Frontends --> React
   Frontends --> Vue3
+  Backends --> NodeJS
   Angular --> JS
   Ionic --> JS
   React --> JS
   Vue3 --> JS
+  NodeJS --> JS
   JS --> [*]
 ````
 
