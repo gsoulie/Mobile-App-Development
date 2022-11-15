@@ -11,6 +11,23 @@ stateDiagram-v2
   Crash --> [*]
 ````
 
+````mermaid
+stateDiagram-v2
+  [*] --> Frontends
+  [*] --> Backends
+  
+  Frontends --> Angular
+  Frontends --> Ionic
+  Ionic --> Angular
+  Frontends --> React
+  Frontends --> Vue3
+  Angular --> JS
+  Ionic --> JS
+  React --> JS
+  Vue3 --> JS
+  JS --> [*]
+````
+
 > **Under construction**
 
 [SASS](#sass)     
