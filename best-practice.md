@@ -1,5 +1,16 @@
 # Best practice guide
 
+````mermaid
+stateDiagram-v2
+  [*] --> Still
+  Still --> [*]
+  
+  Still --> Moving
+  Moving --> Still
+  Moving --> Crash
+  Crash --> [*]
+````
+
 > **Under construction**
 
 [SASS](#sass)     
