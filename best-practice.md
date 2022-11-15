@@ -1,35 +1,5 @@
 # Best practice guide
 
-````mermaid
-stateDiagram-v2
-  [*] --> Still
-  Still --> [*]
-  
-  Still --> Moving
-  Moving --> Still
-  Moving --> Crash
-  Crash --> [*]
-````
-
-````mermaid
-stateDiagram-v2
-  [*] --> Frontends
-  [*] --> Backends
-  
-  Frontends --> Angular
-  Frontends --> Ionic
-  Ionic --> Angular
-  Frontends --> React
-  Frontends --> Vue3
-  Backends --> NodeJS
-  Angular --> JS
-  Ionic --> JS
-  React --> JS
-  Vue3 --> JS
-  NodeJS --> JS
-  JS --> [*]
-````
-
 > **Under construction**
 
 [SASS](#sass)     
