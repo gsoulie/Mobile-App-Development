@@ -122,6 +122,7 @@
 	* Popover      
 	* Accessing shadow parts      
 	* Text overflow ellipsis       
+	* ion-checkbox     
 * [Themes](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-theme.md)  
 	* Dynamic theming
 	* Navbar
