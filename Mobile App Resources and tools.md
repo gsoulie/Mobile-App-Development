@@ -48,9 +48,15 @@ stateDiagram-v2
 
 ````mermaid
 flowchart TD
-  A[Rendering] --> B[Where];
-  B[Where] --> C[Browser];
-  C[Browser] --> D[Client-Side Rendering];
+  A[Rendering] --> B[Where ?];
+  B[Where ?] --> C[Browser];
+  C[Browser] --> D[Client-Side Rendering (CSR)];
+  B[Where ?] --> E[Server];
+  E[Server] --> F[When ?];
+  F[When ?] --> G[At build time];
+  G[At build time] --> H[Prerendering / Static Site Generation (SSG)];
+  F[When ?] --> I[With a client request];
+  I[With a client request] --> J[Server-Side Rendering (SSR)];
 ````
 
 
