@@ -50,7 +50,7 @@ stateDiagram-v2
 flowchart TD
   A[Rendering] --> B[Where ?];
   B[Where ?] --> C[Browser];
-  C[Browser] --> D[Client-Side Rendering (CSR)];
+  C[Browser] --> D[Client-Side Rendering CSR];
   B[Where ?] --> E[Server];
   E[Server] --> F[When ?];
   F[When ?] --> G[At build time];
