@@ -55,8 +55,8 @@ Browser --> CSR
 CSR --> [*]
 Where --> Server
 Server --> When
-When --> At-build-time
-At-build time --> SSG
+When --> Atbuildtime
+Atbuildtime --> SSG
 SSG --> [*]
 When --> With-a-client-request
 With-a-client-request --> SSR
