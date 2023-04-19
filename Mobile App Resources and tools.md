@@ -47,10 +47,10 @@ stateDiagram-v2
 ````
 
 ````mermaid
-stateDiagram-v2
-A[Rendering] --> B[Where];
-B[Where] --> C[Browser];
-C[Browser] --> D[Client-Side Rendering];
+flowchart TD
+  A[Rendering] --> B[Where];
+  B[Where] --> C[Browser];
+  C[Browser] --> D[Client-Side Rendering];
 ````
 
 
