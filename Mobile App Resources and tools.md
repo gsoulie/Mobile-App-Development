@@ -49,6 +49,20 @@ stateDiagram-v2
 ````mermaid
 stateDiagram-v2
 [*] --> Rendering
+Rendering --> Where
+Where --> Browser
+Browser --> CSR
+CSR --> [*]
+Where --> Server
+Server --> When
+When --> At-build-time
+At-build time --> SSG
+SSG --> [*]
+When --> With-a-client-request
+With-a-client-request --> SSR
+SSR --> [*]
+````
+[*] --> Rendering
 Rendering --> Where?
 Where? --> Browser
 Browser --> Client-Side Rendering (CSR)
@@ -61,17 +75,6 @@ Prerendering / Static Site Generation (SSG) --> [*]
 When? --> With-a-client-request
 With-a-client-request --> Server-Side Rendering (SSR)
 Server-Side Rendering (SSR) --> [*]
-
-````
-Rendering --> Where?
-Where? --> Browser
-Browser --> Client-Side Rendering (CSR)
-Where? --> Server
-Server --> When?
-When? --> At-build-time
-At-build time --> Prerendering / Static Site Generation (SSG)
-When? --> With-a-client-request
-With-a-client-request --> Server-Side Rendering (SSR)
 
 ## Framework frontend
 
