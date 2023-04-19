@@ -49,7 +49,7 @@ stateDiagram-v2
 ````mermaid
 stateDiagram-v2
 [*] --> Rendering
-
+Rendering --> [*]
 
 ````
 Rendering --> Where?
