@@ -58,8 +58,8 @@ Server --> When
 When --> Atbuildtime
 Atbuildtime --> SSG
 SSG --> [*]
-When --> With-a-client-request
-With-a-client-request --> SSR
+When --> Withaclientrequest
+Withaclientrequest --> SSR
 SSR --> [*]
 ````
 [*] --> Rendering
