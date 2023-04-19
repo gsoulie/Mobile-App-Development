@@ -46,6 +46,21 @@ stateDiagram-v2
   JS --> [*]
 ````
 
+````mermaid
+stateDiagram-v2
+[*] --> Rendering
+
+Rendering --> Where?
+Where? --> Browser
+Browser --> Client-Side Rendering (CSR)
+Where? --> Server
+Server --> When?
+When? --> At build time
+At build time --> Prerendering / Static Site Generation (SSG)
+When? --> With a client request
+With a client request --> Server-Side Rendering (SSR)
+````
+
 ## Framework frontend
 
 https://materializecss.com/      
