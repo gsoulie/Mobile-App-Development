@@ -54,10 +54,11 @@ flowchart TD
   B[Where ?] --> E[Server];
   E[Server] --> F[When ?];
   F[When ?] --> G[At build time];
-````
-  G[At build time] --> H[Prerendering / Static Site Generation (SSG)];
+  G[At build time] --> H[Prerendering / Static Site Generation SSG];
   F[When ?] --> I[With a client request];
-  I[With a client request] --> J[Server-Side Rendering (SSR)];
+  I[With a client request] --> J[Server-Side Rendering SSR];
+````
+
 
 ## Framework frontend
 
