@@ -48,20 +48,9 @@ stateDiagram-v2
 
 ````mermaid
 stateDiagram-v2
-[*] --> Rendering
-
-Rendering --> Where
-Where --> Browser
-Browser --> A[Client Side Rendering CSR]
-A[Client Side Rendering CSR] --> [*]
-Where --> Server
-Server --> When
-When --> Atbuildtime
-Atbuildtime --> SSG
-SSG --> [*]
-When --> Withaclientrequest
-Withaclientrequest --> SSR
-SSR --> [*]
+A[Rendering] --> B[Where];
+B[Where] --> C[Browser];
+C[Browser] --> D[Client-Side Rendering];
 ````
 
 
