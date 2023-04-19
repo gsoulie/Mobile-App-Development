@@ -51,8 +51,8 @@ stateDiagram-v2
 [*] --> Rendering
 Rendering --> Where
 Where --> Browser
-Browser --> client CSR
-client CSR --> [*]
+Browser --> Client\-Side\-Rendering&nbsp;CSR
+Client\-Side\-Rendering&nbsp;CSR --> [*]
 Where --> Server
 Server --> When
 When --> Atbuildtime
