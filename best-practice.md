@@ -20,8 +20,6 @@
 
 [link : Sass best practice documentation](https://sass-guidelin.es/fr/#syntaxe--formatage)
 
-> **Danger** a
-
 **Display block**
 
 ```
