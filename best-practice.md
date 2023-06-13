@@ -20,6 +20,9 @@
 
 [link : Sass best practice documentation](https://sass-guidelin.es/fr/#syntaxe--formatage)
 
+> **Danger** zerze
+> **Warning** a
+
 **Display block**
 
 ```
