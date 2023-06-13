@@ -20,7 +20,7 @@
 
 [link : Sass best practice documentation](https://sass-guidelin.es/fr/#syntaxe--formatage)
 
-> **Warning** a
+> **Danger** a
 
 **Display block**
 
