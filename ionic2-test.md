@@ -11,15 +11,12 @@
      	* Chrome 108 et impact sur le clavier virtuel
    	    
 * [Prerequisites](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-prerequisites.md)
-	<details>
-		
 	* Update environment npm / nodejs     
 	* Chrome inspect device     
 	* Using gulp      
 	* Android debugging with logcat     
 	* Using multiple version of Node with nvm     
 	* Switching to ESLint     
-	</details>	
 * [Concepts](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-concepts.md)    
 	* Angular 2
 	* Decorators
