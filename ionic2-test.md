@@ -8,7 +8,8 @@
 	* Ionic 7.2     
  	* Ionic 7.1     
    	* Ionic 7     
-     	* Chrome 108 et impact sur le clavier virtuel      
+     	* Chrome 108 et impact sur le clavier virtuel
+   	    
 * [Prerequisites](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-prerequisites.md)    
 	* Update environment npm / nodejs
 	* Chrome inspect device
