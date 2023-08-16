@@ -54,9 +54,10 @@ stateDiagram-v2
   ````md
   <details>
     <summary>You must insert your md content inside details markup and provide a summary</summary>
-
+    // <-- Line break here is important
     ... Your content here. 
   </details>
+  // <-- Line break here is important
   ````
 </details>
 
