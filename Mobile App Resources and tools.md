@@ -46,6 +46,20 @@ stateDiagram-v2
   JS --> [*]
 ````
 
+## Markdown drop down section
+
+<details>
+  <summary>You can use expandable section in markdown, lets see how it works !</summary>
+
+  ````md
+  <details>
+    <summary>You must insert your md content inside details markup and provide a summary</summary>
+
+    ... Your content here. 
+  </details>
+  ````
+</details>
+
 ## Framework frontend
 
 https://materializecss.com/      
