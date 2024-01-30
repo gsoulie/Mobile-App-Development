@@ -4,7 +4,11 @@
 
 * Good Start
 	* [Devdactic Ionic 5 App navigation with Login, Guards & Tabs Area](https://github.com/gsoulie/ionic-capacitor-starter)
-* [News](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-news.md)
+	* [News](https://github.com/gsoulie/ionic2-resources/blob/master/ionic-news.md)
+	* Ionic 7.6
+ 	* Ionic 7.5
+  	* Ionic 7.4
+  	* Ionic 7.3	
 	* Ionic 7.2     
  	* Ionic 7.1     
    	* Ionic 7     
