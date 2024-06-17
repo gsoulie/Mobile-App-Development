@@ -80,7 +80,11 @@ https://materializecss.com/
 ## Graphical resources
 
 ### Icônes font et svg gratuites
-- [https://icones.js.org/](https://icones.js.org/)      
+- [https://icones.js.org/](https://icones.js.org/)
+
+### Color palette
+- [https://coolors.co/96adc8-d7ffab-fcff6c-d89d6a-6d454c](https://coolors.co/96adc8-d7ffab-fcff6c-d89d6a-6d454c)
+- [https://coolors.co/palettes/trending](https://coolors.co/palettes/trending)    
 
 ### Gradiant generators
 
