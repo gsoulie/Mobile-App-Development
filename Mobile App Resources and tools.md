@@ -6,9 +6,9 @@
 
 👉 0px - 480px - small phones
 
-👉 481px - 768px - Tablets / big phones. 
+👉 < 768px - Tablets / big phones. 
 
-👉 769px - 1279px - Laptop
+👉 > 1024px - Computers
 
 👉 1280px+ - Computer and Wide screens
 
