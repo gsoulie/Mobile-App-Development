@@ -12,6 +12,7 @@
 
 👉 1280px+ - Computer and Wide screens
 
+
 ````@media screen and (max-width: 480px){}````
 
 ## Markdown diagrams
