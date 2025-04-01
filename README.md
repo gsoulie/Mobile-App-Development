@@ -3,6 +3,7 @@
 ##### Table of Contents  
 * [<img src="https://img.shields.io/badge/Resources-Ionic-68ADFE.svg?logo=LOGO">](https://github.com/gsoulie/ionic/blob/master/ionic2-test.md)
 * [<img src="https://img.shields.io/badge/Resources-Angular%20(Fr)-DD0031.svg?logo=LOGO">](https://github.com/gsoulie/angular-resources/blob/master/ng-sheet.md)
+* [<img src="https://img.shields.io/badge/Resources-Typescript%20(Fr)-3178C6.svg?logo=LOGO">](https://github.com/gsoulie/typescript-resources/blob/master/ts-sheet.md)
 * [<img src="https://img.shields.io/badge/Resources-Vue%203%20(Fr)-42D392.svg?logo=LOGO">](https://github.com/gsoulie/vue-resources/blob/main/vue-index.md)
 * [<img src="https://img.shields.io/badge/Resources-VSCode-blueviolet.svg?logo=LOGO">](https://github.com/gsoulie/angular-resources/blob/master/vscode-sheet.md)      
 * [<img src="https://img.shields.io/badge/Resources-React%20(Fr)-61DAFB.svg?logo=LOGO">](https://github.com/gsoulie/react-resources/blob/main/react-presentation.md)     
