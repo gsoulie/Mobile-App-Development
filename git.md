@@ -21,6 +21,58 @@
 
 https://www.atlassian.com/fr/git/tutorials/using-branches/git-checkout
 
+| Commande                          | Description                              |
+|-----------------------------------|------------------------------------------|
+| **Setup & Config**                |                                          |
+| git config --global user.name "Your Name"      | Configurer le nom d'utilisateur          |
+| git config --global user.email "you@example.com" | Configurer l'email de l'utilisateur      |
+| git config --list                 | Lister les configurations                |
+|                                   |                                          |
+| **Starting a Repo**               |                                          |
+| git init                          | Démarrer un nouveau dépôt local          |
+| git clone <url>                   | Cloner un dépôt depuis GitHub            |
+|                                   |                                          |
+| **Basic Workflow**                |                                          |
+| git status                        | Vérifier le statut                       |
+| git add <file>                    | Ajouter un fichier à l'index             |
+| git add .                         | Ajouter tous les changements             |
+| git commit -m "message"           | Valider les changements indexés          |
+| git log                           | Afficher l'historique des commits        |
+|                                   |                                          |
+| **Branching**                     |                                          |
+| git branch                        | Lister les branches                      |
+| git branch <name>                 | Créer une nouvelle branche               |
+| git checkout <name>               | Changer de branche                       |
+| git checkout -b <name>            | Créer et changer de branche               |
+| git merge <branch>                | Fusionner une branche dans la branche actuelle |
+| git branch -d <name>              | Supprimer une branche                    |
+|                                   |                                          |
+| **Remote (GitHub)**               |                                          |
+| git remote -v                     | Lister les dépôts distants               |
+| git remote add origin <url>       | Ajouter un dépôt distant                 |
+| git push -u origin main           | Pousser pour la première fois            |
+| git push                          | Pousser les changements                  |
+| git pull                          | Tirer les derniers changements           |
+| git fetch                         | Récupérer les branches/tags distants     |
+|                                   |                                          |
+| **Undo & Fix**                    |                                          |
+| git checkout -- <file>            | Annuler les modifications (avant staging) |
+| git reset HEAD <file>             | Désindexer un fichier                    |
+| git reset --hard HEAD             | Réinitialiser au dernier commit (perd les changements) |
+| git revert <commit>               | Créer un commit qui annule un commit     |
+|                                   |                                          |
+| **Stash**                         |                                          |
+| git stash                         | Sauvegarder les changements non validés  |
+| git stash pop                     | Réappliquer les changements sauvegardés  |
+| git stash list                    | Lister les sauvegardes                   |
+|                                   |                                          |
+| **Tags**                          |                                          |
+| git tag v1.0                      | Créer un tag                             |
+| git tag                           | Lister les tags                          |
+| git push origin v1.0              | Pousser un tag vers GitHub                |
+
+
+
 ## Initialization
 
 ### Create repos
