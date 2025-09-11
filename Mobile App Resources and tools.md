@@ -84,6 +84,7 @@ https://materializecss.com/
 - [https://icones.js.org/](https://icones.js.org/)
 
 ### Color palette
+- [learnUi](https://www.learnui.design/tools/data-color-picker.html)     
 - [Tailwind css color generator](https://uicolors.app/create)    
 - [https://coolors.co/96adc8-d7ffab-fcff6c-d89d6a-6d454c](https://coolors.co/96adc8-d7ffab-fcff6c-d89d6a-6d454c)
 - [https://coolors.co/palettes/trending](https://coolors.co/palettes/trending)    
