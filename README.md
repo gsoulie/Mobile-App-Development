@@ -1,7 +1,7 @@
 # Mobile and Web Apps Development
 
 ##### Table of Contents  
-* [<img src="https://img.shields.io/badge/Bonnes-pratiques-FF0076.svg?logo=LOGO">](https://github.com/gsoulie/ionic/blob/master/resources/clean-code-rules.md)
+* [<img src="https://img.shields.io/badge/Bonnes%20pratiques-Clean-code-FF0076.svg?logo=LOGO">](https://github.com/gsoulie/ionic/blob/master/resources/clean-code-rules.md)
 * [<img src="https://img.shields.io/badge/Resources-Ionic-68ADFE.svg?logo=LOGO">](https://github.com/gsoulie/ionic/blob/master/resources/ionic2-test.md)
 * [<img src="https://img.shields.io/badge/Resources-Angular%20(Fr)-DD0031.svg?logo=LOGO">](https://github.com/gsoulie/angular-resources/blob/master/ng-sheet.md)
 * [<img src="https://img.shields.io/badge/Resources-Typescript%20(Fr)-3178C6.svg?logo=LOGO">](https://github.com/gsoulie/typescript-resources/blob/master/ts-sheet.md)
