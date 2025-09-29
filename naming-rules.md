@@ -28,7 +28,24 @@ ex : ````MAX_VALUE, DEFAULT_TIMEOUT````
 
 Spécificités framework Javascript (Angular, React...)
 
-Consulter les spécificités liées aux frameworks Javascript : Règles de nommage Framework Angular - React - NextJS
+| Élément                     | Convention         | Exemple                                      |
+|-----------------------------|--------------------|----------------------------------------------|
+| Type                        | PascalCase         | `export type ProductCategory = {...}`        |
+| Interface                   | PascalCase         | `export interface ProductCategory {...}`     |
+| Variable                    | camelCase          | `let productId`                              |
+| Constante                   | SCREAMING_SNAKE_CASE | `DEFAULT_TIMEOUT`                           |
+| Enum                        | PascalCase         | `enum Direction {...}`                       |
+| Événement                   | camelCase          | `onClick()`                                  |
+| Fonction                    | camelCase          | `fetchProduct()`                             |
+| Classe                      | PascalCase         | `class Product {...}`                        |
+| Paramètre                   | camelCase          | `getProductDetail(productId: number)`        |
+| Nom de fichier              | kebab-case         | `product-detail.ts`, `user-controller.ts`    |
+| Nom de composant            | PascalCase         | `ProductList`                                |
+| Sélecteur de composant Angular | kebab-case      | `<my-component />`                           |
+| Sélecteur de composant React | PascalCase         | `<MyComponent />`                            |
+| Route (page ou API)         | lowercase          | `/api/product/[id]`                          |
+| Propriété (objet JSON, type, classe, interface...) | camelCase | `let user = { firstName: string, lastName: string }` |
+
 
 ## Longueur des noms
 
