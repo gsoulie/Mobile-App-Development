@@ -26,7 +26,7 @@ ex : ````my-component.vue, user-profile.css, <my-component/>````
 * **SCREAMING_SNAKE_CASE** : A privilégier pour les constantes globales ou valeurs immuables
 ex : ````MAX_VALUE, DEFAULT_TIMEOUT````
 
-Spécificités framework Javascript (Angular, React...)
+## Spécificités framework Javascript (Angular, React...)
 
 | Élément                     | Convention         | Exemple                                      |
 |-----------------------------|--------------------|----------------------------------------------|
