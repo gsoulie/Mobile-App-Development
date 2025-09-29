@@ -1,3 +1,5 @@
+[< Retour aux bonnes pratiques - Clean code](https://github.com/gsoulie/Mobile-App-Development/blob/master/resources/clean-code-rules.md)     
+
 # Convention générales de nommage
 ## Cohérence du langage
 
