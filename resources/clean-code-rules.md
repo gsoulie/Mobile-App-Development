@@ -544,3 +544,4 @@ class Team {
 
 # Rappels sur les conventions de nommage
 
+[Règles de nommage](https://github.com/gsoulie/Mobile-App-Development/blob/master/resources/naming-rules.md)    
