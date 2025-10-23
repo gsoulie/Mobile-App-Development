@@ -7,7 +7,7 @@
 * [<img src="https://img.shields.io/badge/Resources-Typescript%20(Fr)-3178C6.svg?logo=LOGO">](https://github.com/gsoulie/typescript-resources/blob/master/ts-sheet.md)
 * [<img src="https://img.shields.io/badge/Resources-Vue%203%20(Fr)-42D392.svg?logo=LOGO">](https://github.com/gsoulie/vue-resources/blob/main/vue-index.md)
 * [<img src="https://img.shields.io/badge/Resources-VSCode-blueviolet.svg?logo=LOGO">](https://github.com/gsoulie/angular-resources/blob/master/vscode-sheet.md)      
-* [<img src="https://img.shields.io/badge/Resources-React%20(Fr)-61DAFB.svg?logo=LOGO">](https://github.com/gsoulie/react-resources/blob/main/react-presentation.md)     
+* [<img src="https://img.shields.io/badge/Resources-NextJS/React%20(Fr)-61DAFB.svg?logo=LOGO">](https://github.com/gsoulie/react-resources/blob/main/react-presentation.md)     
 * [<img src="https://img.shields.io/badge/Resources-Css%20(Fr)-EA1E4A.svg?logo=LOGO">](https://github.com/gsoulie/css-resources/blob/main/README.md)     
 * [<img src="https://img.shields.io/badge/Resources%20and%20Tools-Mobile%20Front-yellow.svg?logo=LOGO">](https://github.com/gsoulie/ionic/blob/master/resources/Mobile%20App%20Resources%20and%20tools.md)
 * [<img src="https://img.shields.io/badge/Resources-Git%20usage-critical.svg?logo=LOGO" >](https://github.com/gsoulie/Mobile-App-Development/blob/master/resources/git.md)
