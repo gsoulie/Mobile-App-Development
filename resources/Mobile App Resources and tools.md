@@ -70,9 +70,6 @@ https://materializecss.com/
 
 [Features available](https://whatwebcando.today/)    
 
-## Accessibility
-
-- https://randoma11y.com/      
 
 ## Tools
 
@@ -84,6 +81,7 @@ https://materializecss.com/
 - [https://icones.js.org/](https://icones.js.org/)
 
 ### Color palette
+- [randoma11y](https://randoma11y.com/)   
 - [learnUi](https://www.learnui.design/tools/data-color-picker.html)     
 - [Tailwind css color generator](https://uicolors.app/create)    
 - [https://coolors.co/96adc8-d7ffab-fcff6c-d89d6a-6d454c](https://coolors.co/96adc8-d7ffab-fcff6c-d89d6a-6d454c)
