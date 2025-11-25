@@ -93,7 +93,6 @@ https://materializecss.com/
 
 - [Personnal collection](https://github.com/gsoulie/ionic-angular-snippets/blob/master/gradiant.md)      
 - [Josh Comeau Gradient generator](https://www.joshwcomeau.com/gradient-generator/)     
-- [Gradient color palette](https://dribbble.com/shots/13662178-Gradients/attachments/5267324?mode=media)      
 - [https://cssgradient.io/](https://cssgradient.io/)    
 - [https://mycolor.space/gradient](https://mycolor.space/gradient)     
 - [https://www.colorzilla.com/gradient-editor/](https://www.colorzilla.com/gradient-editor/)     
