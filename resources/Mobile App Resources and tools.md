@@ -95,6 +95,9 @@ https://materializecss.com/
 - [https://mycolor.space/gradient](https://mycolor.space/gradient)     
 - [https://www.colorzilla.com/gradient-editor/](https://www.colorzilla.com/gradient-editor/)     
 - [https://www.cssmatic.com/gradient-generator](https://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28left\%2C\%20rgba\%28248\%2C80\%2C50\%2C1\%29\%200\%25\%2C\%20rgba\%28241\%2C111\%2C92\%2C1\%29\%2050\%25\%2C\%20rgba\%28246\%2C41\%2C12\%2C1\%29\%2051\%25\%2C\%20rgba\%28240\%2C47\%2C23\%2C1\%29\%2071\%25\%2C\%20rgba\%28231\%2C56\%2C39\%2C1\%29\%20100\%25\%29\%3B')
+- [Button generator](https://markodenic.com/tools/buttons-generator/)
+- [Glassmorphism](https://hype4.academy/tools/glassmorphism-generator)
+- [Neumorphism](https://neumorphism.io/#e0e0e0)   
 
 ### Drop shadow generators
 - https://getcssscan.com/css-box-shadow-examples       
