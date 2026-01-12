@@ -51,7 +51,6 @@ stateDiagram-v2
 stateDiagram-v2
   [*] --> Playwright
   [*] --> Lighthouse
-  [*] --> Axecore
   [*] --> Wave
 
   Playwright --> CI
