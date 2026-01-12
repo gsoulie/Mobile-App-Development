@@ -56,9 +56,9 @@ stateDiagram-v2
   Playwright --> CI
   Playwright --> CLI
   Playwright --> Axecore
+  Playwright --> Lighthouse
   Wave --> Chrome
   Lighthouse --> Chrome
-  Lighthouse --> Playwright
   Lighthouse --> CI
   Lighthouse --> CLI
   CLI --> [*]
