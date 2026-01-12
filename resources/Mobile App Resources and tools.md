@@ -57,10 +57,10 @@ stateDiagram-v2
   Playwright --> CLI
   Playwright --> Axecore
   Playwright --> Lighthouse
-  Wave --> Chrome
   Lighthouse --> Chrome
   Lighthouse --> CI
   Lighthouse --> CLI
+  Wave --> Chrome
   CLI --> [*]
   CI --> [*]
   Chrome --> [*]
