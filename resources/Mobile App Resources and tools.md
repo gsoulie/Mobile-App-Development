@@ -55,16 +55,16 @@ stateDiagram-v2
   [*] --> Wave
 
   Playwright --> CI
-  Playwright --> CLI (local)
+  Playwright --> CLI
   Axecore --> Playwright
-  Wave --> Extension chrome
-  Lighthouse --> Extension chrome
+  Wave --> Chrome
+  Lighthouse --> Chrome
   Lighthouse --> Playwright
   Lighthouse --> CI
-  Lighthouse --> CLI (local)
-  CLI (local) --> [*]
+  Lighthouse --> CLI
+  CLI --> [*]
   CI --> [*]
-  Extension chrome --> [*]
+  Chrome --> [*]
   
 ````
 
