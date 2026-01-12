@@ -47,6 +47,27 @@ stateDiagram-v2
   JS --> [*]
 ````
 
+````mermaid
+stateDiagram-v2
+  [*] --> Playwright
+  [*] --> Lighthouse
+  [*] --> Axe-core
+  [*] --> Wave
+
+  Playwright --> CI
+  Playwright --> CLI (local)
+  Axe-core --> Playwright
+  Wave --> Extension chrome
+  Lighthouse --> Extension chrome
+  Lighthouse --> Playwright
+  Lighthouse --> CI
+  Lighthouse --> CLI (local)
+  CLI (local) --> [*]
+  CI --> [*]
+  Extension chrome --> [*]
+  
+````
+
 ## Markdown drop down section
 
 <details>
