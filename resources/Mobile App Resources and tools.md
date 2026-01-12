@@ -51,12 +51,12 @@ stateDiagram-v2
 stateDiagram-v2
   [*] --> Playwright
   [*] --> Lighthouse
-  [*] --> Axe-core
+  [*] --> Axecore
   [*] --> Wave
 
   Playwright --> CI
   Playwright --> CLI (local)
-  Axe-core --> Playwright
+  Axecore --> Playwright
   Wave --> Extension chrome
   Lighthouse --> Extension chrome
   Lighthouse --> Playwright
