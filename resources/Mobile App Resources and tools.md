@@ -99,6 +99,8 @@ https://materializecss.com/
 
 ### Icônes font et svg gratuites
 - [https://icones.js.org/](https://icones.js.org/)
+- [vercel icons](https://vercel.com/geist/icons)
+- [iconoir](https://iconoir.com/)    
 
 ### Color palette
 - [randoma11y](https://randoma11y.com/)   
