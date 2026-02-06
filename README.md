@@ -16,4 +16,5 @@
 * [<img src="https://img.shields.io/badge/Resources-Best%20practices-orange.svg?logo=LOGO" >](https://github.com/gsoulie/ionic/blob/master/resources/best-practice.md)
 * [<img src="https://img.shields.io/badge/Site-JS%20from%20basics%20to%20adavanced-brightgreen.svg?logo=LOGO" >](https://javascript.info/)     
 * [<img src="https://img.shields.io/badge/Resources-NodeJS%20bases%20(Fr)-blue.svg?logo=LOGO" >](https://github.com/gsoulie/angular-resources/blob/master/node-sheet.md) 
-* [<img src="https://img.shields.io/badge/Tuto-Extension%20Chrome-DD0031.svg?logo=LOGO">](https://github.com/gsoulie/angular-resources/blob/master/chrome-extension.md)     
+* [<img src="https://img.shields.io/badge/Tuto-Extension%20Chrome-DD0031.svg?logo=LOGO">](https://github.com/gsoulie/angular-resources/blob/master/chrome-extension.md)
+* [<img src="https://img.shields.io/badge/Resources-Python-#FFDA4D.svg?logo=LOGO">](https://github.com/gsoulie/python-resources/blob/master/py-sheet.md)      
